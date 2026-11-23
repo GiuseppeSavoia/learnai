@@ -1,0 +1,63 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Sfumature degli Standard che decidono i casi",
+          "body": [
+            "Al Livello II le domande d'etica sono casi lunghi con più personaggi e più fatti rilevanti; la difficoltà sta nelle sfumature. Professionalità: per la regola più severa conta la legge applicabile a chi opera e ai clienti; la dissociazione può richiedere di lasciare l'incarico se l'illecito continua; un'indagine delle autorità non è di per sé una violazione, la condanna per frode sì.",
+            "Indipendenza: i viaggi pagati dall'emittente sono tollerati solo se non esistono alternative commerciali (es. sito remoto raggiungibile solo con l'aereo aziendale); i regali dei clienti vanno comunicati al datore di lavoro, quelli di emittenti o broker rifiutati se più che modesti. La ricerca pagata dall'emittente deve avere un compenso fisso non legato alle conclusioni ed essere dichiarata.",
+            "Informazioni privilegiate (material nonpublic information): un'informazione ricevuta per errore (email inviata alla persona sbagliata, conversazione ascoltata in ascensore) resta MNPI. Un analista che ottiene dati da un fornitore di dati alternativi deve verificare che non siano stati raccolti in violazione di obblighi di riservatezza (confidentiality). La «guidance» data a pochi analisti in privato non è pubblica.",
+            "Doveri verso i clienti: in un fondo il cliente è il fondo; in un piano pensionistico i beneficiari. I soft dollar sono del cliente: la ricerca acquistata deve aiutare la gestione dei suoi conti (non necessariamente di quel singolo conto, ma dei clienti nel loro insieme). Il voto per delega va esercitato con una policy e nell'interesse del cliente. Ordini aggregati: allocazione pro rata e prezzo medio.",
+            "Performance: presentare un composite con solo i conti migliori, rendimenti simulati senza indicarlo, o risultati ottenuti presso un altro datore di lavoro come se fossero dell'azienda attuale (salvo che si rispettino le regole sulla portabilità dei GIPS: stesse persone, stesso processo, documentazione) è violazione.",
+            "Lealtà verso il datore di lavoro: non c'è violazione se si lavora per un'altra impresa nel tempo libero senza competere né creare conflitto; c'è se lo si fa in un'attività concorrente senza consenso scritto. I modelli costruiti sul lavoro sono del datore di lavoro."
+          ]
+        },
+        {
+          "title": "Analisi, comunicazione e conflitti nei casi di ricerca",
+          "body": [
+            "Base ragionevole: un analista che pubblica un prezzo obiettivo senza aver aggiornato il modello dopo un evento rilevante (es. un'acquisizione) viola V(A). Usare un modello quantitativo senza capire le ipotesi o senza stress test viola V(A). Delegare a uno stagista la raccolta di dati va bene se l'analista ne verifica la qualità.",
+            "Comunicazione: i rischi principali della strategia devono essere spiegati (es. leva, illiquidità (illiquidity), rischio di controparte (counterparty risk) nei derivati (derivatives)); un cambiamento nel processo (nuovo gestore, nuovo modello, uso di derivati) va comunicato. Un report deve separare fatti e opinioni (es. «l'EPS crescerà del 20%» è una previsione, non un fatto).",
+            "Conflitti: un analista che possiede azioni del titolo coperto, che siede nel consiglio di un'impresa, che ha familiari con ruoli rilevanti, o la cui banca ha incarichi di investment banking con l'emittente deve comunicarlo in modo chiaro. La compliance può imporre periodi di quiete (quiet periods) intorno alle IPO, liste ristrette e preautorizzazioni.",
+            "Priorità delle operazioni: un gestore che compra per sé prima di eseguire grandi ordini dei clienti fa front running anche se il volume personale è piccolo. Le operazioni sui conti dei familiari (non clienti) seguono le regole del conto personale; quelle sui conti di familiari clienti a pagamento vanno trattate come gli altri clienti.",
+            "Compensi per segnalazioni: vanno comunicati prima dell'accordo, a clienti e datore di lavoro, con natura e valore. Anche benefici non monetari (biglietti, segnalazioni reciproche) contano.",
+            "Esempio di caso: un'analista sell-side riceve una telefonata dal CFO che le anticipa un calo delle vendite; rivede al ribasso il modello e informa i clienti istituzionali prima della pubblicazione del comunicato. Violazioni: II(A) (uso di MNPI) e III(B) (alcuni clienti informati prima di altri). Azione corretta: non usare l'informazione, rivolgersi alla compliance, sollecitare la diffusione pubblica."
+          ]
+        },
+        {
+          "title": "Supervisione e procedure aziendali nei casi",
+          "body": [
+            "Il supervisore deve avere un sistema di controllo ragionevole e applicarlo. Se scopre una violazione deve indagare subito, limitare le attività del dipendente durante l'indagine e documentare. Affidarsi alla parola del dipendente («non succederà più») non basta.",
+            "Se le procedure aziendali sono inadeguate (es. nessun controllo sulle operazioni personali) il supervisore deve proporle per iscritto; finché non sono adottate non deve accettare la responsabilità di supervisione. Le procedure dovrebbero essere scritte, comunicate, accompagnate da formazione e da sanzioni.",
+            "Procedure consigliate da conoscere: codice etico aziendale; policy su regali e intrattenimenti con limite di valore; restricted list e watch list; firewall tra ricerca e banca d'affari; preautorizzazione e rendicontazione delle operazioni personali; periodi di blocco; politica di allocazione degli ordini; politica sul voto per delega; politica di conservazione dei documenti; politica sui conflitti e sulla loro comunicazione; formazione periodica.",
+            "Esempio: il responsabile della ricerca permette agli analisti di comprare titoli prima di pubblicare raccomandazioni d'acquisto «purché li tengano almeno 30 giorni». La policy non impedisce il front running: violazione di IV(C) per il responsabile e di VI(B) per gli analisti che lo fanno.",
+            "Dimensione e tipo d'azienda: una piccola società di consulenza può avere procedure più semplici, ma devono comunque essere adeguate al rischio. Le procedure consigliate degli Standard sono il riferimento con cui un caso giudica l'adeguatezza (suitability)."
+          ]
+        },
+        {
+          "title": "Strategia per i casi d'etica del Livello II",
+          "body": [
+            "Leggere prima le domande, poi il caso: si sa quali fatti cercare. Annotare per ogni personaggio: ruolo, membro o candidato, azione, momento. Le domande tipiche chiedono se un'azione «è conforme», quale standard viola, quale azione è la più appropriata.",
+            "Le risposte sbagliate sono spesso: estreme (denunciare subito, dimettersi, non lavorare mai con quel cliente), basate su un principio corretto applicato al fatto sbagliato, o che danno peso a giustificazioni irrilevanti (il cliente era d'accordo verbalmente, era la prassi dell'ufficio, nessun cliente ha subito danni).",
+            "Il «danno» non è un requisito per la violazione: front running con profitto nullo, o regali non accettati ma sollecitati, sono comunque violazioni. Il consenso del cliente non sana violazioni dei doveri verso il mercato (manipolazione, MNPI).",
+            "Tempistica: comunicare un conflitto dopo l'acquisto da parte del cliente è tardivo; la disclosure va fatta prima. Il consenso scritto per compensi aggiuntivi va ottenuto prima di accettarli.",
+            "Esempio integrato: un gestore usa commissioni dei clienti per pagare un abbonamento a un servizio dati usato sia per la ricerca sia per il marketing. Solo la quota usata nella ricerca può essere pagata con le commissioni; la parte di marketing va pagata dall'azienda (III(A)). Se il gestore nasconde la pratica ai clienti viola anche V(B) e potenzialmente I(C)."
+          ]
+        }
+      ],
+      "formulas": [
+        "Ordine di analisi: soggetto → cliente → azione → momento → standard → eccezioni → azione corretta",
+        "Disclosure dei conflitti: prima, chiara, prominente; consenso scritto: prima di accettare"
+      ],
+      "pitfalls": [
+        "Ritenere che l'assenza di danno per il cliente escluda la violazione.",
+        "Considerare pubblica un'informazione ricevuta per errore da un dirigente.",
+        "Accettare la promessa del dipendente come risposta adeguata del supervisore.",
+        "Pensare che il consenso del cliente renda accettabile una manipolazione di mercato.",
+        "Comunicare un conflitto solo dopo che il cliente ha investito."
+      ]
+    }
+  ]
+}

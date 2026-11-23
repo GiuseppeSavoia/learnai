@@ -1,0 +1,96 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "fixed",
+      "sections": [
+        {
+          "title": "Struttura a termine e dinamica dei tassi",
+          "body": [
+            "Modello dei tassi forward (forward rate model): (1 + S_T)^T = (1 + S_t)^t × (1 + f(t, T - t))^(T - t). Modello di prezzo forward: P(T*) = P(t*) × F(t*, T*), cioè il prezzo di uno zero coupon con scadenza più lunga è il prezzo dello zero più breve per il prezzo forward. Se le aspettative si realizzano (gli spot futuri uguali ai forward attuali), ogni strategia rende lo stesso tasso a un periodo.",
+            "Cavalcare la curva (riding the yield curve): con curva crescente e stabile, comprare titoli con scadenza oltre l'orizzonte e venderli prima permette di guadagnare il rolldown (il rendimento del titolo scende man mano che si avvicina alla scadenza). Se l'investitore si aspetta che gli spot futuri siano sotto i forward impliciti, conviene allungare la duration.",
+            "Curva swap (swap curve): tassi swap fissi contro un tasso variabile (oggi soprattutto tassi overnight come SOFR o €STR) per diverse scadenze; usata come benchmark perché disponibile per molte scadenze, liquida, poco influenzata da fattori specifici dei titoli di Stato. Spread swap (swap spread) = tasso swap - rendimento del titolo di Stato (government bond) con la stessa scadenza: misura rischio di credito (credit risk) bancario e liquidità (può essere negativo). I-spread = rendimento dell'obbligazione (bonds) - tasso swap.",
+            "Teorie: aspettative locali (local expectations: nel breve periodo i titoli rendono il tasso privo di rischio, i premi esistono solo per orizzonti lunghi), preferenza per la liquidità, segmentazione, habitat preferito. Modelli di equilibrio (Cox-Ingersoll-Ross: ritorno alla media (mean reversion) e volatilità proporzionale alla radice del tasso, tassi non negativi; Vasicek: ritorno alla media con volatilità costante, tassi anche negativi) e di arbitraggio (Ho-Lee, Kalotay-Williams-Fabozzi) calibrati sulla curva corrente.",
+            "Fattori di forma: livello (spostamenti paralleli, spiega la maggior parte delle variazioni), pendenza (steepness), curvatura (curvature). Gestione: sensibilità a ciascun fattore e key rate duration. Influenze macro: inflazione (inflation) attesa e premio per il rischio (risk premium) d'inflazione, crescita, politica monetaria (tratto breve), offerta di titoli e acquisti delle banche centrali (tratto lungo). In fasi di fuga verso la qualità la curva dei titoli di Stato si abbassa e si irripidisce.",
+            "Esempio di strategia: un gestore prevede un irripidimento (tassi a lungo su più di quelli a breve). Può costruire un portafoglio neutrale in duration lungo il tratto breve e corto il tratto lungo (steepener) per guadagnare dalla variazione di pendenza senza esporsi al livello."
+          ]
+        },
+        {
+          "title": "Valutazione senza arbitraggio e albero binomiale",
+          "body": [
+            "Valutazione senza arbitraggio (arbitrage-free valuation): ogni flusso si sconta con il tasso spot (spot rates) della sua scadenza; il prezzo così ottenuto è quello che impedisce di guadagnare separando (stripping) o ricomponendo (reconstitution) le cedole (coupon). Se il prezzo di mercato differisce si può arbitrare.",
+            "Albero binomiale (binomial tree) dei tassi (binomial interest rate tree): in ogni nodo il tasso a un anno può salire o scendere con probabilità 0.5; nel modello lognormale i tassi adiacenti dello stesso periodo sono legati da r_alto = r_basso × e^(2σ). L'albero è calibrato in modo da prezzare correttamente i titoli di riferimento. Valutazione all'indietro (backward induction): valore in un nodo = media dei valori nei due nodi successivi (con le cedole) scontata al tasso del nodo.",
+            "Esempio: tasso a un anno 2%; dopo un anno i tassi possibili sono 3.00% e 3.00% × e^(0.30) = 4.05% (σ = 15%). Obbligazione a 2 anni con cedola 3.5%: valori all'anno 1 = 103.5/1.0405 = 99.47 e 103.5/1.03 = 100.49. Valore oggi = [0.5 × (99.47 + 3.5) + 0.5 × (100.49 + 3.5)]/1.02 = 101.45.",
+            "Valutazione per percorsi (pathwise valuation): si calcola il valore attuale (present value) lungo ogni percorso possibile dei tassi e si fa la media; dà lo stesso risultato dell'albero. Simulazione Monte Carlo: per titoli dipendenti dal percorso (MBS con rimborsi anticipati legati alla storia dei tassi) si simulano molti percorsi, con aggiustamenti per riprodurre i prezzi dei titoli di riferimento.",
+            "Trappola: in un albero calibrato su titoli di Stato si valutano titoli dello stesso emittente o, per altri emittenti, si aggiunge uno spread costante (OAS); non si può usare l'albero dei titoli di Stato per un corporate senza spread."
+          ]
+        },
+        {
+          "title": "Obbligazioni con opzioni: callable, putable, OAS",
+          "body": [
+            "Valore callable = valore senza opzioni (options) - valore della call; putable = valore senza opzioni + valore della put. Nell'albero: in ogni nodo in cui la call è esercitabile, il valore dell'obbligazione è il minore tra quello calcolato e il prezzo di richiamo; per la putable il maggiore tra quello calcolato e il prezzo di rimborso.",
+            "Esempio (stesso albero): se l'obbligazione a 2 anni è richiamabile alla pari tra un anno, nel nodo basso il valore 100.49 viene limitato a 100. Valore oggi = [0.5 × (99.47 + 3.5) + 0.5 × (100 + 3.5)]/1.02 = 101.21. Valore della call = 101.45 - 101.21 = 0.24.",
+            "Effetto della volatilità: più volatilità → opzioni più care → callable meno cara, putable più cara. Effetto della curva: con tassi in calo la call vale di più (il prezzo della callable è compresso); con curva piatta o invertita la call vale di più che con curva crescente (tassi forward più bassi); la put vale di più con tassi in salita e curva crescente.",
+            "Spread corretto per le opzioni (option-adjusted spread, OAS): spread costante aggiunto a tutti i tassi dell'albero che rende il valore del modello uguale al prezzo di mercato. Confronta titoli con opzioni diverse: a parità di credito e liquidità un OAS più alto indica un titolo più conveniente. L'OAS dipende dalla volatilità assunta: se si sottostima la volatilità, il valore della call è troppo basso, il valore del modello troppo alto e l'OAS calcolato per una callable risulta troppo alto (il titolo sembra a buon mercato).",
+            "Duration e convessità (convexity) effettive: si spostano tutti i tassi dell'albero di ±Δ e si ricalcola. Callable: duration effettiva inferiore alla straight e convessità negativa quando i tassi sono bassi (il prezzo non sale oltre il prezzo di richiamo). Putable: duration minore della straight quando i tassi salgono (il prezzo non scende sotto il prezzo di rimborso) e convessità più positiva. Duration unilaterali (one-sided durations): per una callable la duration per un calo dei tassi è più bassa di quella per un rialzo. Key rate duration: per una callable il rischio si concentra vicino alla data di richiamo se i tassi sono bassi.",
+            "Obbligazioni a tasso variabile con limiti: floater con tetto (capped floater) = floater senza tetto - cap (opzione dell'emittente); floater con minimo (floored floater) = floater + floor (opzione dell'investitore). Nell'albero la cedola di ogni periodo è determinata dal tasso del nodo precedente e limitata dal tetto o dal minimo."
+          ]
+        },
+        {
+          "title": "Obbligazioni convertibili",
+          "body": [
+            "Un'obbligazione convertibile (convertible bond) dà all'investitore il diritto di convertirla in azioni: valore = obbligazione senza opzioni + call sulle azioni (- call dell'emittente se callable + put dell'investitore se putable). Valore minimo = maggiore tra valore come obbligazione pura (straight value) e valore di conversione (conversion value = rapporto di conversione × prezzo dell'azione).",
+            "Misure: prezzo di conversione di mercato (market conversion price) = prezzo dell'obbligazione/rapporto di conversione; premio di conversione per azione = prezzo di conversione di mercato - prezzo dell'azione; premio di conversione = premio per azione/prezzo dell'azione; premio sul valore come obbligazione (premium over straight value) = prezzo della convertibile/valore straight - 1, misura del rischio di ribasso.",
+            "Esempio: convertibile a 1,100, rapporto di conversione 20, azione a 45, valore straight 950. Valore di conversione = 900; prezzo di conversione di mercato = 55; premio per azione = 10 (22.2%); premio sul valore straight = 15.8%. Il prezzo si muove in parte con l'azione e in parte con i tassi.",
+            "Comportamento: quando l'azione è molto sotto il prezzo di conversione la convertibile si comporta come un'obbligazione (busted convertible); quando è molto sopra si comporta come l'azione; nella zona intermedia è un ibrido. Se l'emittente richiama la convertibile quando il valore di conversione supera il prezzo di richiamo forza la conversione.",
+            "Fattori: prezzo e volatilità dell'azione (più volatilità, più valore della call incorporata), tassi e spread di credito (agiscono sulla componente obbligazionaria), dividendi (riducono il valore dell'opzione), clausole contingenti (soglie di conversione, aggiustamenti per dividendi straordinari o cambio di controllo).",
+            "Rischio-rendimento rispetto all'azione: se l'azione sale molto, la convertibile rende meno dell'azione (premio pagato); se l'azione crolla, la convertibile perde meno (pavimento dato dal valore straight, che però scende se peggiora il credito)."
+          ]
+        },
+        {
+          "title": "Modelli di rischio di credito e CVA",
+          "body": [
+            "Componenti: esposizione al default (exposure), tasso di recupero (recovery rate), perdita in caso di default (loss given default = esposizione × (1 - recupero)), probabilità di default (probability of default, PD) e di sopravvivenza (probability of survival). Tasso di rischio (hazard rate): probabilità di default nel periodo dato che non c'è stato prima; probabilità di default nel periodo t = probabilità di sopravvivenza fino a t-1 × hazard rate. Perdita attesa (expected loss) = PD × LGD; lo spread di credito ≈ PD × LGD (in un mondo neutrale al rischio).",
+            "Correzione di valore per il rischio di credito (credit valuation adjustment, CVA) = somma dei valori attuali delle perdite attese in ogni periodo (con probabilità neutrali al rischio (risk-neutral probability)). Valore del titolo rischioso = valore privo di rischio - CVA. Esempio: zero coupon a 3 anni, nominale 100, tasso privo di rischio 3%, hazard rate 2%, recupero 40%. Esposizioni 94.26, 97.09, 100; perdite in caso di default 56.56, 58.25, 60; probabilità di default 2.00%, 1.96%, 1.92%; CVA = 3.23. Valore privo di rischio 91.51 → valore equo 88.29, rendimento circa 4.24%: spread di circa 124 punti base, vicino a 2% × 60% = 120.",
+            "Modelli strutturali (structural models, Merton): il capitale proprio è una call sulle attività dell'impresa con strike pari al debito; il debito è debito privo di rischio meno una put sulle attività. La probabilità di default dipende dalla distanza tra valore delle attività e debito e dalla volatilità delle attività. Vantaggi: intuizione economica; limiti: valore e volatilità delle attività non osservabili, struttura del debito semplificata.",
+            "Modelli in forma ridotta (reduced-form models): il default è un evento casuale con un'intensità (hazard rate) che dipende da variabili osservabili (macroeconomiche e dell'impresa); si calibrano su prezzi e dati di mercato. Più flessibili e usati per la valutazione; meno esplicativi sul perché del default.",
+            "Migrazione del rating (credit migration): il rendimento atteso di un'obbligazione deve tener conto della probabilità di cambio di rating; la variazione di prezzo ≈ -duration modificata × variazione dello spread. Un downgrade di un titolo BBB a high yield può far perdere molto per effetto dell'ampliamento dello spread e delle vendite forzate.",
+            "Struttura a termine (term structure) degli spread: per emittenti investment grade di solito crescente (più incertezza nel lungo periodo); per emittenti in difficoltà può essere invertita (rischio di default immediato). Fattori: ciclo del credito, offerta, liquidità, covenant, opzioni incorporate. Per titoli cartolarizzati si analizzano la qualità del pool, la struttura (subordinazione, sovra-collateralizzazione) e la concentrazione."
+          ]
+        },
+        {
+          "title": "Credit default swap",
+          "body": [
+            "Nel credit default swap (CDS) l'acquirente di protezione paga premi periodici; in caso di evento di credito (fallimento, mancato pagamento, ristrutturazione) il venditore paga la perdita. Regolamento fisico (consegna dell'obbligazione al valore nominale) o in contanti (cash settlement) con prezzo determinato da un'asta; si consegna l'obbligazione più conveniente (cheapest-to-deliver) dello stesso grado. CDS su un singolo nome (single-name), su indici (CDX in Nord America, iTraxx in Europa; con equa ponderazione dei nomi) e su tranche di indici.",
+            "Valutazione: gamba del premio (premium leg) e gamba di protezione (protection leg). I contratti standard hanno cedole fisse (es. 1% per investment grade, 5% per high yield); se lo spread di mercato è diverso, si paga un anticipo (upfront payment) ≈ (spread di credito - cedola fissa) × duration del CDS × nominale. Prezzo del CDS = 100 - anticipo in percentuale. Esempio: spread 250 punti base, cedola fissa 100, duration 4.5 → anticipo ≈ 1.5% × 4.5 = 6.75% pagato dall'acquirente di protezione; prezzo 93.25.",
+            "Variazione di valore: se lo spread sale a 300 punti base, il valore della protezione aumenta di circa 0.5% × 4.5 = 2.25% del nominale a favore dell'acquirente (che è «corto credito»). Il venditore di protezione è lungo credito come chi possiede l'obbligazione.",
+            "Usi: coprire un'esposizione (es. una banca con prestiti verso un'impresa), assumere posizioni di credito senza comprare titoli (anche corte), strategie sulla curva dei CDS (comprare protezione a lungo e vendere a breve se ci si aspetta un peggioramento nel lungo periodo), operazioni di base (basis trade: sfruttare differenze tra lo spread dell'obbligazione e quello del CDS), operazioni su indici contro singoli nomi, strategie sulle tranche (correlazione (correlation)).",
+            "Esempio di curva: se la curva dei CDS di un emittente è molto ripida e si crede che migliorerà, si vende protezione a lunga e si compra a breve (posizione lunga sul miglioramento del credito di lungo periodo).",
+            "Trappola: l'acquirente di protezione guadagna quando lo spread si allarga (il credito peggiora), anche senza default."
+          ]
+        }
+      ],
+      "formulas": [
+        "(1 + S_T)^T = (1 + S_t)^t (1 + f)^(T - t)",
+        "Albero lognormale: r_alto = r_basso × e^(2σ)",
+        "Valore nodo = [0.5(V_alto + C) + 0.5(V_basso + C)]/(1 + r_nodo)",
+        "Callable = straight - call; putable = straight + put",
+        "Capped floater = floater - cap; floored floater = floater + floor",
+        "Valore convertibile minimo = max(valore straight, rapporto × prezzo azione)",
+        "Prezzo conversione di mercato = prezzo convertibile/rapporto di conversione",
+        "PD_t = sopravvivenza_(t-1) × hazard rate; CVA = Σ PV(LGD_t × PD_t)",
+        "Spread ≈ PD × LGD",
+        "Anticipo CDS ≈ (spread - cedola fissa) × duration CDS",
+        "ΔValore CDS (acquirente) ≈ Δspread × duration × nominale"
+      ],
+      "pitfalls": [
+        "Pensare che più volatilità aumenti il valore di una callable: lo riduce.",
+        "Interpretare un OAS alto come segno di rischio di credito senza verificare la volatilità usata.",
+        "Confondere spread swap (swap - Stato) con I-spread (obbligazione - swap).",
+        "Credere che il venditore di protezione CDS sia corto credito: è lungo come un obbligazionista.",
+        "Usare la duration modificata invece di quella effettiva per una putable.",
+        "Dimenticare che il valore minimo di una convertibile può scendere se peggiora il credito dell'emittente."
+      ]
+    }
+  ]
+}

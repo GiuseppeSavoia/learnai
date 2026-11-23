@@ -1,0 +1,94 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "fsa",
+      "sections": [
+        {
+          "title": "Metodo del patrimonio netto: calcolo passo per passo",
+          "body": [
+            "Classificazione delle partecipazioni: attività finanziarie (influenza non significativa, di solito < 20%: IFRS 9 a costo ammortizzato, FVOCI o FVPL), collegate (associates, influenza notevole, di solito 20-50%: metodo del patrimonio netto (equity method)), joint venture (controllo congiunto: patrimonio netto in entrambi gli standard), controllate (controllo, di solito > 50%: consolidamento (consolidation) con il metodo dell'acquisizione). L'influenza si giudica anche da rappresentanza nel consiglio, operazioni rilevanti, scambio di personale, dipendenza tecnologica.",
+            "Metodo del patrimonio netto: iscrizione al costo; poi + quota dell'utile della partecipata - dividendi (dividends) ricevuti (che riducono l'investimento, non sono ricavi) - ammortamento (depreciation) delle differenze di fair value. L'eccedenza del prezzo sulla quota del valore contabile si attribuisce prima alle attività identificabili sottovalutate (ammortizzate) e il residuo all'avviamento (non ammortizzato, incluso nella partecipazione).",
+            "Esempio: si acquista il 30% per 600 quando il patrimonio netto contabile della partecipata è 1,500 (quota 450); gli impianti hanno un fair value superiore di 200 (quota 60, vita residua 10 anni). Avviamento implicito = 600 - 450 - 60 = 90. Nell'anno la partecipata guadagna 300 e distribuisce 100. Quota dell'utile = 90 - 6 di ammortamento extra = 84; dividendi ricevuti 30. Partecipazione a fine anno = 600 + 84 - 30 = 654.",
+            "Operazioni infragruppo: i profitti non realizzati su vendite tra investitore e collegata (verso l'alto (upstream) o verso il basso (downstream)) si eliminano per la quota di partecipazione finché i beni non sono venduti a terzi. Esempio: la collegata (30%) vende merci all'investitore con un profitto di 40, metà ancora in magazzino → si eliminano 30% × 20 = 6 dall'utile di partecipazione.",
+            "Opzione (options) fair value: IFRS per alcune entità (fondi di venture capital), US GAAP in generale. Perdite di valore: IFRS se c'è evidenza obiettiva e il valore recuperabile è inferiore; US GAAP se il calo è non temporaneo; nessun ripristino in US GAAP. Se la quota delle perdite azzera la partecipazione, si sospende il metodo.",
+            "Analisi: l'utile da collegate è in una riga sola senza ricavi e debiti della partecipata: margini e leva dell'investitore possono apparire migliori. L'analista può rettificare consolidando proporzionalmente e verificare la conversione dell'utile di partecipazione in dividendi (cassa)."
+          ]
+        },
+        {
+          "title": "Aggregazioni aziendali, avviamento e consolidamento",
+          "body": [
+            "Metodo dell'acquisizione (acquisition method): si iscrivono al fair value tutte le attività e passività (liabilities) identificabili della controllata (anche immateriali non iscritte dalla controllata e passività potenziali); avviamento = corrispettivo + fair value delle minoranze - fair value delle attività nette identificabili. Se negativo (acquisto vantaggioso (bargain purchase)) è un utile immediato. I costi di transazione sono spesati.",
+            "Avviamento pieno (full goodwill: obbligatorio in US GAAP, opzione IFRS) vs parziale (partial goodwill: opzione IFRS). Esempio: si acquista l'80% per 800; fair value delle attività nette identificabili 700. Pieno: valore implicito del 100% = 1,000 → avviamento 300, minoranze 200. Parziale: avviamento = 800 - 0.8 × 700 = 240, minoranze = 0.2 × 700 = 140. Con il parziale attivo e patrimonio netto sono più bassi → ROA e ROE più alti.",
+            "Impairment dell'avviamento: IFRS a livello di unità generatrice di flussi (cash-generating unit): perdita = valore contabile dell'unità - valore recuperabile, prima sull'avviamento. US GAAP a livello di unità di reporting: perdita = valore contabile - fair value dell'unità, limitata all'avviamento. Nessun ripristino in entrambi.",
+            "Consolidamento vs patrimonio netto: l'utile netto (net income) attribuibile alla capogruppo e il patrimonio della capogruppo sono gli stessi (con avviamento parziale), ma il consolidamento iscrive tutti i ricavi, le attività e le passività della controllata. Effetti: ricavi, attivo e debito più alti; margine netto (net profit margin) più basso; ROA più basso; leva più alta. Joint venture con patrimonio netto: margini e ROA migliori di un ipotetico consolidamento proporzionale.",
+            "Entità a destinazione specifica (special purpose/variable interest entities): vanno consolidate se l'impresa ne ha il controllo (IFRS 10) o è il beneficiario principale (primary beneficiary in US GAAP), anche senza maggioranza dei voti. Le strutture fuori bilancio possono nascondere debito: l'analista controlla note e garanzie.",
+            "Trappola: confrontare la leva di un gruppo che consolida una controllata indebitata con quella di un concorrente che detiene una joint venture simile con il patrimonio netto, senza rettifiche."
+          ]
+        },
+        {
+          "title": "Pensioni a benefici definiti e compensi azionari",
+          "body": [
+            "Obbligazione (bonds) per benefici definiti (projected benefit obligation, PBO / defined benefit obligation): movimento = iniziale + costo del servizio (service cost) + interessi (tasso di sconto (discount rate) × PBO iniziale) + costo del servizio passato (past service cost) ± perdite/utili attuariali - benefici pagati. Attività del piano: iniziali + rendimento effettivo + contributi dell'impresa - benefici pagati. Situazione di finanziamento (funded status) = attività - PBO.",
+            "Costo totale del piano nel periodo = contributi - variazione del funded status = costo del servizio + interessi + perdite attuariali - rendimento effettivo ± servizio passato. Esempio: PBO 1,000, costo del servizio 50, tasso 5% (interessi 50), perdita attuariale 30, benefici pagati 60 → PBO finale 1,070. Attività 900, rendimento effettivo 70, contributi 40, benefici 60 → 950. Funded status da -100 a -120. Costo totale = 40 - (-20) = 60 = 50 + 50 + 30 - 70.",
+            "IFRS: a conto economico (income statement) costo del servizio (attuale e passato) + interesse netto = tasso di sconto × passività netta (5% × 100 = 5) → 55; in OCI le rimisurazioni (perdite attuariali 30 - rendimento delle attività oltre l'interesse (70 - 45 = 25) = perdita di 5), senza riciclo. Totale 60. US GAAP: a conto economico costo del servizio + interessi - rendimento atteso delle attività + ammortamento del servizio passato e delle perdite attuariali oltre il corridoio (10% del maggiore tra PBO e attività); il resto in OCI e poi ammortizzato.",
+            "Ipotesi e effetti: tasso di sconto più alto → PBO più bassa, costo del servizio più basso, interessi in genere più alti o più bassi a seconda della durata (sotto IFRS spesso più bassi con piani in deficit); crescita salariale più alta → PBO e costi più alti; vita attesa più lunga → PBO più alta; rendimento atteso più alto (solo US GAAP) → costo a conto economico più basso. Tutte leve di gestione degli utili.",
+            "Rettifiche dell'analista: trattare il deficit netto come debito (al netto delle imposte); riclassificare la componente interessi come onere finanziario e il rendimento come provento finanziario; nei flussi, i contributi superiori al costo totale sono una sorta di rimborso di debito (CFF) e non un'uscita operativa.",
+            "Compensi azionari: opzioni e azioni vincolate (restricted stock) valutate al fair value alla data di assegnazione e spesate durante il periodo di maturazione; i diritti di apprezzamento regolati in contanti (stock appreciation rights) sono passività rimisurate ogni periodo. Ipotesi delle opzioni: volatilità più alta, durata più lunga, tasso privo di rischio più alto → costo più alto; dividendi più alti → costo più basso. L'analista considera la diluizione futura e gli effetti fiscali."
+          ]
+        },
+        {
+          "title": "Operazioni estere: conversione dei bilanci",
+          "body": [
+            "Valuta funzionale (functional currency): valuta dell'ambiente economico principale; valuta di presentazione (presentation currency): quella del bilancio consolidato. Operazioni in valuta: si registrano al cambio della data; le partite monetarie si aggiornano al cambio di chiusura con differenze a conto economico. Esempio: un esportatore italiano vende a 100,000 dollari con cambio 1.10 USD/EUR (credito 90,909 euro); all'incasso il cambio è 1.15 → incassa 86,957 euro: perdita su cambi 3,952.",
+            "Metodo del cambio corrente (current rate method), quando la valuta funzionale è quella locale: tutte le attività e passività al cambio di chiusura, il capitale versato al cambio storico, ricavi e costi al cambio medio; la differenza di conversione (cumulative translation adjustment) va in OCI. Esposizione = attività nette: se la valuta locale si apprezza nasce un utile di conversione in OCI. I rapporti tra voci (margini, liquidità corrente) restano quasi uguali a quelli in valuta locale.",
+            "Metodo temporale (temporal method / remeasurement), quando la valuta funzionale è quella della capogruppo: partite monetarie (cassa, crediti, debiti) al cambio di chiusura, non monetarie (rimanenze (inventories) al costo, immobilizzazioni) al cambio storico; costo del venduto (cost of goods sold) e ammortamenti ai cambi storici; la differenza di rimisurazione va a conto economico. Esposizione = posizione monetaria netta: con passività monetarie nette e valuta locale in apprezzamento si ha una perdita.",
+            "Economie iperinflazionistiche: US GAAP usa il metodo temporale (inflazione (inflation) cumulata > 100% in 3 anni); IFRS prima riesprime il bilancio locale per l'inflazione (con utile/perdita sulla posizione monetaria) e poi converte al cambio corrente.",
+            "Effetti sull'analisi: separare la crescita organica da quella dovuta al cambio (le note spesso indicano la crescita a cambi costanti); l'aliquota effettiva dipende dal mix geografico degli utili e dai cambi; l'utile di un gruppo con metodo temporale è più volatile.",
+            "Trappola: con il metodo del cambio corrente le differenze vanno in OCI, non a conto economico; con il temporale vanno a conto economico. Confondere i due cambia il segno e la collocazione dell'effetto."
+          ]
+        },
+        {
+          "title": "Analisi di banche e assicurazioni",
+          "body": [
+            "Le banche sono diverse: attività soprattutto finanziarie (spesso a fair value), forte leva, rilevanza sistemica, regolamentazione stringente. Quadro CAMELS: adeguatezza (suitability) patrimoniale (capital adequacy), qualità degli attivi (asset quality), management, redditività (earnings), liquidità (liquidity), sensibilità al rischio di mercato (sensitivity). Altri fattori: garanzie pubbliche, cultura del rischio, concentrazione, contesto macro.",
+            "Basilea III: capitale primario di classe 1 (common equity Tier 1) almeno 4.5% delle attività ponderate per il rischio (risk-weighted assets), Tier 1 almeno 6%, capitale totale almeno 8%, più riserve aggiuntive (conservazione, anticiclica, banche sistemiche). Liquidità: indice di copertura (hedging) della liquidità (liquidity coverage ratio) = attività liquide di alta qualità/deflussi netti a 30 giorni ≥ 100%; indice di provvista stabile netta (net stable funding ratio) = provvista stabile disponibile/richiesta ≥ 100%.",
+            "Qualità degli attivi: crediti deteriorati/impieghi, coperture (fondi/crediti deteriorati), concentrazioni settoriali e geografiche, rettifiche sui crediti attese (expected credit losses). Redditività: margine d'interesse netto (net interest margin), rapporto costi/ricavi (cost-to-income), peso delle commissioni (più stabili) e dei proventi da negoziazione (volatili). Sensibilità: gap di duration tra attivo e passivo, analisi di sensibilità del margine e del valore economico del patrimonio.",
+            "Assicurazioni danni (property and casualty): passività brevi e incerte; indice combinato (combined ratio) = indice dei sinistri (loss ratio) + indice delle spese (expense ratio): sotto 100% c'è profitto tecnico, poi si aggiungono i proventi finanziari. Riserve sinistri e loro sviluppo sono la principale area di giudizio. Assicurazioni vita: passività lunghe, redditività legata agli investimenti e alla persistenza delle polizze, sensibilità ai tassi; misure di solvibilità regolamentari (es. Solvency II).",
+            "Esempio: un assicuratore danni con premi di competenza 1,000, sinistri 680 e spese 290 ha indice combinato 97%: profitto tecnico 30. Con proventi finanziari 60 il risultato operativo è 90. Se le riserve degli anni precedenti vengono riviste al rialzo di 40, l'indice sale al 101%: il profitto tecnico diventa una perdita."
+          ]
+        },
+        {
+          "title": "Qualità dei bilanci: modelli e accruals",
+          "body": [
+            "Quadro di valutazione: capire il modello di business e il contesto; identificare le scelte e le stime discrezionali; confrontare con i concorrenti; cercare segnali d'allarme; verificare le misure non conformi; considerare la persistenza degli utili. Le scelte del management sono influenzate da incentivi (bonus, covenant, opzioni, offerte di azioni) e dalle condizioni del mercato.",
+            "Modello di Beneish (M-score): combinazione di otto indici (crescita dei giorni d'incasso, margine lordo, qualità degli attivi, crescita delle vendite, ammortamenti, spese generali, accruals, leva) che stima la probabilità di manipolazione; un valore superiore a circa -1.78 indica un rischio elevato. Z-score di Altman per il rischio di dissesto: combina capitale circolante (working capital), utili trattenuti, EBIT, valore di mercato del capitale sul debito e rotazione dell'attivo.",
+            "Persistenza degli utili: Et+1 = α + β Et + ε; β vicino a 1 = alta persistenza. La componente di cassa è più persistente della componente di competenza (accruals). Rapporto di competenza da stato patrimoniale (balance sheet) = (attività operative nette finali - iniziali)/media; da rendiconto = [NI - (CFO + CFI)]/attività operative nette medie. Esempio: NI 100, CFO 70, CFI -50, attività operative nette da 800 a 900 → stato patrimoniale 100/850 = 11.8%; flussi (100 - 20)/850 = 9.4%. Valori alti e crescenti suggeriscono utili meno persistenti.",
+            "Segnali d'allarme: ricavi (crediti in crescita più delle vendite, ricavi anticipati, transazioni con parti correlate), costi (capitalizzazione di costi operativi, vite utili allungate, riserve rilasciate), flussi (CFO gonfiato con dilazione dei pagamenti, cessione di crediti, classificazione di uscite operative in CFI), stato patrimoniale (passività fuori bilancio, avviamento elevato non svalutato), misure non conformi in crescita rispetto alle misure ufficiali.",
+            "Ritorno alla media (mean reversion): utili straordinariamente alti o bassi tendono a tornare alla media, più rapidamente se dovuti a accruals. L'analista separa le componenti ricorrenti da quelle non ricorrenti e testa la sostenibilità.",
+            "Integrazione delle tecniche: scomposizione DuPont nel tempo, composizione dell'attivo e della struttura del capitale (capital structure), analisi per segmento (ROA e crescita per segmento, allocazione del capitale), rettifiche per le voci fuori bilancio, analisi degli accruals, ricostruzione del valore di mercato come somma delle parti. L'obiettivo è capire le fonti della redditività e la loro sostenibilità."
+          ]
+        }
+      ],
+      "formulas": [
+        "Partecipazione (equity) = costo + quota utile - dividendi - ammortamento differenze FV",
+        "Avviamento pieno = FV 100% impresa - FV attività nette; parziale = prezzo - % × FV attività nette",
+        "PBO finale = PBO iniziale + servizio + interessi + servizio passato ± attuariali - benefici",
+        "Costo pensionistico totale = contributi - (funded status finale - iniziale)",
+        "IFRS: interesse netto = tasso di sconto × (PBO - attività) iniziali",
+        "Esposizione cambio corrente = attività nette; temporale = posizione monetaria netta",
+        "Indice combinato = indice sinistri + indice spese",
+        "LCR = attività liquide di alta qualità/deflussi netti 30 giorni",
+        "Accruals (flussi) = [NI - (CFO + CFI)]/attività operative nette medie"
+      ],
+      "pitfalls": [
+        "Contabilizzare come ricavo i dividendi di una collegata valutata con il patrimonio netto.",
+        "Dimenticare di eliminare la quota di profitti infragruppo non realizzati.",
+        "Pensare che il consolidamento cambi l'utile netto attribuibile alla capogruppo rispetto al patrimonio netto.",
+        "Mettere a conto economico le differenze di conversione del metodo del cambio corrente.",
+        "Ignorare che un rendimento atteso più alto sulle attività pensionistiche (US GAAP) riduce il costo dichiarato.",
+        "Leggere un indice combinato sotto 100% senza controllare lo sviluppo delle riserve."
+      ]
+    }
+  ]
+}

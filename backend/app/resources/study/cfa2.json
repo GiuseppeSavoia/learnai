@@ -1,0 +1,949 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "ethics",
+      "title": "Etica applicata ai casi",
+      "summary": "Al Livello II gli Standards si applicano a casi lunghi con più personaggi: devi riconoscere chi viola cosa e qual è l'azione corretta. Pesa 10-15%.",
+      "sections": [
+        {
+          "title": "Come leggere un caso di etica",
+          "body": [
+            "Individua i ruoli (analista, supervisore, cliente, datore di lavoro) e per ogni azione chiediti quale standard è coinvolto. Le risposte spesso differiscono per un dettaglio: 'ha violato' contro 'non ha violato', oppure lo standard citato.",
+            "Le domande tipiche: c'è una violazione? quale standard? quale azione correttiva è più appropriata? Attenzione alle risposte che sembrano severe ma non sono richieste dagli Standards (es. denunciare all'autorità)."
+          ]
+        },
+        {
+          "title": "Ricerca, raccomandazioni e conflitti",
+          "body": [
+            "Research objectivity (Research Objectivity Standards): separazione tra ricerca e investment banking, quiet period, disclosure dei rating e delle posizioni personali. Un analista può accettare viaggi pagati dall'emittente solo se modesti e se non compromettono l'indipendenza: meglio che paghi il datore.",
+            "Comunicazione: quando cambi metodologia o modello devi informare i clienti. Se usi un modello quantitativo devi spiegarne i limiti e le ipotesi principali."
+          ]
+        },
+        {
+          "title": "Supervisione e procedure",
+          "body": [
+            "Il supervisore (IV(C)) deve avere procedure di compliance adeguate e applicarle. Se scopre una violazione deve indagare e limitare l'attività del dipendente, non basta il suo impegno a non ripetere.",
+            "Asset Manager Code e procedure di allocazione: le operazioni in blocco devono essere allocate ai clienti prima dell'esecuzione o con criteri predefiniti e documentati."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Scegliere l'azione più drastica invece di quella richiesta dagli Standards.",
+        "Pensare che il consenso del cliente sani un conflitto non comunicato agli altri soggetti interessati.",
+        "Accettare che un supervisore si limiti a un richiamo verbale dopo una violazione."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-eth-set1",
+          "vignette": "Lucia Ferri, CFA, is a senior equity analyst at Northgate Securities. Northgate's investment banking division is lead underwriter for an upcoming secondary offering by TerraPower, a company Ferri covers. Ferri's supervisor, Mark Hale, asks her to postpone publishing a downgrade of TerraPower until after the offering closes, saying the bank 'cannot afford to upset the client'. Ferri publishes the downgrade on schedule. Two weeks later, TerraPower invites Ferri to tour its new plant and offers to pay for her business-class flight and two nights at a luxury resort. Ferri accepts the plant tour but asks Northgate to pay for standard travel and lodging. Separately, Ferri learns that a junior analyst on her team, Paolo Neri, bought TerraPower shares in his personal account the day before Northgate issued a buy rating on the stock last year. Ferri reports the matter to Hale. Hale speaks with Neri, who promises not to repeat it, and Hale takes no further action. Northgate's written compliance procedures do not address pre-clearance of personal trades.",
+          "questions": [
+            {
+              "id": "l2-eth-1",
+              "difficulty": 2,
+              "stem": "By asking Ferri to delay the downgrade, Hale most likely violated the Standard relating to:",
+              "choices": [
+                "Independence and Objectivity",
+                "Duties to Employers: Loyalty",
+                "Record Retention"
+              ],
+              "answer": 0,
+              "explanation": "Pressioni per alterare o ritardare una raccomandazione a vantaggio dell'investment banking compromettono l'indipendenza e l'obiettività della ricerca (Standard I(B)). Ferri ha fatto bene a pubblicare."
+            },
+            {
+              "id": "l2-eth-2",
+              "difficulty": 2,
+              "stem": "Regarding the plant tour, Ferri's actions are best described as:",
+              "choices": [
+                "a violation, because analysts may never visit covered companies",
+                "a violation, because she should have refused the tour entirely",
+                "consistent with the Standards"
+              ],
+              "answer": 2,
+              "explanation": "Visitare un'azienda coperta è legittimo; per preservare l'indipendenza conviene che i costi di viaggio li paghi il datore e che si rifiutino benefici sontuosi. Ferri ha fatto esattamente questo."
+            },
+            {
+              "id": "l2-eth-3",
+              "difficulty": 3,
+              "stem": "Neri's purchase of TerraPower shares before the buy rating most likely violated the Standard relating to:",
+              "choices": [
+                "Priority of Transactions",
+                "Fair Dealing only",
+                "Suitability"
+              ],
+              "answer": 0,
+              "explanation": "Operare sul proprio conto prima che i clienti ricevano la raccomandazione antepone l'interesse personale a quello dei clienti: viola VI(B) Priority of Transactions."
+            },
+            {
+              "id": "l2-eth-4",
+              "difficulty": 3,
+              "stem": "Hale's response to the report about Neri is best described as:",
+              "choices": [
+                "adequate, because Neri promised not to repeat the conduct",
+                "inadequate, because a supervisor must investigate, limit the employee's activities and ensure adequate procedures exist",
+                "adequate, because Ferri, not Hale, discovered the violation"
+              ],
+              "answer": 1,
+              "explanation": "Standard IV(C): il supervisore deve fare indagini, limitare l'attività del dipendente durante l'indagine e assicurarsi che esistano procedure adeguate (qui manca la pre-autorizzazione delle operazioni personali). Una semplice promessa non basta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "quant",
+      "title": "Regressione multipla, serie storiche e machine learning",
+      "summary": "Stima e diagnosi dei modelli di regressione multipla (multiple regression), variabili dummy e logit, serie storiche (trend, autoregressivi, radici unitarie), machine learning e big data.",
+      "sections": [
+        {
+          "title": "Regressione multipla: stima e test",
+          "body": [
+            "Ogni coefficiente misura l'effetto di una variabile tenendo fisse le altre. Test t sul singolo coefficiente con n - k - 1 gradi di libertà (degrees of freedom); test F congiunto: F = (SSR/k) / (SSE/(n - k - 1)). R² aggiustato = 1 - (1 - R²)(n - 1)/(n - k - 1): penalizza l'aggiunta di variabili inutili.",
+            "Criteri AIC (previsione) e BIC (bontà dell'adattamento, penalizza di più) per scegliere tra modelli. Test F ristretto per verificare se un gruppo di variabili è congiuntamente nullo."
+          ]
+        },
+        {
+          "title": "Violazioni delle ipotesi",
+          "body": [
+            "Eteroschedasticità (heteroskedasticity) condizionata: errori standard (standard error) sbagliati (di solito troppo piccoli), test di Breusch-Pagan (n × R² della regressione dei residui (residuals) al quadrato, chi-quadro con k gradi di libertà); correzione con errori standard robusti (White).",
+            "Correlazione seriale (serial correlation): test Durbin-Watson o Breusch-Godfrey; correzione con errori standard di Newey-West. Multicollinearità (multicollinearity): R² e F alti ma t non significativi, VIF > 5-10; si rimuove o combina una variabile. Variabili omesse rendono i coefficienti distorti."
+          ]
+        },
+        {
+          "title": "Serie storiche",
+          "body": [
+            "Un modello AR è valido solo su una serie stazionaria in covarianza (covariance). Il livello di ritorno alla media (mean reversion) di un AR(1) è b0 / (1 - b1). Radice unitaria (b1 = 1): random walk, si corregge con la differenza prima; test di Dickey-Fuller.",
+            "Due serie non stazionarie possono essere usate in regressione solo se cointegrate (test di Engle-Granger). ARCH: varianza (variance) degli errori che dipende dagli errori passati."
+          ]
+        },
+        {
+          "title": "Machine learning e big data",
+          "body": [
+            "Apprendimento supervisionato (regressione penalizzata LASSO, SVM, KNN, CART, random forest, reti neurali) e non supervisionato (PCA, k-means, clustering gerarchico). Overfitting: errore basso nel campione e alto fuori; si combatte con cross-validation e regolarizzazione.",
+            "Metriche di classificazione dalla matrice di confusione: precision = TP/(TP+FP), recall = TP/(TP+FN), accuracy, F1. Text analytics: tokenizzazione, rimozione delle stop word, stemming, bag-of-words."
+          ]
+        }
+      ],
+      "formulas": [
+        "R² adj = 1 - (1 - R²)(n - 1)/(n - k - 1)",
+        "F = (SSR/k) / (SSE/(n - k - 1))",
+        "Livello di ritorno alla media AR(1) = b0 / (1 - b1)",
+        "Breusch-Pagan = n × R²(residui²)"
+      ],
+      "pitfalls": [
+        "Pensare che un R² più alto con più variabili indichi sempre un modello migliore.",
+        "Interpretare t non significativi con F significativo come assenza di relazione (è multicollinearità).",
+        "Applicare un AR a una serie con radice unitaria senza differenziarla."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-qm-set1",
+          "vignette": "Anna Galli is modeling monthly excess returns of a small-cap fund using three regressors: the market excess return (MKT), a size factor (SMB) and a value factor (HML). Using 60 monthly observations she obtains the following: intercept 0.15 (standard error 0.20); MKT coefficient 0.80 (standard error 0.25); SMB coefficient 0.45 (standard error 0.30); HML coefficient -0.10 (standard error 0.40). The R² is 0.40 and the F-statistic is significant at the 1% level. The two-tailed critical t-value at the 5% level with 56 degrees of freedom is approximately 2.00. Galli regresses the squared residuals on the three regressors and obtains an R² of 0.18. The 5% critical value of the chi-square distribution with 3 degrees of freedom is 7.81. Her colleague notes that when SMB and HML are added to a regression containing only MKT, the coefficient on MKT barely changes, and none of the pairwise correlations among the regressors exceeds 0.3.",
+          "questions": [
+            {
+              "id": "l2-qm-1",
+              "difficulty": 2,
+              "stem": "Which coefficient is statistically different from zero at the 5% significance level?",
+              "choices": [
+                "MKT only",
+                "MKT and SMB",
+                "SMB and HML"
+              ],
+              "answer": 0,
+              "explanation": "t(MKT) = 0.80 / 0.25 = 3.2 > 2.00; t(SMB) = 0.45 / 0.30 = 1.5; t(HML) = -0.25: solo MKT è significativo."
+            },
+            {
+              "id": "l2-qm-2",
+              "difficulty": 2,
+              "stem": "The adjusted R² of the regression is closest to:",
+              "choices": [
+                "0.37",
+                "0.40",
+                "0.43"
+              ],
+              "answer": 0,
+              "explanation": "R² adj = 1 - (1 - 0.40) × (60 - 1)/(60 - 3 - 1) = 1 - 0.60 × 59/56 = 0.368. È sempre ≤ R² perché penalizza il numero di regressori."
+            },
+            {
+              "id": "l2-qm-3",
+              "difficulty": 3,
+              "stem": "Based on the Breusch-Pagan test, Galli should conclude that:",
+              "choices": [
+                "there is no evidence of conditional heteroskedasticity",
+                "conditional heteroskedasticity is present, so she should use robust standard errors",
+                "the regression suffers from serial correlation"
+              ],
+              "answer": 1,
+              "explanation": "BP = n × R² = 60 × 0.18 = 10.8 > 7.81: si rifiuta l'ipotesi di omoschedasticità (homoskedasticity). Gli errori standard (standard error) vanno corretti con errori robusti (White); i coefficienti restano corretti."
+            },
+            {
+              "id": "l2-qm-4",
+              "difficulty": 2,
+              "stem": "The colleague's observations most likely indicate that the regression:",
+              "choices": [
+                "suffers from severe multicollinearity",
+                "does not suffer from significant multicollinearity",
+                "has omitted variable bias"
+              ],
+              "answer": 1,
+              "explanation": "Correlazioni basse tra regressori e coefficiente di MKT stabile quando si aggiungono variabili: nessun segnale di multicollinearità (multicollinearity). Le t basse di SMB e HML indicano semplicemente scarsa capacità esplicativa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "econ",
+      "title": "Cambi, crescita e regolamentazione",
+      "summary": "Mercato dei cambi e relazioni di parità internazionali, carry trade, determinanti di lungo periodo della crescita e regolamentazione dei mercati.",
+      "sections": [
+        {
+          "title": "Relazioni di parità",
+          "body": [
+            "Parità coperta (sempre vera per non arbitraggio (no-arbitrage)): F/S = (1 + i_prezzo)/(1 + i_base). Parità scoperta (uncovered interest rate parity): il cambio atteso si muove per compensare il differenziale di tassi; se valesse, il forward sarebbe una previsione corretta del futuro spot.",
+            "PPP relativa (purchasing power parity): la valuta con inflazione (inflation) più alta si deprezza della differenza di inflazione. Effetto Fisher internazionale: i differenziali di tasso nominale riflettono i differenziali di inflazione attesa se i tassi reali sono uguali."
+          ]
+        },
+        {
+          "title": "Carry trade e flussi",
+          "body": [
+            "Carry trade: indebitarsi nella valuta con tassi bassi e investire in quella con tassi alti. Funziona quando la parità scoperta non vale nel breve; è esposto a forti perdite nelle crisi (crash risk, rendimenti con asimmetria (skewness) negativa).",
+            "Bilancia dei pagamenti (balance of payments): un deficit di parte corrente (current account) va finanziato con afflussi di capitale. Mundell-Fleming: con alta mobilità dei capitali, politica monetaria (monetary policy) espansiva e fiscale restrittiva deprezzano la valuta."
+          ]
+        },
+        {
+          "title": "Crescita economica",
+          "body": [
+            "Growth accounting: crescita del PIL ≈ crescita della TFP + α × crescita del capitale + (1 - α) × crescita del lavoro. Il capitale ha rendimenti decrescenti; nel modello neoclassico la crescita di lungo periodo del reddito pro capite dipende dal progresso tecnico.",
+            "Teorie della crescita endogena: investimenti in capitale umano e R&S generano esternalità e rendimenti costanti. Convergenza assoluta e condizionata."
+          ]
+        }
+      ],
+      "formulas": [
+        "F(A/B) = S(A/B) × (1 + iA)/(1 + iB)",
+        "%ΔS(A/B) ≈ πA - πB (PPP relativa)",
+        "g(Y) = g(TFP) + α g(K) + (1 - α) g(L)"
+      ],
+      "pitfalls": [
+        "Pensare che la parità scoperta valga sempre nel breve periodo (è la base del carry trade).",
+        "Sbagliare la valuta base nei calcoli dei punti forward."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-ec-set1",
+          "vignette": "Marco Bassi, a currency strategist, gathers the following data. The spot rate is 1.2500 USD/GBP. One-year interest rates are 4.0% in the US and 5.0% in the UK. Expected one-year inflation is 2.5% in the US and 3.5% in the UK. Bassi believes uncovered interest rate parity does not hold over a one-year horizon and that the GBP will remain stable against the USD. A client proposes borrowing in USD and investing in one-year GBP deposits without hedging. Bassi also reviews a growth report for Country Z: labor's share of income is 60%, the labor force grows at 1%, the capital stock grows at 4% and total factor productivity grows at 1.5%.",
+          "questions": [
+            {
+              "id": "l2-ec-1",
+              "difficulty": 2,
+              "stem": "The one-year forward rate in USD/GBP is closest to:",
+              "choices": [
+                "1.2381",
+                "1.2500",
+                "1.2620"
+              ],
+              "answer": 0,
+              "explanation": "F = 1.25 × 1.04 / 1.05 = 1.2381. La sterlina, con il tasso più alto, quota a sconto a termine."
+            },
+            {
+              "id": "l2-ec-2",
+              "difficulty": 2,
+              "stem": "If Bassi's view that the GBP remains stable is correct, the client's unhedged trade will most likely earn approximately:",
+              "choices": [
+                "a loss of 1%",
+                "zero",
+                "a profit of about 1%"
+              ],
+              "answer": 2,
+              "explanation": "Carry trade: si paga il 4% in USD e si guadagna il 5% in GBP; se il cambio non si muove il guadagno è circa il differenziale, 1%."
+            },
+            {
+              "id": "l2-ec-3",
+              "difficulty": 2,
+              "stem": "According to relative purchasing power parity, over the next year the GBP is expected to:",
+              "choices": [
+                "depreciate against the USD by about 1%",
+                "appreciate against the USD by about 1%",
+                "remain unchanged against the USD"
+              ],
+              "answer": 0,
+              "explanation": "Inflazione (inflation) UK 3.5% contro US 2.5%: la valuta con inflazione più alta si deprezza di circa la differenza, 1%."
+            },
+            {
+              "id": "l2-ec-4",
+              "difficulty": 3,
+              "stem": "Using growth accounting, Country Z's expected GDP growth is closest to:",
+              "choices": [
+                "3.1%",
+                "3.7%",
+                "6.5%"
+              ],
+              "answer": 1,
+              "explanation": "g = 1.5% + 0.4 × 4% + 0.6 × 1% = 1.5% + 1.6% + 0.6% = 3.7%. La quota del capitale è 1 - 0.6 = 0.4."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "fsa",
+      "title": "Analisi di bilancio avanzata",
+      "summary": "Partecipazioni (attività finanziarie, metodo del patrimonio netto (equity method), consolidamento (consolidation)), piani pensionistici, operazioni estere, qualità degli utili (earnings quality) e analisi delle banche.",
+      "sections": [
+        {
+          "title": "Partecipazioni intersocietarie",
+          "body": [
+            "Meno del 20% circa (nessuna influenza significativa (significant influence)): attività finanziaria al fair value. Tra 20% e 50% (influenza significativa): metodo del patrimonio netto (equity), la partecipazione cresce con la quota di utile della partecipata e diminuisce con i dividendi (dividends) ricevuti. Controllo: consolidamento integrale con interessenze di minoranza (non-controlling interests); joint venture con il metodo del patrimonio netto.",
+            "Nel consolidamento il goodwill = prezzo pagato - fair value delle attività nette identificabili. Full goodwill (IFRS a scelta, US GAAP obbligatorio) contro partial goodwill (IFRS)."
+          ]
+        },
+        {
+          "title": "Piani pensionistici a benefici definiti",
+          "body": [
+            "Funded status = fair value degli asset del piano - obbligazione (DBO/PBO); se negativo è una passività (liabilities) netta. Il costo periodico include costo del servizio, interessi netti, rimisurazioni. Sotto IFRS service cost e net interest vanno a conto economico (income statement), le rimisurazioni in OCI; sotto US GAAP il rendimento atteso degli asset riduce il costo a conto economico.",
+            "Ipotesi chiave: tasso di sconto (discount rate) più alto riduce l'obbligazione; aumenti salariali attesi più alti la aumentano."
+          ]
+        },
+        {
+          "title": "Operazioni estere e qualità degli utili",
+          "body": [
+            "Metodo del cambio corrente (valuta funzionale (functional currency) locale): tutte le attività e passività al cambio di chiusura, differenze in OCI. Metodo temporale (valuta funzionale = di presentazione): poste monetarie al cambio corrente, non monetarie al cambio storico, differenze a conto economico.",
+            "Segnali di bassa qualità degli utili: accruals alti, ricavi che crescono più dei flussi di cassa, crediti che crescono più delle vendite, ricorrenti voci non ricorrenti. Banche: framework CAMELS (Capital, Asset quality, Management, Earnings, Liquidity, Sensitivity to market risk)."
+          ]
+        }
+      ],
+      "formulas": [
+        "Partecipazione (equity method) = costo + quota utili - quota dividendi",
+        "Goodwill = prezzo - FV attività nette identificabili",
+        "Funded status = FV asset del piano - obbligazione"
+      ],
+      "pitfalls": [
+        "Registrare i dividendi della collegata come ricavo invece di ridurre la partecipazione.",
+        "Confondere metodo temporale (differenze a conto economico) e metodo del cambio corrente (OCI)."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-fsa-set1",
+          "vignette": "Delta Industrial acquired 30% of Orion Components at the beginning of the year for $300 million, obtaining significant influence. During the year Orion reported net income of $100 million and paid dividends of $40 million. Delta also holds a 10% stake in Vega Corp, classified at fair value through profit or loss. At year-end, Delta's defined benefit plan had plan assets with a fair value of $820 million and a defined benefit obligation of $900 million. Delta's analyst, Sara Monti, notes that over the past three years Delta's receivables grew by 45% while revenue grew by 12%, and operating cash flow has been consistently below net income. Delta reports under IFRS.",
+          "questions": [
+            {
+              "id": "l2-fsa-1",
+              "difficulty": 2,
+              "stem": "At year-end, the carrying amount of Delta's investment in Orion is closest to:",
+              "choices": [
+                "$300 million",
+                "$318 million",
+                "$330 million"
+              ],
+              "answer": 1,
+              "explanation": "Metodo del patrimonio netto (equity method): 300 + 30% × 100 - 30% × 40 = 300 + 30 - 12 = 318. 330 dimentica che i dividendi (dividends) riducono la partecipazione."
+            },
+            {
+              "id": "l2-fsa-2",
+              "difficulty": 2,
+              "stem": "The funded status of Delta's pension plan is best described as:",
+              "choices": [
+                "a net pension asset of $80 million",
+                "a net pension liability of $80 million",
+                "a net pension liability of $900 million"
+              ],
+              "answer": 1,
+              "explanation": "Funded status = 820 - 900 = -80: il piano è sottofinanziato e Delta riporta una passività (liabilities) netta di 80 milioni."
+            },
+            {
+              "id": "l2-fsa-3",
+              "difficulty": 2,
+              "stem": "Under IFRS, remeasurements of Delta's net pension liability are recognized in:",
+              "choices": [
+                "profit or loss",
+                "other comprehensive income",
+                "retained earnings directly, bypassing comprehensive income"
+              ],
+              "answer": 1,
+              "explanation": "Sotto IFRS costo del servizio e interessi netti vanno a conto economico (income statement); le rimisurazioni (utili e perdite attuariali, rendimento degli asset diverso dal tasso di sconto (discount rate)) vanno in OCI e non vengono riclassificate."
+            },
+            {
+              "id": "l2-fsa-4",
+              "difficulty": 3,
+              "stem": "Monti's observations about receivables and operating cash flow most likely indicate:",
+              "choices": [
+                "high-quality, conservative earnings",
+                "possible aggressive revenue recognition and lower earnings quality",
+                "improving working capital management"
+              ],
+              "answer": 1,
+              "explanation": "Crediti che crescono molto più dei ricavi e CFO stabilmente sotto l'utile sono segnali classici di accruals elevati e possibile riconoscimento anticipato dei ricavi: qualità degli utili (earnings quality) bassa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "corp",
+      "title": "Emittenti: payout, ESG, costo del capitale e ristrutturazioni",
+      "summary": "Dividendi (dividends) e riacquisti di azioni (share repurchase), considerazioni ESG, costo del capitale (cost of capital) in contesti avanzati (rischio paese, imprese private) e operazioni di ristrutturazione.",
+      "sections": [
+        {
+          "title": "Dividendi e riacquisti",
+          "body": [
+            "Un riacquisto finanziato con debito è accrescitivo per l'EPS se l'earnings yield (E/P) supera il costo del debito (cost of debt) dopo le imposte. Un riacquisto al valore di mercato superiore al book value per azione riduce il BVPS.",
+            "Teorie: irrilevanza dei dividendi (MM), bird-in-hand, effetto fiscale, segnalazione e costi d'agenzia. Le imprese preferiscono dividendi stabili e usano i riacquisti per distribuire flussi variabili."
+          ]
+        },
+        {
+          "title": "Costo del capitale avanzato",
+          "body": [
+            "Per i mercati emergenti si aggiunge un country risk premium al costo dell'equity (cost of equity). Per le imprese private si usa il build-up method: rf + premio di mercato + premio dimensionale + premio specifico. Il beta di imprese comparabili va scorporato dalla leva (unlevered) e poi ricalcolato con la leva target.",
+            "ESG: i fattori materiali (es. emissioni, governance) incidono su flussi attesi e rischio; si integrano nelle stime invece di trattarli come un vincolo separato."
+          ]
+        },
+        {
+          "title": "Ristrutturazioni",
+          "body": [
+            "Investimenti (acquisizioni, joint venture), disinvestimenti (vendite, spin-off, equity carve-out) e ristrutturazioni (cambi di leva, riorganizzazioni). Le valutazioni usano comparabili di società, comparabili di transazioni (includono il premio di controllo (control premium)) e DCF."
+          ]
+        }
+      ],
+      "formulas": [
+        "Riacquisto accrescitivo se E/P > kd × (1 - t)",
+        "β_unlevered = β_levered / [1 + (1 - t) D/E]"
+      ],
+      "pitfalls": [
+        "Pensare che un riacquisto aumenti sempre l'EPS.",
+        "Usare il beta di un comparabile senza aggiustarlo per la diversa leva."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-corp-set1",
+          "vignette": "Helix Manufacturing has net income of $10 million and 5 million shares outstanding, trading at $40 per share. The board is considering repurchasing 500,000 shares at the market price, financed with new debt at a pre-tax cost of 5.33%. Helix's tax rate is 25%. Helix's book value per share is $25. The CFO also wants to estimate the cost of equity for a new subsidiary in an emerging market: the global risk-free rate is 3%, the subsidiary's beta is 1.1, the equity risk premium is 5.5% and the country risk premium is 2.5%.",
+          "questions": [
+            {
+              "id": "l2-corp-1",
+              "difficulty": 3,
+              "stem": "After the repurchase, Helix's EPS will be closest to:",
+              "choices": [
+                "$1.96",
+                "$2.00",
+                "$2.04"
+              ],
+              "answer": 2,
+              "explanation": "Debito = 500,000 × 40 = 20 milioni; costo dopo le imposte = 5.33% × 0.75 ≈ 4% → 0.8 milioni. EPS = (10 - 0.8)/4.5 = 2.04. È accrescitivo perché l'earnings yield (2/40 = 5%) supera il 4%."
+            },
+            {
+              "id": "l2-corp-2",
+              "difficulty": 2,
+              "stem": "The repurchase will most likely cause Helix's book value per share to:",
+              "choices": [
+                "increase",
+                "decrease",
+                "remain unchanged"
+              ],
+              "answer": 1,
+              "explanation": "Riacquistare a 40, sopra il BVPS di 25, toglie dal patrimonio più del valore contabile per azione: il BVPS scende."
+            },
+            {
+              "id": "l2-corp-3",
+              "difficulty": 2,
+              "stem": "The subsidiary's cost of equity is closest to:",
+              "choices": [
+                "9.05%",
+                "11.55%",
+                "11.80%"
+              ],
+              "answer": 1,
+              "explanation": "ke = 3% + 1.1 × 5.5% + 2.5% = 3% + 6.05% + 2.5% = 11.55%. 9.05% dimentica il premio per il rischio paese (country risk premium)."
+            },
+            {
+              "id": "l2-corp-4",
+              "difficulty": 2,
+              "stem": "A debt-financed repurchase is accretive to EPS when:",
+              "choices": [
+                "the earnings yield exceeds the after-tax cost of debt",
+                "the P/E ratio exceeds the after-tax cost of debt",
+                "the share price exceeds book value per share"
+              ],
+              "answer": 0,
+              "explanation": "Ogni azione riacquistata elimina utili pari all'earnings yield sul prezzo pagato; il costo è l'interesse dopo le imposte. Se E/P è maggiore del costo, l'EPS sale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "equity",
+      "title": "Valutazione azionaria",
+      "summary": "Modelli DDM multistadio, free cash flow (FCFF e FCFE), multipli (multiples), residual income e valutazione di imprese private. È uno dei temi più pesanti del Livello II.",
+      "sections": [
+        {
+          "title": "Modelli a dividendi",
+          "body": [
+            "Gordon: V0 = D0(1 + g)/(r - g). Multistadio: sconta i dividendi (dividends) del periodo di crescita alta, poi il valore terminale (terminal value) calcolato con Gordon all'inizio della crescita stabile. Modello H: V0 = [D0(1 + gL) + D0 × H × (gS - gL)]/(r - gL).",
+            "Tasso di crescita sostenibile (sustainable growth rate) g = b × ROE, con b = tasso di ritenzione (retention rate). PVGO = V0 - E1/r: la parte del prezzo dovuta alle opportunità di crescita."
+          ]
+        },
+        {
+          "title": "Free cash flow",
+          "body": [
+            "FCFF = NI + NCC + Int(1 - t) - FCInv - WCInv, oppure CFO + Int(1 - t) - FCInv. FCFE = FCFF - Int(1 - t) + prestiti netti. FCFF si sconta al WACC e dà il valore dell'impresa; FCFE si sconta al costo dell'equity (cost of equity) e dà il valore delle azioni.",
+            "I flussi di cassa liberi (free cash flows) sono preferibili ai dividendi quando l'impresa non paga dividendi o li paga in modo non legato alla redditività."
+          ]
+        },
+        {
+          "title": "Residual income e multipli",
+          "body": [
+            "Residual income = utile - costo del capitale (cost of capital) proprio = EPS - r × B(t-1). V0 = B0 + somma dei RI scontati. Utile quando i flussi sono negativi o difficili da stimare; rilevante l'ipotesi sulla persistenza del RI (fattore ω).",
+            "Multipli: P/E, P/B, P/S, EV/EBITDA, giustificati dai fondamentali (es. P/B giustificato = (ROE - g)/(r - g)). Confronto con comparabili: attenzione a differenze contabili e di ciclo."
+          ]
+        }
+      ],
+      "formulas": [
+        "FCFF = NI + NCC + Int(1 - t) - FCInv - WCInv",
+        "FCFE = FCFF - Int(1 - t) + Net borrowing",
+        "RI_t = E_t - r × B_(t-1)",
+        "g = b × ROE",
+        "P/B giustificato = (ROE - g)/(r - g)"
+      ],
+      "pitfalls": [
+        "Scontare l'FCFE al WACC o l'FCFF al costo dell'equity.",
+        "Dimenticare di scontare il valore terminale dal momento in cui è calcolato.",
+        "Sommare gli interessi lordi invece che al netto delle imposte nell'FCFF."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-eq-set1",
+          "vignette": "Elena Russo is valuing Brightwave Inc. For the coming year she forecasts: net income $200 million, depreciation $50 million, interest expense $40 million, tax rate 25%, fixed capital investment $80 million, working capital investment $20 million and net borrowing of $10 million. Brightwave just paid a dividend of $1.00 per share; Russo expects dividends to grow at 10% for two years and then at 4% indefinitely. The required return on equity is 9%. For a second company, Calder Ltd, the current book value per share is $20, expected EPS next year is $3.00, and the required return on equity is 10%.",
+          "questions": [
+            {
+              "id": "l2-eq-1",
+              "difficulty": 2,
+              "stem": "Brightwave's FCFF for the coming year is closest to:",
+              "choices": [
+                "$150 million",
+                "$180 million",
+                "$190 million"
+              ],
+              "answer": 1,
+              "explanation": "FCFF = 200 + 50 + 40 × 0.75 - 80 - 20 = 180 milioni. 150 dimentica di aggiungere gli interessi al netto delle imposte."
+            },
+            {
+              "id": "l2-eq-2",
+              "difficulty": 2,
+              "stem": "Brightwave's FCFE for the coming year is closest to:",
+              "choices": [
+                "$140 million",
+                "$160 million",
+                "$200 million"
+              ],
+              "answer": 1,
+              "explanation": "FCFE = FCFF - Int(1 - t) + prestiti netti = 180 - 30 + 10 = 160 milioni."
+            },
+            {
+              "id": "l2-eq-3",
+              "difficulty": 4,
+              "stem": "Using the two-stage dividend discount model, Brightwave's value per share is closest to:",
+              "choices": [
+                "$20.80",
+                "$23.21",
+                "$25.17"
+              ],
+              "answer": 1,
+              "explanation": "D1 = 1.10, D2 = 1.21, D3 = 1.2584. Valore terminale (terminal value) a fine anno 2 = 1.2584/(0.09 - 0.04) = 25.168. V0 = 1.10/1.09 + (1.21 + 25.168)/1.09² = 1.009 + 22.202 = 23.21. 25.17 è il valore terminale non scontato."
+            },
+            {
+              "id": "l2-eq-4",
+              "difficulty": 2,
+              "stem": "Calder's expected residual income per share for next year is closest to:",
+              "choices": [
+                "$1.00",
+                "$2.00",
+                "$3.00"
+              ],
+              "answer": 0,
+              "explanation": "RI = EPS - r × B0 = 3.00 - 0.10 × 20 = 1.00. Il residual income misura l'utile in eccesso rispetto al costo del capitale (cost of capital) proprio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "fixed",
+      "title": "Reddito fisso: curva, opzioni e credito",
+      "summary": "Struttura a termine (term structure) e arbitrage-free valuation, alberi binomiali, obbligazioni (bonds) con opzioni (options) e OAS, modelli di credito e credit default swap.",
+      "sections": [
+        {
+          "title": "Curve e forward",
+          "body": [
+            "Dai tassi spot (spot rates) si ricavano i forward: (1 + S2)² = (1 + S1)(1 + f1,1). Con curva crescente i forward stanno sopra gli spot. Strategia riding the yield curve: con curva inclinata e stabile, comprare scadenze più lunghe dell'orizzonte rende più del rendimento del titolo con scadenza pari all'orizzonte.",
+            "Le teorie della struttura a termine: aspettative pure, preferenza per la liquidità, segmentazione e habitat preferito. Swap spread = tasso swap - rendimento del titolo di Stato (government bond) con la stessa scadenza."
+          ]
+        },
+        {
+          "title": "Obbligazioni con opzioni",
+          "body": [
+            "Valore callable = valore senza opzione - valore della call; valore putable = valore senza opzione + valore della put. Con un albero binomiale (binomial tree) si sconta a ritroso e in ogni nodo il valore della callable è il minimo tra valore calcolato e prezzo di call.",
+            "OAS = spread costante sull'albero che eguaglia il prezzo di mercato, dopo aver tolto il valore dell'opzione. Per una callable OAS < Z-spread. Più volatilità aumenta il valore delle opzioni: abbassa il prezzo delle callable e alza quello delle putable."
+          ]
+        },
+        {
+          "title": "Credito e CDS",
+          "body": [
+            "Modelli strutturali (l'equity come call sugli asset dell'impresa) e in forma ridotta (default come evento casuale con intensità). CVA = somma delle perdite attese scontate; il credit spread approssima la perdita attesa (expected loss) annua.",
+            "CDS: l'acquirente di protezione paga un premio periodico e riceve la LGD in caso di evento di credito. Se lo spread del CDS supera la cedola (coupon) standard l'acquirente paga un upfront ≈ (spread - cedola) × duration del CDS."
+          ]
+        }
+      ],
+      "formulas": [
+        "(1 + S2)² = (1 + S1)(1 + f1,1)",
+        "Callable = straight - call; Putable = straight + put",
+        "Upfront CDS ≈ (spread CDS - cedola) × duration CDS"
+      ],
+      "pitfalls": [
+        "Dimenticare che più volatilità riduce il prezzo delle callable.",
+        "Confondere chi paga l'upfront nel CDS (l'acquirente se lo spread supera la cedola)."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-fi-set1",
+          "vignette": "Roberto Lanza manages a fixed-income portfolio. The current one-year spot rate is 2.00% and the two-year spot rate is 3.00% (annual compounding). He is evaluating a two-year, 4% annual-coupon, option-free government bond. He also analyzes a callable corporate bond whose Z-spread is 150 bps and whose option-adjusted spread is 110 bps. Lanza expects interest rate volatility to increase. Finally, he considers buying 5-year CDS protection on an issuer: the CDS spread is 200 bps, the standard coupon is 100 bps and the CDS duration is 4.5.",
+          "questions": [
+            {
+              "id": "l2-fi-1",
+              "difficulty": 2,
+              "stem": "The one-year forward rate one year from now is closest to:",
+              "choices": [
+                "2.50%",
+                "3.00%",
+                "4.01%"
+              ],
+              "answer": 2,
+              "explanation": "1.03² = 1.02 × (1 + f) → f = 1.0609/1.02 - 1 = 4.01%. La media 2.50% non è corretta: i tassi vanno composti."
+            },
+            {
+              "id": "l2-fi-2",
+              "difficulty": 2,
+              "stem": "The arbitrage-free value of the two-year 4% bond per 100 of par is closest to:",
+              "choices": [
+                "100.00",
+                "101.95",
+                "103.88"
+              ],
+              "answer": 1,
+              "explanation": "V = 4/1.02 + 104/1.03² = 3.92 + 98.03 = 101.95: ogni flusso è scontato al proprio tasso spot (spot rates)."
+            },
+            {
+              "id": "l2-fi-3",
+              "difficulty": 3,
+              "stem": "If interest rate volatility increases as Lanza expects, the price of the callable bond will most likely:",
+              "choices": [
+                "increase",
+                "decrease",
+                "remain unchanged"
+              ],
+              "answer": 1,
+              "explanation": "Più volatilità aumenta il valore della call detenuta dall'emittente; poiché callable = straight - call, il prezzo dell'obbligazione (bonds) scende. La differenza Z-spread - OAS (40 bps) misura il costo dell'opzione (options)."
+            },
+            {
+              "id": "l2-fi-4",
+              "difficulty": 3,
+              "stem": "To buy CDS protection, Lanza will most likely:",
+              "choices": [
+                "receive an upfront payment of about 4.5% of notional",
+                "pay an upfront payment of about 4.5% of notional",
+                "pay an upfront payment of about 9.0% of notional"
+              ],
+              "answer": 1,
+              "explanation": "Lo spread (200 bps) supera la cedola (coupon) standard (100 bps): l'acquirente compensa pagando un upfront ≈ (2% - 1%) × 4.5 = 4.5% del nozionale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "deriv",
+      "title": "Pricing e valutazione dei derivati",
+      "summary": "Forward e futures su azioni, obbligazioni (bonds) e valute; swap; opzioni (options) con il modello binomiale e Black-Scholes-Merton; greche e coperture (hedging).",
+      "sections": [
+        {
+          "title": "Forward e swap",
+          "body": [
+            "Forward su azione con dividendi (dividends): F0 = (S0 - PV(dividendi)) × (1 + r)^T. Valore della posizione lunga durante la vita: Vt = [St - PV(dividendi residui (residuals))] - F0/(1 + r)^(T - t).",
+            "Tasso fisso di uno swap: r_swap = (1 - PV_n)/(PV_1 + ... + PV_n), dove PV_i sono i fattori di sconto. Il valore di uno swap dopo l'inizio = differenza tra i tassi fissi × somma dei fattori di sconto residui × nozionale."
+          ]
+        },
+        {
+          "title": "Futures su obbligazioni e valute",
+          "body": [
+            "Futures su titoli di Stato (government bond): si consegna il titolo cheapest-to-deliver; il prezzo del futures si aggiusta con un fattore di conversione: F0 = [(1 + r)^T × (S0 + AI0) - AIT - FVCI] / CF, dove AI sono i ratei e FVCI il valore futuro (future value) delle cedole (coupon) incassate.",
+            "Forward su valute: F(f/d) = S(f/d) × (1 + r_f)^T/(1 + r_d)^T. Il valore di un forward valutario durante la vita è la differenza tra il nuovo forward per la stessa scadenza e quello originario, scontata al tasso della valuta di prezzo."
+          ]
+        },
+        {
+          "title": "Opzioni: BSM e greche",
+          "body": [
+            "BSM: c = S N(d1) - X e^(-rT) N(d2). N(d1) è il delta della call; N(d2) è la probabilità neutrale al rischio (risk-neutral probability) di esercizio. Delta della put = N(d1) - 1.",
+            "Delta hedging: per coprire una posizione corta in call si comprano delta × numero di opzioni azioni; va ribilanciato perché il delta cambia (gamma). Vega: sensibilità alla volatilità, positiva per call e put lunghe. Theta: perdita di valore col tempo."
+          ]
+        },
+        {
+          "title": "Modello binomiale a più periodi",
+          "body": [
+            "Si costruisce l'albero dei prezzi, si calcolano i payoff a scadenza e si scontano a ritroso con le probabilità neutrali al rischio π = (1 + r - d)/(u - d). Per le opzioni americane in ogni nodo si confronta il valore di continuazione con quello di esercizio immediato.",
+            "Una put americana su un titolo senza dividendi può valere più dell'europea (esercizio anticipato quando è molto in the money); una call americana su un titolo senza dividendi non si esercita mai in anticipo."
+          ]
+        }
+      ],
+      "formulas": [
+        "F0 = (S0 - PV(D)) × (1 + r)^T",
+        "r_swap = (1 - PV_n)/Σ PV_i",
+        "Azioni per coprire = delta × numero opzioni",
+        "Delta put = Delta call - 1"
+      ],
+      "pitfalls": [
+        "Dimenticare di sottrarre il valore attuale (present value) dei dividendi prima di capitalizzare (capitalize).",
+        "Confondere N(d1) (delta) e N(d2) (probabilità di esercizio)."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-dv-set1",
+          "vignette": "Giulia Marino trades derivatives for a hedge fund. A stock trades at $50 and will pay a $1.00 dividend in six months. The annual risk-free rate is 4% (annual compounding). Marino wants to price a one-year forward on the stock. She is also pricing a three-year annual-pay interest rate swap; the discount factors for years 1, 2 and 3 are 0.98, 0.95 and 0.91. Finally, the fund has sold 1,000 call options on another stock; each option has a delta of 0.60 and is written on one share.",
+          "questions": [
+            {
+              "id": "l2-dv-1",
+              "difficulty": 3,
+              "stem": "The no-arbitrage price of the one-year forward is closest to:",
+              "choices": [
+                "$50.96",
+                "$50.98",
+                "$52.00"
+              ],
+              "answer": 1,
+              "explanation": "PV(dividendo (dividends)) = 1/1.04^0.5 = 0.981. F0 = (50 - 0.981) × 1.04 = 50.98. 52.00 ignora il dividendo."
+            },
+            {
+              "id": "l2-dv-2",
+              "difficulty": 3,
+              "stem": "The fixed rate on the three-year swap is closest to:",
+              "choices": [
+                "3.00%",
+                "3.17%",
+                "3.25%"
+              ],
+              "answer": 1,
+              "explanation": "r = (1 - 0.91)/(0.98 + 0.95 + 0.91) = 0.09/2.84 = 3.17%."
+            },
+            {
+              "id": "l2-dv-3",
+              "difficulty": 2,
+              "stem": "To delta-hedge the short call position, Marino should:",
+              "choices": [
+                "buy 600 shares",
+                "sell 600 shares",
+                "buy 1,000 shares"
+              ],
+              "answer": 0,
+              "explanation": "Una call corta ha delta negativo (-0.6 × 1,000 = -600): per neutralizzarlo si comprano 600 azioni."
+            },
+            {
+              "id": "l2-dv-4",
+              "difficulty": 2,
+              "stem": "If the stock price rises, the delta of the calls will most likely:",
+              "choices": [
+                "increase, so Marino will need to buy more shares",
+                "decrease, so Marino will need to sell shares",
+                "remain unchanged"
+              ],
+              "answer": 0,
+              "explanation": "Il gamma di una call è positivo: quando il prezzo sale il delta aumenta verso 1. La copertura (hedging) va ribilanciata comprando altre azioni."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "alt",
+      "title": "Immobiliare, private equity e materie prime",
+      "summary": "Valutazione degli immobili diretti e dei REIT, valutazione e struttura del private equity, rendimenti dei futures sulle materie prime (commodities).",
+      "sections": [
+        {
+          "title": "Immobiliare e REIT",
+          "body": [
+            "Metodo della capitalizzazione: valore = NOI1/cap rate; il cap rate ≈ rendimento richiesto (required return) - crescita. DCF con valore terminale (terminal value) per immobili con flussi irregolari. Rapporto loan-to-value e DSCR per il finanziamento.",
+            "REIT: FFO = utile netto (net income) + ammortamenti (depreciation) - plusvalenze da vendita di immobili; AFFO = FFO - spese in conto capitale ricorrenti (e aggiustamenti per affitti lineari). I multipli (multiples) P/FFO e P/AFFO sostituiscono il P/E; il NAVPS valuta gli immobili a mercato."
+          ]
+        },
+        {
+          "title": "Private equity",
+          "body": [
+            "Metodo del venture capital: valore post-money = valore di uscita scontato al tasso target; quota necessaria = investimento / post-money. Indicatori di performance: IRR, MOIC, DPI (distribuito/versato), RVPI (residuo/versato), TVPI = DPI + RVPI.",
+            "Fonti di valore nei buyout: miglioramenti operativi, leva, multipli d'uscita più alti. Rischi: illiquidità (illiquidity), leva, rischio di uscita."
+          ]
+        },
+        {
+          "title": "Materie prime",
+          "body": [
+            "Rendimento totale di un futures collateralizzato = rendimento di prezzo (variazione dello spot) + roll yield + rendimento del collaterale. La teoria dell'assicurazione (Keynes) spiega la backwardation con i produttori che pagano per coprirsi; la teoria della hedging pressure aggiunge i consumatori; la teoria dello stoccaggio lega la forma della curva a costi di magazzino e convenience yield.",
+            "Gli indici di materie prime differiscono per ponderazione (produzione, liquidità, pesi fissi), ribilanciamento (rebalancing) e scelta delle scadenze: queste scelte cambiano roll yield e rischio."
+          ]
+        }
+      ],
+      "formulas": [
+        "FFO = NI + ammortamenti - plusvalenze",
+        "AFFO = FFO - capex ricorrente",
+        "TVPI = DPI + RVPI"
+      ],
+      "pitfalls": [
+        "Includere le plusvalenze da vendita di immobili nell'FFO.",
+        "Usare il P/E per i REIT, distorto dagli ammortamenti."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-alt-set1",
+          "vignette": "Fabio Conte analyzes Meridian REIT. For the latest year Meridian reported net income of $50 million, depreciation of real estate of $30 million, a gain on the sale of a property of $10 million and recurring capital expenditures of $15 million. Meridian has 20 million shares trading at $45. Conte also reviews a private equity fund: limited partners have paid in $100 million, received distributions of $60 million, and the fund's remaining NAV is $90 million.",
+          "questions": [
+            {
+              "id": "l2-alt-1",
+              "difficulty": 2,
+              "stem": "Meridian's funds from operations (FFO) is closest to:",
+              "choices": [
+                "$70 million",
+                "$80 million",
+                "$90 million"
+              ],
+              "answer": 0,
+              "explanation": "FFO = 50 + 30 - 10 = 70 milioni: si aggiungono gli ammortamenti (depreciation) e si toglie la plusvalenza, non ricorrente."
+            },
+            {
+              "id": "l2-alt-2",
+              "difficulty": 2,
+              "stem": "Meridian's price-to-AFFO multiple is closest to:",
+              "choices": [
+                "12.9x",
+                "16.4x",
+                "18.0x"
+              ],
+              "answer": 1,
+              "explanation": "AFFO = 70 - 15 = 55 milioni → 2.75 per azione. P/AFFO = 45/2.75 = 16.4x. 12.9x usa l'FFO (3.50 per azione)."
+            },
+            {
+              "id": "l2-alt-3",
+              "difficulty": 2,
+              "stem": "The private equity fund's TVPI is closest to:",
+              "choices": [
+                "0.60x",
+                "0.90x",
+                "1.50x"
+              ],
+              "answer": 2,
+              "explanation": "TVPI = DPI + RVPI = 60/100 + 90/100 = 1.50x. 0.60x è solo il DPI."
+            },
+            {
+              "id": "l2-alt-4",
+              "difficulty": 2,
+              "stem": "Compared with P/E, P/FFO is preferred for REITs mainly because:",
+              "choices": [
+                "real estate depreciation can understate the economic earnings of property",
+                "REITs do not pay taxes",
+                "FFO includes gains on property sales"
+              ],
+              "answer": 0,
+              "explanation": "Gli immobili spesso mantengono o aumentano valore mentre in bilancio vengono ammortizzati: l'utile contabile sottostima la redditività economica. L'FFO esclude anche le plusvalenze."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "pm",
+      "title": "Gestione di portafoglio: fattori, rischio e gestione attiva",
+      "summary": "Modelli multifattoriali e APT, misurazione del rischio di mercato (VaR e stress test), backtesting e simulazione, gestione attiva e legge fondamentale (fundamental law of active management).",
+      "sections": [
+        {
+          "title": "Modelli multifattoriali",
+          "body": [
+            "APT: E(R) = rf + Σ βi λi, dove λi sono i premi per fattore. Modelli macroeconomici (sorprese di crescita e inflazione (inflation)), fondamentali (caratteristiche come value e size) e statistici. Servono per attribuire rendimento e rischio attivi e per costruire portafogli con esposizioni volute."
+          ]
+        },
+        {
+          "title": "VaR e stress test",
+          "body": [
+            "VaR parametrico = (z × σ - μ) × valore del portafoglio; a 5% unilaterale z = 1.645, a 1% z = 2.33. Il VaR storico usa la distribuzione osservata; quello Monte Carlo simula scenari.",
+            "Limiti del VaR: non dice quanto si perde oltre la soglia (si usa l'expected shortfall o CVaR), sottovaluta le code e dipende dal periodo di stima. Stress test e analisi di scenario completano il quadro."
+          ]
+        },
+        {
+          "title": "Gestione attiva e backtesting",
+          "body": [
+            "Legge fondamentale: IR ≈ TC × IC × √BR, dove IC è la correlazione (correlation) tra previsioni e risultati, BR il numero di scommesse indipendenti, TC il coefficiente di trasferimento (vincoli di implementazione). Il rendimento attivo (active return) atteso = IR × rischio attivo (active risk).",
+            "Backtesting: attenzione a survivorship bias, look-ahead bias (usare dati non disponibili all'epoca) e data snooping. Si usano rolling window e test fuori campione."
+          ]
+        }
+      ],
+      "formulas": [
+        "E(R) = rf + Σ βi λi",
+        "VaR = z × σ × V (μ = 0)",
+        "IR = TC × IC × √BR"
+      ],
+      "pitfalls": [
+        "Interpretare il VaR come perdita massima possibile.",
+        "Dimenticare il coefficiente di trasferimento nella legge fondamentale."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-pm-set1",
+          "vignette": "Chiara Leone uses a two-factor model for a stock: sensitivity of 1.2 to a market factor with a risk premium of 4% and sensitivity of 0.5 to an inflation factor with a premium of 2%. The risk-free rate is 3%. She also estimates the one-day VaR of a $10 million portfolio whose daily returns have a mean of zero and a standard deviation of 1.5%. Her colleague runs a quantitative strategy with an information coefficient of 0.05, 100 independent bets per year and a transfer coefficient of 0.8. In the colleague's backtest, earnings data were assumed available on the fiscal quarter-end date, although companies report them several weeks later.",
+          "questions": [
+            {
+              "id": "l2-pm-1",
+              "difficulty": 2,
+              "stem": "The stock's expected return under the two-factor model is closest to:",
+              "choices": [
+                "7.8%",
+                "8.8%",
+                "9.8%"
+              ],
+              "answer": 1,
+              "explanation": "E(R) = 3% + 1.2 × 4% + 0.5 × 2% = 3% + 4.8% + 1.0% = 8.8%."
+            },
+            {
+              "id": "l2-pm-2",
+              "difficulty": 2,
+              "stem": "The one-day 5% VaR of the portfolio is closest to:",
+              "choices": [
+                "$150,000",
+                "$246,750",
+                "$349,500"
+              ],
+              "answer": 1,
+              "explanation": "VaR = 1.645 × 1.5% × 10,000,000 = 246,750. 349,500 usa z = 2.33 (1%)."
+            },
+            {
+              "id": "l2-pm-3",
+              "difficulty": 3,
+              "stem": "The colleague's expected information ratio is closest to:",
+              "choices": [
+                "0.05",
+                "0.40",
+                "0.50"
+              ],
+              "answer": 1,
+              "explanation": "IR = TC × IC × √BR = 0.8 × 0.05 × √100 = 0.40. 0.50 ignora il coefficiente di trasferimento (transfer coefficient)."
+            },
+            {
+              "id": "l2-pm-4",
+              "difficulty": 2,
+              "stem": "The assumption about earnings data in the backtest most likely introduces:",
+              "choices": [
+                "survivorship bias",
+                "look-ahead bias",
+                "data snooping bias"
+              ],
+              "answer": 1,
+              "explanation": "Usare dati che all'epoca non erano ancora disponibili (gli utili sono pubblicati settimane dopo la chiusura del trimestre) è look-ahead bias: gonfia i risultati del backtest."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

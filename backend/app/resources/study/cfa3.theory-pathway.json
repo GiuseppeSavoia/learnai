@@ -1,0 +1,73 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "pathway",
+      "sections": [
+        {
+          "title": "Costi di negoziazione e implementation shortfall",
+          "body": [
+            "Costi espliciti: commissioni, tasse, commissioni di borsa. Impliciti: spread denaro-lettera, impatto di mercato (market impact: il proprio ordine muove il prezzo), ritardo (delay: il prezzo si muove tra la decisione e l'invio), costo opportunità (parte dell'ordine non eseguita). Gli impliciti sono di solito più grandi e difficili da misurare.",
+            "Implementation shortfall (IS): differenza tra il rendimento di un portafoglio cartaceo eseguito al prezzo di decisione senza costi e il portafoglio reale. Componenti: costo di ritardo = quantità eseguita × (prezzo all'arrivo - prezzo di decisione); costo di esecuzione (execution cost) = quantità eseguita × (prezzo medio di esecuzione - prezzo all'arrivo); costo opportunità = quantità non eseguita × (prezzo finale o di cancellazione - prezzo di decisione); commissioni.",
+            "Esempio: decisione di comprare 10,000 azioni a 50. L'ordine arriva al mercato quando il prezzo è 50.20; si comprano 8,000 azioni a un prezzo medio di 50.40 con commissioni di 0.02 per azione; il resto viene annullato con chiusura a 51. Ritardo 8,000 × 0.20 = 1,600; esecuzione 8,000 × 0.20 = 1,600; opportunità 2,000 × 1 = 2,000; commissioni 160. IS totale 5,360, cioè 1.07% dei 500,000 del portafoglio cartaceo.",
+            "Altri parametri di riferimento: VWAP (prezzo medio ponderato per i volumi della giornata: facile da battere ritardando, manipolabile), prezzo di chiusura, prezzo di arrivo (arrival price). Pre-trade: stima dei costi con modelli (dimensione rispetto al volume, volatilità, spread). Post-trade: confronto con le stime.",
+            "Analisi dei costi di transazione: l'IS collega la negoziazione alle decisioni del gestore; ritardi nell'invio degli ordini sono un costo della struttura, non del trader."
+          ]
+        },
+        {
+          "title": "Strategie di esecuzione e mercati elettronici",
+          "body": [
+            "Fattori della strategia: dimensione dell'ordine rispetto al volume medio, urgenza (l'informazione alla base perde valore rapidamente?), liquidità e volatilità del titolo, rischio di prezzo durante l'esecuzione, obiettivo del gestore. Compromesso del trader: eseguire velocemente aumenta l'impatto di mercato; eseguire lentamente aumenta il rischio di prezzo e il rischio di opportunità.",
+            "Algoritmi: programmati (scheduled: VWAP, TWAP, percentuale del volume (POV); adatti a ordini grandi rispetto al volume con bassa urgenza), di ricerca di liquidità (liquidity-seeking: cercano blocchi nelle dark pool e in più sedi), al prezzo d'arrivo (arrival price: eseguono di più all'inizio per ridurre il rischio rispetto al prezzo di decisione), dinamici in base al mercato. Esecuzione manuale e tramite broker per ordini molto grandi o titoli illiquidi; operazioni di portafoglio (program trades) per ribilanciamenti.",
+            "Esempio di scelta: ordine pari al 30% del volume giornaliero di un titolo poco liquido, alfa che svanisce lentamente → algoritmo programmato su più giorni o ricerca di liquidità con blocchi; ordine piccolo con informazione che svanisce rapidamente → esecuzione aggressiva immediata.",
+            "Mercati elettronici: frammentazione tra borse, sistemi alternativi e dark pool; negoziazione ad alta frequenza (high-frequency trading): fornisce liquidità ma può ritirarla nei momenti di stress; pratiche abusive (spoofing, layering). Miglior esecuzione (best execution): obbligo di cercare il miglior risultato complessivo (prezzo, costi, velocità, probabilità di esecuzione), con politiche scritte e controlli.",
+            "Valutazione della negoziazione: confronti con benchmark coerenti con la strategia (non giudicare con il VWAP un trader a cui si chiede urgenza), analisi per broker e per algoritmo, governance con comitati di negoziazione."
+          ]
+        },
+        {
+          "title": "Investitori istituzionali: obiettivi e vincoli",
+          "body": [
+            "Piani pensionistici a benefici definiti (defined benefit pension plan): obiettivo coprire le passività (liabilities); tolleranza al rischio (risk tolerance) legata a grado di finanziamento (funded status), solidità e correlazione (correlation) dello sponsor, età dei beneficiari (piani chiusi e maturi → più LDI). Piani a contribuzione definita: il rischio è del partecipante; obiettivi di scelta, costi, fondi a data obiettivo (target-date). Fondi sovrani: stabilizzazione (liquidi, orizzonte breve), risparmio intergenerazionale (orizzonte lungo, molti alternativi), sviluppo, riserve.",
+            "Fondazioni ed enti universitari (endowments): orizzonte perpetuo, regola di spesa (es. 5% della media mobile del patrimonio) che stabilizza il budget, obiettivo di preservare il valore reale: rendimento richiesto (required return) ≈ spesa + inflazione (inflation) + costi. Modello degli endowment (molto private equity, hedge fund, immobili) adatto solo a chi ha governance, accesso ai migliori gestori e tolleranza all'illiquidità (illiquidity).",
+            "Banche: gestione degli attivi e passivi, regolazione del capitale e della liquidità, portafoglio titoli usato per liquidità e gestione del rischio di tasso. Assicurazioni vita: passività lunghe e sensibili ai tassi, abbinamento della duration, vincoli di capitale. Assicurazioni danni: passività brevi e incerte, più liquidità, attenzione alla fiscalità e alla correlazione tra sinistri e mercati (catastrofi).",
+            "Esempio di endowment: spesa 5%, inflazione attesa 2.5%, costi 0.5% → rendimento nominale richiesto ≈ (1.05 × 1.025 × 1.005) - 1 = 8.2% (moltiplicativo), circa 8% sommando. Un obiettivo così alto richiede molto rischio azionario e illiquidità.",
+            "Governance: comitato d'investimento con competenze adeguate, IPS chiaro, delega al personale e ai consulenti (modello OCIO: outsourced chief investment officer), monitoraggio indipendente."
+          ]
+        },
+        {
+          "title": "Gestione della ricchezza privata",
+          "body": [
+            "Il consulente raccoglie informazioni finanziarie (patrimonio, redditi, fiscalità, passività, beni concentrati) e qualitative (obiettivi, famiglia, valori, esperienza, pregiudizi comportamentali). Obiettivi pianificati (pensione, istruzione, acquisto casa, eredità) e aspirazionali. Tolleranza al rischio: capacità (patrimonio rispetto ai bisogni) e propensione (questionari e comportamento).",
+            "Pianificazione: analisi di scenario e Monte Carlo della probabilità di raggiungere gli obiettivi; sostenibilità dei prelievi in pensione (sequence of returns risk: perdite nei primi anni di prelievo hanno effetti molto peggiori); rendite vitalizie per la longevità.",
+            "Fiscalità: tipi di conti (tassabili, a imposta differita, esenti), collocazione delle attività (asset location: titoli con redditi tassati come reddito ordinario nei conti esenti, azioni a lungo termine nei conti tassabili), raccolta delle minusvalenze, gestione delle posizioni concentrate a basso costo fiscale (collar, prestiti garantiti, exchange fund, donazioni).",
+            "Pianificazione successoria (estate planning): testamenti, trust, donazioni in vita, fondazioni, polizze vita; equilibrio tra imposte, controllo e protezione dei beneficiari. Il patrimonio familiare va visto come bilancio economico che include capitale umano, beni immobili e attività d'impresa.",
+            "Revisione e reporting: aggiornare l'IPS ai cambiamenti di vita, comunicare risultati rispetto agli obiettivi, non solo rispetto ai benchmark di mercato; gestire i pregiudizi del cliente (avversione alle perdite (loss aversion), contabilità mentale) usando l'approccio per obiettivi."
+          ]
+        },
+        {
+          "title": "Alternativi, hedge fund e ESG nel portafoglio",
+          "body": [
+            "Inserire hedge fund in un portafoglio tradizionale: si valuta il contributo al rischio e al rendimento con modelli a fattori condizionali (esposizioni diverse in crisi); strategie con convessità (convexity) positiva (trend following, global macro) aiutano nei crolli; strategie che vendono liquidità o volatilità (relative value con leva, merger arbitrage) peggiorano nelle crisi. Valutare liquidità, costi, capacità del gestore e rischio operativo.",
+            "Allocazione ai mercati privati: programma di impegni per annate (vintage), riserve di liquidità, monitoraggio dell'esposizione netta richiamata; rischio di effetto denominatore nei crolli; confronto con il public market equivalent per valutare se l'illiquidità è remunerata.",
+            "Integrazione ESG: politiche di esclusione, integrazione dei fattori nelle stime, inclinazioni verso emittenti con rating migliori, investimenti tematici e a impatto, azionariato attivo (engagement, voto, escalation fino al disinvestimento). Misure di portafoglio: intensità di carbonio (emissioni/ricavi), allineamento a obiettivi climatici, quota di attività allineate alla tassonomia.",
+            "Effetti sul portafoglio: le esclusioni riducono l'universo e possono aumentare il tracking error; l'integrazione ben fatta mira a migliorare il rapporto rischio-rendimento; l'impatto deve essere misurabile e addizionale. Rischio di greenwashing e di disallineamento con le preferenze del cliente.",
+            "Esempio: un fondo pensione vuole ridurre del 50% l'intensità di carbonio del portafoglio azionario rispetto al benchmark con un tracking error massimo dell'1%: l'ottimizzazione sposta i pesi all'interno dei settori (best in class) invece di escludere interi settori, riducendo l'impatto sul rischio attivo (active risk)."
+          ]
+        }
+      ],
+      "formulas": [
+        "IS = ritardo + esecuzione + opportunità + commissioni",
+        "Ritardo = Q_eseguita × (P_arrivo - P_decisione); esecuzione = Q_eseguita × (P_medio - P_arrivo)",
+        "Opportunità = Q_non eseguita × (P_finale - P_decisione)",
+        "Rendimento richiesto endowment ≈ (1 + spesa)(1 + inflazione)(1 + costi) - 1"
+      ],
+      "pitfalls": [
+        "Giudicare con il VWAP un trader a cui si è chiesta un'esecuzione urgente.",
+        "Attribuire al trader il costo di ritardo dovuto al gestore che invia l'ordine tardi.",
+        "Copiare il modello degli endowment senza governance, accesso e tolleranza all'illiquidità.",
+        "Ignorare il rischio di sequenza dei rendimenti nei piani di prelievo.",
+        "Collocare titoli con redditi tassati come reddito ordinario nei conti tassabili invece che in quelli esenti."
+      ]
+    }
+  ]
+}

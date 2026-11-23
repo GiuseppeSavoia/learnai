@@ -1,0 +1,195 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "constr",
+      "sections": [
+        {
+          "title": "Investitori istituzionali: politica e rischi",
+          "body": [
+            "Caratteristiche comuni: orizzonti lunghi, grandi patrimoni (economie di scala, accesso agli alternativi), governance formale (consiglio, comitato investimenti, personale interno o esternalizzato), regolamentazione specifica, rendicontazione a più stakeholder. Le politiche d'investimento partono dalle passività (liabilities): chi sono i beneficiari, quanto e quando bisogna pagare, quanto rischio può essere sopportato.",
+            "Fondi pensione (defined benefit pension plan) a benefici definiti privati: rischi da valutare insieme allo sponsor: grado di finanziamento, solidità finanziaria e redditività dello sponsor, correlazione (correlation) tra attività dello sponsor e attivi del piano (se crollano insieme il rischio è doppio), caratteristiche del piano (opzioni (options) di pensionamento anticipato, indicizzazioni), caratteristiche dei lavoratori (età media, rapporto attivi/pensionati: un piano maturo ha passività più brevi e minore tolleranza al rischio (risk tolerance)).",
+            "Fondi sovrani: di stabilizzazione (finanze pubbliche esposte alle materie prime (commodities): liquidità e obbligazioni (bonds)), di risparmio intergenerazionale (orizzonte lunghissimo, molte azioni e alternativi), di riserve (gestione delle riserve valutarie in eccesso), di sviluppo (investimenti domestici strategici), fondi pensione pubblici di riserva. Fondazioni ed endowment: spesa e preservazione del valore reale. Banche e assicurazioni: gestione del bilancio, abbinamento di duration e liquidità, vincoli di capitale (gli attivi rischiosi consumano capitale regolamentare).",
+            "Valutare un IPS istituzionale: coerenza tra obiettivi di rendimento e tolleranza al rischio, considerazione delle passività, vincoli di liquidità realistici (inclusi richiami dei fondi privati), orizzonte, fiscalità e vincoli legali, chiarezza dei ruoli, regole di ribilanciamento (rebalancing), criteri di valutazione della performance.",
+            "Esempio: un piano DB con rapporto di finanziamento dell'85%, sponsor ciclico con rating BBB e lavoratori in maggioranza vicini alla pensione ha bassa capacità di rischio (ability to take risk): conviene aumentare la copertura (hedging) delle passività (LDI) anche a costo di un rendimento atteso più basso."
+          ]
+        },
+        {
+          "title": "Ricchezza privata: capitale umano e patrimonio economico",
+          "body": [
+            "Tipi di ricchezza: capitale finanziario (attivi investibili), capitale umano (valore attuale (present value) dei redditi da lavoro futuri), attivi non finanziari (casa, azienda di famiglia, collezioni). Patrimonio economico netto (economic net worth) = attivi finanziari + capitale umano + altri attivi - passività finanziarie - passività implicite (consumi futuri, obiettivi familiari).",
+            "Ciclo di vita: da giovani il capitale umano domina; man mano che si lavora si trasforma in capitale finanziario. Il rischio del capitale umano (stabilità e correlazione del reddito con i mercati) influenza l'asset allocation: un funzionario pubblico ha un capitale umano «obbligazionario» e può tenere più azioni; un banker d'investimento ha un capitale umano «azionario» e dovrebbe tenere più obbligazioni.",
+            "Rendimenti, rischi, obiettivi e vincoli per gli individui: obiettivi multipli (multiples) con priorità diverse; vincoli di liquidità (spese previste, emergenze), orizzonte a più stadi, fiscalità, vincoli legali (trust), circostanze particolari (attivi concentrati, preferenze etiche).",
+            "Tasse: sul reddito, sulle plusvalenze, sul patrimonio, sulle successioni; il loro peso cambia il rendimento netto e la scelta degli strumenti (titoli esenti, conti a imposta differita). Rendimento dopo le tasse con tassazione annuale: r × (1 - t); con tassazione differita il vantaggio cresce con l'orizzonte.",
+            "Differenze tra clienti privati e istituzionali: orizzonti legati alla vita, fiscalità personale, minore governance formale, pregiudizi comportamentali più incisivi, obiettivi non solo finanziari (famiglia, eredità). L'IPS privato include informazioni personali e familiari e va aggiornato ai cambiamenti di vita."
+          ]
+        },
+        {
+          "title": "Alternativi come mitigatori del rischio e classificazione per rischio",
+          "body": [
+            "Gli alternativi e le obbligazioni come strumenti di riduzione del rischio azionario: i titoli di Stato (government bond) hanno storicamente protetto nei crolli da shock di domanda, ma meno in contesti inflazionistici; strategie come trend following e global macro hanno avuto rendimenti positivi in molte crisi prolungate; private equity e immobili, pur con correlazioni contabili basse, perdono nelle recessioni come le azioni.",
+            "Definire l'universo: approccio tradizionale per etichette (azioni, obbligazioni, alternativi) contro approccio basato sui rischi (crescita, inflazione (inflation), tassi reali, liquidità, credito): un fondo di private equity è un'esposizione alla crescita con leva e illiquidità (illiquidity); le infrastrutture regolate sono in parte esposte all'inflazione e ai tassi. L'approccio per rischi evita di sopravvalutare la diversificazione (diversification).",
+            "Considerazioni per le diverse categorie: orizzonte e liquidità, costi (commissioni, carried interest), accesso ai gestori migliori (dispersione elevata), capacità di due diligence, fiscalità, necessità di gestire richiami e distribuzioni.",
+            "Idoneità (suitability): investitori con orizzonte lungo, patrimonio ampio, bisogni di liquidità limitati, governance e competenze adeguate. Per individui: requisiti patrimoniali, rischio di concentrazione, comprensione dei prodotti, costi elevati dei veicoli feeder.",
+            "Monitoraggio dei programmi: performance contro benchmark adeguati, esposizione netta e impegni non richiamati, rischio di leva e di liquidità, aggiornamenti della due diligence operativa, coerenza con l'allocazione strategica."
+          ]
+        },
+        {
+          "title": "Mercati elettronici e rischi della negoziazione automatizzata",
+          "body": [
+            "Componenti del costo d'esecuzione: espliciti (commissioni, tasse, oneri) e impliciti (spread, impatto, ritardo, opportunità). Stime: spread effettivo (2 × distanza dal punto medio, cattura il miglioramento di prezzo), costo rispetto al VWAP = quantità × (prezzo medio - VWAP) per un acquisto, implementation shortfall come misura completa.",
+            "Sviluppo dei sistemi elettronici: riduzione dei costi, maggiore velocità, regolamentazioni che hanno favorito la concorrenza tra sedi, crescita della negoziazione algoritmica. Frammentazione del mercato: lo stesso titolo è negoziato in più borse, sistemi alternativi e dark pool; servono instradamento intelligente degli ordini (smart order routing) e consolidamento (consolidation) delle informazioni.",
+            "Tipi di operatori elettronici: fornitori di liquidità e market maker elettronici, arbitraggisti, trader ad alta frequenza, trader algoritmici del lato acquisto (gestori), trader di notizie (news traders). Vantaggi dei trader a bassa latenza: reazione più rapida alle informazioni, migliore gestione delle code d'ordine, cancellazione rapida degli ordini superati.",
+            "Rischi: errori operativi di algoritmi (ordini anomali), crolli improvvisi (flash crash) quando la liquidità sparisce, effetti a catena tra mercati collegati. Rimedi dei regolatori: interruttori di circuito (circuit breakers), limiti di prezzo, controlli pre-negoziazione obbligatori, registrazione degli algoritmi, tassi minimi di esecuzione.",
+            "Pratiche abusive rilevabili con la sorveglianza in tempo reale: spoofing e layering (ordini fittizi per ingannare sulla domanda), quote stuffing (inondare il mercato di ordini), front running, wash trading, marking the close, abuso di informazioni privilegiate (material nonpublic information)."
+          ]
+        },
+        {
+          "title": "Caso fondo sovrano: rischi e gestione d'impresa del rischio",
+          "body": [
+            "Un fondo sovrano con investimenti diretti di lungo periodo (infrastrutture, immobili, partecipazioni) affronta rischi finanziari (mercato, valuta, leva, liquidità, concentrazione) e non finanziari (ambientali, sociali, politici, reputazionali, legali).",
+            "Rischi ambientali e sociali degli investimenti diretti: impatto climatico fisico (alluvioni su un porto) e di transizione (regolazione del carbonio), rapporti con le comunità locali, condizioni di lavoro dei contractor, sicurezza. Questi rischi possono diventare finanziari (multe, ritardi, perdita di licenze).",
+            "Metodi di gestione: due diligence ESG prima dell'investimento, clausole contrattuali, partecipazione ai consigli delle società partecipate, co-investimento con partner esperti, assicurazioni, coperture valutarie e sui tassi, diversificazione geografica, limiti per controparte.",
+            "Gestione del rischio d'impresa (enterprise risk management, ERM): identifica e aggrega i rischi in tutta l'organizzazione, assegna responsabilità, fissa la propensione al rischio (willingness to take risk), misura e comunica. Punti di forza: visione d'insieme, coerenza tra unità. Debolezze tipiche: misure focalizzate sui rischi finanziari quantificabili, poca attenzione ai rischi non finanziari, silos organizzativi, scarsa considerazione delle correlazioni nelle crisi.",
+            "Esempio: il fondo misura il VaR del portafoglio quotato ma valuta gli investimenti diretti al costo; nella crisi il rischio aggregato è sottostimato. Rimedio: valutazioni periodiche indipendenti e stress test integrati su tutto il portafoglio."
+          ]
+        }
+      ],
+      "formulas": [
+        "Patrimonio economico netto = attivi finanziari + capitale umano + altri attivi - passività finanziarie - passività implicite",
+        "Costo vs VWAP (acquisto) = Q × (prezzo medio - VWAP)"
+      ],
+      "pitfalls": [
+        "Valutare un fondo pensione senza considerare la correlazione tra lo sponsor e gli attivi del piano.",
+        "Trattare il private equity come diversificatore delle azioni solo per la bassa correlazione contabile.",
+        "Ignorare il capitale umano nella costruzione del portafoglio di un cliente privato."
+      ]
+    },
+    {
+      "topic": "perf",
+      "sections": [
+        {
+          "title": "GIPS per il Livello III: calcolo, composite e verifica",
+          "body": [
+            "Obiettivi e ambito: rappresentazione equa e completa e comparabilità globale. Si applicano alle società di gestione (firm) e ai proprietari di attivi (asset owner) che scelgono di aderire; la conformità è a livello di intera firm e va dichiarata solo se tutti i requisiti sono rispettati, compresi quelli di aggiornamento.",
+            "Calcolo dei rendimenti: rendimenti time-weighted per i composite con valutazione almeno mensile e ai grandi flussi esterni (definiti dalla firm per composite); money-weighted ammessi quando la firm controlla i flussi e il portafoglio è chiuso o con investimenti illiquidi (fondi privati). Rendimenti lordi e netti delle commissioni; inclusione dei proventi e della liquidità; i rendimenti dei composite sono medie ponderate per gli attivi di inizio periodo (o con flussi).",
+            "Gerarchia di valutazione raccomandata (fair value): 1) prezzi quotati di attività identiche in mercati attivi; 2) prezzi quotati di attività simili o in mercati non attivi; 3) input di mercato osservabili; 4) input non osservabili (modelli). Le firm devono avere politiche di valutazione documentate e applicate in modo coerente.",
+            "Composite: devono includere tutti i portafogli discrezionali a pagamento. Discrezionale significa che il gestore può attuare la strategia; vincoli del cliente che impediscono di farlo rendono il portafoglio non discrezionale (es. divieto di vendere un titolo concentrato). Definizione del composite basata su mandato, obiettivo o strategia; i nuovi portafogli entrano tempestivamente secondo regole fissate in anticipo; quelli chiusi restano nella storia fino all'ultimo periodo pieno; non si possono spostare portafogli tra composite se non per un cambio documentato del mandato. Le porzioni (carve-out) possono entrare solo se gestite separatamente con la propria liquidità.",
+            "Presentazione: GIPS Report con rendimenti annuali del composite e del benchmark, numero di portafogli, attivi del composite e della firm, dispersione interna, deviazione standard (standard deviation) ex post a 3 anni, commissioni, descrizione del composite e della firm, dichiarazione di conformità. Performance di una firm precedente: si può collegare se sostanzialmente tutte le persone che prendevano le decisioni sono passate alla nuova firm, il processo decisionale è sostanzialmente intatto e si hanno i documenti a supporto.",
+            "Verifica: condotta da un terzo indipendente a livello di firm; verifica che le politiche di costruzione dei composite e dei fondi e quelle di calcolo, presentazione e distribuzione siano conformi e applicate. Non attesta l'accuratezza di uno specifico rendimento (l'esame della performance è un servizio aggiuntivo)."
+          ]
+        },
+        {
+          "title": "Benchmark: qualità, passività e responsabilità delle scelte",
+          "body": [
+            "Benchmark basati sulle passività (liability-based): il rendimento delle passività (variazione del loro valore attuale (present value)) è il riferimento corretto per un investitore che deve finanziare obblighi; si misura così il successo del portafoglio nel coprire la crescita delle passività.",
+            "Tipi di benchmark basati sugli attivi: rendimento assoluto, universo di gestori, indici di mercato ampi, indici di stile, modelli fattoriali, benchmark basati sui rendimenti (regressione su indici di stile), benchmark personalizzati costruiti sulle posizioni. Test di qualità: il sistematico tracking del benchmark (beta del portafoglio rispetto al benchmark vicino a 1), bassa correlazione (correlation) tra rendimento attivo (active return) del gestore e le deviazioni stile (benchmark - mercato), copertura (quota del portafoglio nei titoli del benchmark), rotazione del benchmark bassa, posizioni attive positive (il gestore detiene titoli del benchmark).",
+            "Errata specificazione del benchmark: un benchmark sbagliato fa apparire come abilità quella che è solo esposizione di stile (alfa spurio) o nasconde abilità reali; distorce attribuzione (performance attribution) e apprezzamento.",
+            "Risultati attribuibili al proprietario degli attivi e ai gestori: la scelta dell'allocazione strategica e dei benchmark dei gestori è del proprietario; la differenza tra il benchmark dei gestori e il benchmark strategico (misfit o rischio di stile) è responsabilità di chi ha selezionato i gestori; il rendimento attivo rispetto al benchmark del mandato è del gestore.",
+            "Problemi per gli alternativi: valutazioni smorzate, assenza di indici investibili, peer group distorti; si usano benchmark di mercato pubblico equivalente, indici con correzioni di leva e ritardo, o rendimenti obiettivo assoluti con orizzonti lunghi."
+          ]
+        },
+        {
+          "title": "Selezione dei gestori: stile, comportamento e commissioni",
+          "body": [
+            "Analisi di stile: basata sui rendimenti (regressione su indici di stile; semplice, richiede pochi dati, ma meno precisa e può confondere fattori correlati) e sulle posizioni (precisa nel momento ma fotografa solo le date di rendicontazione e può non cogliere il «window dressing»). Usi: verificare la coerenza con lo stile dichiarato, individuare derive di stile, scegliere il benchmark.",
+            "Misure di rischio: capture ratio al rialzo e al ribasso, drawdown massimo e durata del recupero, asimmetria (skewness); servono a capire se il profilo del gestore è coerente con il ruolo nel portafoglio (es. un gestore difensivo deve avere downside capture basso).",
+            "Filosofia e processo: un vantaggio competitivo identificabile, coerente e ripetibile; processo decisionale chiaro (chi decide, come si generano le idee, come si costruisce il portafoglio, come si vende). Fattori comportamentali nei team: pensiero di gruppo (groupthink), dominanza di una personalità, eccesso di fiducia (overconfidence); rimedi: diversità di opinioni, avvocato del diavolo, decisioni documentate e verificate a posteriori.",
+            "Veicoli: fondi collettivi (costi bassi per piccoli importi, liquidità, meno personalizzazione, possibili costi indotti da altri investitori) contro conti separati (personalizzazione, trasparenza, gestione fiscale; minimi e costi più alti).",
+            "Commissioni: fisse sugli attivi (semplici, incentivano la crescita degli attivi) e basate sulla performance; forme tipiche: commissione base più quota della sovraperformance (asimmetrica), commissione simmetrica (fulcrum: cresce e diminuisce con la performance relativa), commissione sulla performance pura con soglia. Clausole: high-water mark, clawback, tetti, periodi di misurazione pluriennali per ridurre l'incentivo al rischio.",
+            "Esempio di commissione: base 0.50% più 20% della sovraperformance oltre il benchmark, con tetto all'1.5% totale. Con sovraperformance del 3% la commissione è 0.50% + 0.60% = 1.10%; con 6% sarebbe 1.70% ma il tetto la limita all'1.50%."
+          ]
+        }
+      ],
+      "formulas": [
+        "Valutazione composite: almeno mensile e ai grandi flussi esterni",
+        "Portabilità: persone decisive + processo intatto + documenti"
+      ],
+      "pitfalls": [
+        "Chiamare discrezionale un portafoglio con vincoli che impediscono la strategia.",
+        "Attribuire al gestore il rendimento dovuto alla differenza tra il suo benchmark e quello strategico.",
+        "Pensare che la verifica GIPS certifichi i rendimenti di un composite."
+      ]
+    },
+    {
+      "topic": "risk",
+      "sections": [
+        {
+          "title": "Opzioni: replica, delta e esposizioni mirate",
+          "body": [
+            "Replica: una posizione lunga sul sottostante equivale a call lunga + put corta con lo stesso strike + investimento del valore attuale (present value) dello strike (dalla parità). Un'azione con put protettiva equivale a call + titolo privo di rischio. Queste equivalenze permettono di creare esposizioni sintetiche quando il sottostante è costoso o difficile da negoziare.",
+            "Delta delle posizioni: la covered call ha delta = 1 - delta della call (meno di 1: si riduce l'esposizione); la put protettiva ha delta = 1 + delta della put (meno di 1, positivo). Comprare una call su una posizione corta in azioni (copertura (hedging) dello short) limita la perdita da rialzo come una put protettiva limita quella da ribasso.",
+            "Sorriso e asimmetria (skewness) di volatilità (volatility smile/skew): nei mercati azionari le put fuori dal denaro hanno volatilità implicita più alta (domanda di protezione); la volatilità implicita varia con lo strike e la scadenza. Strategie: vendere opzioni (options) con volatilità implicita alta, comprare quelle con volatilità bassa; collar che sfruttano lo skew (la put costa più della call allo stesso scostamento).",
+            "Scegliere la strategia in base alle attese sul prezzo e sulla volatilità: rialzo con volatilità attesa in calo → vendere put (incassa premio); rialzo con volatilità in aumento → comprare call; ribasso con volatilità in aumento → comprare put; prezzo stabile con volatilità in calo → vendere straddle o strangle; movimento ampio senza direzione → comprare straddle.",
+            "Esposizioni azionarie mirate con opzioni: aumentare il delta comprando call o vendendo put, ridurlo con covered call o put protettive; numero di opzioni = variazione di delta desiderata/delta dell'opzione, con aggiustamenti dinamici per il gamma.",
+            "Esempio: un gestore con 100,000 azioni vuole ridurre il delta a 80,000 per un mese. Vende call con delta 0.4: servono 20,000/0.4 = 50,000 call (500 contratti da 100), sapendo che il delta cambierà con il prezzo."
+          ]
+        },
+        {
+          "title": "Swap, forward e futures: valute, azioni e volatilità",
+          "body": [
+            "Valute: forward e swap valutari per coprire flussi o investimenti esteri; uno swap valutario trasforma un debito in valuta estera in debito domestico. Azioni: equity swap per cambiare l'esposizione senza vendere (es. ricevere il rendimento di un indice e pagare quello di un titolo concentrato per diversificare senza realizzare plusvalenze), futures su indici per modificare il beta o per equitizzare la liquidità.",
+            "Derivati (derivatives) sulla volatilità: futures sul VIX (scommessa sulla volatilità implicita futura; in contango il rinnovo è costoso per chi è lungo), opzioni sul VIX, swap sulla varianza (variance swap: pagano la differenza tra varianza realizzata e varianza strike). Nozionale di varianza = nozionale vega/(2 × strike). Esempio: nozionale vega 100,000, strike 20 (volatilità), realizzata 25 → nozionale di varianza 2,500; pagamento = 2,500 × (625 - 400) = 562,500 a favore di chi è lungo varianza.",
+            "Esposizioni mirate su azioni e tassi: combinare futures azionari e obbligazionari per portare beta e duration ai valori desiderati; con swap su tassi si modificano duration e key rate. Asset allocation e ribilanciamento (rebalancing) con derivati: rapidi e a basso costo, senza disturbare i gestori; servono margini e gestione del rinnovo.",
+            "Dedurre le aspettative del mercato: dai futures sui tassi ufficiali si ricava la probabilità implicita di un cambio di tasso. Esempio: tasso attuale 4.50%, futures a 95.35 (tasso implicito 4.65%) → probabilità di un rialzo di 25 punti base ≈ (4.65 - 4.50)/0.25 = 60%. Dalle opzioni si deduce la volatilità implicita e la distribuzione attesa (skew), dagli indici di inflazione (breakeven) le aspettative d'inflazione.",
+            "Trappola: la volatilità implicita dei futures sul VIX non coincide con quella spot; una posizione lunga in futures sul VIX perde valore nel tempo se la curva è in contango."
+          ]
+        },
+        {
+          "title": "Valute: strategie attive e riduzione dei costi di copertura",
+          "body": [
+            "Strategie attive basate sui fondamentali (valuta sottovalutata rispetto alla PPP o ai modelli di equilibrio: orizzonte lungo), sul momentum e sull'analisi tecnica (trend nel breve), sul carry (lungo valute ad alto tasso: guadagni regolari, crolli nelle fughe dal rischio), sulla volatilità (comprare volatilità prima di eventi, venderla in periodi calmi; delta hedging). Cambiamenti dei fattori: un aumento dell'avversione al rischio o della volatilità riduce la redditività del carry; cambi di politica monetaria (monetary policy) modificano i differenziali.",
+            "Forward e FX swap nella copertura: si coprono le posizioni con forward e si rinnovano a scadenza con uno swap; alla scadenza si regolano le perdite o i guadagni in contanti (rischio di liquidità). La scelta della scadenza: forward più lunghi riducono i costi di transazione ma aumentano il rischio di disallineamento con la posizione.",
+            "Ridurre i costi di copertura: opzioni fuori dal denaro (protezione solo oltre una soglia), collar (put comprata e call venduta), risk reversal, seagull (collar più una put venduta più in basso: costo minore, protezione persa per crolli estremi), opzioni esotiche (knock-in e knock-out che si attivano o si annullano a determinati livelli, digitali), coperture parziali, ottimizzazione del rapporto di copertura.",
+            "Coperture incrociate (cross-hedge: coprire con una valuta correlata), macro-coperture (macro hedge: coprire il rischio complessivo di portafoglio con un paniere o un indice valutario), rapporto di copertura a varianza minima (dalla regressione del rendimento domestico dell'attivo sulle variazioni del cambio, che tiene conto della correlazione (correlation) tra attivo e valuta).",
+            "Mercati emergenti: costi di transazione alti, liquidità limitata e che sparisce in crisi, controlli sui capitali, forward non consegnabili (NDF, regolati in una valuta forte), regimi di cambio gestiti che crollano improvvisamente (rischio di salto), correlazioni che aumentano nelle crisi. Spesso conviene coprire con proxy più liquide accettando il rischio di base."
+          ]
+        }
+      ],
+      "formulas": [
+        "Delta covered call = 1 - delta call; delta put protettiva = 1 + delta put",
+        "Nozionale varianza = nozionale vega/(2 × strike); payoff = N_var × (σ²_realizzata - K²)",
+        "Probabilità implicita rialzo = (tasso implicito futures - tasso attuale)/ampiezza del rialzo",
+        "Opzioni per Δdelta = variazione desiderata/delta opzione"
+      ],
+      "pitfalls": [
+        "Dimenticare che il delta delle coperture con opzioni cambia con il prezzo (gamma).",
+        "Detenere futures sul VIX a lungo come copertura permanente ignorando il costo del contango.",
+        "Usare un seagull credendo che protegga da crolli estremi."
+      ]
+    },
+    {
+      "topic": "alloc",
+      "sections": [
+        {
+          "title": "Previsioni economiche: approcci, shock e mercati emergenti",
+          "body": [
+            "Approcci alla previsione economica: modelli econometrici (relazioni stimate tra variabili; rigorosi ma complessi e instabili nei cambi di regime), indicatori (anticipatori, coincidenti, ritardati; semplici ma con falsi segnali), liste di controllo (checklist: valutazione soggettiva di molti fattori; flessibile ma soggetta a pregiudizi). Spesso si combinano.",
+            "Shock esogeni: cambi di politica, nuovi prodotti e tecnologie, eventi geopolitici, disastri naturali, scoperte di risorse, crisi finanziarie. Possono modificare la crescita di trend in modo duraturo (es. una crisi finanziaria riduce l'investimento e la crescita potenziale per anni). Applicazione: la crescita di trend influenza i rendimenti di lungo periodo delle azioni (crescita degli utili) e i tassi reali.",
+            "Ciclo e aspettative: nelle prime fasi della ripresa le azioni anticipano gli utili, gli spread si restringono, i tassi a breve restano bassi; nell'espansione avanzata l'inflazione (inflation) sale, le banche centrali stringono, la curva si appiattisce; la forma della curva aiuta a prevedere le recessioni. Collegamenti tra macroeconomia, tassi e cambi: politiche monetarie divergenti muovono i differenziali di tasso e i cambi.",
+            "Rischi degli investimenti in obbligazioni (bonds) e azioni dei paesi emergenti: dipendenza dalle materie prime (commodities) e dai capitali esteri, debito in valuta estera, istituzioni deboli, rischio politico ed espropriazione, liquidità limitata, governance societaria debole, controlli sui capitali, concentrazione settoriale degli indici. Un debito estero elevato e a breve con riserve basse è il segnale più pericoloso.",
+            "Previsione dei cambi: approcci basati sui flussi commerciali e la PPP (lungo periodo), sui flussi di capitale e la parità dei tassi, sul bilanciamento di portafoglio, sulle crisi (segnali d'allarme). Previsione della volatilità: medie storiche, medie mobili esponenziali (più peso ai dati recenti), modelli GARCH; le matrici di covarianza (covariance) si stabilizzano con fattori e shrinkage."
+          ]
+        },
+        {
+          "title": "Governance, bilancio economico e attuazione dell'allocazione",
+          "body": [
+            "Governance efficace: obiettivi di lungo e breve periodo chiari, allocazione delle responsabilità decisionali secondo competenze (consiglio, comitato, personale, consulenti), processi per redigere e aggiornare l'IPS e l'allocazione strategica, rendicontazione e controllo, efficienza. Una governance debole porta a decisioni procicliche (vendere dopo le perdite).",
+            "Bilancio economico (economic balance sheet): include attivi e passività (liabilities) esterni al portafoglio (capitale umano, beni immobili, passività implicite come i consumi futuri, per un fondo pensione (defined benefit pension plan) il valore dello sponsor). L'asset allocation deve tenere conto di queste esposizioni: un imprenditore con l'azienda nel settore tecnologico dovrebbe sottopesare la tecnologia nel portafoglio finanziario.",
+            "Portafoglio di mercato (market portfolio) globale come punto di partenza: rappresenta il consenso dei prezzi; ci si discosta per motivi giustificati (passività, preferenze, tasse, vincoli, opinioni). Classi d'attività come esposizioni ai fattori di rischio sistematico (systematic risk): diverse classi condividono fattori (azioni e high yield → crescita), quindi conviene analizzarle insieme.",
+            "Scelte di attuazione: passiva o attiva per ogni classe, uso di veicoli (fondi, mandati, derivati (derivatives)), ribilanciamento (rebalancing). Simulazione Monte Carlo e analisi di scenario per valutare la probabilità di raggiungere gli obiettivi lungo il percorso (non solo in media) e il rischio di sequenza; la media-varianza (variance) su un periodo non coglie i prelievi e i flussi.",
+            "Budget di rischio assoluto (volatilità o perdita massima del portafoglio) e relativo (tracking error rispetto al benchmark strategico): un'allocazione è ottimale quando il rapporto tra rendimento in eccesso e contributo marginale al rischio è uguale per tutte le classi. Pregiudizi comportamentali nell'allocazione: avversione alle perdite (troppo poco rischio), illusione di controllo, contabilità mentale, preferenza per il proprio paese (home bias), eccesso di fiducia (overconfidence) nelle allocazioni tattiche; rimedi: processi strutturati, approccio per obiettivi, IPS scritto e rispettato."
+          ]
+        }
+      ],
+      "formulas": [
+        "Ottimo del budget di rischio: (E(R_i) - rf)/contributo marginale al rischio_i uguale per tutte le classi"
+      ],
+      "pitfalls": [
+        "Costruire l'allocazione ignorando gli attivi del bilancio economico esterni al portafoglio.",
+        "Usare indicatori anticipatori (leading indicators) senza considerare i falsi segnali.",
+        "Sottovalutare il debito estero a breve nei paesi emergenti."
+      ]
+    }
+  ]
+}

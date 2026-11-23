@@ -1,0 +1,50 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Asset Manager Code of Professional Conduct",
+          "body": [
+            "Il codice per i gestori (Asset Manager Code) si applica alle società di gestione (non alle persone come gli Standard) e richiede di dichiarare pubblicamente la conformità. Principi generali: agire in modo professionale ed etico, nell'interesse dei clienti, con indipendenza e obiettività (independence and objectivity), con abilità, competenza e diligenza, comunicare con i clienti in modo tempestivo e accurato, rispettare le regole che regolano i mercati.",
+            "Sei aree: 1) lealtà verso i clienti (anteporre i loro interessi, riservatezza (confidentiality), rifiutare regali che compromettano l'indipendenza); 2) processo e azioni d'investimento (base ragionevole, adeguatezza (suitability) al mandato, comprensione dei rischi); 3) negoziazione (niente uso di MNPI, priorità ai clienti, best execution, allocazione equa, uso corretto delle commissioni di intermediazione); 4) gestione del rischio, conformità e supporto (responsabile della conformità, procedure, controlli, verifica da terzi, piani di continuità operativa); 5) performance e valutazione (presentazione equa, valutazione con fonti indipendenti); 6) informativa (struttura, conflitti, commissioni, processo, rischi, politica di voto, risultati della verifica dei conti).",
+            "Differenze rispetto agli Standard: il codice è per l'organizzazione, richiede politiche e procedure scritte; molti requisiti sono analoghi (lealtà, best execution, equità), ma alcuni sono specifici (continuità operativa, valutazione indipendente, nomina di un responsabile della conformità).",
+            "Esempio: una società di gestione che dichiara conformità al codice usa per i titoli illiquidi i prezzi forniti dagli stessi gestori senza controlli. Viola la sezione su performance e valutazione: serve una politica di valutazione con fonti indipendenti o un comitato di valutazione.",
+            "Raccomandazioni: piani di emergenza per interruzioni operative, politica sulle commissioni trasparente, comunicazione delle principali modifiche al personale chiave, rendicontazione regolare ai clienti."
+          ]
+        },
+        {
+          "title": "Standard applicati alla gestione di portafoglio",
+          "body": [
+            "Al Livello III i casi d'etica riguardano gestori, consulenti di ricchezza privata e istituzionali. Adeguatezza: l'IPS deve essere aggiornato e le decisioni coerenti con i vincoli; una strategia che aumenta il rischio (leva, alternativi illiquidi) per inseguire i rendimenti richiesti dal cliente, senza discuterne, viola III(C). Il gestore deve rifiutare istruzioni del cliente palesemente contrarie al suo interesse documentando il disaccordo.",
+            "Equità: allocazione delle IPO tra conti in base all'idoneità e al mandato, non alle commissioni pagate; operazioni incrociate (cross trades) tra conti consentite solo se eque per entrambi e permesse dai clienti; ribilanciamenti che non favoriscono un fondo a spese di un altro.",
+            "Conflitti tipici della gestione: conti con commissione di performance (incentive fee) favoriti rispetto a quelli a commissione fissa (side-by-side management), voto per delega in società clienti della banca, investimenti in fondi della casa, soft dollar. Rimedi: politiche di allocazione, voto indipendente, disclosure.",
+            "Performance e GIPS: composite definiti per strategia; portabilità dei risultati di un team che cambia azienda solo se si spostano le persone chiave e il processo, si hanno i documenti e c'è un'adeguata comunicazione; i rendimenti simulati o modello vanno chiaramente identificati; benchmark e commissioni devono essere chiariti; la verifica dei GIPS va dichiarata con il suo perimetro.",
+            "Esempio: un gestore con due conti, uno a commissione fissa e uno con 20% di performance, alloca le migliori idee prima al secondo. Viola III(B) e il codice dei gestori: le opportunità vanno allocate in modo equo secondo i mandati."
+          ]
+        },
+        {
+          "title": "Casi integrati per il Livello III",
+          "body": [
+            "Caso 1: un consulente privato raccomanda al cliente un prodotto strutturato emesso dalla propria banca, con commissioni elevate, senza confronto con alternative più economiche; il cliente ha bisogni di liquidità. Violazioni: III(A) (lealtà), III(C) (adeguatezza), VI(A) (conflitto non comunicato). Corretto: valutare alternative, comunicare il conflitto, verificare la liquidità.",
+            "Caso 2: il responsabile degli investimenti di un fondo pensione (defined benefit pension plan) riceve da un gestore candidato un invito a un viaggio di lusso. Anche se la decisione è collegiale, accettare viola I(B); il codice del fondo dovrebbe vietarlo.",
+            "Caso 3: un gestore quantitativo modifica il modello dopo una sottoperformance, senza comunicarlo ai clienti, aumentando l'esposizione a titoli illiquidi. Violazioni: V(B) (cambio di processo non comunicato), V(A) se il nuovo modello non è testato, III(C) se il mandato prevedeva liquidità.",
+            "Caso 4: un team lascia la società e presenta nel nuovo marketing i rendimenti storici come propri. Senza i requisiti di portabilità (stesso team decisionale, stesso processo, documentazione) e senza indicare che i risultati sono stati ottenuti altrove, viola III(D) e i GIPS.",
+            "Metodo: individua per ogni fatto il dovere (verso cliente, datore di lavoro, mercato, professione) e il momento in cui l'azione corretta andava compiuta. Le risposte migliori sono quelle che proteggono il cliente con il minimo intervento necessario (comunicazione, consenso, astensione, documentazione)."
+          ]
+        }
+      ],
+      "formulas": [
+        "Asset Manager Code: lealtà, processo, negoziazione, rischio/conformità, performance/valutazione, informativa"
+      ],
+      "pitfalls": [
+        "Credere che l'Asset Manager Code si applichi alle singole persone come gli Standard.",
+        "Considerare lecita la portabilità della performance senza le persone chiave e i documenti.",
+        "Pensare che una decisione collegiale renda accettabile un regalo personale.",
+        "Allocare le opportunità migliori ai conti con commissione di performance.",
+        "Modificare il processo d'investimento senza comunicarlo ai clienti."
+      ]
+    }
+  ]
+}

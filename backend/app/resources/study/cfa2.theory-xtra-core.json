@@ -1,0 +1,93 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Casi guidati: ricerca, trading e consulenza",
+          "body": [
+            "Caso A, ricerca sell-side: un'analista cambia la raccomandazione da acquistare a vendere su pressione del responsabile della banca d'affari che sta perdendo il mandato del cliente. Anche se la nuova raccomandazione fosse corretta, il motivo viola I(B); se il cambio non ha base nei fatti viola anche V(A). Azione corretta: mantenere l'analisi indipendente, informare la compliance, documentare.",
+            "Caso B, trading: un gestore aggrega gli ordini di tre fondi e del proprio conto personale; l'esecuzione parziale viene assegnata prima al conto personale. Violazioni: VI(B) priorità delle operazioni e III(B) trattamento equo (fair dealing). Corretto: allocazione pro rata ai clienti, conto personale escluso o servito per ultimo.",
+            "Caso C, consulenza privata: il cliente, pensionato con bisogno di reddito, chiede di investire il 50% in criptovalute dopo averne letto sui giornali. Il consulente deve spiegare l'incoerenza con l'IPS; se il cliente insiste, valutare un aggiornamento dell'IPS o rifiutare documentando; eseguire senza discussione viola III(C).",
+            "Caso D, presentazione dei risultati: un gestore mostra il rendimento di un portafoglio modello come se fosse stato realizzato. Violazione di III(D) e potenzialmente I(C); corretto: etichettare chiaramente come simulato, con ipotesi e limiti.",
+            "Caso E, lealtà: un analista, prima di dimettersi, scarica sul proprio computer personale i modelli di valutazione che ha costruito e la lista dei clienti. Violazione di IV(A): i modelli e le liste appartengono all'azienda anche se li ha creati lui.",
+            "Caso F, informazioni: durante una visita all'impianto, il direttore dello stabilimento dice all'analista che la produzione sarà fermata per un mese per un guasto. L'informazione è rilevante e non pubblica: l'analista non può modificare la raccomandazione basandosi su di essa finché non viene diffusa."
+          ]
+        },
+        {
+          "title": "Criteri di risposta e procedure da raccomandare",
+          "body": [
+            "Domande «quale azione è più appropriata»: scegliere quella che elimina la violazione con il minimo intervento e protegge clienti e mercati (rifiutare, comunicare, ottenere consenso, correggere, informare la compliance). Le risposte che puntano a vantaggi per l'azienda o che rimandano l'azione sono sbagliate.",
+            "Domande «quale procedura raccomandare»: per i conflitti di ricerca → firewall, separazione dei compensi, liste ristrette, periodi di quiete; per le operazioni personali → preautorizzazione, periodi di blocco, rendicontazione; per l'allocazione → policy scritta pro rata; per le informazioni privilegiate (material nonpublic information) → registro degli accessi, formazione, controlli sulle comunicazioni; per la conservazione dei documenti → policy di sette anni in assenza di norme.",
+            "Errori di ragionamento frequenti: confondere un fatto lecito (lavorare per un concorrente dopo le dimissioni) con uno illecito (sollecitare clienti prima delle dimissioni); credere che la legge locale meno severa basti; pensare che la documentazione sostituisca la comunicazione al cliente.",
+            "Gli Standard si applicano al comportamento del membro anche se il datore di lavoro non è membro e anche fuori dall'orario di lavoro quando la condotta riguarda l'integrità professionale."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Eseguire un ordine inadeguato del cliente senza discuterne e documentarlo.",
+        "Considerare propri i modelli costruiti per il datore di lavoro."
+      ]
+    },
+    {
+      "topic": "econ",
+      "sections": [
+        {
+          "title": "Valore di equilibrio del cambio e mercati emergenti",
+          "body": [
+            "Determinanti di lungo periodo del cambio reale: differenziali di produttività (effetto Balassa-Samuelson: paesi con produttività crescente nei beni commerciabili vedono apprezzarsi il cambio reale), ragioni di scambio, posizione netta sull'estero, politica fiscale (fiscal policy) persistente. Modelli di valutazione: PPP, tasso di cambio (exchange rate) di equilibrio basato sui fondamentali (es. saldo corrente sostenibile).",
+            "Valute dei mercati emergenti: più sensibili a cicli delle materie prime (commodities), flussi di capitale e avversione al rischio globale; gli afflussi in fasi di rischio basso possono rovesciarsi improvvisamente. Le banche centrali intervengono per moderare la volatilità accumulando riserve nei periodi di afflussi.",
+            "Esempio di analisi: un paese con deficit corrente del 6% del PIL finanziato da investimenti di portafoglio a breve, inflazione (inflation) sopra quella dei partner e valuta apprezzata in termini reali del 20% negli ultimi tre anni è vulnerabile a un deprezzamento rapido quando la liquidità globale si restringe.",
+            "Implicazioni per l'investitore: valutare la sostenibilità del saldo corrente, la composizione del finanziamento (investimenti diretti più stabili del portafoglio), le riserve rispetto al debito a breve, la credibilità della politica monetaria (monetary policy). Coprire o meno la valuta dipende dal costo della copertura (differenziale di tasso) e dal rischio di crisi."
+          ]
+        },
+        {
+          "title": "Crescita: produttività, capitale umano e convergenza applicata",
+          "body": [
+            "Fonti della produttività del lavoro: approfondimento del capitale (più capitale per lavoratore) e progresso tecnologico (TFP). Investimenti in capitale umano (istruzione, salute) e in ricerca e sviluppo aumentano la TFP; l'apertura al commercio e agli investimenti esteri diffonde le tecnologie.",
+            "Crescita sostenibile della forza lavoro: crescita della popolazione in età lavorativa, tasso di partecipazione (donne, anziani), immigrazione, ore medie lavorate. I paesi con invecchiamento rapido hanno crescita potenziale in calo, che può essere compensata solo con più produttività.",
+            "Esempio: crescita della forza lavoro 0.3%, produttività del lavoro 1.2% → crescita potenziale 1.5%. Se la partecipazione femminile aumenta e porta la crescita della forza lavoro allo 0.8%, la crescita potenziale sale al 2%.",
+            "Collegamento con i mercati: nel lungo periodo la crescita degli utili aggregati segue il PIL nominale; il rendimento azionario di lungo periodo ≈ rendimento da dividendo (dividends) + crescita nominale del PIL ± variazione della quota degli utili sul PIL ± variazione dei multipli (multiples). Un mercato che sconta una crescita superiore a quella sostenibile è vulnerabile a una revisione dei multipli."
+          ]
+        }
+      ],
+      "formulas": [
+        "Crescita potenziale = crescita forza lavoro + crescita produttività del lavoro",
+        "Rendimento azionario lungo periodo ≈ D/P + crescita PIL nominale ± Δquota utili ± ΔP/E"
+      ],
+      "pitfalls": [
+        "Ignorare la composizione del finanziamento del deficit corrente nel valutare il rischio di cambio."
+      ]
+    },
+    {
+      "topic": "alt",
+      "sections": [
+        {
+          "title": "Indici, regole di rinnovo e analisi di una posizione in commodity",
+          "body": [
+            "Il rendimento di un indice di materie prime (commodities) dipende da: scelta dei contratti (scadenza vicina o lontana, che cambia l'esposizione al roll), frequenza di rinnovo e ribilanciamento (rebalancing), ponderazione per settore. Un indice dominato dall'energia ha rendimenti molto diversi da uno bilanciato.",
+            "Analisi di una posizione: prezzo spot atteso (domanda e offerta, scorte, stagionalità, geopolitica), forma della curva (contango o backwardation), rendimento del collaterale, costi. Esempio: con il petrolio in backwardation del 5% annuo e tassi al 4%, una posizione completamente collateralizzata rende circa il 9% anche con prezzo spot invariato.",
+            "Ruolo in portafoglio: copertura (hedging) dall'inflazione (inflation) inattesa e dagli shock d'offerta, diversificazione (diversification) rispetto ad azioni e obbligazioni (bonds) in alcuni regimi; nei crolli dovuti a recessione globale le materie prime industriali cadono insieme alle azioni, mentre l'oro tende a reggere."
+          ]
+        },
+        {
+          "title": "Immobili: rischi, investimento diretto contro quotato, due diligence",
+          "body": [
+            "Rischi specifici: ciclo economico (business cycle) e del settore immobiliare (offerta di nuove costruzioni che arriva con ritardo), tassi (cap rate), liquidità, gestione e locatari, sviluppo (costi e tempi), ambientali e climatici, regolamentari (urbanistica, efficienza energetica), leva.",
+            "Diretto contro quotato: l'investimento diretto dà controllo, benefici fiscali e diversificazione rispetto alle azioni nel lungo periodo, ma richiede capitale, gestione e accetta illiquidità (illiquidity); i REIT danno liquidità e diversificazione immediata, ma prezzi volatili e correlati con il mercato azionario nel breve periodo; nel lungo periodo i rendimenti tendono a convergere a quelli degli immobili sottostanti.",
+            "Effetti della leva: aumenta il rendimento sul capitale proprio se il rendimento dell'immobile supera il costo del debito (cost of debt), ma amplifica le perdite e il rischio di rifinanziamento. Esempio: immobile che rende il 7% finanziato al 60% con debito al 5% → rendimento sul capitale ≈ 7% + 1.5 × 2% = 10%; se il rendimento scende al 3% → 3% - 1.5 × 2% = 0%.",
+            "Valutazione con DCF: tasso di sconto (discount rate), tasso di capitalizzazione (capitalization rate) terminale, crescita degli affitti, sfitto, rinnovi dei contratti; sensibilità: un aumento del cap rate terminale di 50 punti base può ridurre il valore del 7-8% per un immobile con cap rate del 6%."
+          ]
+        }
+      ],
+      "formulas": [
+        "Rendimento equity immobiliare ≈ r_immobile + (D/E)(r_immobile - r_debito)"
+      ],
+      "pitfalls": [
+        "Confrontare indici di commodity senza considerare le regole di rinnovo e la composizione settoriale."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "econ",
+      "sections": [
+        {
+          "title": "Quotazioni, incroci con spread e arbitraggio triangolare",
+          "body": [
+            "Il dealer quota denaro (bid: prezzo a cui compra la valuta base) e lettera (offer/ask: prezzo a cui la vende). Lo spread si allarga per volatilità, scarsa liquidità, dimensioni grandi dell'operazione, rischio della controparte e orari di mercato poco liquidi. Il cliente compra la valuta base all'ask e la vende al bid.",
+            "Incroci con spread: per ricavare A/C da A/B e B/C, bid(A/C) = bid(A/B) × bid(B/C) e ask(A/C) = ask(A/B) × ask(B/C). Se una quotazione va invertita, bid(B/A) = 1/ask(A/B) e ask(B/A) = 1/bid(A/B).",
+            "Arbitraggio triangolare: se il tasso incrociato quotato da un dealer è fuori dall'intervallo implicito bid-ask ottenuto dalle altre due coppie, si può comprare dove costa meno e vendere dove vale di più passando per le tre valute. Esempio concettuale: se il tasso implicito JPY/EUR è 164.80-165.20 e un dealer quota 165.50-165.70 si vendono euro contro yen a 165.50 da quel dealer e si ricompra l'euro passando dal dollaro a 165.20: profitto 0.30 yen per euro senza rischio.",
+            "Premio o sconto forward: punti forward = F - S; la valuta base è a premio se F > S. Percentuale ≈ differenziale di tassi per la frazione d'anno. Il valore di un forward esistente si calcola come differenza tra il forward attuale per la stessa data e quello del contratto, scontata con il tasso della valuta quotata.",
+            "Trappola: invertire una quotazione bid-ask senza scambiare bid e ask (l'inverso del bid diventa l'ask) porta a un incrocio sbagliato."
+          ]
+        },
+        {
+          "title": "Relazioni di parità e loro evidenza",
+          "body": [
+            "Parità coperta dei tassi d'interesse (covered interest parity): F/S = (1 + i_quotata)/(1 + i_base); è un vincolo di arbitraggio e regge bene nei mercati sviluppati (salvo tensioni di finanziamento in dollari). Parità scoperta (uncovered interest parity): il deprezzamento atteso della valuta con tasso più alto compensa il differenziale: E(S_T)/S = (1 + i_quotata)/(1 + i_base). Esempio: USD/EUR 1.10, tasso USD 5%, EUR 3% → spot atteso 1.1214, euro in apprezzamento atteso dell'1.94%. Empiricamente non regge nel breve-medio periodo (forward premium puzzle), il che rende profittevole il carry trade.",
+            "Parità dei poteri d'acquisto (purchasing power parity): assoluta (stesso paniere allo stesso prezzo in una valuta comune); relativa: variazione del cambio ≈ differenziale d'inflazione (inflation). Esempio: inflazione USA 4%, area euro 2% → USD/EUR atteso 1.10 × 1.04/1.02 = 1.1216. Regge nel lungo periodo e per inflazioni molto diverse, non nel breve.",
+            "Effetto Fisher internazionale (international Fisher effect) e parità dei tassi reali (real interest rate parity): se valgono Fisher e PPP relativa, i differenziali di tasso nominale riflettono i differenziali d'inflazione e i tassi reali convergono. Se tutte le parità valessero, il forward sarebbe uno stimatore non distorto dello spot futuro (forward rate parity).",
+            "Carry trade: prendere a prestito nella valuta a basso tasso e investire in quella ad alto tasso, senza copertura (hedging). Profitto se la valuta ad alto rendimento non si deprezza più del differenziale. Esempio: prestito in yen allo 0.5%, investimento in dollari australiani al 4.5%: guadagno se l'AUD perde meno del 4% circa. Distribuzione dei rendimenti con asimmetria (skewness) negativa e code spesse: guadagni regolari e crolli improvvisi quando aumenta l'avversione al rischio (unwind dei carry trade).",
+            "Uso pratico: nel lungo periodo il cambio tende al valore di equilibrio (PPP e fondamentali), nel breve dominano flussi di capitale, differenziali di tasso, sentiment e politica monetaria (monetary policy)."
+          ]
+        },
+        {
+          "title": "Bilancia dei pagamenti, politiche e crisi valutarie",
+          "body": [
+            "Flussi commerciali: un deficit corrente persistente richiede afflussi di capitali; nel lungo periodo pressione al deprezzamento (deficit finanziati con debito accumulano passività (liabilities) estere). Flussi di capitali: dominano nel breve periodo; afflussi rapidi possono apprezzare troppo il cambio e creare bolle, seguiti da deflussi improvvisi.",
+            "Modello di Mundell-Fleming (con alta mobilità dei capitali): politica monetaria espansiva → tassi più bassi → deflussi → deprezzamento; politica fiscale (fiscal policy) espansiva → tassi più alti → afflussi → apprezzamento. Combinazioni (combinations): monetaria restrittiva + fiscale espansiva → forte apprezzamento; monetaria espansiva + fiscale restrittiva → forte deprezzamento. Con bassa mobilità domina l'effetto sulla bilancia commerciale: fiscale espansiva → più importazioni → deprezzamento.",
+            "Approccio monetario: il cambio dipende dall'offerta relativa di moneta; nel modello di Dornbusch i prezzi sono rigidi nel breve periodo, quindi un'espansione monetaria provoca un deprezzamento eccessivo (overshooting) che poi rientra. Approccio del bilanciamento di portafoglio (portfolio balance): deficit fiscali persistenti aumentano l'offerta di debito; gli investitori esteri lo accettano solo a prezzi più bassi o con valuta deprezzata.",
+            "Interventi e controlli: gli interventi sterilizzati hanno effetti limitati nei grandi mercati; nei paesi emergenti con riserve adeguate possono funzionare. I controlli sui capitali possono limitare afflussi speculativi ma riducono l'efficienza.",
+            "Segnali d'allarme delle crisi valutarie: liberalizzazione finanziaria recente, grandi afflussi di capitale, crescita del credito interno, banche fragili, valuta sopravvalutata in termini reali, riserve in calo, deficit corrente ampio, debito estero a breve elevato, rallentamento delle esportazioni, inflazione in aumento, crisi in paesi vicini (contagio)."
+          ]
+        },
+        {
+          "title": "Crescita economica: contabilità e modelli",
+          "body": [
+            "Crescita potenziale del PIL = crescita della forza lavoro (ore lavorate) + crescita della produttività del lavoro. Funzione Cobb-Douglas Y = A K^α L^(1 - α), con α quota del capitale. Contabilità della crescita (growth accounting): ΔY/Y = ΔA/A + α ΔK/K + (1 - α) ΔL/L. Esempio: produttività totale dei fattori (total factor productivity) +1%, α = 0.35, capitale +4%, lavoro +0.5% → 1 + 1.4 + 0.325 = 2.725%.",
+            "Rendimenti decrescenti del capitale: aumentare il capitale per lavoratore fa crescere sempre meno l'output; nel lungo periodo la crescita pro capite dipende dal progresso tecnologico (TFP). Approfondimento del capitale (capital deepening) aumenta la produttività del lavoro ma con effetti decrescenti; i paesi con poco capitale crescono più rapidamente investendo.",
+            "Modelli: classico (Malthus: la popolazione assorbe ogni guadagno, crescita pro capite nulla); neoclassico (Solow: nello stato stazionario la crescita pro capite = crescita della TFP/(1 - α); la crescita totale aggiunge quella della forza lavoro; più risparmio aumenta il livello ma non la crescita di lungo periodo); endogeno (gli investimenti in conoscenza e ricerca hanno ricadute positive (spillover) e rendimenti non decrescenti: il risparmio può aumentare la crescita permanente).",
+            "Convergenza: assoluta (tutti i paesi convergono allo stesso livello pro capite), condizionata (convergono paesi con stesse caratteristiche di risparmio, popolazione e tecnologia), di club (solo i paesi con istituzioni adeguate). Il modello neoclassico prevede convergenza; quello endogeno no necessariamente.",
+            "Fattori di crescita: tassi di risparmio e investimento, mercati finanziari sviluppati, stabilità politica, diritti di proprietà e stato di diritto, istruzione e salute (capitale umano), apertura al commercio e agli investimenti esteri, tasse e regolamentazione, risorse naturali (spesso una maledizione se gestite male), infrastrutture, demografia (immigrazione e partecipazione al lavoro).",
+            "Implicazioni per gli investimenti: nel lungo periodo gli utili aggregati non possono crescere più del PIL (la quota dei profitti è limitata); il rendimento azionario di lungo periodo dipende da crescita del PIL, rendimento da dividendo (dividends) e variazione dei multipli (multiples). La crescita potenziale guida anche i tassi reali di equilibrio."
+          ]
+        },
+        {
+          "title": "Economia della regolamentazione",
+          "body": [
+            "Motivi della regolamentazione: fallimenti di mercato (asimmetrie informative, esternalità, beni pubblici, potere di mercato), tutela dei consumatori e degli investitori, stabilità finanziaria. Fonti: leggi (statutes), regolamenti amministrativi delle autorità, decisioni giudiziarie. Regolatori governativi indipendenti e organizzazioni autoregolamentate (self-regulatory organizations) come le borse.",
+            "Strumenti: limiti di prezzo e tariffe, tasse e sussidi (es. sulle emissioni), licenze e autorizzazioni, obblighi informativi, requisiti di capitale, divieti, norme antitrust (blocco di fusioni, sanzioni per abusi). Regolamentazione prudenziale (solvibilità delle istituzioni) e di condotta (comportamento verso i clienti).",
+            "Problemi: cattura del regolatore (regulatory capture: il regolatore finisce per servire gli interessi dell'industria regolata), arbitraggio regolamentare (regulatory arbitrage: spostare attività dove le regole sono meno severe), costi non previsti, conseguenze indesiderate, regole troppo rigide per l'innovazione. Si valutano con analisi costi-benefici e clausole di revisione (sunset clauses).",
+            "Effetti sulle imprese e sui settori: costi di conformità, barriere all'ingresso (che possono favorire gli operatori esistenti), limiti ai prezzi o ai rendimenti (utility), opportunità per chi offre soluzioni (es. tecnologie verdi). L'analista valuta il rischio regolatorio nelle previsioni e nel costo del capitale (cost of capital).",
+            "Esempio: un nuovo tetto alle commissioni sulle carte di pagamento riduce i ricavi delle banche emittenti ma avvantaggia i commercianti; nel lungo periodo le banche possono compensare con canoni annuali più alti: l'effetto netto dipende dall'elasticità della domanda (elasticity of demand)."
+          ]
+        }
+      ],
+      "formulas": [
+        "bid(A/C) = bid(A/B) × bid(B/C); bid(B/A) = 1/ask(A/B)",
+        "Parità scoperta: E(S_T)/S = (1 + i_quotata)/(1 + i_base)",
+        "PPP relativa: %ΔS ≈ π_quotata - π_base",
+        "Crescita = ΔA/A + α ΔK/K + (1 - α) ΔL/L",
+        "Solow: crescita pro capite stazionaria = θ/(1 - α)",
+        "Crescita potenziale = crescita forza lavoro + crescita produttività"
+      ],
+      "pitfalls": [
+        "Considerare la parità scoperta un vincolo di arbitraggio come quella coperta.",
+        "Dimenticare che il carry trade ha asimmetria negativa: piccoli guadagni regolari e grandi perdite rare.",
+        "Pensare che nel modello neoclassico un risparmio più alto aumenti per sempre la crescita.",
+        "Invertire gli effetti di Mundell-Fleming: con alta mobilità la fiscale espansiva apprezza la valuta.",
+        "Ignorare la cattura del regolatore nel giudicare l'efficacia delle regole."
+      ]
+    }
+  ]
+}

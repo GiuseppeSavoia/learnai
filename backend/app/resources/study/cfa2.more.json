@@ -1,0 +1,716 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Adeguatezza, modelli e comunicazione con i clienti",
+          "body": [
+            "Quando un gestore cambia in modo rilevante il processo d'investimento (per esempio passa da un approccio fondamentale a uno quantitativo) deve informare tempestivamente i clienti (Standard V(B)). Deve anche verificare che il nuovo approccio resti (remainders) adatto al mandato (III(C)).",
+            "Se un cliente chiede un investimento non adatto al suo profilo, il gestore può eseguirlo come operazione non sollecitata dopo averne discusso l'inadeguatezza; se l'impatto sul portafoglio è grande, deve valutare se aggiornare l'IPS o rifiutare."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Pensare che un cambiamento di metodologia riguardi solo la compliance interna e non vada comunicato ai clienti."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-eth-set2",
+          "vignette": "Stefano Moretti, CFA, manages balanced portfolios at Riva Wealth. After two years of disappointing results he replaces his fundamental stock-selection process with a quantitative factor model developed by a vendor. He tests the model for three months but does not tell clients about the change, believing that 'clients care about results, not methods'. One client, Laura Pini, a 70-year-old retiree whose IPS specifies capital preservation, asks Moretti to invest 40% of her portfolio in a single biotechnology stock recommended by a friend. Moretti explains that the trade is inconsistent with her objectives; Pini insists. Separately, Moretti's assistant, who is not a CFA member, discovers that the vendor's model was backtested using only companies that survived to the present.",
+          "questions": [
+            {
+              "id": "l2-eth-5",
+              "difficulty": 2,
+              "stem": "By not informing clients about the new investment process, Moretti most likely violated the Standard relating to:",
+              "choices": [
+                "Communication with Clients and Prospective Clients",
+                "Fair Dealing",
+                "Market Manipulation"
+              ],
+              "answer": 0,
+              "explanation": "Lo Standard V(B) richiede di comunicare i principi e i processi d'investimento e i loro cambiamenti significativi. Passare da un processo fondamentale a uno quantitativo è un cambiamento rilevante."
+            },
+            {
+              "id": "l2-eth-6",
+              "difficulty": 3,
+              "stem": "Regarding Pini's request, Moretti's most appropriate course of action is to:",
+              "choices": [
+                "execute the trade immediately because the client insists",
+                "refuse any trade not recommended by him",
+                "consider whether to update the IPS or decline, given that the position would significantly change the portfolio's risk"
+              ],
+              "answer": 2,
+              "explanation": "Un'operazione non sollecitata si può eseguire dopo aver spiegato l'inadeguatezza, ma se l'impatto è grande (40% su un solo titolo per un profilo conservativo) il gestore deve valutare se aggiornare l'IPS con il cliente o non procedere (Standard III(C))."
+            },
+            {
+              "id": "l2-eth-7",
+              "difficulty": 3,
+              "stem": "The vendor model's backtest suggests that Moretti has most likely failed to comply with the Standard relating to:",
+              "choices": [
+                "Diligence and Reasonable Basis",
+                "Preservation of Confidentiality",
+                "Additional Compensation Arrangements"
+              ],
+              "answer": 0,
+              "explanation": "Chi usa un modello di terzi deve verificarne in modo ragionevole ipotesi e solidità (Standard V(A)). Un backtest con solo le società sopravvissute è affetto da survivorship bias e gonfia i risultati."
+            },
+            {
+              "id": "l2-eth-8",
+              "difficulty": 2,
+              "stem": "Because Moretti's assistant is not a CFA Institute member, the assistant:",
+              "choices": [
+                "is bound by the Code and Standards through Moretti",
+                "is not bound by the Code and Standards, but Moretti remains responsible for his own compliance",
+                "must report Moretti to CFA Institute"
+              ],
+              "answer": 1,
+              "explanation": "Il Code vincola solo membri e candidati. L'assistente non è soggetto agli Standards; resta però Moretti a dover rispettare i propri obblighi, inclusa la diligenza sul modello."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "quant",
+      "sections": [
+        {
+          "title": "Previsioni con modelli autoregressivi e metriche di classificazione",
+          "body": [
+            "Con un AR(1) stazionario la previsione a un passo è b0 + b1 × xt; la previsione a due passi si ottiene applicando il modello alla previsione a un passo (chain rule of forecasting). Più ci si allontana, più la previsione converge verso il livello di ritorno alla media (mean reversion) b0/(1 - b1).",
+            "Nella matrice di confusione: precision = TP/(TP + FP) misura quante delle previsioni positive sono corrette; recall (sensibilità) = TP/(TP + FN) misura quanti dei veri positivi vengono trovati. Si privilegia la precision quando i falsi positivi costano molto, la recall quando costano molto i falsi negativi."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Confondere precision (diviso le previsioni positive) e recall (diviso i positivi reali)."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-qm-set2",
+          "vignette": "Federico Testa models a company's quarterly sales growth (in %) with an AR(1) model estimated on 80 quarters: x(t) = 1.2 + 0.4 x(t-1). The residuals show no significant autocorrelation and the slope coefficient is significantly less than 1. The most recent observation is 3.0%. Testa also builds a machine learning classifier to flag firms likely to cut dividends. On a test sample, the classifier produced 40 true positives, 10 false positives, 20 false negatives and 130 true negatives.",
+          "questions": [
+            {
+              "id": "l2-qm-5",
+              "difficulty": 2,
+              "stem": "The mean-reverting level of sales growth implied by the model is closest to:",
+              "choices": [
+                "1.2%",
+                "2.0%",
+                "3.0%"
+              ],
+              "answer": 1,
+              "explanation": "Livello di ritorno alla media (mean reversion) = b0/(1 - b1) = 1.2/0.6 = 2.0%."
+            },
+            {
+              "id": "l2-qm-6",
+              "difficulty": 3,
+              "stem": "The two-quarter-ahead forecast of sales growth is closest to:",
+              "choices": [
+                "2.16%",
+                "2.40%",
+                "3.00%"
+              ],
+              "answer": 0,
+              "explanation": "Un passo: 1.2 + 0.4 × 3.0 = 2.4. Due passi: 1.2 + 0.4 × 2.4 = 2.16. Le previsioni scendono verso il 2.0% di lungo periodo."
+            },
+            {
+              "id": "l2-qm-7",
+              "difficulty": 2,
+              "stem": "The classifier's precision is closest to:",
+              "choices": [
+                "0.67",
+                "0.80",
+                "0.85"
+              ],
+              "answer": 1,
+              "explanation": "Precision = TP/(TP + FP) = 40/50 = 0.80."
+            },
+            {
+              "id": "l2-qm-8",
+              "difficulty": 2,
+              "stem": "The classifier's recall is closest to:",
+              "choices": [
+                "0.67",
+                "0.80",
+                "0.93"
+              ],
+              "answer": 0,
+              "explanation": "Recall = TP/(TP + FN) = 40/60 = 0.67: il modello trova due terzi delle imprese che taglieranno davvero il dividendo (dividends)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "econ",
+      "sections": [
+        {
+          "title": "Punti forward, Mundell-Fleming e regolamentazione",
+          "body": [
+            "I punti forward sono la differenza F - S espressa in pip (moltiplicata per 10,000 per la maggior parte delle coppie). Sono negativi quando la valuta base ha il tasso d'interesse più alto.",
+            "Mundell-Fleming con alta mobilità dei capitali: politica monetaria (monetary policy) restrittiva e fiscale espansiva apprezzano la valuta; monetaria espansiva e fiscale restrittiva la deprezzano; combinazioni (combinations) miste hanno effetto ambiguo.",
+            "Regolamentazione: la cattura del regolatore (regulatory capture) avviene quando l'autorità finisce per servire gli interessi dell'industria che dovrebbe controllare; l'arbitraggio regolamentare sfrutta differenze tra giurisdizioni."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Dimenticare che punti forward negativi indicano la valuta base a sconto."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-ec-set2",
+          "vignette": "Paola Greco analyzes the Canadian dollar. The spot rate is 1.3500 CAD/USD. One-year interest rates are 4.0% in Canada and 5.0% in the US. Greco expects the Canadian government to adopt an expansionary fiscal policy while the Bank of Canada tightens monetary policy, in a setting of high capital mobility. In a separate report, she notes that labor productivity in Country M grew 3% last year; the capital share is 0.35 and the capital-to-labor ratio grew 4%. A regulatory agency in Country M is staffed mainly by former executives of the banks it supervises and has repeatedly approved rules favored by those banks.",
+          "questions": [
+            {
+              "id": "l2-ec-5",
+              "difficulty": 3,
+              "stem": "The one-year forward points on CAD/USD are closest to:",
+              "choices": [
+                "-129 pips",
+                "-100 pips",
+                "+129 pips"
+              ],
+              "answer": 0,
+              "explanation": "F = 1.35 × 1.04/1.05 = 1.3371; punti = (1.3371 - 1.3500) × 10,000 ≈ -129. L'USD, valuta base con il tasso più alto, quota a sconto."
+            },
+            {
+              "id": "l2-ec-6",
+              "difficulty": 3,
+              "stem": "Under the Mundell-Fleming model, Greco's expected policy mix will most likely cause the CAD to:",
+              "choices": [
+                "appreciate",
+                "depreciate",
+                "remain unchanged"
+              ],
+              "answer": 0,
+              "explanation": "Con alta mobilità dei capitali, una politica fiscale (fiscal policy) espansiva e una monetaria restrittiva spingono entrambe in su i tassi: affluiscono capitali e la valuta si apprezza."
+            },
+            {
+              "id": "l2-ec-7",
+              "difficulty": 3,
+              "stem": "Using growth accounting, the contribution of total factor productivity to labor productivity growth in Country M is closest to:",
+              "choices": [
+                "1.4%",
+                "1.6%",
+                "2.6%"
+              ],
+              "answer": 1,
+              "explanation": "Crescita della produttività del lavoro = TFP + α × crescita del capitale per lavoratore: 3% = TFP + 0.35 × 4% → TFP = 3% - 1.4% = 1.6%."
+            },
+            {
+              "id": "l2-ec-8",
+              "difficulty": 2,
+              "stem": "The situation of Country M's regulatory agency is best described as:",
+              "choices": [
+                "regulatory arbitrage",
+                "regulatory capture",
+                "regulatory competition"
+              ],
+              "answer": 1,
+              "explanation": "Un'autorità che serve gli interessi dei soggetti vigilati, anche per la provenienza del personale, è un caso di regulatory capture."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "fsa",
+      "sections": [
+        {
+          "title": "Avviamento pieno e parziale; costo pensionistico IFRS",
+          "body": [
+            "Avviamento pieno (full goodwill): fair value dell'intera partecipata (implicito nel prezzo pagato) - fair value delle attività nette identificabili; le interessenze di minoranza (non-controlling interests) sono al fair value. Avviamento parziale (partial goodwill, solo IFRS): prezzo pagato - quota acquisita delle attività nette; le minoranze sono pari alla loro quota delle attività nette.",
+            "Costo pensionistico a conto economico (income statement) sotto IFRS = costo del servizio corrente (e passato) + interessi netti sulla passività (liabilities) netta (tasso di sconto (discount rate) × deficit). Il rendimento effettivo degli asset diverso dal tasso di sconto è una rimisurazione in OCI."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Calcolare gli interessi netti IFRS sull'intera obbligazione (bonds) invece che sul deficit netto."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-fsa-set2",
+          "vignette": "Omega Group acquires 80% of Sigma Ltd for $800 million in cash. At the acquisition date, the fair value of Sigma's identifiable net assets is $900 million, and the fair value of the non-controlling interest is estimated at $200 million. Omega reports under IFRS. Omega's defined benefit plan has plan assets of $500 million and a defined benefit obligation of $600 million at the beginning of the year. The discount rate is 5% and current service cost for the year is $50 million. Plan assets actually returned 9% during the year.",
+          "questions": [
+            {
+              "id": "l2-fsa-5",
+              "difficulty": 3,
+              "stem": "Under the full goodwill method, goodwill is closest to:",
+              "choices": [
+                "$80 million",
+                "$100 million",
+                "$200 million"
+              ],
+              "answer": 1,
+              "explanation": "Valore totale di Sigma = 800 + 200 = 1,000; goodwill pieno = 1,000 - 900 = 100 milioni."
+            },
+            {
+              "id": "l2-fsa-6",
+              "difficulty": 3,
+              "stem": "Under the partial goodwill method, goodwill and the non-controlling interest are closest to:",
+              "choices": [
+                "$80 million and $180 million",
+                "$100 million and $200 million",
+                "$80 million and $200 million"
+              ],
+              "answer": 0,
+              "explanation": "Goodwill parziale = 800 - 80% × 900 = 80; minoranze = 20% × 900 = 180."
+            },
+            {
+              "id": "l2-fsa-7",
+              "difficulty": 3,
+              "stem": "Omega's pension expense recognized in profit or loss for the year is closest to:",
+              "choices": [
+                "$35 million",
+                "$55 million",
+                "$80 million"
+              ],
+              "answer": 1,
+              "explanation": "IFRS: costo del servizio 50 + interessi netti 5% × (600 - 500) = 5 → 55 milioni. 80 calcola gli interessi sull'intera obbligazione (bonds) (5% × 600)."
+            },
+            {
+              "id": "l2-fsa-8",
+              "difficulty": 2,
+              "stem": "The difference between the actual return on plan assets (9%) and the discount rate (5%) is recognized under IFRS in:",
+              "choices": [
+                "profit or loss",
+                "other comprehensive income",
+                "the cash flow statement only"
+              ],
+              "answer": 1,
+              "explanation": "È una rimisurazione: va in OCI e non transita mai a conto economico (income statement) sotto IFRS."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "corp",
+      "sections": [
+        {
+          "title": "Beta unlevered e teorie dei dividendi",
+          "body": [
+            "Per stimare il beta di un progetto o di un'impresa non quotata: prendi il beta di un comparabile, togli l'effetto della leva (βU = βL/[1 + (1 - t)D/E]) e applica la leva target (βL = βU × [1 + (1 - t)D/E]).",
+            "Effetto clientela (clientele effect): investitori con aliquote diverse preferiscono politiche di dividendo diverse. Teoria della segnalazione: aumenti dei dividendi (dividends) comunicano fiducia nei flussi futuri; un taglio è un segnale negativo forte. Un dividendo stabile è preferito dai manager (modello di Lintner)."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Usare direttamente il beta di un comparabile con leva diversa senza unlevering e relevering."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-corp-set2",
+          "vignette": "Sofia Ricci estimates the cost of equity for Nova Robotics, a private company that plans a debt-to-equity ratio of 1.0. A comparable public company has an equity beta of 1.5 and a debt-to-equity ratio of 0.5. Both companies face a 25% tax rate. The risk-free rate is 3% and the equity risk premium is 5%. Nova's board is also debating dividend policy: one director argues that the company's shareholders, mostly retirees in low tax brackets, prefer regular cash dividends; another notes that when Nova's peer raised its dividend last year, its share price rose sharply.",
+          "questions": [
+            {
+              "id": "l2-corp-5",
+              "difficulty": 3,
+              "stem": "The comparable company's asset (unlevered) beta is closest to:",
+              "choices": [
+                "1.00",
+                "1.09",
+                "1.20"
+              ],
+              "answer": 1,
+              "explanation": "βU = 1.5/[1 + 0.75 × 0.5] = 1.5/1.375 = 1.09."
+            },
+            {
+              "id": "l2-corp-6",
+              "difficulty": 3,
+              "stem": "Nova's equity beta at its target capital structure is closest to:",
+              "choices": [
+                "1.50",
+                "1.91",
+                "2.18"
+              ],
+              "answer": 1,
+              "explanation": "βL = 1.09 × [1 + 0.75 × 1.0] = 1.09 × 1.75 = 1.91. Più leva implica un beta azionario più alto."
+            },
+            {
+              "id": "l2-corp-7",
+              "difficulty": 2,
+              "stem": "Using the CAPM, Nova's cost of equity is closest to:",
+              "choices": [
+                "10.5%",
+                "12.5%",
+                "13.9%"
+              ],
+              "answer": 1,
+              "explanation": "ke = 3% + 1.91 × 5% = 12.5%. 10.5% usa il beta del comparabile (1.5) senza aggiustare la leva."
+            },
+            {
+              "id": "l2-corp-8",
+              "difficulty": 2,
+              "stem": "The two directors' arguments are best described, respectively, as the:",
+              "choices": [
+                "clientele effect and the signaling effect",
+                "bird-in-hand theory and the tax argument",
+                "signaling effect and the clientele effect"
+              ],
+              "answer": 0,
+              "explanation": "Investitori con preferenze fiscali specifiche per i dividendi (dividends) = effetto clientela; reazione del prezzo a un aumento del dividendo = effetto segnalazione."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "equity",
+      "sections": [
+        {
+          "title": "Modello H e PVGO",
+          "body": [
+            "Il modello H approssima una crescita che scende linearmente da gS a gL in 2H anni: V0 = [D0(1 + gL) + D0 × H × (gS - gL)]/(r - gL). È utile per imprese in fase di maturazione.",
+            "Valore delle opportunità di crescita: PVGO = P0 - E1/r, dove E1/r è il valore dell'impresa senza crescita. Un PVGO alto indica che il mercato paga molto per la crescita futura. P/B giustificato = (ROE - g)/(r - g): un ROE superiore al costo del capitale (cost of capital) giustifica un P/B maggiore di 1."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Usare come H l'intero periodo di transizione invece della sua metà."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-eq-set2",
+          "vignette": "Matteo Villa values three stocks. Stock A: ROE of 15%, sustainable growth of 5% and required return of 10%. Stock B: current dividend of $1.00; dividend growth is 12% today and is expected to decline linearly over 6 years to a long-term rate of 4%; required return 9%. Stock C trades at $50 with expected next-year EPS of $4.00 and a required return of 10%. Villa also notes that Stock A retains 60% of its earnings.",
+          "questions": [
+            {
+              "id": "l2-eq-5",
+              "difficulty": 2,
+              "stem": "The justified price-to-book ratio for Stock A is closest to:",
+              "choices": [
+                "1.0",
+                "1.5",
+                "2.0"
+              ],
+              "answer": 2,
+              "explanation": "P/B = (ROE - g)/(r - g) = (15% - 5%)/(10% - 5%) = 2.0."
+            },
+            {
+              "id": "l2-eq-6",
+              "difficulty": 4,
+              "stem": "Using the H-model, the value of Stock B is closest to:",
+              "choices": [
+                "$20.80",
+                "$25.60",
+                "$30.40"
+              ],
+              "answer": 1,
+              "explanation": "H = 6/2 = 3. V0 = [1.00 × 1.04 + 1.00 × 3 × (0.12 - 0.04)]/(0.09 - 0.04) = (1.04 + 0.24)/0.05 = 25.60. $20.80 ignora l'extra-crescita."
+            },
+            {
+              "id": "l2-eq-7",
+              "difficulty": 2,
+              "stem": "The present value of growth opportunities (PVGO) for Stock C is closest to:",
+              "choices": [
+                "$10.00",
+                "$12.50",
+                "$40.00"
+              ],
+              "answer": 0,
+              "explanation": "Valore senza crescita = E1/r = 4/0.10 = 40; PVGO = 50 - 40 = 10."
+            },
+            {
+              "id": "l2-eq-8",
+              "difficulty": 2,
+              "stem": "If Stock A's retention ratio of 60% and ROE of 15% are sustained, its sustainable growth rate is closest to:",
+              "choices": [
+                "6%",
+                "9%",
+                "15%"
+              ],
+              "answer": 1,
+              "explanation": "g = b × ROE = 0.60 × 15% = 9%, più alto del 5% ipotizzato: con questi fondamentali il P/B giustificato sarebbe ancora maggiore."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "fixed",
+      "sections": [
+        {
+          "title": "Valutazione con albero binomiale e spread di credito",
+          "body": [
+            "Nell'albero binomiale (binomial tree) dei tassi ogni nodo ha probabilità 0.5. Si parte dalla scadenza: in ogni nodo il valore è la media dei valori successivi (cedola (coupon) inclusa) scontata al tasso del nodo. Per una callable si prende il minimo tra valore calcolato e prezzo di call; per una putable il massimo tra valore e prezzo di put.",
+            "Valore della call incorporata = valore senza opzione (options) - valore callable. Spread di credito ≈ probabilità di default (probability of default) × perdita in caso di default (con ipotesi semplificate e default annuo costante)."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Applicare il vincolo di call alla data zero invece che nei nodi in cui l'opzione è esercitabile."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-fi-set2",
+          "vignette": "Carla Pellegrini values a 2-year, 5% annual-coupon bond with par of 100 using a binomial interest rate tree. The one-year rate today is 3.00%. In one year, the one-year rate will be either 6.00% (up node) or 4.00% (down node), each with probability 0.5. She values both an option-free version and a version callable at par at the end of year 1 (after the coupon is paid). Separately, she estimates that a corporate issuer has an annual probability of default of 2% and a loss given default of 60%.",
+          "questions": [
+            {
+              "id": "l2-fi-5",
+              "difficulty": 4,
+              "stem": "The value of the option-free bond is closest to:",
+              "choices": [
+                "100.00",
+                "101.48",
+                "101.95"
+              ],
+              "answer": 2,
+              "explanation": "Nodo alto: 105/1.06 = 99.06; nodo basso: 105/1.04 = 100.96. Oggi: [0.5 × (99.06 + 5) + 0.5 × (100.96 + 5)]/1.03 = 101.95."
+            },
+            {
+              "id": "l2-fi-6",
+              "difficulty": 4,
+              "stem": "The value of the callable bond is closest to:",
+              "choices": [
+                "100.00",
+                "101.48",
+                "101.95"
+              ],
+              "answer": 1,
+              "explanation": "Nel nodo basso il valore 100.96 supera il prezzo di call: si limita a 100. Oggi: [0.5 × (99.06 + 5) + 0.5 × (100 + 5)]/1.03 = 101.48."
+            },
+            {
+              "id": "l2-fi-7",
+              "difficulty": 3,
+              "stem": "The value of the embedded call option is closest to:",
+              "choices": [
+                "0.47",
+                "1.48",
+                "1.95"
+              ],
+              "answer": 0,
+              "explanation": "Call = 101.95 - 101.48 = 0.47. È il valore che l'investitore cede all'emittente."
+            },
+            {
+              "id": "l2-fi-8",
+              "difficulty": 2,
+              "stem": "The approximate credit spread implied by the issuer's default probability and loss given default is closest to:",
+              "choices": [
+                "0.8%",
+                "1.2%",
+                "2.0%"
+              ],
+              "answer": 1,
+              "explanation": "Spread ≈ PD × LGD = 2% × 60% = 1.2%. 0.8% usa il tasso di recupero (recovery rate) (40%) al posto della LGD."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "deriv",
+      "sections": [
+        {
+          "title": "Valore dei contratti durante la vita",
+          "body": [
+            "Un forward lungo su un'azione senza dividendi (dividends), a una data intermedia t, vale St - F0/(1 + r)^(T - t): il prezzo attuale meno il valore attuale (present value) del prezzo concordato. Uno swap, dopo l'inizio, vale per chi paga fisso (nuovo tasso swap - tasso fisso originario) × somma dei fattori di sconto residui (residuals) × nozionale.",
+            "Delta della put = delta della call - 1 (stesso strike e scadenza, per la put-call parity). Una put lunga ha delta negativo: per coprirla si comprano azioni."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Scontare il prezzo spot invece del prezzo forward concordato nel valore del forward."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-dv-set2",
+          "vignette": "Six months ago, Andrea Fabbri entered a one-year long forward contract on a non-dividend-paying stock at a forward price of $105. Today the stock trades at $108 and the annual risk-free rate is 5%. Fabbri's firm also has a pay-fixed interest rate swap with a notional of $10 million and a fixed rate of 3%; the current swap rate for the remaining term is 4% and the sum of the remaining discount factors is 1.85. Finally, a European call on another stock has a delta of 0.60.",
+          "questions": [
+            {
+              "id": "l2-dv-5",
+              "difficulty": 3,
+              "stem": "The value of Fabbri's long forward position today is closest to:",
+              "choices": [
+                "$3.00",
+                "$5.53",
+                "$8.00"
+              ],
+              "answer": 1,
+              "explanation": "V = 108 - 105/1.05^0.5 = 108 - 102.47 = 5.53. 3.00 dimentica di scontare il prezzo forward."
+            },
+            {
+              "id": "l2-dv-6",
+              "difficulty": 3,
+              "stem": "The value of the swap to the pay-fixed party is closest to:",
+              "choices": [
+                "-$185,000",
+                "$100,000",
+                "$185,000"
+              ],
+              "answer": 2,
+              "explanation": "(4% - 3%) × 1.85 × 10,000,000 = 185,000. Chi paga fisso al 3% quando il mercato chiede il 4% ha un contratto con valore positivo."
+            },
+            {
+              "id": "l2-dv-7",
+              "difficulty": 2,
+              "stem": "The delta of a European put with the same strike and expiration as the call is closest to:",
+              "choices": [
+                "-0.60",
+                "-0.40",
+                "0.40"
+              ],
+              "answer": 1,
+              "explanation": "Delta put = delta call - 1 = 0.60 - 1 = -0.40."
+            },
+            {
+              "id": "l2-dv-8",
+              "difficulty": 2,
+              "stem": "If interest rates rise after the swap is entered, the value of the swap to the pay-fixed party will most likely:",
+              "choices": [
+                "increase",
+                "decrease",
+                "remain unchanged"
+              ],
+              "answer": 0,
+              "explanation": "Con tassi più alti il flusso variabile ricevuto aumenta e il fisso pagato diventa relativamente conveniente: il valore per chi paga fisso sale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "alt",
+      "sections": [
+        {
+          "title": "Metodo del venture capital e indici di copertura del debito",
+          "body": [
+            "Metodo del venture capital: valore post-money = valore di uscita atteso/(1 + tasso target)^anni; quota di proprietà richiesta = investimento/post-money; pre-money = post-money - investimento. I tassi target sono alti (30-50%) per il rischio di fallimento.",
+            "Finanziamento immobiliare (real estate): DSCR (debt service coverage ratio) = NOI/servizio del debito; LTV = prestito/valore dell'immobile. I finanziatori richiedono DSCR minimi (es. 1.25) e LTV massimi."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Confondere valore pre-money e post-money nel calcolo della quota."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-alt-set2",
+          "vignette": "Giorgio Amato, a venture capitalist, plans to invest $3 million in a start-up. He expects to exit in 5 years at a value of $50 million and uses a target rate of return of 40%. Amato's firm also evaluates a loan on an office building with net operating income of $1.2 million and annual debt service of $0.96 million; the building is appraised at $16 million and the loan is $11.2 million. Finally, a commodity futures market is in contango.",
+          "questions": [
+            {
+              "id": "l2-alt-5",
+              "difficulty": 3,
+              "stem": "The post-money valuation of the start-up is closest to:",
+              "choices": [
+                "$6.3 million",
+                "$9.3 million",
+                "$35.7 million"
+              ],
+              "answer": 1,
+              "explanation": "Post-money = 50/1.40^5 = 50/5.378 = 9.30 milioni."
+            },
+            {
+              "id": "l2-alt-6",
+              "difficulty": 3,
+              "stem": "The ownership fraction Amato should require is closest to:",
+              "choices": [
+                "6%",
+                "32%",
+                "48%"
+              ],
+              "answer": 1,
+              "explanation": "Quota = investimento/post-money = 3/9.30 = 32.3%. Il pre-money è 9.30 - 3 = 6.30 milioni."
+            },
+            {
+              "id": "l2-alt-7",
+              "difficulty": 2,
+              "stem": "The building's debt service coverage ratio and loan-to-value ratio are closest to:",
+              "choices": [
+                "1.25 and 70%",
+                "0.80 and 70%",
+                "1.25 and 143%"
+              ],
+              "answer": 0,
+              "explanation": "DSCR = 1.2/0.96 = 1.25; LTV = 11.2/16 = 70%."
+            },
+            {
+              "id": "l2-alt-8",
+              "difficulty": 2,
+              "stem": "For a long investor rolling futures in the contango market, roll yield is most likely:",
+              "choices": [
+                "positive",
+                "negative",
+                "zero"
+              ],
+              "answer": 1,
+              "explanation": "In contango i contratti lontani costano più di quelli in scadenza: chi rinnova vende basso e compra alto, e il roll yield è negativo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "pm",
+      "sections": [
+        {
+          "title": "Scalare il VaR e ampiezza delle scommesse",
+          "body": [
+            "Con rendimenti indipendenti il VaR di T giorni ≈ VaR giornaliero × √T. L'expected shortfall (CVaR) è la perdita media oltre la soglia del VaR e descrive meglio le code.",
+            "Legge fondamentale (fundamental law of active management): a parità di abilità (IC) e vincoli (TC), quadruplicare il numero di scommesse indipendenti raddoppia l'information ratio. Rendimento attivo (active return) atteso = IR × rischio attivo (active risk)."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Moltiplicare il VaR per T invece che per √T."
+      ],
+      "item_sets": [
+        {
+          "id": "l2-pm-set2",
+          "vignette": "Elisa Marchi oversees risk at a hedge fund. A trading book has a one-day 1% VaR of $100,000; returns are assumed independent across days. A portfolio manager with an information ratio of 0.5 targets active risk of 6%. A second manager has an information coefficient of 0.04, a transfer coefficient of 1.0 and makes 100 independent bets per year; he proposes expanding to 400 independent bets with the same skill. Marchi's board asks for a measure of the average loss in the worst 1% of days.",
+          "questions": [
+            {
+              "id": "l2-pm-5",
+              "difficulty": 2,
+              "stem": "The 20-day 1% VaR of the trading book is closest to:",
+              "choices": [
+                "$447,000",
+                "$2,000,000",
+                "$100,000"
+              ],
+              "answer": 0,
+              "explanation": "VaR 20 giorni ≈ 100,000 × √20 = 447,214."
+            },
+            {
+              "id": "l2-pm-6",
+              "difficulty": 2,
+              "stem": "The first manager's expected active return is closest to:",
+              "choices": [
+                "0.5%",
+                "3.0%",
+                "12.0%"
+              ],
+              "answer": 1,
+              "explanation": "Rendimento attivo (active return) = IR × rischio attivo (active risk) = 0.5 × 6% = 3.0%."
+            },
+            {
+              "id": "l2-pm-7",
+              "difficulty": 3,
+              "stem": "If the second manager expands to 400 independent bets with the same skill, his information ratio will change from:",
+              "choices": [
+                "0.40 to 0.80",
+                "0.40 to 1.60",
+                "0.04 to 0.16"
+              ],
+              "answer": 0,
+              "explanation": "IR = 1.0 × 0.04 × √100 = 0.40; con 400 scommesse 1.0 × 0.04 × 20 = 0.80: quadruplicare l'ampiezza raddoppia l'IR."
+            },
+            {
+              "id": "l2-pm-8",
+              "difficulty": 2,
+              "stem": "The measure requested by the board is best described as:",
+              "choices": [
+                "value at risk",
+                "expected shortfall (conditional VaR)",
+                "tracking error"
+              ],
+              "answer": 1,
+              "explanation": "La perdita media nell'1% dei giorni peggiori è l'expected shortfall: il VaR indica solo la soglia, non quanto si perde oltre."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

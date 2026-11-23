@@ -1,0 +1,98 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "equity",
+      "sections": [
+        {
+          "title": "Processo di valutazione e rendimento richiesto",
+          "body": [
+            "Il processo: 1) capire l'impresa (settore, posizione competitiva, strategia, qualità dell'informativa); 2) prevedere la performance; 3) scegliere il modello adatto; 4) convertire le previsioni in un valore; 5) applicare le conclusioni (raccomandazione, prezzo obiettivo). Valore di continuità (going concern) vs valore di liquidazione; valore intrinseco (intrinsic value) vs valore equo di mercato (fair market value); approccio assoluto (flussi attualizzati) vs relativo (multipli (multiples)). Somma delle parti (sum-of-the-parts) per conglomerati, che spesso trattano a sconto (conglomerate discount) per inefficienze, errori di misura o diversificazione (diversification) non richiesta dagli investitori.",
+            "Concetti di rendimento: rendimento richiesto (required return: minimo per accettare il rischio), rendimento atteso (expected return: in base alle proprie stime), alfa ex ante = atteso - richiesto; alfa ex post = realizzato - richiesto aggiustato al rischio. Se il prezzo converge al valore intrinseco in un anno: rendimento atteso ≈ r + (V0 - P0)/P0.",
+            "Premio per il rischio azionario (equity risk premium, ERP): storico (media aritmetica (arithmetic mean) per un periodo, geometrica per il lungo periodo; distorto da survivorship e da cambi di regime; si confronta con titoli a breve o a lungo, preferibile il lungo), prospettico con il modello di Gordon: ERP = D1/P0 + g - rendimento del titolo di Stato (government bond) a lungo; macroeconomico (Ibbotson-Chen: inflazione (inflation) + crescita reale degli utili + crescita del P/E + rendimento da dividendo (dividends) - tasso privo di rischio); da sondaggi. Esempio Gordon: dividend yield 2%, crescita 5%, titolo di Stato 4% → ERP 3%.",
+            "Modelli per il costo del capitale (cost of capital) proprio: CAPM; multifattoriali (Fama-French con mercato, SMB, HML; Pastor-Stambaugh con fattore di liquidità; macroeconomici); metodo per somma (build-up) per società non quotate: rf + ERP + premio dimensionale + premio specifico; rendimento obbligazionario più premio (bond yield plus risk premium) con un premio del 3-4% sul rendimento del debito dell'emittente. Beta: stimato con regressione su 60 mesi; beta corretto di Blume = 2/3 × grezzo + 1/3 × 1 (tende a 1). Per società senza storia: beta di un comparabile, senza leva e con la leva della società. Mercati emergenti: aggiungere un premio rischio paese (country risk premium).",
+            "Esempio Fama-French: rf 3%, beta di mercato 1.1 con premio 5%, SMB 0.4 con premio 2%, HML -0.2 con premio 3% → r = 3% + 5.5% + 0.8% - 0.6% = 8.7%."
+          ]
+        },
+        {
+          "title": "Modelli a dividendi: Gordon, PVGO, H-model, più stadi",
+          "body": [
+            "Il modello a dividendi è adatto quando l'impresa paga dividendi legati alla capacità di generare utili e l'investitore è di minoranza. Gordon V0 = D1/(r - g); il rendimento richiesto implicito r = D1/P0 + g. Il valore si può scomporre: V0 = E1/r + PVGO, dove E1/r è il valore senza crescita (tutti gli utili distribuiti) e PVGO il valore attuale (present value) delle opportunità di crescita. Esempio: E1 = 4, r = 10%, prezzo 60 → PVGO = 60 - 40 = 20 (un terzo del prezzo).",
+            "P/E giustificato: prospettico P0/E1 = (1 - b)/(r - g); storico P0/E0 = (1 - b)(1 + g)/(r - g). Crescita sostenibile g = b × ROE; scomposizione PRAT: g = ritenzione × margine netto (net profit margin) × rotazione dell'attivo × leva. Una crescita che viene da una leva in aumento non è sostenibile all'infinito.",
+            "Due stadi: alta crescita per n anni, poi crescita stabile; valore = PV dei dividendi di alta crescita + PV del valore terminale (Gordon a n o un multiplo). H-model: la crescita scende linearmente da gS a gL in 2H anni: V0 = D0(1 + gL)/(r - gL) + D0 × H × (gS - gL)/(r - gL). Esempio: D0 = 2, gS = 12%, gL = 4%, declino in 10 anni (H = 5), r = 9% → 2 × 1.04/0.05 + 2 × 5 × 0.08/0.05 = 41.6 + 16.0 = 57.6.",
+            "Tre stadi: crescita alta costante, transizione (spesso lineare), stabile; adatto a imprese giovani. Fogli di calcolo permettono previsioni anno per anno. Il valore terminale pesa spesso oltre il 70%: le ipotesi di lungo periodo (g e r) dominano.",
+            "Rendimento implicito da un modello a più stadi: si cerca r tale che il valore uguagli il prezzo (IRR); con l'H-model esiste una formula approssimata: r = (D0/P0)[(1 + gL) + H(gS - gL)] + gL.",
+            "Trappola: la crescita di lungo periodo non può superare quella nominale dell'economia; con g vicino a r i valori esplodono. Coerenza: la crescita stabile richiede un payout coerente con ROE stabile (b = g/ROE)."
+          ]
+        },
+        {
+          "title": "Free cash flow: FCFF e FCFE",
+          "body": [
+            "Quando usarli: impresa che non paga dividendi o paga molto meno della sua capacità, prospettiva di controllo, flussi legati alla redditività. FCFF scontato al WACC dà il valore dell'impresa; meno il valore di mercato del debito dà il capitale proprio. FCFE scontato al costo del capitale proprio dà direttamente il capitale proprio; preferito con struttura stabile, FCFF con leva elevata o in cambiamento.",
+            "Formule FCFF: da utile netto (net income): NI + costi non monetari + Int(1 - t) - FCInv - WCInv; da CFO: CFO + Int(1 - t) - FCInv; da EBIT: EBIT(1 - t) + ammortamenti (depreciation) - FCInv - WCInv; da EBITDA: EBITDA(1 - t) + ammortamenti × t - FCInv - WCInv. FCFE = FCFF - Int(1 - t) + indebitamento netto = NI + costi non monetari - FCInv - WCInv + indebitamento netto. Con rapporto di indebitamento obiettivo DR: FCFE = NI - (1 - DR)(FCInv - ammortamenti) - (1 - DR) WCInv.",
+            "Esempio: EBIT 500, aliquota 25%, ammortamenti 80, capex 150, aumento del capitale circolante (working capital) 30 → FCFF = 375 + 80 - 150 - 30 = 275. Interessi 40 (30 netti), nuovo debito netto 20 → FCFE = 275 - 30 + 20 = 265. Valutazione: WACC 9%, g 4% → FCFF1 = 286, valore d'impresa (enterprise value) = 286/0.05 = 5,720; debito 1,500 → capitale 4,220.",
+            "Attenzione alle voci: i costi non monetari includono ammortamenti, svalutazioni, perdite non monetarie, oneri di ristrutturazione non monetari; si tolgono plusvalenze non monetarie. Le imposte differite (deferred taxes) si aggiungono se non si prevede che si annullino. Il capitale circolante esclude cassa e debiti a breve. Dividendi, riacquisti (share repurchase) ed emissioni di azioni non influenzano FCFF né FCFE (sono usi del FCFE).",
+            "Previsioni: crescita dei flussi o dei componenti (ricavi, margini, investimenti in proporzione all'aumento delle vendite). Modelli a due e tre stadi come per i dividendi. Attività non operative (cassa in eccesso, partecipazioni, terreni non usati) si aggiungono al valore operativo.",
+            "Sensibilità: il valore è molto sensibile a crescita e tasso di sconto (discount rate); un FCFE negativo per anni (impresa in crescita) non rende il modello inutile ma aumenta il peso del valore terminale. EBITDA o utile netto non sono buone proxy del flusso disponibile."
+          ]
+        },
+        {
+          "title": "Multipli: P/E, P/B, P/S, EV/EBITDA",
+          "body": [
+            "P/E: storico con EPS normalizzati per imprese cicliche (media storica degli EPS, oppure ROE medio × valore contabile per azione corrente, che tiene conto della dimensione attuale); prospettico con utili attesi. Rettifiche: voci non ricorrenti, differenze contabili, diluizione. Rapporto prezzo/utili sulla crescita (PEG) = P/E/crescita attesa in punti percentuali: presuppone relazione lineare e ignora il rischio. Rendimento degli utili (earnings yield) E/P utile quando gli utili sono negativi o vicini a zero.",
+            "P/B giustificato = (ROE - g)/(r - g): sopra 1 se ROE > r. Esempio: ROE 12%, r 10%, g 5% → 1.4. Rettifiche del valore contabile: togliere avviamento (goodwill) e immateriali (tangible book), rivalutare attivi e passivi a valori di mercato, uniformare LIFO/FIFO, considerare le passività (liabilities) fuori bilancio. Adatto a banche e assicurazioni.",
+            "P/S giustificato = (E0/S0)(1 - b)(1 + g)/(r - g) = margine netto × payout × (1 + g)/(r - g). Il P/S è utile con utili negativi ma ignora i costi: va letto con i margini. P/CF con cash flow (utile + ammortamenti), CFO rettificato, FCFE o EBITDA. Rendimento da dividendo (dividend yield).",
+            "EV/EBITDA: confronta imprese con leva diversa, ignora le differenze di ammortamento ma anche gli investimenti necessari; EV/vendite per imprese in perdita. Multipli specifici: EV/abbonati, prezzo/riserve. Media dei multipli di un gruppo: la media armonica (harmonic mean) attenua gli outlier verso l'alto ed è preferita per i rapporti di prezzo; usare anche la mediana.",
+            "Momentum e altri indicatori: sorpresa sugli utili non attesi standardizzata (standardized unexpected earnings, SUE) = (EPS effettivo - atteso)/deviazione standard (standard deviation) delle sorprese passate; forza relativa del prezzo. Modelli di mercato: Fed model (rendimento degli utili dell'S&P 500 vs rendimento del Treasury a 10 anni) e Yardeni model (aggiunge la crescita attesa e il rendimento corporate).",
+            "Valore terminale con un multiplo: valore a n = multiplo atteso × utile (o EBITDA) dell'anno n; coerente con il Gordon se il multiplo riflette crescita e rischio di lungo periodo. Trappola: applicare il multiplo attuale di un settore in forte crescita come multiplo terminale gonfia il valore."
+          ]
+        },
+        {
+          "title": "Reddito residuo",
+          "body": [
+            "Reddito residuo (residual income, RI): utile netto meno il costo del capitale proprio: RI_t = E_t - r × B_t-1 = (ROE_t - r) × B_t-1. Valore V0 = B0 + Σ RI_t/(1 + r)^t. Il valore contabile ancora il valore; il modello riconosce valore aggiunto solo se ROE > r. Valore economico aggiunto (economic value added, EVA) = NOPAT - WACC × capitale investito: versione a livello d'impresa; valore aggiunto di mercato (market value added) = valore di mercato - capitale investito.",
+            "Esempio a uno stadio: B0 = 20, ROE costante 15%, r = 10%, g = 5% → V0 = B0 + (ROE - r) B0/(r - g) = 20 + 1/0.05 = 40, P/B = 2. Coincide con il P/B giustificato (0.15 - 0.05)/(0.10 - 0.05) = 2.",
+            "Esempio pluriennale: B0 = 50, utili attesi 7, 7.5, 8 con payout zero, r = 10%. Anno 1: RI = 7 - 5 = 2; B1 = 57. Anno 2: RI = 7.5 - 5.7 = 1.8; B2 = 64.5. Anno 3: RI = 8 - 6.45 = 1.55. V0 = 50 + 2/1.1 + 1.8/1.21 + 1.55/1.331 = 50 + 1.82 + 1.49 + 1.16 = 54.47 (senza valore terminale, cioè assumendo RI nullo dopo il terzo anno).",
+            "Reddito residuo continuativo: dopo l'orizzonte esplicito il RI può restare costante, crescere, scendere a zero o decadere con un fattore di persistenza ω (0 ≤ ω ≤ 1): valore terminale a T-1 = RI_T/(1 + r - ω). ω alto con vantaggi competitivi forti e conservatorismo contabile; basso con ROE anomali, settori competitivi, voci non ricorrenti.",
+            "Requisito contabile: relazione di surplus pulito (clean surplus relation): B_t = B_t-1 + E_t - D_t. Se voci passano direttamente a patrimonio (OCI: differenze di conversione, coperture (hedging)), l'utile va rettificato. Altre rettifiche: valori equi di attivi e passivi, leasing, voci non ricorrenti, pratiche aggressive.",
+            "Punti di forza: valore terminale meno pesante, applicabile senza dividendi né flussi positivi, basato su dati contabili disponibili. Debolezze: dipende dalla qualità contabile e richiede rettifiche. Il RI è il modello preferito quando i flussi sono negativi per anni ma l'impresa è redditizia contabilmente."
+          ]
+        },
+        {
+          "title": "Valutazione delle società non quotate",
+          "body": [
+            "Differenze rispetto alle quotate: fattori legati all'impresa (fase di sviluppo, dimensione più piccola con rischio maggiore, management e proprietà coincidenti, informativa di minore qualità, orizzonte più lungo, meno pressione sugli utili trimestrali) e alle azioni (minore liquidità, restrizioni al trasferimento, concentrazione della proprietà). Scopi: transazioni (vendite, finanziamenti, IPO), conformità (bilanci, fisco), contenziosi.",
+            "Definizioni di valore: valore equo di mercato (fair market value: tra un acquirente e un venditore ipotetici informati, senza costrizioni), fair value per l'informativa finanziaria (prezzo di uscita in un'operazione ordinata), valore d'investimento (investment value: per un acquirente specifico, include le sinergie), valore intrinseco.",
+            "Normalizzazione degli utili: rettificare compensi dei proprietari diversi da quelli di mercato, affitti o operazioni con parti correlate, spese personali, voci non ricorrenti, attivi non operativi. Un acquirente strategico può includere sinergie; uno finanziario no.",
+            "Approcci: del reddito (flussi attualizzati; metodo del flusso capitalizzato (capitalized cash flow) = flusso normalizzato/(r - g) per imprese stabili; metodo degli utili in eccesso (excess earnings) per valutare gli intangibili separatamente), di mercato (società quotate comparabili (guideline public company), transazioni comparabili (guideline transactions, includono premi di controllo), transazioni precedenti sulle stesse azioni), patrimoniale (per holding e imprese in liquidazione). Il tasso di sconto si stima spesso con il metodo per somma (build-up) o con il CAPM ampliato (premi dimensionali e specifici).",
+            "Sconti e premi: sconto per mancanza di controllo (discount for lack of control, DLOC) = 1 - 1/(1 + premio di controllo (control premium)); sconto per mancanza di commerciabilità (discount for lack of marketability, DLOM) stimato da azioni vincolate, IPO precedenti, prezzo di una put. Combinazione moltiplicativa: sconto totale = 1 - (1 - DLOC)(1 - DLOM). Esempio: premio di controllo 25% → DLOC = 20%; DLOM 15% → sconto totale = 1 - 0.80 × 0.85 = 32%.",
+            "Trappola: applicare un DLOC a un valore ottenuto da prezzi di quotate comparabili (già di minoranza) significa scontare due volte; il DLOC va applicato a valori di controllo (es. transazioni comparabili)."
+          ]
+        }
+      ],
+      "formulas": [
+        "ERP (Gordon) = D1/P0 + g - rendimento titolo di Stato a lungo",
+        "Beta di Blume = 2/3 × beta grezzo + 1/3",
+        "V0 = E1/r + PVGO",
+        "H-model: V0 = D0(1 + gL)/(r - gL) + D0 H (gS - gL)/(r - gL)",
+        "g = b × ROE = b × (NI/S)(S/A)(A/E)",
+        "FCFF = EBIT(1 - t) + D&A - FCInv - WCInv = CFO + Int(1 - t) - FCInv",
+        "FCFE = FCFF - Int(1 - t) + indebitamento netto",
+        "FCFE (DR) = NI - (1 - DR)(FCInv - D&A) - (1 - DR)WCInv",
+        "P/B giustificato = 1 + (ROE - r)/(r - g)",
+        "P/S giustificato = (E0/S0)(1 - b)(1 + g)/(r - g)",
+        "RI_t = E_t - r B_t-1; V0 = B0 + Σ RI_t/(1 + r)^t",
+        "Valore terminale RI = RI_T/(1 + r - ω)",
+        "DLOC = 1 - 1/(1 + premio di controllo); sconto totale = 1 - (1 - DLOC)(1 - DLOM)"
+      ],
+      "pitfalls": [
+        "Scontare il FCFF al costo del capitale proprio (o il FCFE al WACC).",
+        "Considerare i dividendi pagati nel calcolo del FCFE.",
+        "Usare la media aritmetica di multipli con forti outlier invece della armonica o mediana.",
+        "Ignorare la relazione di surplus pulito nel reddito residuo quando ci sono voci in OCI.",
+        "Applicare lo sconto di minoranza a un valore che è già di minoranza.",
+        "Valutare una banca con EV/EBITDA invece che con P/B o reddito residuo."
+      ]
+    }
+  ]
+}

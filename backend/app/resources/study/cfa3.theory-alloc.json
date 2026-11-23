@@ -1,0 +1,76 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "alloc",
+      "sections": [
+        {
+          "title": "Aspettative di mercato: quadro e insidie",
+          "body": [
+            "Le aspettative sui mercati dei capitali (capital market expectations, CME) sono le stime di rendimento, rischio e correlazione (correlation) delle classi d'attività su cui si basa l'asset allocation strategica. Processo: 1) definire le aspettative necessarie e l'orizzonte; 2) studiare la storia; 3) scegliere metodo e modelli; 4) determinare le fonti dei dati; 5) interpretare il contesto attuale con giudizio; 6) produrre le stime e documentarle; 7) monitorare e confrontare i risultati con le stime.",
+            "Insidie nei dati: errori e distorsioni (survivorship, valutazioni smorzate per attivi illiquidi), dati di periodi con regimi diversi, serie troppo brevi o troppo lunghe (rischio di non stazionarietà), correlazioni apparenti (data mining), proxy inadeguate. Rimedio per i dati smorzati: de-smoothing che ricostruisce la volatilità vera.",
+            "Insidie psicologiche: ancoraggio, conferma, eccesso di fiducia (overconfidence), prudenza (prudence trap: previsioni troppo moderate), status quo, ricordo dei fatti recenti (recallability). Insidie di modello: incertezza sul modello e sui parametri, condizioni che cambiano.",
+            "Modelli: statistici (medie storiche con stimatori di shrinkage che combinano la media del campione con un obiettivo, serie storiche (time series), modelli multifattoriali per la matrice di covarianza (covariance)), a flussi attualizzati, approccio per componenti (building blocks), giudizio. Le matrici di covarianza campionarie con molti titoli sono rumorose: si usano modelli fattoriali o shrinkage.",
+            "Analisi del ciclo: inventari, ciclo del credito, componenti del PIL; politica monetaria (monetary policy) con la regola di Taylor: tasso obiettivo = tasso neutrale reale + inflazione (inflation) + 0.5 × (inflazione - obiettivo) + 0.5 × output gap. Esempio: neutrale reale 1%, inflazione 3%, obiettivo 2%, output gap +1% → 5%. Politica fiscale (fiscal policy) e monetaria combinate influenzano la forma della curva: monetaria restrittiva e fiscale espansiva → curva piatta o invertita con tassi alti."
+          ]
+        },
+        {
+          "title": "Previsioni per classe d'attività",
+          "body": [
+            "Obbligazioni (bonds): rendimento atteso ≈ rendimento attuale corretto per variazioni attese dei tassi su un orizzonte vicino alla duration, oppure per componenti: tasso reale a breve + inflazione attesa + premio a termine + premio per il credito + premio di liquidità. Il premio per il credito è più ampio nelle fasi di stress e si comprime nelle espansioni; i titoli dei paesi emergenti aggiungono rischio politico e valutario.",
+            "Azioni: modello di Grinold-Kroner: E(R) ≈ D/P + (inflazione + crescita reale degli utili) - ΔS + ΔP/E, dove ΔS è la variazione percentuale (percent change) del numero di azioni (i riacquisti (share repurchase) netti la rendono negativa e aumentano il rendimento). Esempio: dividend yield 2%, inflazione 2%, crescita reale 2.5%, riacquisti netti 1% (ΔS = -1%), compressione del P/E -0.5% → 2 + 4.5 + 1 - 0.5 = 7%. La crescita aggregata degli utili non può superare a lungo quella del PIL.",
+            "Modello di Singer-Terhaar per il premio per il rischio (risk premium): in mercati integrati RP = ρ × σ_i × (Sharpe del mercato globale); in mercati segmentati RP = σ_i × Sharpe; si pondera per il grado di integrazione e si aggiunge un premio di illiquidità (illiquidity). Esempio: σ 20%, correlazione 0.7, Sharpe globale 0.3 → integrato 4.2%, segmentato 6%; integrazione all'80% → 4.56%; più premio di illiquidità 0.3% → 4.86%.",
+            "Immobili: rendimento ≈ cap rate + crescita del NOI - variazione del cap rate; i cap rate seguono i tassi reali e i premi per il rischio con ritardo. Valute: guidate da commercio (nel lungo periodo PPP), flussi di capitale (nel breve periodo dominanti), differenziali di tasso e premio per il rischio; una posizione in valuta sopravvalutata con deficit corrente ampio e finanziamento esterno a breve è vulnerabile.",
+            "Volatilità e correlazioni: modelli GARCH per la volatilità variabile nel tempo; matrice di covarianza da modelli fattoriali; correlazioni che aumentano nelle crisi (la diversificazione (diversification) si riduce quando serve); serve anche stimare la coda della distribuzione."
+          ]
+        },
+        {
+          "title": "Asset allocation strategica: approcci",
+          "body": [
+            "Approcci: solo attivi (asset-only, mean-variance), relativi alle passività (liability-relative: ottimizzare il surplus = attivi - passività), basati sugli obiettivi (goals-based: per individui, sotto-portafogli per ogni obiettivo con orizzonte e probabilità richiesta). Il rischio rilevante cambia: volatilità del portafoglio, volatilità del surplus o probabilità di non raggiungere un obiettivo.",
+            "Ottimizzazione media-varianza (mean-variance optimization): massimizza U = E(R) - 0.005 × λ × σ² (con rendimenti in percentuale), λ avversione al rischio. Problemi: molto sensibile agli input (piccole variazioni di rendimento atteso cambiano molto i pesi), portafogli concentrati, ignora code, liquidità e passività. Rimedi: ottimizzazione inversa (reverse optimization: si ricavano i rendimenti impliciti nei pesi di mercato), modello di Black-Litterman (combina rendimenti impliciti di equilibrio e opinioni dell'investitore con un grado di fiducia), vincoli sui pesi, ricampionamento (resampled MVO), ottimizzazioni con le code (CVaR).",
+            "Esempio di utilità: portafoglio A con E(R) 7% e σ 10%; B con E(R) 9% e σ 16%; λ = 4. U(A) = 7 - 0.005 × 4 × 100 = 5.0; U(B) = 9 - 0.005 × 4 × 256 = 3.88 → A preferito. Con λ = 1.5: U(A) = 6.25, U(B) = 7.08 → B preferito.",
+            "Approcci di rischio: parità di rischio (risk parity: ogni classe contribuisce allo stesso rischio, spesso con leva sulle obbligazioni), pesi uguali (1/N), allocazione per fattori. Contributo al rischio di una classe = peso × beta della classe rispetto al portafoglio × volatilità del portafoglio. Il rischio di un portafoglio 60/40 viene per circa il 90% dalle azioni.",
+            "Per le passività: modelli di surplus (ottimizzazione media-varianza del surplus), approccio a due portafogli (portafoglio di copertura delle passività (hedging portfolio) e portafoglio di rendimento), approcci integrati. Per l'approccio per obiettivi: obiettivi essenziali con alta probabilità richiesta → portafogli prudenti; aspirazionali → più rischio.",
+            "Classi d'attività: devono essere omogenee al loro interno, mutuamente esclusive, diversificanti, coprire gran parte dell'universo investibile e avere capacità sufficiente. Anche i fattori di rischio (crescita, inflazione, tassi reali, credito, liquidità) possono guidare l'allocazione."
+          ]
+        },
+        {
+          "title": "Ribilanciamento e vincoli reali",
+          "body": [
+            "Il ribilanciamento (rebalancing) riporta i pesi verso la strategia: a calendario, per soglie (corridoi) o combinato. Ampiezza ottimale del corridoio: più larga se i costi di transazione sono alti, se l'investitore tollera di più il rischio, se la classe è molto correlata con il resto del portafoglio; più stretta se la classe è volatile. Il ribilanciamento è implicitamente una strategia contrarian (vende ciò che è salito): funziona bene in mercati con ritorno alla media (mean reversion), meno in trend forti.",
+            "Vincoli reali: dimensione degli attivi (piccoli investitori non accedono ad alcuni veicoli, grandissimi hanno problemi di capacità e devono usare mandati più grandi), liquidità (bisogni di cassa, illiquidità dei privati e richiami di capitale), orizzonte, regolamentazione (assicurazioni, fondi pensione (defined benefit pension plan)), fiscalità (asset location: titoli tassati in modo più favorevole nei conti tassabili; rendimenti e rischi dopo le tasse), preferenze ESG.",
+            "Rendimento e rischio dopo le tasse: r_dopo = r × (1 - t) per redditi tassati annualmente; il ribilanciamento genera plusvalenze tassabili, quindi i corridoi tassabili sono più larghi. Raccolta delle minusvalenze (tax-loss harvesting) per compensare plusvalenze.",
+            "Revisioni dell'allocazione: cambiamenti negli obiettivi o vincoli (cambio di vita, fusione dello sponsor, nuovi regolamenti), cambiamenti delle aspettative, cambiamenti nel finanziamento delle passività. Allocazione tattica: scostamenti a breve termine basati su segnali di valutazione o momentum, con budget di rischio attivo (active risk) definito.",
+            "Esempio: un fondo con allocazione 60/40 e corridoi del ±5% vede le azioni salire al 67% dopo un rally. Ribilancia vendendo azioni fino al target (o al limite del corridoio se i costi sono alti). Un investitore tassabile potrebbe ribilanciare usando i nuovi flussi e i dividendi (dividends) anziché vendere."
+          ]
+        },
+        {
+          "title": "Asset allocation agli alternativi",
+          "body": [
+            "Ruoli degli alternativi: aumentare il rendimento atteso (private equity), diversificare (hedge fund macro, trend following), proteggere dall'inflazione (immobili, infrastrutture, materie prime (commodities), terreni), generare reddito (private credit, infrastrutture core). Classificazione per ruolo e per fattori di rischio piuttosto che per etichetta: il private equity è economicamente azionario con leva e illiquidità.",
+            "Problemi nella stima: rendimenti smorzati, distribuzioni non normali, dati distorti; si usano dati de-smoothed e scenari. Approcci: media-varianza con correzioni, simulazioni Monte Carlo per i flussi dei fondi chiusi, allocazione per fattori di rischio.",
+            "Gestione della liquidità: i fondi privati richiedono impegni di capitale richiamati nel tempo; per raggiungere il peso obiettivo serve un programma di impegni pluriennale (vintage diversification) e una riserva di liquidità per i richiami. Modelli di flussi (es. Takahashi-Alexander) stimano richiami e distribuzioni. Rischio di sovraesposizione (effetto denominatore: se i mercati quotati crollano il peso dei privati supera il limite).",
+            "Monitoraggio: rischi di leva, liquidità, valutazione; due diligence operativa; confronti di performance con benchmark appropriati (PME, public market equivalent, per il private equity).",
+            "Per investitori individuali: limiti di accesso (requisiti patrimoniali), costi, liquidità, complessità fiscale; prodotti semiliquidi (interval fund, ELTIF) con limiti di rimborso."
+          ]
+        }
+      ],
+      "formulas": [
+        "Taylor: i* = r_neutrale + π + 0.5(π - π*) + 0.5(output gap)",
+        "Grinold-Kroner: E(R) ≈ D/P + (i + g) - ΔS + ΔP/E",
+        "Singer-Terhaar: RP = ρ σ_i SR_globale (integrato); σ_i SR (segmentato)",
+        "U = E(R) - 0.005 λ σ² (in percentuale)",
+        "Contributo al rischio = w_i × β_i,portafoglio × σ_portafoglio",
+        "Rendimento immobili ≈ cap rate + crescita NOI - Δcap rate"
+      ],
+      "pitfalls": [
+        "Usare dati di attivi illiquidi senza correggere lo smoothing.",
+        "Pensare che il ribilanciamento convenga sempre: costa in mercati con trend persistenti.",
+        "Dimenticare che i riacquisti netti di azioni aumentano il rendimento atteso nel modello di Grinold-Kroner.",
+        "Allargare i corridoi per una classe molto volatile: andrebbero stretti.",
+        "Ignorare l'effetto denominatore sugli impegni nel private equity."
+      ]
+    }
+  ]
+}

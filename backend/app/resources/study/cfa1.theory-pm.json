@@ -1,0 +1,99 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "pm",
+      "sections": [
+        {
+          "title": "Approccio di portafoglio, investitori e industria del risparmio gestito",
+          "body": [
+            "Approccio di portafoglio (portfolio approach): valutare ogni investimento per il contributo al rischio e al rendimento complessivi, non isolatamente. La diversificazione riduce il rischio specifico (idiosyncratic risk); il rapporto di diversificazione (diversification ratio) = rischio del portafoglio equiponderato/rischio medio dei singoli titoli. La diversificazione non protegge dai crolli sistemici, quando le correlazioni salgono.",
+            "Processo di gestione in tre fasi: pianificazione (capire il cliente, redigere l'IPS, definire le aspettative di mercato (capital market expectations) e l'asset allocation strategica), esecuzione (analisi dei titoli, costruzione del portafoglio, implementazione e negoziazione), feedback (monitoraggio e ribilanciamento (rebalancing), misurazione e valutazione della performance).",
+            "Tipi di investitori: individui (obiettivi vari, orizzonte legato al ciclo di vita, fiscalità personale), piani pensionistici a benefici definiti (orizzonte lungo, rendimento legato alle passività (liabilities), tolleranza al rischio (risk tolerance) dipendente dal finanziamento del piano e dalla solidità dello sponsor), fondazioni ed enti patrimoniali (endowments: orizzonte perpetuo, spesa annuale del 4-5%, alta tolleranza al rischio, poca liquidità necessaria), banche (passività a breve, alta liquidità, bassa tolleranza al rischio), assicurazioni (vita: passività lunghe; danni: passività brevi e incerte; regolamentazione stringente), fondi sovrani (sovereign wealth funds: obiettivi di stabilizzazione, risparmio intergenerazionale o sviluppo), fondi d'investimento.",
+            "Industria del risparmio gestito: gestori attivi e passivi (crescita degli indicizzati e degli ETF, pressione sulle commissioni), tradizionali e alternativi, attivi di proprietà o di terzi. Tendenze: crescita dei prodotti passivi, big data e tecnologia (robo-advisor), consolidamento (consolidation).",
+            "Veicoli collettivi: fondi comuni aperti (open-end: quote emesse e rimborsate al NAV giornaliero), chiusi (closed-end: numero fisso di azioni quotate, possono trattare a premio o sconto sul NAV), ETF (quotati, con meccanismo di creazione e rimborso in natura da parte dei partecipanti autorizzati che mantiene il prezzo vicino al NAV, tassazione efficiente), conti separati (separately managed accounts: titoli intestati al cliente, personalizzazione fiscale), hedge fund e fondi di private equity."
+          ]
+        },
+        {
+          "title": "Rischio, rendimento e utilità",
+          "body": [
+            "Rendimenti storici: azioni piccole > azioni grandi > obbligazioni (bonds) a lungo termine > titoli di Stato (government bond) a breve, con rischio crescente nello stesso ordine; i rendimenti reali e i premi per il rischio sono le grandezze rilevanti. Le distribuzioni dei rendimenti non sono normali: asimmetria (skewness) negativa e code spesse; la liquidità è un'altra dimensione di rischio (costi di negoziazione e impatto di mercato).",
+            "Avversione al rischio (risk aversion): un investitore avverso al rischio preferisce un rendimento certo a uno incerto con lo stesso valore atteso. Funzione di utilità usata nel curriculum: U = E(R) - ½ A σ², con A coefficiente di avversione (A > 0 avverso, A = 0 neutrale, A < 0 amante del rischio). Esempio: E(R) = 10%, σ = 20%, A = 4 → U = 0.10 - 0.5 × 4 × 0.04 = 0.02 (equivalente certo 2%).",
+            "Curve di indifferenza (indifference curves): combinazioni (combinations) di rischio e rendimento con la stessa utilità; più ripide per investitori più avversi; utilità più alta in alto a sinistra. Retta di allocazione del capitale (capital allocation line, CAL): combinazioni tra attività priva di rischio e un portafoglio rischioso: E(Rc) = rf + [(E(Rp) - rf)/σp] × σc. Peso ottimale nel portafoglio rischioso y* = (E(Rp) - rf)/(A σp²). Esempio: E(Rp) = 10%, rf = 3%, σp = 20%, A = 4 → y* = 0.07/0.16 = 43.75%.",
+            "Frontiera efficiente (efficient frontier) di Markowitz: portafogli con il massimo rendimento per ogni livello di rischio; il portafoglio a varianza minima globale (global minimum-variance) è il punto più a sinistra; sotto di esso i portafogli sono inefficienti. Con un'attività priva di rischio la CAL ottimale è tangente alla frontiera: il portafoglio di tangenza (optimal risky portfolio) è lo stesso per tutti gli investitori con le stesse aspettative (separazione in due fondi (two-fund separation)); l'avversione al rischio decide solo quanto mettere nel rischioso e quanto nel privo di rischio.",
+            "Correlazione (correlation) e diversificazione: con correlazione inferiore a +1 la frontiera si incurva verso sinistra; più bassa la correlazione, maggiore il beneficio. Aumentando il numero di titoli la varianza del portafoglio tende alla covarianza (covariance) media: il rischio sistematico (systematic risk) non si diversifica."
+          ]
+        },
+        {
+          "title": "CML, CAPM e SML",
+          "body": [
+            "Linea del mercato dei capitali (capital market line, CML): la CAL quando il portafoglio rischioso è il portafoglio di mercato (con aspettative omogenee). E(Rp) = rf + [(E(Rm) - rf)/σm] σp. Sopra il portafoglio di mercato ci si indebita al tasso privo di rischio (portafogli a leva); sotto si presta. Nella realtà il tasso a prestito è più alto e la CML si piega.",
+            "Rischio sistematico (systematic) e non sistematico (unsystematic): il rischio totale si scompone in una parte legata al mercato, non diversificabile, e una specifica, diversificabile. Il mercato remunera solo il rischio sistematico. Beta: β = Cov(Ri, Rm)/σm² = ρ σi/σm. Esempio: ρ = 0.6, σi = 30%, σm = 15% → β = 1.2. Modello di mercato (market model): Ri = αi + βi Rm + εi.",
+            "Modello CAPM (capital asset pricing model): E(Ri) = rf + βi [E(Rm) - rf]. Ipotesi: investitori avversi al rischio e razionali con orizzonte a un periodo, aspettative omogenee, investimenti divisibili e negoziabili, possibilità di prestare e prendere a prestito al tasso privo di rischio, niente costi di transazione e tasse, investitori price taker. Esempio: rf = 3%, β = 1.2, premio di mercato 6% → 10.2%.",
+            "Linea del mercato dei titoli (security market line, SML): rappresentazione del CAPM con il beta sull'asse orizzontale; vale per tutti i titoli e portafogli, efficienti o no (la CML vale solo per portafogli efficienti e usa la deviazione standard (standard deviation)). Un titolo sopra la SML (rendimento atteso stimato > rendimento richiesto (required return)) è sottovalutato; sotto è sopravvalutato.",
+            "Oltre il CAPM: modelli multifattoriali (Fama-French con mercato, dimensione e valore; Carhart con momentum; modelli macroeconomici). Usi del CAPM: costo del capitale (cost of capital), valutazione dei titoli, costruzione dei portafogli, valutazione della performance. Limiti: il portafoglio di mercato vero non è osservabile, i beta sono instabili, l'evidenza empirica è debole."
+          ]
+        },
+        {
+          "title": "Misure di performance aggiustate per il rischio",
+          "body": [
+            "Indice di Sharpe (Sharpe ratio) = (Rp - rf)/σp: rendimento in eccesso per unità di rischio totale; adatto a portafogli che rappresentano tutta la ricchezza investita. Indice di Treynor (Treynor ratio) = (Rp - rf)/βp: per unità di rischio sistematico; adatto a portafogli ben diversificati che fanno parte di un insieme più ampio. M-quadro (M²) = (Rp - rf) × σm/σp - (Rm - rf): rendimento in eccesso di un portafoglio con lo stesso rischio totale del mercato, espresso in punti percentuali. Alfa di Jensen (Jensen's alpha) = Rp - [rf + βp(Rm - rf)].",
+            "Esempio: portafoglio Rp = 12%, σp = 18%, βp = 1.1; mercato Rm = 10%, σm = 15%; rf = 3%. Sharpe = 9/18 = 0.50 contro 7/15 = 0.467 del mercato. Treynor = 9/1.1 = 8.18% contro 7% del mercato. M² = 9% × 15/18 - 7% = 0.5%. Alfa di Jensen = 12% - (3% + 1.1 × 7%) = 1.3%. Tutte le misure indicano una performance superiore al mercato.",
+            "Coerenza: Sharpe e M² producono la stessa classifica; Treynor e Jensen usano il beta e possono dare classifiche diverse se i portafogli non sono ben diversificati. Un portafoglio concentrato può avere alfa di Jensen alto e Sharpe basso (molto rischio specifico).",
+            "Limiti: dipendono dal benchmark e dal periodo, assumono rendimenti normali (gli indici di Sharpe di strategie che vendono opzioni (options) sono gonfiati), i beta stimati sono instabili. Per misure di rischio di coda si usano anche Sortino (rendimento in eccesso/semideviazione) e drawdown massimo.",
+            "Trappola: l'indice di Treynor di un portafoglio con beta negativo non è interpretabile con la stessa logica; e un alfa positivo con un benchmark sbagliato può essere solo un'esposizione a un fattore non misurato."
+          ]
+        },
+        {
+          "title": "Pianificazione: IPS, obiettivi e vincoli",
+          "body": [
+            "Il documento di politica d'investimento (investment policy statement, IPS) contiene: introduzione e descrizione del cliente, scopo, doveri e responsabilità delle parti, procedure di aggiornamento, obiettivi d'investimento (rendimento e rischio), vincoli, linee guida (uso della leva, dei derivati (derivatives)), procedure di valutazione e revisione, appendici con asset allocation strategica e regole di ribilanciamento.",
+            "Obiettivi di rischio: tolleranza = capacità (ability: dipende da orizzonte, ricchezza, stabilità del reddito, importanza degli obiettivi rispetto al patrimonio) e propensione (willingness: atteggiamento psicologico, da questionari e comportamento passato). Se divergono prevale la più bassa, oppure si educa il cliente se la propensione bassa è irrazionale. Obiettivi di rendimento: devono essere coerenti con il rischio accettabile; si distinguono rendimento richiesto (required, per gli obiettivi) e desiderato.",
+            "Vincoli: liquidità (spese previste e imprevisti), orizzonte temporale (può essere a più stadi), fiscalità (conti tassabili, a imposta differita, esenti; collocazione delle attività tra conti (asset location)), legali e regolatori (norme sui fondi pensione, prudent investor rule), circostanze particolari (preferenze etiche ed ESG, concentrazione in azioni del datore di lavoro, restrizioni di insider).",
+            "Esempio: una vedova di 60 anni con 2 milioni, spese annue di 80,000 e una pensione di 20,000 deve prelevare 60,000 netti: rendimento richiesto ≈ 3% netto + inflazione (inflation) 2% = circa 5% nominale. Ha orizzonte di 25-30 anni (capacità media), ma è preoccupata delle perdite (propensione bassa): tolleranza complessiva al rischio sotto la media; liquidità: un anno di spese in liquidità; fiscalità rilevante.",
+            "Asset allocation strategica (strategic asset allocation): pesi di lungo periodo delle classi d'attività coerenti con IPS e aspettative di mercato. Le classi d'attività (asset classes) devono essere omogenee al loro interno e poco correlate tra loro. Allocazione tattica (tactical): scostamenti temporanei per sfruttare opportunità di breve periodo. Ribilanciamento con calendario o con soglie (corridoi). Il rischio può anche essere allocato per fattori (factor-based allocation). L'ESG può entrare con esclusioni, integrazione o temi."
+          ]
+        },
+        {
+          "title": "Pregiudizi comportamentali",
+          "body": [
+            "La finanza comportamentale (behavioral finance) distingue errori cognitivi (cognitive errors: dovuti a ragionamenti difettosi, si correggono più facilmente con l'informazione e l'educazione) e pregiudizi emotivi (emotional biases: dovuti a sentimenti e impulsi, più difficili da correggere, spesso conviene adattarsi).",
+            "Errori cognitivi di perseveranza delle credenze (belief perseverance): conservatorismo (conservatism: aggiornare troppo lentamente le opinioni alle nuove informazioni), conferma (confirmation: cercare solo ciò che conferma le proprie idee), rappresentatività (representativeness: classificare in base a stereotipi o campioni piccoli, es. un'azienda di qualità è un buon investimento), illusione di controllo (illusion of control), senno di poi (hindsight: credere di aver previsto ciò che è successo).",
+            "Errori cognitivi di elaborazione (information-processing): ancoraggio e aggiustamento (anchoring and adjustment: restare legati a un valore iniziale come il prezzo d'acquisto), contabilità mentale (mental accounting: trattare il denaro in conti separati invece che come un portafoglio unico), inquadramento (framing: decisioni diverse a seconda di come è presentato il problema), disponibilità (availability: sovrastimare la probabilità di eventi facili da ricordare).",
+            "Pregiudizi emotivi: avversione alle perdite (loss aversion: le perdite pesano circa il doppio dei guadagni; porta a tenere i titoli in perdita e vendere quelli in guadagno, effetto disposizione (disposition effect)), eccesso di fiducia (overconfidence: sopravvalutare le proprie capacità e la precisione delle proprie previsioni, porta a troppa negoziazione e poca diversificazione), autocontrollo (self-control: preferire il consumo presente al risparmio), status quo (non cambiare nulla), dotazione (endowment: attribuire più valore a ciò che si possiede), avversione al rimpianto (regret aversion: evitare decisioni per paura di sbagliare, porta al comportamento gregario).",
+            "Effetti sui mercati: bolle e crolli, momentum, sottoreazione e ipereazione, premi value/growth, comportamento gregario. Per il consulente: identificare i pregiudizi, moderare quelli cognitivi con informazioni e quelli emotivi adattando l'asset allocation (es. un cliente con forte avversione alle perdite può avere un portafoglio leggermente più prudente dell'ottimo teorico).",
+            "Esempio: un investitore rifiuta di vendere un'azione scesa da 100 a 60 «finché non torna al prezzo d'acquisto». Ancoraggio (cognitivo) e avversione alle perdite (emotivo). Rimedio: valutare il titolo come se lo si dovesse comprare oggi."
+          ]
+        },
+        {
+          "title": "Gestione del rischio",
+          "body": [
+            "La gestione del rischio (risk management) non elimina il rischio: lo identifica, misura e porta al livello desiderato. Quadro (risk management framework): governance (consiglio e alta direzione fissano la propensione al rischio (risk tolerance) e la supervisione), identificazione e misurazione, infrastruttura (persone, sistemi, dati), politiche e processi, monitoraggio, mitigazione e gestione, comunicazione, analisi strategica e integrazione nelle decisioni. Allocazione del rischio (risk budgeting): distribuire il rischio totale accettabile tra attività, gestori o fattori.",
+            "Rischi finanziari: di mercato (prezzi, tassi, cambi, materie prime (commodities)), di credito (controparte, default), di liquidità (vendere solo a forte sconto o non riuscire a finanziarsi). Rischi non finanziari: operativo (processi, persone, sistemi, eventi esterni, cyber), di regolamento (settlement), legale, di conformità (compliance), di modello, di coda (tail), di solvibilità, di contabilità, fiscale, di reputazione, di governance. I rischi interagiscono: una perdita di mercato può innescare problemi di liquidità e di credito (come nel 2008).",
+            "Misure: deviazione standard, beta, duration e convessità (convexity) per i tassi, sensibilità delle opzioni (delta al prezzo del sottostante, gamma alla variazione del delta, vega alla volatilità, rho al tasso), valore a rischio (value at risk, VaR: perdita minima attesa con una data probabilità in un dato periodo, es. VaR giornaliero al 5% di 1 milione = nel 5% dei giorni la perdita supera 1 milione), VaR condizionale (CVaR/expected shortfall: perdita media oltre il VaR), analisi di scenario e stress test. Per il credito: probabilità di default (probability of default), LGD, esposizione al default.",
+            "Modificare il rischio: prevenzione ed evitamento (non fare l'attività), accettazione (autoassicurazione con riserve, diversificazione), trasferimento (assicurazione: un terzo si assume il rischio), spostamento (shifting: con derivati si cambia la distribuzione dei risultati, ad esempio una put elimina le perdite oltre una soglia). La scelta dipende dal costo e dalla tolleranza.",
+            "Esempio: un fondo pensione con passività di lungo periodo è esposto al calo dei tassi (aumentano le passività più degli attivi). Può accettare il rischio, ridurlo comprando obbligazioni a lunga duration, o spostarlo con swap in cui riceve il fisso.",
+            "Trappola: il VaR non dice quanto si può perdere oltre la soglia; due portafogli con lo stesso VaR possono avere perdite di coda molto diverse."
+          ]
+        }
+      ],
+      "formulas": [
+        "U = E(R) - ½ A σ²",
+        "CAL: E(Rc) = rf + [(E(Rp) - rf)/σp] σc; y* = (E(Rp) - rf)/(A σp²)",
+        "CML: E(Rp) = rf + [(E(Rm) - rf)/σm] σp",
+        "β = Cov(Ri,Rm)/σm² = ρ σi/σm",
+        "Sharpe = (Rp - rf)/σp; Treynor = (Rp - rf)/βp",
+        "M² = (Rp - rf) σm/σp - (Rm - rf)",
+        "Alfa di Jensen = Rp - [rf + βp(Rm - rf)]"
+      ],
+      "pitfalls": [
+        "Usare la CML per valutare un singolo titolo: per i titoli si usa la SML con il beta.",
+        "Confondere capacità e propensione al rischio: prevale la più bassa.",
+        "Trattare l'avversione alle perdite come errore cognitivo: è un pregiudizio emotivo.",
+        "Credere che più titoli eliminino tutto il rischio: resta il rischio sistematico.",
+        "Interpretare il VaR come perdita massima possibile.",
+        "Classificare con Treynor portafogli poco diversificati: serve lo Sharpe."
+      ]
+    }
+  ]
+}

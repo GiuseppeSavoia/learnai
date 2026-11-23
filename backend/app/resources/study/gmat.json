@@ -1,0 +1,663 @@
+{
+  "exam": "gmat",
+  "modules": [
+    {
+      "topic": "ps",
+      "title": "Quant: Problem Solving",
+      "summary": "Aritmetica e algebra senza geometria: percentuali, rapporti, numeri interi e divisibilità (divisibility), equazioni, statistica di base, probabilità e combinatoria, problemi di lavoro, velocità e miscugli. 21 domande in 45 minuti, senza calcolatrice.",
+      "sections": [
+        {
+          "title": "Percentuali, rapporti e miscugli",
+          "body": [
+            "Le variazioni percentuali successive si moltiplicano: +20% poi -20% dà 1.2 × 0.8 = 0.96, cioè -4%, non zero. Variazione percentuale (percent change) = (nuovo - vecchio)/vecchio.",
+            "Nei miscugli tieni fisso ciò che non cambia: aggiungendo acqua la quantità di soluto resta la stessa. Media ponderata (weighted average): il risultato sta sempre tra i valori, più vicino a quello con peso maggiore."
+          ]
+        },
+        {
+          "title": "Numeri interi",
+          "body": [
+            "Resti (remainders): se n diviso per d dà resto r, allora n = dk + r. Per il resto di un'espressione, sostituisci il resto (es. 2n → 2r, poi riduci). Divisibilità: per 3 e 9 somma delle cifre; numero di divisori da fattorizzazione in primi: se n = p^a q^b, i divisori sono (a + 1)(b + 1).",
+            "Inclusione-esclusione (inclusion-exclusion): |A ∪ B| = |A| + |B| - |A ∩ B|. Pari/dispari: pari × qualunque = pari; dispari ± dispari = pari."
+          ]
+        },
+        {
+          "title": "Velocità, lavoro e medie",
+          "body": [
+            "Velocità media (average speed) = distanza totale / tempo totale, non la media delle velocità. Lavoro combinato: si sommano i ritmi (1/a + 1/b), quindi il tempo insieme è ab/(a + b).",
+            "Media e somma: somma = media × numero di elementi. Se togli o aggiungi un elemento lavora sempre sulle somme."
+          ]
+        },
+        {
+          "title": "Probabilità e combinatoria",
+          "body": [
+            "Eventi indipendenti: si moltiplicano le probabilità; senza reinserimento la seconda probabilità cambia. Combinazioni (combinations) C(n, k) = n!/(k!(n - k)!) quando l'ordine non conta; permutazioni (permutations) quando conta.",
+            "Strategie d'esame: stima e scarta le risposte impossibili, prova le opzioni (options) partendo dal centro (backsolving), sostituisci numeri semplici alle variabili."
+          ]
+        }
+      ],
+      "formulas": [
+        "Variazioni successive: (1 + a)(1 + b) - 1",
+        "Tempo lavoro insieme = ab/(a + b)",
+        "Velocità media = distanza totale / tempo totale",
+        "|A ∪ B| = |A| + |B| - |A ∩ B|",
+        "C(n, k) = n!/(k!(n - k)!)"
+      ],
+      "pitfalls": [
+        "Fare la media delle velocità invece di distanza/tempo totali.",
+        "Pensare che +x% e -x% si annullino.",
+        "Contare due volte gli elementi comuni (dimenticare l'intersezione)."
+      ],
+      "questions": [
+        {
+          "id": "ps-1",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "The price of a jacket is increased by 20% and the new price is then decreased by 20%. The final price is what percent of the original price?",
+          "choices": [
+            "80%",
+            "96%",
+            "100%",
+            "104%",
+            "120%"
+          ],
+          "answer": 1,
+          "explanation": "1.20 × 0.80 = 0.96: il prezzo finale è il 96% dell'originale. Il -20% si applica a una base più alta, quindi toglie più di quanto il +20% avesse aggiunto."
+        },
+        {
+          "id": "ps-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Machine A can complete a job in 6 hours and Machine B can complete the same job in 3 hours. Working together at their constant rates, how many hours will the two machines take to complete the job?",
+          "choices": [
+            "1.5",
+            "2",
+            "3",
+            "4.5",
+            "9"
+          ],
+          "answer": 1,
+          "explanation": "Ritmi: 1/6 + 1/3 = 1/2 di lavoro all'ora, quindi 2 ore (= 6 × 3/(6 + 3)). Il tempo insieme è sempre minore di quello della macchina più veloce."
+        },
+        {
+          "id": "ps-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A 20-liter solution is 30% salt by volume. How many liters of pure water must be added to make the solution 20% salt?",
+          "choices": [
+            "5",
+            "6",
+            "8",
+            "10",
+            "15"
+          ],
+          "answer": 3,
+          "explanation": "Il sale resta 0.3 × 20 = 6 litri. Serve 6/(20 + w) = 0.20 → 20 + w = 30 → w = 10."
+        },
+        {
+          "id": "ps-4",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "When the positive integer n is divided by 6, the remainder is 4. What is the remainder when 2n is divided by 6?",
+          "choices": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "8"
+          ],
+          "answer": 2,
+          "explanation": "n = 6k + 4 → 2n = 12k + 8 = 6(2k + 1) + 2: il resto è 2. Prova con n = 4: 2n = 8, 8 diviso 6 dà resto 2. 8 non può essere un resto della divisione per 6."
+        },
+        {
+          "id": "ps-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "The average of five numbers is 20. When one number is removed, the average of the remaining four numbers is 18. What number was removed?",
+          "choices": [
+            "2",
+            "18",
+            "20",
+            "26",
+            "28"
+          ],
+          "answer": 4,
+          "explanation": "Somma iniziale 5 × 20 = 100; somma finale 4 × 18 = 72; il numero tolto è 100 - 72 = 28."
+        },
+        {
+          "id": "ps-6",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "How many integers from 1 to 100, inclusive, are divisible by 3 or by 5?",
+          "choices": [
+            "33",
+            "47",
+            "48",
+            "53",
+            "60"
+          ],
+          "answer": 1,
+          "explanation": "Multipli (multiples) di 3: 33; di 5: 20; di entrambi (cioè di 15): 6. Inclusione-esclusione (inclusion-exclusion): 33 + 20 - 6 = 47."
+        },
+        {
+          "id": "ps-7",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A driver travels 120 kilometers to a city at an average speed of 60 kilometers per hour and returns along the same route at an average speed of 40 kilometers per hour. What is the average speed, in kilometers per hour, for the entire trip?",
+          "choices": [
+            "45",
+            "48",
+            "50",
+            "52",
+            "55"
+          ],
+          "answer": 1,
+          "explanation": "Tempo andata 2 h, ritorno 3 h; distanza totale 240 km. Velocità media (average speed) = 240/5 = 48. La media semplice 50 è sbagliata perché il viaggio lento dura di più."
+        },
+        {
+          "id": "ps-8",
+          "difficulty": 4,
+          "vignette": "",
+          "stem": "A bag contains 5 red marbles and 3 blue marbles. Two marbles are drawn at random without replacement. What is the probability that both are red?",
+          "choices": [
+            "5/16",
+            "5/14",
+            "25/64",
+            "5/8",
+            "15/28"
+          ],
+          "answer": 1,
+          "explanation": "P = 5/8 × 4/7 = 20/56 = 5/14. 25/64 assume il reinserimento (5/8 × 5/8); 5/8 è la probabilità della sola prima estrazione."
+        }
+      ]
+    },
+    {
+      "topic": "cr",
+      "title": "Verbal: Critical Reasoning",
+      "summary": "Brevi argomenti da analizzare: rafforzare (strengthen), indebolire (weaken), trovare l'assunzione (assumption), valutare, inferire, spiegare un paradosso e riconoscere il ruolo delle frasi in grassetto.",
+      "sections": [
+        {
+          "title": "Struttura dell'argomento",
+          "body": [
+            "Ogni argomento ha premesse (fatti), una conclusione (ciò che l'autore vuole dimostrare) e un'assunzione non dichiarata che collega le due. Trova prima la conclusione: spesso è introdotta da therefore, thus, so, clearly, o è la tesi che le altre frasi sostengono.",
+            "Schemi ricorrenti: causa-effetto (correlazione (correlation) non è causalità: possono esserci cause alternative o causalità inversa), piano per raggiungere un obiettivo (il piano può fallire o avere effetti collaterali), confronto e campione non rappresentativo, numeri contro percentuali."
+          ]
+        },
+        {
+          "title": "Tipi di domanda",
+          "body": [
+            "Weaken: introduci una causa alternativa o mostra che l'assunzione non regge. Strengthen: elimina una causa alternativa o conferma l'assunzione. Assumption: usa il negation test, nega l'opzione (options): se l'argomento crolla, è l'assunzione necessaria.",
+            "Inference: la risposta giusta deve essere sostenuta dalle frasi, senza aggiungere nulla; diffida dei termini estremi (always, never). Paradox/explain: cerca un fatto che renda compatibili due affermazioni apparentemente contraddittorie. Evaluate: la domanda la cui risposta rafforzerebbe o indebolirebbe a seconda del risultato."
+          ]
+        },
+        {
+          "title": "Errori nelle risposte sbagliate",
+          "body": [
+            "Fuori tema (parla di altro rispetto alla conclusione), direzione opposta (rafforza invece di indebolire), troppo estrema, vera ma irrilevante, ripete una premessa. Nelle domande assumption, un'opzione può essere coerente con l'argomento senza essere necessaria."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Scegliere un'opzione che è vera ma non tocca il collegamento tra premesse e conclusione.",
+        "Confondere sufficiente e necessario nelle domande sull'assunzione.",
+        "Accettare una correlazione come prova di causalità."
+      ],
+      "questions": [
+        {
+          "id": "cr-1",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Residents of Lakeport who drink green tea daily have lower rates of heart disease than residents who do not. Therefore, drinking green tea reduces the risk of heart disease.\n\nWhich of the following, if true, most seriously weakens the argument?",
+          "choices": [
+            "Green tea contains antioxidants that have been studied in laboratories.",
+            "Lakeport residents who drink green tea daily are also much more likely to exercise regularly and to avoid smoking.",
+            "Some residents who drink green tea daily still develop heart disease.",
+            "Green tea consumption in Lakeport has risen over the past decade.",
+            "Heart disease is the leading cause of death in Lakeport."
+          ],
+          "answer": 1,
+          "explanation": "L'argomento passa da una correlazione (correlation) a una causa. Se chi beve tè fa anche più sport e non fuma, c'è una causa alternativa della minore incidenza: l'argomento si indebolisce. 'Alcuni bevitori si ammalano comunque' non contraddice una riduzione del rischio."
+        },
+        {
+          "id": "cr-2",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "To reduce traffic congestion downtown, the city plans to double parking fees in downtown garages. Officials conclude that the plan will reduce the number of cars entering downtown.\n\nThe officials' conclusion depends on which of the following assumptions?",
+          "choices": [
+            "Most downtown workers live outside the city.",
+            "A significant number of drivers will not simply park on downtown streets where parking remains free.",
+            "Public transportation downtown is already heavily used.",
+            "Parking garages downtown are currently full every day.",
+            "The revenue from higher fees will be used to repair roads."
+          ],
+          "answer": 1,
+          "explanation": "Negation test: se la maggior parte degli automobilisti parcheggiasse gratis per strada, il numero di auto non diminuirebbe e il piano fallirebbe. Quindi l'argomento presuppone che non sia così. Le altre opzioni (options) non sono necessarie."
+        },
+        {
+          "id": "cr-3",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Last year, sales of Brand X running shoes increased by 30%, yet Brand X's share of the running shoe market declined.\n\nWhich of the following, if true, best explains the apparent discrepancy?",
+          "choices": [
+            "Brand X raised the price of its shoes last year.",
+            "Total sales of running shoes increased by more than 30% last year.",
+            "Brand X introduced several new models last year.",
+            "Some competitors of Brand X lost market share last year.",
+            "Brand X's advertising budget was cut last year."
+          ],
+          "answer": 1,
+          "explanation": "La quota di mercato è vendite di X / vendite totali. Se il mercato cresce più del 30%, X perde quota pur vendendo di più. Le altre opzioni (options) non spiegano il contrasto tra crescita assoluta e quota calante."
+        },
+        {
+          "id": "cr-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company found that employees who attended its optional time-management workshop completed more projects on schedule than employees who did not. The company concluded that the workshop improves employee productivity and plans to make it mandatory.\n\nWhich of the following would be most useful to know in evaluating the company's conclusion?",
+          "choices": [
+            "Whether the workshop was taught by an external consultant",
+            "Whether employees who chose to attend were already completing more projects on schedule before the workshop",
+            "How many hours the workshop lasted",
+            "Whether other companies offer similar workshops",
+            "Whether employees enjoyed the workshop"
+          ],
+          "answer": 1,
+          "explanation": "La partecipazione era volontaria: forse si sono iscritti i più organizzati (selezione). Sapere com'erano prima del corso distinguerebbe l'effetto del workshop da quello della selezione."
+        },
+        {
+          "id": "cr-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "All the restaurants on Elm Street that received a health inspection score above 90 display a gold certificate. The Riverside Grill, on Elm Street, does not display a gold certificate.\n\nIf the statements above are true, which of the following must also be true?",
+          "choices": [
+            "The Riverside Grill failed its health inspection.",
+            "The Riverside Grill did not receive a health inspection score above 90.",
+            "No restaurant on Elm Street scored below 90.",
+            "The Riverside Grill will receive a gold certificate next year.",
+            "Restaurants not on Elm Street do not display gold certificates."
+          ],
+          "answer": 1,
+          "explanation": "Se punteggio > 90 → certificato. Riverside non ha il certificato, quindi (contrapposizione) non ha avuto un punteggio sopra 90. Non sappiamo se abbia 'fallito': potrebbe avere 85."
+        },
+        {
+          "id": "cr-6",
+          "difficulty": 4,
+          "vignette": "",
+          "stem": "Critics argue that the new highway will increase air pollution. However, [A] the highway will reduce the time vehicles spend idling in traffic jams, and idling vehicles emit more pollutants per kilometer than moving ones. Therefore, [B] the highway is likely to reduce air pollution in the region.\n\nThe portions marked [A] and [B] play which of the following roles?",
+          "choices": [
+            "[A] is evidence supporting the argument's conclusion; [B] is that conclusion.",
+            "[A] is the conclusion; [B] is evidence for it.",
+            "[A] is a position the argument opposes; [B] is the argument's conclusion.",
+            "Both are evidence supporting a conclusion that is not stated.",
+            "[A] is an objection; [B] responds to it."
+          ],
+          "answer": 0,
+          "explanation": "[A] è una premessa (meno tempo al minimo nel traffico), [B] è la conclusione principale, introdotta da therefore. La posizione dei critici, che l'argomento contrasta, non è tra le parti segnate."
+        }
+      ]
+    },
+    {
+      "topic": "rc",
+      "title": "Verbal: Reading Comprehension",
+      "summary": "Brani di 200-350 parole (scienze, business, scienze sociali) con 3-4 domande: idea principale (main idea), dettaglio, inferenza (inference), scopo di una frase, struttura e tono.",
+      "sections": [
+        {
+          "title": "Lettura attiva",
+          "body": [
+            "Leggi per la struttura, non per i dettagli: per ogni paragrafo annota in poche parole la sua funzione (presenta una teoria, la critica, porta un esempio). Individua l'opinione dell'autore e le parole di svolta (however, but, yet), che segnalano i punti importanti.",
+            "Non memorizzare numeri e nomi: quando una domanda li chiede, torna al testo."
+          ]
+        },
+        {
+          "title": "Tipi di domanda",
+          "body": [
+            "Main idea: la risposta copre tutto il brano, non solo un paragrafo, e non è troppo ampia. Detail: la risposta è scritta nel testo, spesso con parole diverse. Inference: deve seguire per forza dal testo, senza salti. Purpose: perché l'autore cita un esempio o una frase (per sostenere, contrastare, illustrare).",
+            "Le risposte sbagliate tipiche: estreme, fuori dal brano, giuste per un altro paragrafo, che invertono il rapporto tra due idee."
+          ]
+        },
+        {
+          "title": "Gestione del tempo",
+          "body": [
+            "Circa 2-3 minuti per leggere un brano e circa 1 minuto per domanda. Una buona sintesi iniziale fa risparmiare tempo su tutte le domande del brano."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Scegliere una risposta che riassume un solo paragrafo in una domanda sull'idea principale.",
+        "Fare inferenze che richiedono informazioni esterne al brano.",
+        "Lasciarsi attirare da parole estreme come always o only."
+      ],
+      "item_sets": [
+        {
+          "id": "rc-set1",
+          "vignette": "For decades, economists assumed that firms set prices primarily by adding a markup to their costs. Under this view, a rise in input costs would be passed on to consumers almost automatically. Recent survey research, however, suggests a more complicated picture. Many managers report that they hesitate to raise prices even when costs increase, fearing that customers will perceive the increase as unfair and switch to competitors. This reluctance is strongest in markets where customers can easily compare prices online.\n\nThe survey findings do not imply that costs are irrelevant. Rather, they indicate that firms weigh cost pressures against the risk of damaging long-term customer relationships. Firms appear more willing to raise prices when the cost increase is widely publicized, such as a well-known rise in fuel prices, because customers then regard the increase as justified. Some researchers argue that this explains why inflation can remain subdued for a time even after input costs rise, and then accelerate suddenly once firms believe that price increases will be accepted.",
+          "questions": [
+            {
+              "id": "rc-1",
+              "difficulty": 2,
+              "stem": "The primary purpose of the passage is to:",
+              "choices": [
+                "argue that costs have no effect on firms' pricing decisions",
+                "describe research that complicates a traditional view of how firms set prices",
+                "explain why online shopping has reduced inflation",
+                "criticize managers for refusing to raise prices",
+                "compare pricing practices in different countries"
+              ],
+              "answer": 1,
+              "explanation": "Il brano presenta la visione tradizionale (prezzo = costo + markup) e poi una ricerca che la rende più complessa. La prima opzione (options) è estrema (il testo dice proprio che i costi non sono irrilevanti); le altre coprono dettagli o temi assenti."
+            },
+            {
+              "id": "rc-2",
+              "difficulty": 3,
+              "stem": "According to the passage, firms are more willing to raise prices when:",
+              "choices": [
+                "customers can easily compare prices online",
+                "competitors have lowered their prices",
+                "the reason for the cost increase is widely known to customers",
+                "inflation has already been high for several years",
+                "managers have conducted customer surveys"
+              ],
+              "answer": 2,
+              "explanation": "Dettaglio del secondo paragrafo: le imprese aumentano più volentieri i prezzi quando l'aumento dei costi è ampiamente noto (es. carburante), perché i clienti lo considerano giustificato. Il confronto online, al contrario, rende più riluttanti."
+            },
+            {
+              "id": "rc-3",
+              "difficulty": 4,
+              "stem": "It can be inferred from the passage that, under the traditional markup view, a rise in input costs would most likely lead to:",
+              "choices": [
+                "a delayed and sudden increase in consumer prices",
+                "a prompt increase in consumer prices",
+                "no change in consumer prices",
+                "a decrease in firms' markups",
+                "greater customer loyalty"
+              ],
+              "answer": 1,
+              "explanation": "Il testo dice che, nella visione tradizionale, l'aumento dei costi verrebbe trasferito ai consumatori 'quasi automaticamente': aumento rapido dei prezzi. L'aumento ritardato e improvviso è invece la spiegazione proposta dai nuovi studi."
+            }
+          ]
+        },
+        {
+          "id": "rc-set2",
+          "vignette": "Coral reefs occupy less than one percent of the ocean floor, yet they support roughly a quarter of all known marine species. Their survival depends on a partnership between coral animals and microscopic algae that live inside their tissues. The algae supply the coral with most of its energy through photosynthesis; in return, the coral provides shelter and nutrients.\n\nWhen water temperatures rise even one or two degrees above the usual summer maximum, this partnership breaks down. The stressed coral expels its algae and turns white, a process known as bleaching. Bleached coral is not dead, and it can recover if temperatures return to normal within a few weeks. Prolonged heat, however, leaves the coral starving and vulnerable to disease.\n\nSome scientists have proposed breeding heat-tolerant coral and transplanting it onto damaged reefs. Critics caution that such efforts, while valuable locally, cannot be scaled to the size of the world's reefs and may distract from the more fundamental task of limiting ocean warming.",
+          "questions": [
+            {
+              "id": "rc-4",
+              "difficulty": 2,
+              "stem": "According to the passage, coral bleaching occurs when:",
+              "choices": [
+                "coral animals die from disease",
+                "coral expels the algae living in its tissues",
+                "algae produce too much energy through photosynthesis",
+                "coral reefs expand beyond one percent of the ocean floor",
+                "water temperatures fall below the usual minimum"
+              ],
+              "answer": 1,
+              "explanation": "Dettaglio del secondo paragrafo: sotto stress termico il corallo espelle le alghe e diventa bianco. Il testo precisa che il corallo sbiancato non è morto."
+            },
+            {
+              "id": "rc-5",
+              "difficulty": 3,
+              "stem": "It can be inferred from the passage that a bleached coral that remains in abnormally warm water for several months is likely to:",
+              "choices": [
+                "recover more quickly than coral in normal water",
+                "develop greater tolerance to heat",
+                "be weakened and at greater risk of disease",
+                "produce more algae than before",
+                "be unaffected, since bleached coral is not dead"
+              ],
+              "answer": 2,
+              "explanation": "Il testo dice che il calore prolungato lascia il corallo affamato e vulnerabile alle malattie: un periodo di diversi mesi rientra in questo caso. La ripresa è possibile solo se le temperature tornano normali in poche settimane."
+            },
+            {
+              "id": "rc-6",
+              "difficulty": 3,
+              "stem": "The critics mentioned in the final paragraph would most likely agree that breeding heat-tolerant coral is:",
+              "choices": [
+                "useless in all circumstances",
+                "helpful in some places but not a substitute for limiting ocean warming",
+                "the most important solution to coral bleaching",
+                "harmful to the algae that live in coral",
+                "already being used on most of the world's reefs"
+              ],
+              "answer": 1,
+              "explanation": "I critici riconoscono che questi sforzi sono 'valuable locally' ma non scalabili e rischiano di distrarre dall'obiettivo principale: limitare il riscaldamento. 'Inutile in ogni caso' è troppo estremo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "ds",
+      "title": "Data Insights: Data Sufficiency",
+      "summary": "Non devi risolvere il problema: devi decidere se le informazioni bastano. Le cinque risposte sono sempre le stesse e vanno imparate a memoria.",
+      "sections": [
+        {
+          "title": "Le cinque risposte",
+          "body": [
+            "A: solo (1) basta. B: solo (2) basta. C: servono entrambe insieme. D: ciascuna basta da sola. E: neppure insieme bastano. Procedi così: valuta (1) da sola, poi (2) da sola (dimenticando la (1)), e solo se nessuna basta valutale insieme.",
+            "Albero rapido: se (1) basta, la risposta è A o D; se (1) non basta, è B, C o E."
+          ]
+        },
+        {
+          "title": "Domande di valore e domande sì/no",
+          "body": [
+            "Domanda di valore (quanto vale x?): basta se c'è un solo valore possibile. Domanda sì/no (x è positivo?): basta se la risposta è sempre sì o sempre no; un 'sempre no' è sufficiente quanto un 'sempre sì'.",
+            "Prova numeri diversi, inclusi negativi, zero e frazioni, per cercare un controesempio. Attenzione alle affermazioni che sembrano due equazioni ma sono la stessa moltiplicata per un numero."
+          ]
+        },
+        {
+          "title": "Trappole classiche",
+          "body": [
+            "Quadrati: x² = 9 dà due valori (±3), mentre x³ = 27 dà un solo valore. Due equazioni lineari indipendenti in due incognite bastano; la stessa equazione scritta due volte no. Spesso non serve sapere le singole variabili ma una loro combinazione (es. x + y)."
+          ]
+        }
+      ],
+      "formulas": [
+        "A: (1) sola · B: (2) sola · C: insieme · D: ciascuna · E: nessuna"
+      ],
+      "pitfalls": [
+        "Risolvere fino in fondo invece di fermarsi quando la sufficienza (sufficiency) è chiara.",
+        "Portare l'informazione di (1) nella valutazione di (2) da sola.",
+        "Dimenticare le radici negative di un quadrato."
+      ],
+      "questions": [
+        {
+          "id": "ds-1",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Is x > 0?\n\n(1) x² = 9\n(2) x³ = 27",
+          "choices": [],
+          "answer": 1,
+          "explanation": "(1): x = 3 oppure -3, non basta. (2): x = 3, quindi sì, basta. Risposta B."
+        },
+        {
+          "id": "ds-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "What is the value of x + y?\n\n(1) 2x + 2y = 10\n(2) x - y = 1",
+          "choices": [],
+          "answer": 0,
+          "explanation": "(1): x + y = 5, basta. (2): dà solo la differenza, non basta. Risposta A. Non servono x e y singolarmente."
+        },
+        {
+          "id": "ds-3",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "What is the value of x?\n\n(1) x + y = 10\n(2) x - y = 2",
+          "choices": [],
+          "answer": 2,
+          "explanation": "Ciascuna equazione da sola ha infinite soluzioni. Insieme formano un sistema con soluzione unica (x = 6). Risposta C."
+        },
+        {
+          "id": "ds-4",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Is the integer n even?\n\n(1) n² is even.\n(2) n + 1 is odd.",
+          "choices": [],
+          "answer": 3,
+          "explanation": "(1): il quadrato di un dispari è dispari, quindi se n² è pari n è pari: basta. (2): n + 1 dispari implica n pari: basta. Risposta D."
+        },
+        {
+          "id": "ds-5",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "What is the price of one pen?\n\n(1) 3 pens and 2 pencils cost $11 in total.\n(2) 6 pens and 4 pencils cost $22 in total.",
+          "choices": [],
+          "answer": 4,
+          "explanation": "La (2) è la (1) moltiplicata per 2: è la stessa informazione. Anche insieme resta un'equazione in due incognite. Risposta E."
+        },
+        {
+          "id": "ds-6",
+          "difficulty": 4,
+          "vignette": "",
+          "stem": "Is xy > 0?\n\n(1) x > y\n(2) x > 0",
+          "choices": [],
+          "answer": 4,
+          "explanation": "Insieme: x = 2, y = 1 dà xy > 0; x = 2, y = -1 dà xy < 0. Nemmeno insieme si risponde con certezza. Risposta E."
+        },
+        {
+          "id": "ds-7",
+          "difficulty": 4,
+          "vignette": "",
+          "stem": "If x and y are positive, what is the value of xy?\n\n(1) x + y = 10\n(2) x² + y² = 52",
+          "choices": [],
+          "answer": 2,
+          "explanation": "Da sole non bastano. Insieme: (x + y)² = x² + 2xy + y² → 100 = 52 + 2xy → xy = 24. Risposta C, senza bisogno di trovare x e y."
+        }
+      ]
+    },
+    {
+      "topic": "gi",
+      "title": "Data Insights: tabelle e grafici",
+      "summary": "Leggere e interpretare dati presentati in tabelle e grafici: percentuali, variazioni, quote, medie ponderate. Nell'esame vero alcune domande hanno più risposte; qui alleniamo il ragionamento con domande a risposta singola.",
+      "sections": [
+        {
+          "title": "Leggere i dati",
+          "body": [
+            "Prima di calcolare, guarda unità di misura, titoli delle colonne e note. Distingui valori assoluti e percentuali: un aumento percentuale alto su una base piccola può valere poco in assoluto.",
+            "Molte domande chiedono stime: arrotonda in modo intelligente e confronta frazioni senza calcolare tutto."
+          ]
+        },
+        {
+          "title": "Calcoli tipici",
+          "body": [
+            "Variazione percentuale (percent change) = (nuovo - vecchio)/vecchio. Quota = parte/totale. Media ponderata (weighted average) = Σ(valore × peso)/Σ pesi: la media degli stipendi di più reparti va pesata per il numero di dipendenti.",
+            "Effetto di una variazione su un totale: variazione del totale = variazione della parte / totale iniziale."
+          ]
+        },
+        {
+          "title": "Strategia",
+          "body": [
+            "Il Data Insights ammette la calcolatrice a schermo: usala per i calcoli lunghi ma non per tutto. Scarta subito le opzioni (options) chiaramente fuori scala."
+          ]
+        }
+      ],
+      "formulas": [
+        "Variazione % = (nuovo - vecchio)/vecchio",
+        "Media ponderata = Σ(x × w)/Σ w"
+      ],
+      "pitfalls": [
+        "Fare la media semplice di medie con pesi diversi.",
+        "Confondere variazione percentuale e variazione in punti percentuali."
+      ],
+      "item_sets": [
+        {
+          "id": "gi-set1",
+          "vignette": "Quarterly sales by region ($ thousands)\n\nRegion | Q1 | Q2\nNorth | 120 | 150\nSouth | 80 | 100\nEast | 200 | 190\nWest | 50 | 75\nTotal | 450 | 515",
+          "questions": [
+            {
+              "id": "gi-1",
+              "difficulty": 2,
+              "stem": "Which region had the greatest percent increase in sales from Q1 to Q2?",
+              "choices": [
+                "North",
+                "South",
+                "East",
+                "West",
+                "North and South equally"
+              ],
+              "answer": 3,
+              "explanation": "Nord +25%, Sud +25%, Est -5%, Ovest +50% (da 50 a 75). L'Ovest ha l'aumento assoluto più piccolo dopo il Sud ma quello percentuale più grande."
+            },
+            {
+              "id": "gi-2",
+              "difficulty": 2,
+              "stem": "East's share of total Q2 sales is closest to:",
+              "choices": [
+                "29%",
+                "33%",
+                "37%",
+                "42%",
+                "44%"
+              ],
+              "answer": 2,
+              "explanation": "190/515 ≈ 0.369, cioè circa il 37%."
+            },
+            {
+              "id": "gi-3",
+              "difficulty": 3,
+              "stem": "Total sales increased from Q1 to Q2 by approximately:",
+              "choices": [
+                "6.5%",
+                "12.6%",
+                "14.4%",
+                "16.5%",
+                "65%"
+              ],
+              "answer": 2,
+              "explanation": "(515 - 450)/450 = 65/450 ≈ 14.4%. 12.6% divide per 515 (il valore nuovo) invece che per quello vecchio."
+            }
+          ]
+        },
+        {
+          "id": "gi-set2",
+          "vignette": "Company headcount and average annual salary by department\n\nDepartment | Employees | Average salary ($ thousands)\nSales | 40 | 60\nEngineering | 25 | 90\nAdministration | 15 | 45",
+          "questions": [
+            {
+              "id": "gi-4",
+              "difficulty": 3,
+              "stem": "The average annual salary across all employees of the company is closest to:",
+              "choices": [
+                "$60,000",
+                "$65,000",
+                "$66,600",
+                "$70,000",
+                "$75,000"
+              ],
+              "answer": 2,
+              "explanation": "Media ponderata (weighted average): (40 × 60 + 25 × 90 + 15 × 45)/80 = (2,400 + 2,250 + 675)/80 = 5,325/80 ≈ 66.6 mila. La media semplice dei tre reparti (65) ignora il numero di dipendenti."
+            },
+            {
+              "id": "gi-5",
+              "difficulty": 3,
+              "stem": "Engineering accounts for approximately what percent of total payroll?",
+              "choices": [
+                "31%",
+                "36%",
+                "42%",
+                "47%",
+                "50%"
+              ],
+              "answer": 2,
+              "explanation": "Monte salari ingegneria = 2,250 su un totale di 5,325: circa 42%, molto più della sua quota di dipendenti (31%)."
+            },
+            {
+              "id": "gi-6",
+              "difficulty": 4,
+              "stem": "If the average salary in Administration increases by 10% and all other salaries stay the same, total payroll increases by approximately:",
+              "choices": [
+                "0.6%",
+                "1.3%",
+                "1.9%",
+                "3.3%",
+                "10%"
+              ],
+              "answer": 1,
+              "explanation": "Aumento = 10% × 675 = 67.5 mila su 5,325 ≈ 1.3%. Un aumento del 10% di una parte piccola sposta poco il totale."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

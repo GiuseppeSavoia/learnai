@@ -1,0 +1,1256 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "ethics",
+      "title": "Etica e standard professionali",
+      "summary": "Il Code of Ethics, i sette Standards of Professional Conduct e i GIPS. È l'area più pesante del Livello I (15-20%) e torna in tutti e tre i livelli: va studiata all'inizio e ripassata alla fine.",
+      "sections": [
+        {
+          "title": "Code of Ethics e struttura degli Standards",
+          "body": [
+            "Il Code chiede di agire con integrità, competenza, diligenza e rispetto; di mettere l'integrità della professione e l'interesse dei clienti sopra il proprio; di usare ragionevole cura e giudizio indipendente; di promuovere l'integrità dei mercati e di mantenere la propria competenza.",
+            "Gli Standards sono sette: I Professionalism (conoscenza della legge, indipendenza e obiettività (independence and objectivity), misrepresentation, misconduct); II Integrity of Capital Markets (informazioni privilegiate (material nonpublic information), manipolazione); III Duties to Clients (lealtà, fair dealing, suitability, performance, riservatezza (confidentiality)); IV Duties to Employers; V Investment Analysis (diligenza, comunicazione, archivi); VI Conflicts of Interest; VII Responsibilities as a CFA Member or Candidate.",
+            "Regola d'oro sulla legge: se legge locale e Code differiscono, segui la più restrittiva. Se scopri una violazione altrui non basta non partecipare: devi dissociarti (dissociate), di solito informando il supervisore o la compliance; il whistle-blowing esterno non è obbligatorio."
+          ]
+        },
+        {
+          "title": "Mercati e clienti: gli standard più testati",
+          "body": [
+            "II(A) Material Nonpublic Information: un'informazione è materiale se un investitore ragionevole la considererebbe rilevante, è non pubblica finché non è diffusa al mercato. Non si agisce né si induce altri ad agire. La mosaic theory permette conclusioni basate su informazioni pubbliche più informazioni non materiali non pubbliche.",
+            "III(A) Loyalty, Prudence and Care: il cliente è il beneficiario finale (per un fondo pensione (defined benefit pension plan) sono i partecipanti, non il management dell'azienda). III(B) Fair Dealing: tratta i clienti in modo equo nella diffusione delle raccomandazioni e nell'allocazione delle operazioni (es. pro-rata nelle IPO sovrascritte), equo non significa identico.",
+            "III(C) Suitability: prima di raccomandare devi conoscere obiettivi, vincoli e tolleranza al rischio (risk tolerance) del cliente (IPS) e valutare l'adeguatezza nel contesto del portafoglio complessivo. III(E) Confidentiality: le informazioni dei clienti restano riservate salvo attività illegali o richiesta di legge."
+          ]
+        },
+        {
+          "title": "Datore di lavoro, analisi e conflitti",
+          "body": [
+            "IV(A) Loyalty: non danneggiare il datore di lavoro; puoi prepararti a lasciare il lavoro, ma senza portare via file, liste clienti o sollecitare clienti prima di andartene. IV(B) Additional Compensation: serve il consenso scritto del datore per compensi che possono creare conflitto. IV(C) i supervisori devono avere sistemi adeguati per prevenire violazioni.",
+            "V(A) Diligence and Reasonable Basis: le raccomandazioni devono avere una base ragionevole e adeguata, anche quando usi ricerche di terzi (verifica la loro solidità). V(B) Communication: distingui fatti e opinioni e spiega i rischi principali. V(C) Record Retention: conserva la documentazione (7 anni se non c'è altra regola).",
+            "VI(A) Disclosure of Conflicts: comunica in modo chiaro tutti i conflitti a clienti e datore. VI(B) Priority of Transactions: prima i clienti, poi il datore, poi te stesso. VI(C) Referral Fees: comunica i compensi per le segnalazioni prima che il cliente accetti."
+          ]
+        },
+        {
+          "title": "Responsabilità del candidato e GIPS",
+          "body": [
+            "VII(A): non compromettere la reputazione o l'integrità del programma CFA (es. rivelare domande d'esame, barare). VII(B): puoi dire di aver superato i livelli e usare la designazione solo quando sei charterholder; Chartered Financial Analyst non si usa come sostantivo e non esiste il livello parziale (non dire CFA Level II).",
+            "I GIPS sono standard volontari per presentare la performance in modo equo e confrontabile. Si applicano a livello di firm, che deve rispettarli tutti (niente compliance parziale). Si costruiscono composite (portafogli con strategia simile) e i portafogli discrezionali a pagamento devono entrare in almeno un composite."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Confondere il cliente con chi paga: in un fondo pensione il cliente è il beneficiario.",
+        "Credere che basti non partecipare a una violazione: serve dissociarsi.",
+        "Fair dealing non vuol dire trattamento identico per tutti i clienti.",
+        "Pensare che la legge locale prevalga sempre: vale la regola più restrittiva.",
+        "Usare 'CFA' come sostantivo o dichiarare un livello parziale."
+      ],
+      "questions": [
+        {
+          "id": "eth-1",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An analyst overhears, in an elevator, the CFO of a company say that the firm will miss its quarterly earnings guidance by a wide margin. The information has not been released. According to the Standards, the analyst should:",
+          "choices": [
+            "not trade or cause others to trade on the information",
+            "trade only for personal accounts, not for clients",
+            "trade for clients first, then for personal accounts"
+          ],
+          "answer": 0,
+          "explanation": "L'informazione è materiale (un mancato obiettivo di utili sposta il prezzo) e non pubblica: lo Standard II(A) vieta di agire o indurre altri ad agire, per qualsiasi conto. La priorità dei clienti (VI(B)) è irrilevante: l'operazione stessa è vietata."
+        },
+        {
+          "id": "eth-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A portfolio manager for a company's defined benefit pension plan is pressured by the company's management to invest plan assets in the company's own shares to support the stock price. Under the Standards, the manager's duty of loyalty is owed to:",
+          "choices": [
+            "the company's management, which hired the manager",
+            "the plan participants and beneficiaries",
+            "the company's shareholders"
+          ],
+          "answer": 1,
+          "explanation": "Per un fondo pensione (defined benefit pension plan) il cliente sono i partecipanti e i beneficiari (Standard III(A)). Investire per sostenere il titolo dell'azienda sponsor sarebbe una violazione del dovere di lealtà (duty of loyalty), prudenza e cura."
+        },
+        {
+          "id": "eth-3",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "An analyst combines public financial statements, industry trade data and non-material conversations with a company's suppliers to conclude that the company's earnings will exceed consensus. She issues a buy recommendation. She has most likely:",
+          "choices": [
+            "violated the standard on material nonpublic information",
+            "violated the standard on diligence and reasonable basis",
+            "not violated any standard, because she applied the mosaic theory"
+          ],
+          "answer": 2,
+          "explanation": "La mosaic theory consente conclusioni ricavate da informazioni pubbliche più informazioni non pubbliche ma non materiali: anche se la conclusione è materiale, non c'è violazione di II(A). Il lavoro di ricerca mostra anzi diligenza (V(A))."
+        },
+        {
+          "id": "eth-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A firm receives a limited allocation of a hot IPO. To comply with the Fair Dealing standard, the firm should most appropriately:",
+          "choices": [
+            "allocate the shares to its largest clients first",
+            "allocate the shares on a pro-rata basis among clients for whom the IPO is suitable",
+            "allocate the shares to employees' accounts to avoid favoring any client"
+          ],
+          "answer": 1,
+          "explanation": "Lo Standard III(B) richiede un'allocazione equa, tipicamente pro-rata, tra i clienti per cui l'investimento è adatto. Favorire i grandi clienti non è equo e dare le azioni ai dipendenti viola anche la priorità dei clienti (VI(B))."
+        },
+        {
+          "id": "eth-5",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Before leaving her employer to start a competing firm, a manager, on her own time and without using firm resources, registers the new company and rents office space. She does not contact any clients until after she resigns. She has:",
+          "choices": [
+            "violated the standard on loyalty to her employer",
+            "not violated the standard on loyalty to her employer",
+            "violated the standard on additional compensation arrangements"
+          ],
+          "answer": 1,
+          "explanation": "Prepararsi a una nuova attività nel tempo libero, senza usare risorse o informazioni riservate del datore e senza sollecitare clienti prima delle dimissioni, è ammesso dallo Standard IV(A)."
+        },
+        {
+          "id": "eth-6",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "Which of the following statements by a candidate who has passed Level II of the CFA exam is consistent with the Standards?",
+          "choices": [
+            "I am a Level II CFA.",
+            "I passed Level II of the CFA exam on my first attempt.",
+            "I am a CFA (expected)."
+          ],
+          "answer": 1,
+          "explanation": "Lo Standard VII(B) consente di dichiarare fatti veri come aver superato un livello. Non esiste una designazione parziale (Level II CFA) e non si può usare la designazione prima di ottenerla, nemmeno con 'expected'."
+        }
+      ]
+    },
+    {
+      "topic": "quant",
+      "title": "Metodi quantitativi",
+      "summary": "Valore del denaro nel tempo (time value of money), statistica descrittiva, probabilità, campionamento (sampling), test d'ipotesi (hypothesis testing) e regressione semplice. È la cassetta degli attrezzi per tutto il resto del programma.",
+      "sections": [
+        {
+          "title": "Tassi e valore del denaro nel tempo",
+          "body": [
+            "Un tasso può essere letto come rendimento richiesto (required return), tasso di sconto (discount rate) o costo opportunità (opportunity cost). Il tasso nominale annuo (stated) diventa effettivo con la capitalizzazione: EAR = (1 + r/m)^m - 1; con capitalizzazione continua (continuous compounding) EAR = e^r - 1.",
+            "Valore attuale (present value) di una rendita posticipata (ordinary annuity): PV = PMT × [1 - (1+r)^-N] / r. Una rendita anticipata (annuity due) vale la stessa per (1+r). Perpetuità (perpetuity): PV = PMT / r. Usa sempre una timeline: l'errore più frequente è sbagliare di un periodo.",
+            "Rendimenti: holding period return, media aritmetica (stima del rendimento di un singolo periodo), media geometrica (crescita composta, sempre ≤ aritmetica), media armonica (costo medio nel cost averaging). Money-weighted return = IRR dei flussi dell'investitore; time-weighted return elimina l'effetto dei versamenti ed è lo standard per valutare il gestore."
+          ]
+        },
+        {
+          "title": "Statistica e probabilità",
+          "body": [
+            "Dispersione: varianza (variance) e deviazione standard (standard deviation); coefficiente di variazione (coefficient of variation) CV = s / media per confrontare rischi relativi. Asimmetria (skewness) positiva: media > mediana > moda. Curtosi (kurtosis) in eccesso > 0 = code spesse (leptocurtica).",
+            "Covarianza (covariance) e correlazione (correlation): ρ = Cov(A,B) / (σA σB), tra -1 e +1; misura solo la relazione lineare. Probabilità condizionata (conditional probability) P(A|B) = P(AB) / P(B); teorema di Bayes (Bayes' theorem): P(A|B) = P(B|A) P(A) / P(B), con P(B) dalla probabilità totale.",
+            "Distribuzione normale (normal distribution): circa il 68% entro ±1σ, 95% entro ±1.96σ, 99% entro ±2.58σ. Lognormale per i prezzi (non negativi). Simulazione Monte Carlo per problemi path-dependent; bootstrap per ricampionare dai dati."
+          ]
+        },
+        {
+          "title": "Campionamento e test d'ipotesi",
+          "body": [
+            "Teorema del limite centrale (central limit theorem): con n grande la media campionaria è circa normale con errore standard (standard error) σ/√n. Intervallo di confidenza (confidence interval): media ± z (o t) × errore standard. Si usa la t di Student quando la varianza della popolazione è ignota e il campione è piccolo.",
+            "Test d'ipotesi: H0 contiene sempre l'uguaglianza. Errore di tipo I = rifiutare H0 vera (probabilità = livello di significatività (significance level) α); errore di tipo II = non rifiutare H0 falsa; potenza (power) = 1 - P(tipo II). Il p-value è il più piccolo α al quale si rifiuta H0.",
+            "Test parametrici tipici: t per la media e per la differenza di medie, chi-quadro per una varianza, F per il rapporto tra due varianze. Test non parametrici (es. correlazione di Spearman) quando le ipotesi di distribuzione non reggono."
+          ]
+        },
+        {
+          "title": "Regressione lineare semplice",
+          "body": [
+            "Y = b0 + b1 X + ε. La pendenza (slope) stimata è b1 = Cov(X,Y) / Var(X). R² = SSR/SST è la quota di variazione spiegata; con un solo regressore R² = ρ².",
+            "Ipotesi: relazione lineare, varianza dei residui (residuals) costante (omoschedasticità (homoskedasticity)), residui indipendenti e normali. Il test t sulla pendenza: t = (b1 - 0) / s(b1). L'errore standard della stima (SEE) misura la dispersione dei residui."
+          ]
+        }
+      ],
+      "formulas": [
+        "EAR = (1 + r/m)^m - 1",
+        "PV annuity = PMT × [1 - (1+r)^-N] / r",
+        "ρ = Cov(A,B) / (σA × σB)",
+        "P(A|B) = P(B|A) × P(A) / P(B)",
+        "CI = media ± z × σ/√n",
+        "b1 = Cov(X,Y) / Var(X); R² = SSR / SST"
+      ],
+      "pitfalls": [
+        "Scambiare annuity due e ordinary annuity (differenza di un fattore 1+r).",
+        "Dimenticare di dividere per √n nell'errore standard.",
+        "Confondere errore di tipo I (rifiutare H0 vera) e di tipo II.",
+        "Usare la media aritmetica per misurare una crescita composta pluriennale."
+      ],
+      "questions": [
+        {
+          "id": "qm-1",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A bank quotes a stated annual interest rate of 8% compounded quarterly. The effective annual rate is closest to:",
+          "choices": [
+            "8.00%",
+            "8.24%",
+            "8.33%"
+          ],
+          "answer": 1,
+          "explanation": "EAR = (1 + 0.08/4)^4 - 1 = 1.02^4 - 1 = 8.24%. Con capitalizzazione più frequente dell'anno l'EAR è sempre maggiore del tasso nominale; 8.33% sarebbe circa la capitalizzazione continua (continuous compounding) di un tasso più alto."
+        },
+        {
+          "id": "qm-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investment pays $1,000 at the end of each year for 5 years. At a discount rate of 6%, its present value is closest to:",
+          "choices": [
+            "$4,212",
+            "$4,465",
+            "$5,000"
+          ],
+          "answer": 0,
+          "explanation": "PV = 1,000 × [1 - 1.06^-5] / 0.06 = 4,212.36. $4,465 è il valore se i pagamenti arrivassero a inizio anno (annuity due = 4,212 × 1.06); $5,000 ignora lo sconto."
+        },
+        {
+          "id": "qm-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A sample of 64 observations has a mean of 10 and the population standard deviation is known to be 4. The 95% confidence interval for the population mean is closest to:",
+          "choices": [
+            "2.16 to 17.84",
+            "9.02 to 10.98",
+            "9.18 to 10.82"
+          ],
+          "answer": 1,
+          "explanation": "Errore standard (standard error) = 4/√64 = 0.5; intervallo = 10 ± 1.96 × 0.5 = 9.02-10.98. 2.16-17.84 usa la deviazione standard (standard deviation) invece dell'errore standard; 9.18-10.82 usa z = 1.645 (90%)."
+        },
+        {
+          "id": "qm-4",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "30% of firms in a sector are expected to cut dividends. Among firms that cut dividends, 60% had negative earnings surprises in the prior quarter; among firms that did not cut, 20% had negative earnings surprises. Given that a firm had a negative earnings surprise, the probability that it will cut its dividend is closest to:",
+          "choices": [
+            "18.0%",
+            "56.3%",
+            "60.0%"
+          ],
+          "answer": 1,
+          "explanation": "Bayes: P(cut|neg) = 0.6 × 0.3 / (0.6 × 0.3 + 0.2 × 0.7) = 0.18 / 0.32 = 56.25%. 18% è la probabilità congiunta, 60% è P(neg|cut): la condizionata invertita."
+        },
+        {
+          "id": "qm-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A researcher rejects the null hypothesis that a fund's alpha equals zero when, in fact, the true alpha is zero. The researcher has made a:",
+          "choices": [
+            "Type I error",
+            "Type II error",
+            "correct decision, since the test has high power"
+          ],
+          "answer": 0,
+          "explanation": "Rifiutare un'ipotesi nulla (null hypothesis) vera è l'errore di tipo I, la cui probabilità è il livello di significatività (significance level) α. L'errore di tipo II è non rifiutare un'H0 falsa; la potenza (power) riguarda proprio quest'ultimo."
+        },
+        {
+          "id": "qm-6",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Two assets have a covariance of returns of 0.006. Their standard deviations are 10% and 20%. The correlation between the two assets is closest to:",
+          "choices": [
+            "0.03",
+            "0.30",
+            "0.60"
+          ],
+          "answer": 1,
+          "explanation": "ρ = Cov / (σA σB) = 0.006 / (0.10 × 0.20) = 0.006 / 0.02 = 0.30."
+        }
+      ]
+    },
+    {
+      "topic": "econ",
+      "title": "Economia",
+      "summary": "Domanda e offerta, strutture di mercato, ciclo economico (business cycle), politica monetaria (monetary policy) e fiscale, commercio internazionale e tassi di cambio (exchange rate).",
+      "sections": [
+        {
+          "title": "Microeconomia: elasticità e strutture di mercato",
+          "body": [
+            "Elasticità della domanda (elasticity of demand) al prezzo = %ΔQ / %ΔP. Se in valore assoluto è < 1 la domanda è anelastica e un aumento di prezzo aumenta il ricavo totale (total revenue); se > 1 è elastica e il ricavo scende. Beni con molti sostituti e grande peso nel budget sono più elastici.",
+            "Ogni impresa massimizza il profitto dove ricavo marginale (marginal revenue) = costo marginale (MR = MC). In concorrenza perfetta (perfect competition) P = MR = MC e nel lungo periodo profitto economico zero. Il monopolista produce meno e a prezzo più alto (P > MR). Concorrenza monopolistica (monopolistic competition): differenziazione, profitto zero nel lungo periodo. Oligopolio (oligopoly): interdipendenza (Cournot, Stackelberg, cartelli instabili).",
+            "Concentrazione: indice di Herfindahl-Hirschman (somma dei quadrati delle quote di mercato), più robusto del semplice concentration ratio perché pesa la distribuzione delle quote."
+          ]
+        },
+        {
+          "title": "Ciclo economico e inflazione",
+          "body": [
+            "Fasi: espansione, picco, contrazione, minimo. Indicatori anticipatori (es. ordini, curva dei rendimenti (yield curve), permessi edilizi), coincidenti (produzione industriale, occupazione) e ritardati (disoccupazione (unemployment) di lunga durata, costo unitario del lavoro).",
+            "Disoccupazione frizionale e strutturale formano il tasso naturale; quella ciclica dipende dal ciclo. Inflazione (inflation) da domanda (demand-pull) e da costi (cost-push). Deflazione pericolosa perché aumenta il peso reale del debito."
+          ]
+        },
+        {
+          "title": "Politica monetaria e fiscale",
+          "body": [
+            "La banca centrale (central bank) agisce sui tassi ufficiali, le operazioni di mercato aperto e le riserve. Politica espansiva: tassi più bassi, più credito, valuta tendenzialmente più debole, prezzi degli asset più alti. Trappola della liquidità: oltre un certo punto la politica perde efficacia.",
+            "Politica fiscale (fiscal policy): spesa pubblica e imposte. Gli stabilizzatori automatici (imposte progressive, sussidi di disoccupazione) agiscono senza decisioni discrezionali. Ritardi: di riconoscimento, di azione, di impatto. Effetto crowding-out: il deficit può spingere su i tassi e ridurre gli investimenti privati."
+          ]
+        },
+        {
+          "title": "Tassi di cambio",
+          "body": [
+            "Una quotazione A/B indica quante unità di A servono per una unità di B (B è la valuta base). Cross rate: JPY/EUR = JPY/USD × USD/EUR, le valute intermedie si semplificano.",
+            "Parità coperta dei tassi d'interesse (covered interest rate parity): F(A/B) = S(A/B) × (1 + iA) / (1 + iB) per un anno. La valuta con il tasso d'interesse più alto quota a sconto a termine. Regimi: dal cambio fisso (currency board, peg) al fluttuante."
+          ]
+        }
+      ],
+      "formulas": [
+        "Elasticità = %ΔQ / %ΔP",
+        "Profitto massimo: MR = MC",
+        "Cross rate: (A/C) = (A/B) × (B/C)",
+        "F(A/B) = S(A/B) × (1 + iA × T) / (1 + iB × T)"
+      ],
+      "pitfalls": [
+        "Leggere al contrario la quotazione A/B (la valuta base è al denominatore).",
+        "Pensare che la valuta con tasso più alto quoti a premio a termine: quota a sconto.",
+        "Confondere stabilizzatori automatici e politica fiscale discrezionale."
+      ],
+      "questions": [
+        {
+          "id": "ec-1",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A firm raises the price of its product by 10% and the quantity demanded falls by 5%. Demand is:",
+          "choices": [
+            "elastic, and total revenue falls",
+            "inelastic, and total revenue rises",
+            "unit elastic, and total revenue is unchanged"
+          ],
+          "answer": 1,
+          "explanation": "Elasticità = -5% / 10% = -0.5, in valore assoluto < 1: domanda anelastica. L'aumento di prezzo prevale sulla perdita di quantità, quindi il ricavo cresce (circa 1.10 × 0.95 = 1.045)."
+        },
+        {
+          "id": "ec-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Compared with a perfectly competitive industry with the same costs, a monopolist will most likely:",
+          "choices": [
+            "produce more output at a lower price",
+            "produce less output at a higher price",
+            "produce the same output, but at a higher price"
+          ],
+          "answer": 1,
+          "explanation": "Il monopolista produce dove MR = MC, ma il suo MR è sotto la curva di domanda: la quantità è inferiore e il prezzo superiore rispetto alla concorrenza perfetta (perfect competition), dove P = MC."
+        },
+        {
+          "id": "ec-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "The USD/EUR exchange rate is 1.10 and the JPY/USD exchange rate is 150. The JPY/EUR cross rate is closest to:",
+          "choices": [
+            "136.36",
+            "151.10",
+            "165.00"
+          ],
+          "answer": 2,
+          "explanation": "JPY/EUR = JPY/USD × USD/EUR = 150 × 1.10 = 165. Il dollaro si semplifica. 136.36 deriva dal dividere invece di moltiplicare."
+        },
+        {
+          "id": "ec-4",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "The spot USD/EUR rate is 1.1000. The one-year interest rate is 5% in USD and 3% in EUR. The one-year forward USD/EUR rate consistent with covered interest rate parity is closest to:",
+          "choices": [
+            "1.0790",
+            "1.1000",
+            "1.1214"
+          ],
+          "answer": 2,
+          "explanation": "F = 1.10 × 1.05 / 1.03 = 1.1214. Nella quotazione USD/EUR l'USD è al numeratore, quindi il suo tasso va al numeratore. L'euro, valuta con tasso più basso, quota a premio a termine."
+        },
+        {
+          "id": "ec-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Which of the following is best described as an automatic stabilizer?",
+          "choices": [
+            "A progressive income tax system",
+            "A one-time infrastructure spending program",
+            "An interest rate cut by the central bank"
+          ],
+          "answer": 0,
+          "explanation": "Le imposte progressive riducono automaticamente il reddito disponibile in espansione e lo sostengono in recessione, senza nuove decisioni. Il piano infrastrutturale è politica fiscale (fiscal policy) discrezionale; il taglio dei tassi è politica monetaria (monetary policy)."
+        },
+        {
+          "id": "ec-6",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An expansionary monetary policy is most likely to result in:",
+          "choices": [
+            "higher interest rates and a stronger domestic currency",
+            "lower interest rates and a weaker domestic currency",
+            "lower interest rates and a stronger domestic currency"
+          ],
+          "answer": 1,
+          "explanation": "La politica espansiva abbassa i tassi; rendimenti più bassi riducono l'attrattiva degli asset domestici e la valuta tende a indebolirsi."
+        }
+      ]
+    },
+    {
+      "topic": "fsa",
+      "title": "Analisi di bilancio",
+      "summary": "Conto economico (income statement), stato patrimoniale (balance sheet) e rendiconto finanziario (cash flow statement); rimanenze (inventories), immobilizzazioni, imposte, debito e indici. Insieme a Equity e Fixed Income è uno dei tre pilastri del Livello I.",
+      "sections": [
+        {
+          "title": "I tre prospetti e i principi contabili",
+          "body": [
+            "Conto economico: ricavi riconosciuti quando il controllo del bene o servizio passa al cliente (modello in cinque passi di IFRS 15 / ASC 606). Utile per azione (earnings per share) base e diluito: il diluito include l'effetto di opzioni (options), warrant e titoli convertibili se diluitivi (treasury stock method per le opzioni).",
+            "Stato patrimoniale: attività = passività (liabilities) + patrimonio netto (equity). Rendiconto finanziario: CFO, CFI, CFF. Metodo indiretto: parti dall'utile netto (net income), aggiungi le voci non monetarie (ammortamenti (depreciation)), togli gli aumenti del capitale circolante (working capital) operativo.",
+            "Differenze IFRS / US GAAP utili all'esame: interessi pagati e dividendi (dividends) ricevuti possono stare in CFO o CFI/CFF sotto IFRS, ma vanno in CFO sotto US GAAP; dividendi pagati in CFO o CFF sotto IFRS, sempre CFF sotto US GAAP; LIFO vietato sotto IFRS."
+          ]
+        },
+        {
+          "title": "Rimanenze e immobilizzazioni",
+          "body": [
+            "Con prezzi in aumento il LIFO dà COGS più alto, utile e imposte più bassi, rimanenze finali più basse; il FIFO il contrario. La LIFO reserve (differenza FIFO - LIFO delle rimanenze) serve a convertire i bilanci per confrontarli.",
+            "Capitalizzare (capitalize) una spesa invece di spenderla subito: utile più alto nel primo anno, CFO più alto (l'esborso va in CFI), attività e patrimonio più alti; negli anni successivi l'ammortamento riduce l'utile. L'impairment riduce il valore contabile; sotto IFRS può essere stornato, sotto US GAAP no (per gli asset detenuti per l'uso)."
+          ]
+        },
+        {
+          "title": "Imposte, leasing e debito",
+          "body": [
+            "Le imposte differite (deferred taxes) nascono dalle differenze temporanee (temporary differences) tra valore contabile e fiscale. Una deferred tax liability nasce quando paghi meno imposte oggi di quanto riporti in bilancio, ad esempio con ammortamento fiscale accelerato. Le deferred tax asset nascono con perdite riportabili (tax loss carryforwards) o costi deducibili più tardi.",
+            "Leasing: per il locatario, IFRS 16 e ASC 842 portano quasi tutti i leasing a bilancio (diritto d'uso e passività). Sotto US GAAP i leasing operativi mostrano un unico costo di locazione lineare; sotto IFRS si vedono ammortamento e interessi."
+          ]
+        },
+        {
+          "title": "Analisi per indici",
+          "body": [
+            "Liquidità: current ratio = attività correnti / passività correnti; quick ratio esclude rimanenze (e risconti). Attività: rotazione di crediti, magazzino, debiti; ciclo di cassa (cash conversion cycle) = DSO + DOH - DPO. Solvibilità: debt-to-equity, interest coverage.",
+            "Redditività e DuPont: ROE = margine netto (net profit margin) × rotazione delle attività (asset turnover) × leva (attivo / patrimonio). La versione estesa separa il carico fiscale (NI/EBT) e il carico degli interessi (EBT/EBIT). Un ROE alto dovuto solo alla leva è di qualità inferiore."
+          ]
+        }
+      ],
+      "formulas": [
+        "ROE = (NI/Sales) × (Sales/Assets) × (Assets/Equity)",
+        "Current ratio = CA / CL; Quick = (Cash + titoli + crediti) / CL",
+        "Ciclo di cassa = DSO + DOH - DPO",
+        "LIFO reserve = Inventory FIFO - Inventory LIFO"
+      ],
+      "pitfalls": [
+        "Invertire gli effetti di LIFO e FIFO quando i prezzi scendono (gli effetti si rovesciano).",
+        "Dimenticare che capitalizzare aumenta il CFO e riduce il CFI.",
+        "Classificare interessi pagati in CFF sotto US GAAP (vanno in CFO).",
+        "Leggere un aumento del ROE come miglioramento senza scomporlo con DuPont."
+      ],
+      "questions": [
+        {
+          "id": "fsa-1",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "During a period of rising prices, compared with a firm using FIFO, a firm using LIFO will most likely report:",
+          "choices": [
+            "higher cost of goods sold and lower ending inventory",
+            "lower cost of goods sold and higher ending inventory",
+            "higher cost of goods sold and higher ending inventory"
+          ],
+          "answer": 0,
+          "explanation": "Con prezzi in aumento il LIFO scarica a costo del venduto (cost of goods sold) gli acquisti più recenti e cari, lasciando in magazzino i costi vecchi e bassi: COGS più alto, rimanenze (inventories) più basse."
+        },
+        {
+          "id": "fsa-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company has a net profit margin of 5%, total asset turnover of 1.6 and a financial leverage ratio (assets/equity) of 2.5. Its return on equity is closest to:",
+          "choices": [
+            "8.0%",
+            "12.5%",
+            "20.0%"
+          ],
+          "answer": 2,
+          "explanation": "DuPont: ROE = 5% × 1.6 × 2.5 = 20%. 8% è il ROA (5% × 1.6): manca la leva."
+        },
+        {
+          "id": "fsa-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Compared with expensing an expenditure immediately, capitalizing it will most likely result in, in the year of the expenditure:",
+          "choices": [
+            "lower cash flow from operations",
+            "higher cash flow from operations",
+            "lower net income"
+          ],
+          "answer": 1,
+          "explanation": "Se capitalizzata, la spesa va in CFI e non in CFO, quindi il CFO è più alto; l'utile del primo anno è più alto perché si registra solo una quota di ammortamento (depreciation). Il flusso di cassa totale non cambia."
+        },
+        {
+          "id": "fsa-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A deferred tax liability is most likely created when a company:",
+          "choices": [
+            "uses accelerated depreciation for tax purposes and straight-line depreciation for financial reporting",
+            "has tax loss carryforwards",
+            "recognizes warranty expenses in its financial statements before they are tax deductible"
+          ],
+          "answer": 0,
+          "explanation": "Ammortamento (depreciation) fiscale accelerato: imposte pagate oggi inferiori a quelle in bilancio, quindi una passività (liabilities) per imposte che si pagheranno quando la differenza si riassorbe. Perdite riportabili (tax loss carryforwards) e garanzie dedotte più tardi creano invece deferred tax asset."
+        },
+        {
+          "id": "fsa-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company reporting under US GAAP pays interest on its bonds. The interest paid is classified in the cash flow statement as:",
+          "choices": [
+            "an operating activity",
+            "an investing activity",
+            "a financing activity"
+          ],
+          "answer": 0,
+          "explanation": "Sotto US GAAP gli interessi pagati sono sempre in CFO. Sotto IFRS l'impresa può scegliere tra CFO e CFF."
+        },
+        {
+          "id": "fsa-6",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A company has days of inventory on hand of 60, days of sales outstanding of 45 and number of days of payables of 30. Its cash conversion cycle is closest to:",
+          "choices": [
+            "15 days",
+            "75 days",
+            "135 days"
+          ],
+          "answer": 1,
+          "explanation": "Ciclo di cassa (cash conversion cycle) = DOH + DSO - DPO = 60 + 45 - 30 = 75 giorni. 135 dimentica di sottrarre i debiti verso fornitori."
+        }
+      ]
+    },
+    {
+      "topic": "corp",
+      "title": "Emittenti societari (Corporate Issuers)",
+      "summary": "Forme giuridiche, governance e stakeholder, capital budgeting, costo del capitale (cost of capital), struttura del capitale (capital structure) e leva operativa (operating leverage) e finanziaria.",
+      "sections": [
+        {
+          "title": "Governance e stakeholder",
+          "body": [
+            "I conflitti principali (principal-agent): azionisti contro management (remunerazione, empire building), azionisti di controllo contro minoranze, azionisti contro creditori (gli azionisti preferiscono più rischio, i creditori meno).",
+            "Meccanismi: consiglio indipendente, comitati (audit, remunerazione, nomine), voto e proxy, attivismo, covenant per i creditori. I fattori ESG entrano nell'analisi attraverso rischi e opportunità materiali."
+          ]
+        },
+        {
+          "title": "Capital budgeting",
+          "body": [
+            "Si valutano flussi di cassa incrementali al netto delle imposte, ignorando i costi irrecuperabili (sunk) e includendo costi opportunità (opportunity cost) ed esternalità (es. cannibalizzazione (cannibalization)). I costi di finanziamento non si includono nei flussi: sono già nel tasso di sconto (discount rate).",
+            "NPV = somma dei flussi scontati meno l'investimento iniziale: accetta se positivo. L'IRR è il tasso che azzera l'NPV; per progetti alternativi con conflitto tra NPV e IRR vale l'NPV (ipotesi di reinvestimento al costo del capitale). Il payback ignora il valore del tempo e i flussi successivi."
+          ]
+        },
+        {
+          "title": "Costo del capitale e struttura",
+          "body": [
+            "WACC = wd × kd × (1 - t) + wp × kp + we × ke, con pesi di mercato o target. Il costo dell'equity (cost of equity) con il CAPM: ke = rf + β × (E(Rm) - rf); in alternativa il bond yield plus risk premium.",
+            "Modigliani-Miller senza imposte: la struttura del capitale è irrilevante. Con imposte: il valore aumenta con il debito per lo scudo fiscale (V_L = V_U + t × D). Teoria del trade-off statico: il valore ottimo bilancia scudo fiscale e costi di dissesto (costs of financial distress). Pecking order: prima autofinanziamento, poi debito, poi nuove azioni."
+          ]
+        },
+        {
+          "title": "Leva operativa e finanziaria",
+          "body": [
+            "Grado di leva operativa DOL = %ΔEBIT / %ΔVendite = Q(P - V) / [Q(P - V) - F]. Costi fissi alti significano DOL alto. Leva finanziaria (financial leverage) DFL = %ΔEPS / %ΔEBIT = EBIT / (EBIT - interessi). DTL = DOL × DFL.",
+            "Capitale circolante (working capital): gestire la liquidità con fonti primarie (cassa, flussi operativi) e secondarie (vendita di asset, rinegoziazione). Il costo dello sconto per pagamento anticipato non sfruttato è spesso molto alto in termini annui."
+          ]
+        }
+      ],
+      "formulas": [
+        "NPV = Σ CFt / (1+r)^t - investimento",
+        "WACC = wd kd (1-t) + wp kp + we ke",
+        "ke = rf + β (E(Rm) - rf)",
+        "V_L = V_U + t × D (MM con imposte)",
+        "DOL = %ΔEBIT / %ΔSales; DTL = DOL × DFL"
+      ],
+      "pitfalls": [
+        "Includere costi sunk o interessi nei flussi del progetto.",
+        "Usare il kd prima delle imposte nel WACC.",
+        "Scegliere con l'IRR tra progetti mutuamente esclusivi in conflitto con l'NPV."
+      ],
+      "questions": [
+        {
+          "id": "corp-1",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A project requires an initial investment of $100 and is expected to generate cash flows of $40, $50 and $30 at the end of years 1, 2 and 3. At a cost of capital of 10%, the project's NPV is closest to:",
+          "choices": [
+            "-$2.50",
+            "$0.23",
+            "$20.00"
+          ],
+          "answer": 1,
+          "explanation": "NPV = -100 + 40/1.1 + 50/1.1^2 + 30/1.1^3 = -100 + 36.36 + 41.32 + 22.54 = 0.23. $20 è la somma dei flussi non scontati meno l'investimento."
+        },
+        {
+          "id": "corp-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A firm is financed with 60% equity and 40% debt at market values. Its cost of equity is 12%, its pre-tax cost of debt is 6% and its tax rate is 25%. The firm's WACC is closest to:",
+          "choices": [
+            "9.0%",
+            "9.6%",
+            "10.8%"
+          ],
+          "answer": 0,
+          "explanation": "WACC = 0.6 × 12% + 0.4 × 6% × (1 - 0.25) = 7.2% + 1.8% = 9.0%. 9.6% dimentica lo scudo fiscale (tax shield) sul debito."
+        },
+        {
+          "id": "corp-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "When evaluating a new product line, which of the following should be excluded from the project's incremental cash flows?",
+          "choices": [
+            "A market research study already paid for last year",
+            "Lost sales of the firm's existing products caused by the new line",
+            "The after-tax rental income forgone on a building the project will use"
+          ],
+          "answer": 0,
+          "explanation": "La ricerca di mercato già pagata è un costo sunk (sunk costs): non cambia con la decisione. La cannibalizzazione (cannibalization) è un'esternalità da includere; l'affitto perso è un costo opportunità (opportunity cost) da includere."
+        },
+        {
+          "id": "corp-4",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Two mutually exclusive projects of the same size and life are being evaluated. Project A has the higher NPV and Project B has the higher IRR. The firm should choose:",
+          "choices": [
+            "Project A, because NPV assumes reinvestment at the cost of capital",
+            "Project B, because IRR measures the rate of return",
+            "either project, since both are acceptable"
+          ],
+          "answer": 0,
+          "explanation": "In caso di conflitto tra progetti alternativi vince l'NPV: misura direttamente l'aumento di ricchezza degli azionisti e assume il reinvestimento al costo del capitale (cost of capital), più realistico di quello all'IRR."
+        },
+        {
+          "id": "corp-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "According to Modigliani and Miller's proposition with corporate taxes and no costs of financial distress, increasing the proportion of debt in the capital structure will:",
+          "choices": [
+            "leave firm value unchanged",
+            "increase firm value because of the tax shield on interest",
+            "decrease firm value because the cost of equity rises"
+          ],
+          "answer": 1,
+          "explanation": "Con imposte, gli interessi deducibili creano uno scudo fiscale (tax shield): V_L = V_U + t × D. Il costo dell'equity (cost of equity) sale con la leva, ma non abbastanza da compensare il beneficio fiscale. Senza imposte il valore sarebbe invariato."
+        },
+        {
+          "id": "corp-6",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A firm's sales increase by 10% and its EBIT increases by 25%. Its degree of operating leverage is closest to:",
+          "choices": [
+            "0.4",
+            "2.5",
+            "3.5"
+          ],
+          "answer": 1,
+          "explanation": "DOL = %ΔEBIT / %ΔSales = 25% / 10% = 2.5. Un DOL alto indica costi fissi elevati: l'EBIT reagisce più che proporzionalmente alle vendite."
+        }
+      ]
+    },
+    {
+      "topic": "equity",
+      "title": "Investimenti azionari",
+      "summary": "Funzionamento dei mercati, indici, efficienza, analisi di settore e modelli di valutazione: dividendi (dividends), multipli (multiples) e valore degli asset.",
+      "sections": [
+        {
+          "title": "Mercati, posizioni e indici",
+          "body": [
+            "Comprare a margine: con margine iniziale (initial margin) m_i e di mantenimento m_m, il prezzo che fa scattare la margin call è P0 × (1 - m_i) / (1 - m_m). Ordini: market (esecuzione certa, prezzo incerto), limit (prezzo certo, esecuzione incerta), stop (diventa market al prezzo di attivazione).",
+            "Indici: price-weighted (peso proporzionale al prezzo, es. Dow), equal-weighted (va ribilanciato), market-cap-weighted (si auto-ribilancia, sovrappesa i titoli sopravvalutati se il mercato sbaglia), float-adjusted. Un indice di prezzo esclude i dividendi; un total return li include."
+          ]
+        },
+        {
+          "title": "Efficienza dei mercati",
+          "body": [
+            "Forma debole (weak form): i prezzi riflettono i dati storici, l'analisi tecnica non dà extra-rendimenti. Semi-forte: i prezzi riflettono tutte le informazioni pubbliche, l'analisi fondamentale non batte sistematicamente il mercato. Forte: anche le informazioni private sono nei prezzi (non regge nella realtà, visto che l'insider trading paga).",
+            "Anomalie: effetto gennaio, momentum, reazioni eccessive. Spesso spariscono una volta scoperte o sono spiegabili con il rischio. La finanza comportamentale (behavioral finance) spiega le deviazioni con bias come overconfidence e herding."
+          ]
+        },
+        {
+          "title": "Analisi di settore",
+          "body": [
+            "Le cinque forze (five forces) di Porter: minaccia di nuovi entranti, potere dei fornitori, potere dei clienti, minaccia dei sostituti, rivalità. Ciclo di vita del settore: embrionale, crescita, shakeout, maturità, declino.",
+            "Strategie competitive: leadership di costo o differenziazione. Settori ciclici contro difensivi; barriere all'ingresso alte proteggono i margini."
+          ]
+        },
+        {
+          "title": "Modelli di valutazione",
+          "body": [
+            "Gordon growth model: V0 = D1 / (r - g), con D1 = D0 × (1 + g) e r > g. Azioni privilegiate (preferred stock) senza scadenza: V = D / r. Modelli multistadio per crescita alta iniziale e poi stabile.",
+            "Multipli: P/E giustificato forward = payout / (r - g); trailing = payout × (1 + g) / (r - g). Enterprise value / EBITDA confronta imprese con strutture di capitale diverse. I modelli basati sugli asset sono adatti a imprese con attività valutabili a mercato (es. holding, risorse naturali)."
+          ]
+        }
+      ],
+      "formulas": [
+        "V0 = D1 / (r - g)",
+        "Margin call: P = P0 (1 - m_i) / (1 - m_m)",
+        "P/E forward giustificato = (1 - b) / (r - g)",
+        "Preferred: V = D / r"
+      ],
+      "pitfalls": [
+        "Usare D0 invece di D1 nel modello di Gordon.",
+        "Confondere forma semi-forte (informazioni pubbliche) e forte (anche private).",
+        "Dimenticare che l'indice price-weighted pesa di più le azioni con prezzo alto, non le società più grandi."
+      ],
+      "questions": [
+        {
+          "id": "eq-1",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company just paid a dividend of $2.00. Dividends are expected to grow at 4% per year indefinitely and the required return is 9%. The intrinsic value of the stock is closest to:",
+          "choices": [
+            "$40.00",
+            "$41.60",
+            "$43.26"
+          ],
+          "answer": 1,
+          "explanation": "D1 = 2.00 × 1.04 = 2.08; V0 = 2.08 / (0.09 - 0.04) = 41.60. $40 usa D0 al posto di D1."
+        },
+        {
+          "id": "eq-2",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "An investor buys a stock at $50 using an initial margin of 50%. The maintenance margin is 25%. The price below which the investor receives a margin call is closest to:",
+          "choices": [
+            "$25.00",
+            "$33.33",
+            "$37.50"
+          ],
+          "answer": 1,
+          "explanation": "P = 50 × (1 - 0.50) / (1 - 0.25) = 25 / 0.75 = 33.33. Verifica: a 33.33 il prestito di 25 lascia un equity di 8.33, cioè il 25% del valore."
+        },
+        {
+          "id": "eq-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "If markets are semi-strong form efficient, which of the following strategies is least likely to earn consistent abnormal returns?",
+          "choices": [
+            "Trading on material nonpublic information",
+            "Buying stocks immediately after positive earnings announcements",
+            "None, because insider information is always reflected in prices"
+          ],
+          "answer": 1,
+          "explanation": "Nella forma semi-forte (semi-strong form) le informazioni pubbliche, come un annuncio di utili, sono incorporate subito nei prezzi: comprarle dopo l'annuncio non dà extra-rendimenti. Le informazioni privilegiate (material nonpublic information) invece non sono incluse (lo sarebbero solo nella forma forte (strong form))."
+        },
+        {
+          "id": "eq-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A firm has a dividend payout ratio of 40%, a required return on equity of 10% and an expected dividend growth rate of 6%. Its justified forward P/E is closest to:",
+          "choices": [
+            "4.0",
+            "6.7",
+            "10.0"
+          ],
+          "answer": 2,
+          "explanation": "P/E forward = payout / (r - g) = 0.40 / (0.10 - 0.06) = 10.0."
+        },
+        {
+          "id": "eq-5",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A non-callable, non-convertible perpetual preferred share pays an annual dividend of $5. If the required return is 8%, its value is closest to:",
+          "choices": [
+            "$40.00",
+            "$62.50",
+            "$67.50"
+          ],
+          "answer": 1,
+          "explanation": "Perpetuità (perpetuity): V = 5 / 0.08 = 62.50."
+        },
+        {
+          "id": "eq-6",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "In a price-weighted index, which stock has the greatest influence on the index value?",
+          "choices": [
+            "The stock with the highest market capitalization",
+            "The stock with the highest share price",
+            "All stocks have equal influence"
+          ],
+          "answer": 1,
+          "explanation": "Nell'indice price-weighted il peso di un titolo è il suo prezzo diviso la somma dei prezzi: conta il prezzo per azione, non la capitalizzazione."
+        }
+      ]
+    },
+    {
+      "topic": "fixed",
+      "title": "Reddito fisso",
+      "summary": "Caratteristiche delle obbligazioni (bonds), prezzo e rendimento, curva dei tassi (yield curve), duration e convessità (convexity), rischio di credito (credit risk) e cartolarizzazioni (securitization).",
+      "sections": [
+        {
+          "title": "Prezzo e rendimento",
+          "body": [
+            "Il prezzo di un'obbligazione è il valore attuale (present value) di cedole e rimborso scontati al rendimento a scadenza (YTM). Prezzo e rendimento si muovono in direzione opposta; se la cedola (coupon) è sopra il rendimento il titolo quota sopra la pari (premium), se è sotto quota sotto la pari (discount).",
+            "Misure di rendimento: current yield = cedola annua / prezzo; YTM (ipotizza reinvestimento delle cedole allo YTM e detenzione fino a scadenza); yield-to-call, yield-to-worst. Prezzo tel quel (full) = prezzo secco (flat) + rateo d'interesse (accrued interest)."
+          ]
+        },
+        {
+          "title": "Curva dei tassi e spread",
+          "body": [
+            "Curva spot (tassi zero coupon), curva par e curva forward. Con curva crescente i forward sono sopra gli spot. Il prezzo arbitrage-free di un titolo si ottiene scontando ogni flusso al proprio tasso spot (spot rates).",
+            "Spread: G-spread rispetto al titolo di Stato (government bond), I-spread rispetto al tasso swap, Z-spread costante sulla curva spot. Lo spread compensa il rischio di credito e di liquidità."
+          ]
+        },
+        {
+          "title": "Duration e convessità",
+          "body": [
+            "La Macaulay duration è la vita media ponderata (weighted average) dei flussi; la modified duration = Macaulay / (1 + y/m) misura la variazione percentuale (percent change) di prezzo per un movimento di rendimento: %ΔP ≈ -ModDur × Δy + ½ × Convexity × (Δy)².",
+            "La duration aumenta con la scadenza e diminuisce con cedola e rendimento più alti. La convessità positiva è un vantaggio: il prezzo sale più di quanto scende per movimenti uguali. Le obbligazioni callable hanno convessità negativa quando i tassi scendono (il prezzo è limitato dal prezzo di call). Effective duration per titoli con opzioni (options).",
+            "Rischio di reinvestimento (reinvestment risk) contro rischio di prezzo: per un orizzonte pari alla Macaulay duration i due effetti si compensano (immunizzazione (immunization))."
+          ]
+        },
+        {
+          "title": "Rischio di credito e cartolarizzazioni",
+          "body": [
+            "Perdita attesa (expected loss) = probabilità di default (probability of default) × loss given default (LGD = 1 - recovery rate). Priorità: secured prima di senior unsecured, poi subordinated. Le quattro C dell'analisi: Capacity, Collateral, Covenants, Character.",
+            "Cartolarizzazioni: un veicolo (SPE) acquista i crediti e emette tranche con subordinazione; le tranche senior sono protette dalle junior. Gli MBS hanno rischio di rimborso anticipato (prepayment): contraction risk quando i tassi scendono, extension risk quando salgono."
+          ]
+        }
+      ],
+      "formulas": [
+        "P = Σ C/(1+y)^t + F/(1+y)^N",
+        "Current yield = C / P",
+        "ModDur = MacDur / (1 + y/m)",
+        "%ΔP ≈ -ModDur × Δy + ½ × Convexity × (Δy)²",
+        "Perdita attesa = PD × LGD"
+      ],
+      "pitfalls": [
+        "Dimenticare che la convessità va moltiplicata per (Δy)² e per ½.",
+        "Pensare che una cedola più alta aumenti la duration (la riduce).",
+        "Confondere contraction risk (tassi giù) ed extension risk (tassi su) negli MBS."
+      ],
+      "questions": [
+        {
+          "id": "fi-1",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A 3-year bond with a 5% annual coupon and a par value of 100 has a yield-to-maturity of 6%. Its price is closest to:",
+          "choices": [
+            "97.33",
+            "100.00",
+            "102.72"
+          ],
+          "answer": 0,
+          "explanation": "P = 5/1.06 + 5/1.06^2 + 105/1.06^3 = 4.72 + 4.45 + 88.16 = 97.33. La cedola (coupon) (5%) è sotto il rendimento (6%), quindi il titolo quota sotto la pari."
+        },
+        {
+          "id": "fi-2",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A bond has a modified duration of 7 and a convexity of 60. If its yield increases by 50 basis points, the estimated percentage price change is closest to:",
+          "choices": [
+            "-3.43%",
+            "-3.50%",
+            "-3.58%"
+          ],
+          "answer": 0,
+          "explanation": "%ΔP = -7 × 0.005 + 0.5 × 60 × 0.005^2 = -3.50% + 0.075% = -3.425%. La convessità (convexity) attenua la perdita; -3.50% considera solo la duration."
+        },
+        {
+          "id": "fi-3",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A bond pays an annual coupon of $6 and is priced at $95. Its current yield is closest to:",
+          "choices": [
+            "5.70%",
+            "6.00%",
+            "6.32%"
+          ],
+          "answer": 2,
+          "explanation": "Current yield = 6 / 95 = 6.32%. Non tiene conto della plusvalenza verso il rimborso alla pari, a differenza dello YTM."
+        },
+        {
+          "id": "fi-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "All else equal, which bond has the highest modified duration?",
+          "choices": [
+            "A 10-year bond with a 2% coupon",
+            "A 10-year bond with an 8% coupon",
+            "A 5-year bond with a 2% coupon"
+          ],
+          "answer": 0,
+          "explanation": "La duration cresce con la scadenza e cala con la cedola (coupon): il titolo a 10 anni con cedola bassa ha più peso sul rimborso finale, quindi la duration più alta."
+        },
+        {
+          "id": "fi-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "When interest rates decline significantly, a callable bond most likely exhibits:",
+          "choices": [
+            "positive convexity and greater price appreciation than an otherwise identical option-free bond",
+            "negative convexity and less price appreciation than an otherwise identical option-free bond",
+            "zero duration"
+          ],
+          "answer": 1,
+          "explanation": "Quando i tassi scendono aumenta la probabilità di richiamo: il prezzo resta compresso vicino al prezzo di call (convessità (convexity) negativa) e sale meno di un titolo senza opzione (options)."
+        },
+        {
+          "id": "fi-6",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A bond has a 3% annual probability of default and an expected recovery rate of 40%. Its expected annual loss is closest to:",
+          "choices": [
+            "1.2%",
+            "1.8%",
+            "3.0%"
+          ],
+          "answer": 1,
+          "explanation": "Perdita attesa (expected loss) = PD × LGD = 3% × (1 - 40%) = 1.8%. 1.2% usa il recovery rate al posto della LGD."
+        }
+      ]
+    },
+    {
+      "topic": "deriv",
+      "title": "Derivati",
+      "summary": "Forward, futures, swap e opzioni (options): caratteristiche, pagamenti, pricing per non arbitraggio (no-arbitrage), put-call parity e modello binomiale.",
+      "sections": [
+        {
+          "title": "Impegni a termine e diritti",
+          "body": [
+            "Forward commitments (forward, futures, swap) obbligano entrambe le parti; contingent claims (opzioni, credit derivatives) danno un diritto a una parte che paga un premio. I futures sono standardizzati, quotati, con stanza di compensazione (clearinghouse) e margini giornalieri (mark-to-market); i forward sono OTC con rischio di controparte (counterparty risk).",
+            "Usi: copertura (hedging), speculazione, scoperta del prezzo. I derivati (derivatives) riducono i costi di transazione e permettono posizioni corte facilmente."
+          ]
+        },
+        {
+          "title": "Pricing per non arbitraggio",
+          "body": [
+            "Prezzo forward senza flussi intermedi: F0 = S0 × (1 + r)^T. Con redditi (dividendi (dividends), cedole (coupon)) si sottrae il loro valore attuale (present value) da S0; con costi di detenzione (stoccaggio) si aggiungono. Il convenience yield riduce il prezzo forward delle merci.",
+            "Il valore di un forward all'inizio è zero; durante la vita, per la posizione lunga, è St - F0 / (1 + r)^(T - t). Uno swap equivale a una serie di forward."
+          ]
+        },
+        {
+          "title": "Opzioni: payoff e parità",
+          "body": [
+            "Call: payoff max(0, ST - X); put: max(0, X - ST). Profitto = payoff - premio. Il venditore della call ha perdita potenziale illimitata. Valore = valore intrinseco (intrinsic value) + valore temporale (time value).",
+            "Put-call parity (europee): C + PV(X) = P + S0 (fiduciary call = protective put). Ne deriva per esempio P = C - S0 + PV(X). Le opzioni valgono di più con volatilità maggiore; la call vale di più con tassi più alti, la put di meno."
+          ]
+        },
+        {
+          "title": "Modello binomiale a un periodo",
+          "body": [
+            "Probabilità neutrale al rischio (risk-neutral probability): π = (1 + r - d) / (u - d). Valore dell'opzione = [π × payoff_up + (1 - π) × payoff_down] / (1 + r). Non serve la probabilità reale di salita: conta solo l'assenza di arbitraggio."
+          ]
+        }
+      ],
+      "formulas": [
+        "F0 = S0 × (1 + r)^T",
+        "C + PV(X) = P + S0",
+        "π = (1 + r - d) / (u - d)",
+        "c0 = [π c_u + (1 - π) c_d] / (1 + r)"
+      ],
+      "pitfalls": [
+        "Confondere payoff e profitto (il profitto toglie il premio).",
+        "Usare probabilità reali nel modello binomiale.",
+        "Pensare che un forward abbia valore positivo alla stipula."
+      ],
+      "questions": [
+        {
+          "id": "dv-1",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A non-dividend-paying stock trades at $100 and the annual risk-free rate is 5%. The no-arbitrage price of a one-year forward contract on the stock is closest to:",
+          "choices": [
+            "$95.24",
+            "$100.00",
+            "$105.00"
+          ],
+          "answer": 2,
+          "explanation": "F0 = 100 × 1.05 = 105. Comprare l'azione finanziandosi al tasso privo di rischio replica il forward: qualunque prezzo diverso permetterebbe un arbitraggio."
+        },
+        {
+          "id": "dv-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A European call on a stock is priced at $5. The stock trades at $50 and the present value of the exercise price is $48. Using put-call parity, the price of a European put with the same strike and expiration is closest to:",
+          "choices": [
+            "$3.00",
+            "$5.00",
+            "$7.00"
+          ],
+          "answer": 0,
+          "explanation": "P = C - S0 + PV(X) = 5 - 50 + 48 = 3. $7 deriva dall'invertire i segni di S0 e PV(X)."
+        },
+        {
+          "id": "dv-3",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "An investor buys a call option with an exercise price of $40 for a premium of $2. At expiration the stock price is $46. The investor's profit is closest to:",
+          "choices": [
+            "$4",
+            "$6",
+            "$8"
+          ],
+          "answer": 0,
+          "explanation": "Payoff = 46 - 40 = 6; profitto = 6 - 2 = 4. $6 è il payoff, senza togliere il premio."
+        },
+        {
+          "id": "dv-4",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A stock is priced at $100 and can move up by 20% or down by 20% in one year. The risk-free rate is 5%. The value of a one-year European call with an exercise price of $100 is closest to:",
+          "choices": [
+            "$9.52",
+            "$10.00",
+            "$11.90"
+          ],
+          "answer": 2,
+          "explanation": "π = (1.05 - 0.80) / (1.20 - 0.80) = 0.625. Payoff in salita = 20, in discesa = 0. Valore = 0.625 × 20 / 1.05 = 11.90. $9.52 usa probabilità 50/50 invece di quelle neutrali al rischio."
+        },
+        {
+          "id": "dv-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Compared with forward contracts, futures contracts are most likely:",
+          "choices": [
+            "customized and traded over the counter",
+            "standardized and marked to market daily",
+            "free of any margin requirements"
+          ],
+          "answer": 1,
+          "explanation": "I futures sono standardizzati, negoziati in borsa con una stanza di compensazione (clearinghouse) che richiede margini e regola giornalmente guadagni e perdite. I forward sono personalizzati e OTC."
+        },
+        {
+          "id": "dv-6",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Which of the following is a contingent claim?",
+          "choices": [
+            "An interest rate swap",
+            "A futures contract on crude oil",
+            "A put option on a stock index"
+          ],
+          "answer": 2,
+          "explanation": "L'opzione (options) dà a chi la compra il diritto, non l'obbligo, di esercitare: è un contingent claim. Swap e futures sono forward commitments, vincolanti per entrambe le parti."
+        }
+      ]
+    },
+    {
+      "topic": "alt",
+      "title": "Investimenti alternativi",
+      "summary": "Private equity e private debt, immobiliare (real estate), hedge fund, materie prime (commodities), infrastrutture e strumenti digitali: caratteristiche, rendimenti, commissioni e valutazione.",
+      "sections": [
+        {
+          "title": "Caratteristiche comuni",
+          "body": [
+            "Illiquidità (illiquidity), minore trasparenza, commissioni alte, dati storici limitati e spesso distorti (survivorship e backfill bias), rendimenti non normali. Possono migliorare la diversificazione (diversification) grazie a correlazioni più basse con gli asset tradizionali.",
+            "Modi di investire: diretto (meno costi, più competenze richieste), co-investimento a fianco di un fondo, tramite fondo (limited partner di un GP)."
+          ]
+        },
+        {
+          "title": "Commissioni e struttura dei fondi",
+          "body": [
+            "Struttura tipica 2 e 20: commissione di gestione (management fee) sul capitale e commissione di performance (incentive fee) sui guadagni. Hurdle rate: soglia minima prima della performance fee (soft = calcolata su tutto il guadagno una volta superata, hard = solo sull'eccedenza). High-water mark: la performance fee si paga solo sopra il massimo valore precedente.",
+            "Il calcolo cambia a seconda che la performance fee sia calcolata al netto della management fee o indipendentemente: leggi sempre attentamente l'ipotesi del testo. Waterfall nel private equity: deal-by-deal (americano) o sull'intero fondo (europeo); clawback per restituire commissioni pagate in eccesso."
+          ]
+        },
+        {
+          "title": "Immobiliare, private equity, materie prime",
+          "body": [
+            "Immobiliare: valutazione per capitalizzazione del reddito (valore = NOI / cap rate), per comparabili o costo di ricostruzione. Il private equity segue la J-curve: rendimenti negativi all'inizio per commissioni e investimenti, positivi poi con le uscite (IPO, trade sale, secondary).",
+            "Materie prime: rendimento del futures = variazione dello spot + roll yield + rendimento del collaterale. In backwardation (futures sotto spot) il roll yield è positivo; in contango è negativo."
+          ]
+        }
+      ],
+      "formulas": [
+        "Valore immobile = NOI / cap rate",
+        "Perdita/guadagno sul roll: positivo in backwardation, negativo in contango",
+        "Net return = (Valore finale - fees - Valore iniziale) / Valore iniziale"
+      ],
+      "pitfalls": [
+        "Ignorare se la performance fee è calcolata al netto della management fee.",
+        "Fidarsi dei dati storici degli hedge fund senza correggere survivorship e backfill bias.",
+        "Confondere contango e backwardation nel segno del roll yield."
+      ],
+      "questions": [
+        {
+          "id": "alt-1",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A hedge fund charges a 2% management fee on year-end assets and a 20% incentive fee calculated on gains net of the management fee. The fund starts the year with $100 million and ends at $120 million before fees. The investor's net return is closest to:",
+          "choices": [
+            "13.60%",
+            "14.08%",
+            "16.00%"
+          ],
+          "answer": 1,
+          "explanation": "Management fee = 2% × 120 = 2.4. Guadagno netto della management fee = 120 - 2.4 - 100 = 17.6; incentive = 20% × 17.6 = 3.52. Netto = (120 - 2.4 - 3.52 - 100) / 100 = 14.08%. 13.60% calcola l'incentive sul guadagno lordo (20)."
+        },
+        {
+          "id": "alt-2",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A commercial property generates net operating income of $500,000 per year. Comparable properties trade at a capitalization rate of 6.25%. The estimated value of the property is closest to:",
+          "choices": [
+            "$3,125,000",
+            "$7,500,000",
+            "$8,000,000"
+          ],
+          "answer": 2,
+          "explanation": "Valore = NOI / cap rate = 500,000 / 0.0625 = 8,000,000."
+        },
+        {
+          "id": "alt-3",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "When a commodity futures market is in backwardation, a long investor who rolls futures contracts will most likely earn:",
+          "choices": [
+            "a positive roll yield",
+            "a negative roll yield",
+            "no roll yield"
+          ],
+          "answer": 0,
+          "explanation": "In backwardation il contratto con scadenza più lontana costa meno di quello in scadenza: chi rinnova vende caro e compra a meno, e il prezzo converge verso lo spot, quindi il roll yield è positivo."
+        },
+        {
+          "id": "alt-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "The J-curve pattern in private equity returns is best explained by:",
+          "choices": [
+            "early management fees and investment costs followed by gains from later exits",
+            "high leverage in the final years of the fund",
+            "the high-water mark provision"
+          ],
+          "answer": 0,
+          "explanation": "Nei primi anni il fondo paga commissioni e investe senza ancora realizzare: rendimenti negativi. Con la crescita delle partecipazioni e le uscite i rendimenti diventano positivi, da cui la forma a J."
+        },
+        {
+          "id": "alt-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Historical return databases for hedge funds most likely overstate performance because of:",
+          "choices": [
+            "survivorship and backfill biases",
+            "mark-to-market accounting",
+            "the use of high-water marks"
+          ],
+          "answer": 0,
+          "explanation": "I fondi falliti escono dai database (survivorship) e i fondi entrano portando solo storie di successo (backfill): entrambi gonfiano i rendimenti medi riportati."
+        }
+      ]
+    },
+    {
+      "topic": "pm",
+      "title": "Gestione di portafoglio",
+      "summary": "Rischio e rendimento, diversificazione (diversification), frontiera efficiente (efficient frontier), CAPM e misure di performance, Investment Policy Statement, finanza comportamentale (behavioral finance) e risk management.",
+      "sections": [
+        {
+          "title": "Rischio, rendimento e diversificazione",
+          "body": [
+            "Varianza (variance) di un portafoglio di due titoli: σp² = w1²σ1² + w2²σ2² + 2 w1 w2 ρ σ1 σ2. Con correlazione (correlation) minore di 1 il rischio del portafoglio è minore della media ponderata (weighted average) dei rischi: è il beneficio della diversificazione.",
+            "La frontiera efficiente contiene i portafogli rischiosi con il massimo rendimento per ogni livello di rischio. Con un titolo privo di rischio, la linea tangente (capital market line) individua il portafoglio di mercato (market portfolio); ogni investitore sceglie il mix in base alle preferenze (curve di indifferenza)."
+          ]
+        },
+        {
+          "title": "CAPM e misure di performance",
+          "body": [
+            "Il rischio specifico (idiosyncratic risk) si elimina diversificando, quello sistematico (beta) no: il mercato remunera solo il beta. CAPM: E(Ri) = rf + βi × (E(Rm) - rf). La Security Market Line rappresenta il CAPM: i titoli sopra la SML sono sottovalutati.",
+            "Sharpe = (Rp - rf) / σp; Treynor = (Rp - rf) / βp; M² riporta lo Sharpe in termini di rendimento con lo stesso rischio del mercato; alfa di Jensen = Rp - [rf + βp (Rm - rf)]. Sharpe per portafogli complessivi, Treynor per componenti di un portafoglio diversificato."
+          ]
+        },
+        {
+          "title": "IPS e processo di investimento",
+          "body": [
+            "L'Investment Policy Statement descrive obiettivi (rendimento e rischio: capacità e propensione) e vincoli: liquidità, orizzonte, fiscalità, aspetti legali e regolamentari, circostanze particolari. Se capacità e propensione al rischio (willingness to take risk) divergono, prevale la più bassa.",
+            "Processo: pianificazione (IPS, aspettative di mercato (capital market expectations), asset allocation strategica), esecuzione (selezione titoli e operatività), feedback (monitoraggio, ribilanciamento (rebalancing), valutazione)."
+          ]
+        },
+        {
+          "title": "Finanza comportamentale e risk management",
+          "body": [
+            "Bias cognitivi (correggibili con informazione): conservatism, confirmation, representativeness, illusion of control, hindsight, anchoring, mental accounting, framing, availability. Bias emotivi (più difficili da correggere): loss aversion, overconfidence, self-control, status quo, endowment, regret aversion.",
+            "Il risk management non elimina il rischio: lo identifica, misura e governa rispetto alla tolleranza dell'organizzazione. Strumenti: VaR, stress test, limiti, copertura (hedging), assicurazione."
+          ]
+        }
+      ],
+      "formulas": [
+        "σp² = w1²σ1² + w2²σ2² + 2 w1 w2 ρ σ1 σ2",
+        "E(Ri) = rf + βi (E(Rm) - rf)",
+        "Sharpe = (Rp - rf) / σp",
+        "Treynor = (Rp - rf) / βp",
+        "Jensen α = Rp - [rf + βp (Rm - rf)]"
+      ],
+      "pitfalls": [
+        "Dimenticare il termine di covarianza (covariance) nella varianza del portafoglio.",
+        "Usare la deviazione standard (standard deviation) al posto del beta nel CAPM o nel Treynor.",
+        "Confondere bias cognitivi ed emotivi (loss aversion è emotivo)."
+      ],
+      "questions": [
+        {
+          "id": "pm-1",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A portfolio is invested 60% in Asset A (standard deviation 20%) and 40% in Asset B (standard deviation 10%). The correlation between A and B is 0.25. The portfolio's standard deviation is closest to:",
+          "choices": [
+            "13.56%",
+            "16.00%",
+            "18.40%"
+          ],
+          "answer": 0,
+          "explanation": "σp² = 0.36 × 0.04 + 0.16 × 0.01 + 2 × 0.6 × 0.4 × 0.25 × 0.20 × 0.10 = 0.0144 + 0.0016 + 0.0024 = 0.0184; σp = 13.56%. 16% è la media ponderata (weighted average) delle deviazioni standard (standard deviation), vera solo con correlazione (correlation) 1."
+        },
+        {
+          "id": "pm-2",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "The risk-free rate is 3%, the expected market risk premium is 5% and a stock's beta is 1.2. Its expected return under the CAPM is closest to:",
+          "choices": [
+            "6.0%",
+            "9.0%",
+            "9.6%"
+          ],
+          "answer": 1,
+          "explanation": "E(R) = 3% + 1.2 × 5% = 9.0%. 9.6% moltiplica il beta per il rendimento di mercato (8%) invece che per il premio."
+        },
+        {
+          "id": "pm-3",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A portfolio has a return of 10% and a standard deviation of 16%. The risk-free rate is 2%. Its Sharpe ratio is closest to:",
+          "choices": [
+            "0.50",
+            "0.63",
+            "0.80"
+          ],
+          "answer": 0,
+          "explanation": "Sharpe = (10% - 2%) / 16% = 0.50. 0.63 dimentica di sottrarre il tasso privo di rischio."
+        },
+        {
+          "id": "pm-4",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "According to the CAPM, which type of risk is rewarded with a higher expected return?",
+          "choices": [
+            "Total risk",
+            "Systematic risk",
+            "Firm-specific risk"
+          ],
+          "answer": 1,
+          "explanation": "Il rischio specifico (idiosyncratic risk) si elimina con la diversificazione (diversification), quindi il mercato non lo remunera. Viene premiato solo il rischio sistematico (systematic risk), misurato dal beta."
+        },
+        {
+          "id": "pm-5",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investor holds a losing stock far longer than justified because selling would mean accepting the loss. This behavior is best described as:",
+          "choices": [
+            "confirmation bias",
+            "loss aversion",
+            "anchoring"
+          ],
+          "answer": 1,
+          "explanation": "Il dolore delle perdite pesa più del piacere di guadagni equivalenti: si tengono troppo i titoli in perdita. È un bias emotivo. La confirmation bias riguarda la ricerca di informazioni che confermano le proprie idee."
+        },
+        {
+          "id": "pm-6",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A client has a high willingness to take risk but a low ability to take risk because of large near-term liquidity needs. The investment policy statement should most likely reflect:",
+          "choices": [
+            "above-average risk tolerance",
+            "below-average risk tolerance",
+            "average risk tolerance, as the two factors offset"
+          ],
+          "answer": 1,
+          "explanation": "Quando capacità e propensione divergono prevale la più restrittiva: la capacità bassa impone una tolleranza al rischio (risk tolerance) sotto la media, e il consulente deve spiegarlo al cliente."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,958 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Professionalità: false dichiarazioni e cattiva condotta",
+          "body": [
+            "I(C) Misrepresentation: non fare dichiarazioni false o fuorvianti su servizi, qualifiche e performance, e non commettere plagio. Puoi usare ricerche altrui solo citandone la fonte; i dati fattuali di fonti riconosciute (es. statistiche ufficiali) si possono usare senza citazione.",
+            "I(D) Misconduct: comportamenti disonesti, fraudolenti o ingannevoli che riflettono negativamente sulla tua integrità professionale. Riguarda la condotta professionale, non ogni comportamento privato; un problema personale diventa rilevante solo se compromette integrità o competenza.",
+            "III(E) Preservation of Confidentiality: puoi rivelare informazioni dei clienti se riguardano attività illegali, se la legge lo richiede o se il cliente lo consente. V(C) Record Retention: i documenti appartengono al datore; se cambi lavoro non puoi portarli con te e devi ricostruire le analisi da fonti pubbliche."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Copiare una ricerca altrui senza citarla, anche se la si condivide: è plagio.",
+        "Portare con sé modelli o archivi del vecchio datore di lavoro."
+      ],
+      "questions": [
+        {
+          "id": "eth-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An analyst copies several paragraphs from a competitor's research report into her own report without citing the source. She has most likely violated the Standard relating to:",
+          "choices": [
+            "Misrepresentation",
+            "Fair Dealing",
+            "Duties to Employers: Loyalty"
+          ],
+          "answer": 0,
+          "explanation": "Presentare come proprio il lavoro di altri è plagio, una forma di misrepresentation (Standard I(C)). Basterebbe citare la fonte."
+        },
+        {
+          "id": "eth-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A CFA charterholder works in a country whose securities laws are less strict than the Code and Standards and do not prohibit a particular practice that the Standards forbid. The charterholder should:",
+          "choices": [
+            "follow local law, because it governs her activities",
+            "follow the Code and Standards",
+            "follow whichever rule her employer prefers"
+          ],
+          "answer": 1,
+          "explanation": "Standard I(A): si segue la regola più restrittiva. Se la legge locale è meno severa, prevalgono il Code e gli Standards."
+        },
+        {
+          "id": "eth-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An adviser receives a fee from a tax attorney for every client he refers. According to the Standards, the adviser must disclose the arrangement:",
+          "choices": [
+            "only if the client asks",
+            "to the client before the client engages the attorney",
+            "to his employer only, after the referral"
+          ],
+          "answer": 1,
+          "explanation": "Standard VI(C) Referral Fees: il compenso per le segnalazioni va comunicato a clienti e datore prima che il cliente accetti, così che possa valutarne l'eventuale conflitto."
+        },
+        {
+          "id": "eth-10",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "While managing a client's account, a portfolio manager discovers evidence that the client is laundering money. Under the Standards, the manager:",
+          "choices": [
+            "must keep the information confidential in all circumstances",
+            "may disclose the information to the appropriate authorities",
+            "must immediately sell all of the client's securities"
+          ],
+          "answer": 1,
+          "explanation": "La riservatezza (Standard III(E)) non protegge attività illegali: il gestore può comunicarle alle autorità competenti, seguendo le procedure di compliance e la legge."
+        },
+        {
+          "id": "eth-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "When leaving her firm, an analyst wants to take copies of the spreadsheets and models she built for her research. According to the Standards, she:",
+          "choices": [
+            "may take them because she created them",
+            "may not take them without her employer's permission",
+            "may take them if she deletes client names"
+          ],
+          "answer": 1,
+          "explanation": "I documenti di ricerca appartengono al datore (Standard V(C) e IV(A)). Senza autorizzazione non può portarli via: dovrà ricostruire le analisi da fonti pubbliche."
+        },
+        {
+          "id": "eth-12",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A client offers a portfolio manager a bonus if the client's portfolio outperforms its benchmark this year. To comply with the Standards, the manager should:",
+          "choices": [
+            "decline, because any gift from a client is prohibited",
+            "obtain written consent from her employer before accepting",
+            "accept and disclose it only at year-end"
+          ],
+          "answer": 1,
+          "explanation": "Standard IV(B) Additional Compensation Arrangements: un compenso legato alla performance di un cliente può creare conflitti con gli altri clienti e con il datore, quindi serve il consenso scritto del datore prima di accettare."
+        }
+      ]
+    },
+    {
+      "topic": "quant",
+      "sections": [
+        {
+          "title": "Rendimenti di portafoglio e misure di performance",
+          "body": [
+            "Il rendimento ponderato per il denaro (money-weighted return) è il tasso interno di rendimento (internal rate of return) dei flussi dell'investitore: risente di versamenti e prelievi. Il rendimento ponderato per il tempo (time-weighted return) concatena i rendimenti dei sotto-periodi e non dipende dai flussi: per questo si usa per valutare il gestore, che non controlla quando il cliente versa o preleva.",
+            "Statistica t per una media: t = (media campionaria - valore ipotizzato) / (s/√n). Se il valore assoluto supera il valore critico, si rifiuta l'ipotesi nulla (null hypothesis). Con campioni grandi il valore critico al 5% bilaterale è circa 1.96."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Usare il money-weighted return per giudicare un gestore che non controlla i flussi del cliente."
+      ],
+      "questions": [
+        {
+          "id": "qm-7",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "An investor deposits $10,000 today at 5% compounded annually. The value of the deposit after 10 years is closest to:",
+          "choices": [
+            "$15,000",
+            "$16,289",
+            "$16,470"
+          ],
+          "answer": 1,
+          "explanation": "FV = 10,000 × 1.05^10 = 16,288.95. $15,000 è l'interesse semplice (senza capitalizzazione)."
+        },
+        {
+          "id": "qm-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A fund returns +50% in year 1 and -50% in year 2. Its geometric mean annual return is closest to:",
+          "choices": [
+            "-13.4%",
+            "0.0%",
+            "+25.0%"
+          ],
+          "answer": 0,
+          "explanation": "Geometrica = (1.5 × 0.5)^(1/2) - 1 = 0.75^0.5 - 1 = -13.4%. La media aritmetica (arithmetic mean) (0%) inganna: in realtà 100 diventa 75."
+        },
+        {
+          "id": "qm-9",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A sample of 100 monthly returns has a mean of 0.8% and a standard deviation of 4%. The t-statistic for testing whether the population mean return equals zero is closest to:",
+          "choices": [
+            "0.20",
+            "2.00",
+            "20.00"
+          ],
+          "answer": 1,
+          "explanation": "t = (0.8 - 0) / (4/√100) = 0.8 / 0.4 = 2.0. 0.20 dimentica di dividere la deviazione standard (standard deviation) per √n."
+        },
+        {
+          "id": "qm-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A $100,000 loan is repaid in 10 equal annual end-of-year payments at an interest rate of 5%. The annual payment is closest to:",
+          "choices": [
+            "$10,000",
+            "$12,950",
+            "$15,000"
+          ],
+          "answer": 1,
+          "explanation": "PMT = 100,000 × 0.05 / (1 - 1.05^-10) = 12,950.46. $10,000 ignora gli interessi."
+        },
+        {
+          "id": "qm-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Which return measure is most appropriate for evaluating a portfolio manager who has no control over the timing of client contributions and withdrawals?",
+          "choices": [
+            "Money-weighted return",
+            "Time-weighted return",
+            "Holding period return of the largest cash flow"
+          ],
+          "answer": 1,
+          "explanation": "Il time-weighted return elimina l'effetto dei flussi decisi dal cliente; il money-weighted ne è influenzato e premierebbe o penalizzerebbe il gestore per decisioni non sue."
+        },
+        {
+          "id": "qm-12",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "In a simple linear regression, the correlation between the dependent and independent variables is 0.6. The coefficient of determination (R²) is closest to:",
+          "choices": [
+            "0.36",
+            "0.60",
+            "0.77"
+          ],
+          "answer": 0,
+          "explanation": "Con un solo regressore R² = ρ² = 0.6² = 0.36: il 36% della variabilità è spiegata dal modello."
+        }
+      ]
+    },
+    {
+      "topic": "econ",
+      "sections": [
+        {
+          "title": "Moneta, quantità e commercio internazionale",
+          "body": [
+            "Teoria quantitativa della moneta: M × V = P × Y. Se la velocità di circolazione e la produzione reale sono stabili, un aumento della moneta si traduce in aumento dei prezzi. Neutralità della moneta: nel lungo periodo la moneta influenza solo le variabili nominali.",
+            "Commercio internazionale: il vantaggio comparato (costo opportunità (opportunity cost) più basso) e non quello assoluto determina la specializzazione. Un apprezzamento della valuta domestica rende le esportazioni più care per gli stranieri e le importazioni più economiche; la condizione di Marshall-Lerner indica quando un deprezzamento migliora la bilancia commerciale."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Confondere vantaggio assoluto e vantaggio comparato.",
+        "Calcolare l'indice HHI con le quote in decimali e confrontarlo con soglie pensate per le quote in punti percentuali."
+      ],
+      "questions": [
+        {
+          "id": "ec-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An industry has four firms with market shares of 40%, 30%, 20% and 10%. The Herfindahl-Hirschman Index (using percentage shares) is closest to:",
+          "choices": [
+            "1,000",
+            "3,000",
+            "10,000"
+          ],
+          "answer": 1,
+          "explanation": "HHI = 40² + 30² + 20² + 10² = 1,600 + 900 + 400 + 100 = 3,000: un mercato molto concentrato. 10,000 sarebbe il monopolio."
+        },
+        {
+          "id": "ec-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "In long-run equilibrium, firms in monopolistic competition most likely earn:",
+          "choices": [
+            "positive economic profits protected by barriers to entry",
+            "zero economic profit",
+            "losses, because of product differentiation"
+          ],
+          "answer": 1,
+          "explanation": "Senza barriere all'ingresso, i profitti attirano nuovi concorrenti finché il profitto economico si annulla. Il prezzo resta però sopra il costo marginale (marginal cost), a differenza della concorrenza perfetta (perfect competition)."
+        },
+        {
+          "id": "ec-9",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "Which of the following is best classified as a leading economic indicator?",
+          "choices": [
+            "Building permits for new private housing",
+            "Industrial production",
+            "Average duration of unemployment"
+          ],
+          "answer": 0,
+          "explanation": "I permessi edilizi anticipano l'attività futura. La produzione industriale è coincidente; la durata media della disoccupazione (unemployment) è ritardata."
+        },
+        {
+          "id": "ec-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "According to the quantity theory of money, if the velocity of money and real output are constant, a 5% increase in the money supply will most likely cause:",
+          "choices": [
+            "a 5% increase in the price level",
+            "a 5% increase in real output",
+            "no change in the price level"
+          ],
+          "answer": 0,
+          "explanation": "M × V = P × Y: con V e Y costanti, P cresce nella stessa proporzione di M, cioè del 5%."
+        },
+        {
+          "id": "ec-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An appreciation of a country's currency is most likely to:",
+          "choices": [
+            "make its exports more expensive for foreign buyers",
+            "make its imports more expensive for domestic buyers",
+            "have no effect on trade flows"
+          ],
+          "answer": 0,
+          "explanation": "Con la valuta più forte gli stranieri devono spendere di più per comprare i beni del paese: le esportazioni diventano meno competitive e le importazioni più economiche."
+        },
+        {
+          "id": "ec-12",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Country A can produce either 10 cars or 20 computers per worker; Country B can produce either 4 cars or 16 computers per worker. Based on comparative advantage:",
+          "choices": [
+            "A should specialize in cars and B in computers",
+            "A should specialize in computers and B in cars",
+            "A should produce both goods, since it has an absolute advantage in both"
+          ],
+          "answer": 0,
+          "explanation": "Costo opportunità (opportunity cost) di un'auto: A rinuncia a 2 computer, B a 4. A ha il vantaggio comparato nelle auto, B nei computer (per B un computer costa 0.25 auto contro 0.5 in A). Il vantaggio assoluto non conta per la specializzazione."
+        }
+      ]
+    },
+    {
+      "topic": "fsa",
+      "sections": [
+        {
+          "title": "Utile per azione diluito e conversione LIFO-FIFO",
+          "body": [
+            "Metodo del riacquisto di azioni (share repurchase) proprie (treasury stock method) per opzioni (options) e warrant: si ipotizza che i proventi dell'esercizio servano a riacquistare azioni al prezzo medio di mercato; le nuove azioni nette = n × (prezzo medio - strike) / prezzo medio. Si applica solo se le opzioni sono in the money (diluitive).",
+            "Per confrontare un'impresa LIFO con una FIFO: rimanenze (inventories) FIFO = rimanenze LIFO + LIFO reserve; COGS FIFO = COGS LIFO - aumento della LIFO reserve nel periodo. La liquidazione LIFO (si vendono strati vecchi e a basso costo) gonfia temporaneamente i margini."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Includere nell'EPS diluito opzioni con strike sopra il prezzo medio (sono antidiluitive)."
+      ],
+      "questions": [
+        {
+          "id": "fsa-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company has cash of $50, marketable securities of $0, receivables of $100, inventory of $150 and current liabilities of $125. Its quick ratio is closest to:",
+          "choices": [
+            "0.4",
+            "1.2",
+            "2.4"
+          ],
+          "answer": 1,
+          "explanation": "Quick ratio = (cassa + titoli + crediti) / passività (liabilities) correnti = 150/125 = 1.2. 2.4 include le rimanenze (current ratio)."
+        },
+        {
+          "id": "fsa-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A firm's cost of goods sold is $730 and its average inventory is $100. Using a 365-day year, its days of inventory on hand is closest to:",
+          "choices": [
+            "7.3 days",
+            "50 days",
+            "137 days"
+          ],
+          "answer": 1,
+          "explanation": "Rotazione del magazzino = 730/100 = 7.3; giorni di giacenza = 365/7.3 = 50."
+        },
+        {
+          "id": "fsa-9",
+          "difficulty": 4,
+          "vignette": "",
+          "stem": "A company reports net income of $1,000,000 and has 500,000 common shares outstanding. It also has 50,000 options outstanding with an exercise price of $20; the average market price of the stock was $25. Diluted EPS is closest to:",
+          "choices": [
+            "$1.82",
+            "$1.96",
+            "$2.00"
+          ],
+          "answer": 1,
+          "explanation": "Treasury stock method: i proventi (50,000 × 20 = 1,000,000) riacquistano 40,000 azioni a 25; nuove azioni nette 10,000. EPS diluito = 1,000,000 / 510,000 = 1.96. $1.82 aggiunge tutte le 50,000 opzioni (options) senza riacquisto (share repurchase)."
+        },
+        {
+          "id": "fsa-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company using LIFO reports inventory of $400 and a LIFO reserve of $60. Its inventory on a FIFO basis is closest to:",
+          "choices": [
+            "$340",
+            "$400",
+            "$460"
+          ],
+          "answer": 2,
+          "explanation": "Rimanenze (inventories) FIFO = LIFO + LIFO reserve = 400 + 60 = 460. Con prezzi in aumento le rimanenze FIFO sono più alte."
+        },
+        {
+          "id": "fsa-11",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A company has EBIT of $600 and interest expense of $150. Its interest coverage ratio is closest to:",
+          "choices": [
+            "0.25",
+            "4.0",
+            "4.5"
+          ],
+          "answer": 1,
+          "explanation": "Copertura (hedging) degli interessi = EBIT / interessi = 600/150 = 4.0: l'utile operativo copre quattro volte gli interessi."
+        },
+        {
+          "id": "fsa-12",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Under IFRS 15 and ASC 606, revenue is recognized when:",
+          "choices": [
+            "cash is received from the customer",
+            "control of the promised goods or services transfers to the customer",
+            "the contract is signed"
+          ],
+          "answer": 1,
+          "explanation": "Il principio guida è il trasferimento del controllo del bene o servizio al cliente (dopo i cinque passi: contratto, obbligazioni (bonds), prezzo, allocazione, adempimento). L'incasso può arrivare prima o dopo."
+        }
+      ]
+    },
+    {
+      "topic": "corp",
+      "sections": [
+        {
+          "title": "Punto di pareggio e liquidità",
+          "body": [
+            "Quantità di pareggio = costi fissi / (prezzo - costo variabile unitario); il margine di contribuzione unitario è P - V. Se includi anche gli interessi tra i costi fissi ottieni il pareggio a livello di utile netto (net income).",
+            "Liquidità: le fonti primarie (cassa, flussi operativi, linee di credito) servono la gestione ordinaria; le fonti secondarie (vendita di attivi, rinegoziazione del debito, procedure concorsuali) segnalano tensioni. Le azioni a doppia classe (dual-class shares) separano diritti di voto e proprietà e possono indebolire (weaken) la tutela delle minoranze."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Calcolare il payback senza considerare la frazione dell'ultimo anno."
+      ],
+      "questions": [
+        {
+          "id": "corp-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A project costs $100 and generates cash flows of $30, $40 and $50 in years 1, 2 and 3. Its payback period is closest to:",
+          "choices": [
+            "2.0 years",
+            "2.6 years",
+            "3.0 years"
+          ],
+          "answer": 1,
+          "explanation": "Dopo 2 anni si recuperano 70; mancano 30 su 50 del terzo anno: 2 + 30/50 = 2.6 anni."
+        },
+        {
+          "id": "corp-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A firm has EBIT of $500 and interest expense of $100. Its degree of financial leverage is closest to:",
+          "choices": [
+            "0.80",
+            "1.25",
+            "5.00"
+          ],
+          "answer": 1,
+          "explanation": "DFL = EBIT / (EBIT - interessi) = 500/400 = 1.25: l'EPS varia di 1.25 volte la variazione percentuale (percent change) dell'EBIT."
+        },
+        {
+          "id": "corp-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A product sells for $50 with a variable cost of $30 per unit. Fixed operating costs are $100,000. The operating breakeven quantity is closest to:",
+          "choices": [
+            "2,000 units",
+            "3,333 units",
+            "5,000 units"
+          ],
+          "answer": 2,
+          "explanation": "Q = 100,000 / (50 - 30) = 5,000 unità. 2,000 divide per il prezzo invece che per il margine di contribuzione."
+        },
+        {
+          "id": "corp-10",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A company's bonds yield 6% and its marginal tax rate is 30%. Its after-tax cost of debt is closest to:",
+          "choices": [
+            "1.8%",
+            "4.2%",
+            "6.0%"
+          ],
+          "answer": 1,
+          "explanation": "kd × (1 - t) = 6% × 0.7 = 4.2%. Gli interessi sono deducibili, quindi il costo effettivo è inferiore al rendimento."
+        },
+        {
+          "id": "corp-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Which of the following is a secondary source of liquidity?",
+          "choices": [
+            "Cash flow from operations",
+            "An unused bank line of credit",
+            "Liquidating short-term assets or renegotiating debt agreements"
+          ],
+          "answer": 2,
+          "explanation": "Vendere attivi o rinegoziare il debito sono fonti secondarie: possono cambiare la struttura finanziaria o operativa e segnalano difficoltà. Flussi operativi e linee di credito sono fonti primarie."
+        },
+        {
+          "id": "corp-12",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A dual-class share structure in which founders hold shares with ten votes each is most likely to:",
+          "choices": [
+            "strengthen the protection of minority shareholders",
+            "allow founders to retain control with a small economic stake",
+            "eliminate principal-agent conflicts"
+          ],
+          "answer": 1,
+          "explanation": "Le azioni a voto multiplo separano controllo e proprietà: i fondatori decidono anche con una quota economica piccola, il che può danneggiare gli azionisti di minoranza."
+        }
+      ]
+    },
+    {
+      "topic": "equity",
+      "sections": [
+        {
+          "title": "Rendimento degli indici e valore d'impresa",
+          "body": [
+            "Rendimento di un indice equal-weighted = media semplice dei rendimenti; di un indice ponderato per la capitalizzazione = media dei rendimenti pesata per i valori di mercato iniziali. I due possono differire molto se i titoli grandi e piccoli si muovono in modo diverso.",
+            "Valore d'impresa (enterprise value) EV = capitalizzazione + debito (+ privilegiate + minoranze) - cassa e investimenti a breve. EV/EBITDA è utile per confrontare imprese con leva e ammortamenti (depreciation) diversi. Vendita allo scoperto (short sale): guadagni se il prezzo scende, ma devi pagare al prestatore i dividendi (dividends) distribuiti nel frattempo."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Dimenticare che chi vende allo scoperto paga i dividendi al prestatore dei titoli."
+      ],
+      "questions": [
+        {
+          "id": "eq-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An index contains three stocks with returns of 10%, 0% and -4% over a period. The return of an equal-weighted index is closest to:",
+          "choices": [
+            "-1.8%",
+            "2.0%",
+            "6.0%"
+          ],
+          "answer": 1,
+          "explanation": "Media semplice = (10 + 0 - 4)/3 = 2.0%."
+        },
+        {
+          "id": "eq-8",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "The same three stocks (returns of 10%, 0% and -4%) have beginning market capitalizations of $100, $200 and $700. The return of a market-cap-weighted index is closest to:",
+          "choices": [
+            "-1.8%",
+            "2.0%",
+            "3.3%"
+          ],
+          "answer": 0,
+          "explanation": "(100 × 10% + 200 × 0% + 700 × -4%)/1,000 = (10 - 28)/1,000 = -1.8%. Il titolo più grande, in perdita, pesa per il 70%."
+        },
+        {
+          "id": "eq-9",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A stock is expected to pay dividends of $1.00 next year and $1.20 the year after, with dividends then growing at 5% forever from the year-2 dividend. The required return is 10%. Today's value is closest to:",
+          "choices": [
+            "$21.82",
+            "$22.73",
+            "$24.00"
+          ],
+          "answer": 1,
+          "explanation": "Valore alla fine dell'anno 1: P1 = D2/(r - g) = 1.20/0.05 = 24. V0 = (D1 + P1)/1.10 = (1 + 24)/1.10 = 22.73. $24 è P1 non scontato."
+        },
+        {
+          "id": "eq-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company has a market capitalization of $800 million, debt of $300 million and cash of $100 million. Its EBITDA is $125 million. Its EV/EBITDA multiple is closest to:",
+          "choices": [
+            "6.4x",
+            "8.0x",
+            "9.6x"
+          ],
+          "answer": 1,
+          "explanation": "EV = 800 + 300 - 100 = 1,000; EV/EBITDA = 1,000/125 = 8.0x. 9.6x dimentica di togliere la cassa."
+        },
+        {
+          "id": "eq-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investor short sells a stock at $50 and later buys it back at $40. While the position was open, the company paid a $1 dividend. Ignoring transaction costs, the investor's profit per share is closest to:",
+          "choices": [
+            "$9",
+            "$10",
+            "$11"
+          ],
+          "answer": 0,
+          "explanation": "Guadagno sul prezzo 50 - 40 = 10, meno il dividendo (dividends) di 1 da versare al prestatore: 9."
+        },
+        {
+          "id": "eq-12",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "According to Porter's five forces, an industry with high barriers to entry, few substitutes and fragmented buyers is most likely to have:",
+          "choices": [
+            "high profitability",
+            "low profitability",
+            "profitability determined only by the business cycle"
+          ],
+          "answer": 0,
+          "explanation": "Barriere alte, pochi sostituti e clienti frammentati (poco potere contrattuale) riducono la pressione competitiva: margini e redditività tendono a essere alti."
+        }
+      ]
+    },
+    {
+      "topic": "fixed",
+      "sections": [
+        {
+          "title": "Zero coupon, duration e PVBP",
+          "body": [
+            "Un titolo zero coupon ha Macaulay duration pari alla scadenza: c'è un solo flusso. Modified duration = Macaulay / (1 + y) per titoli annuali. Il valore di un punto base (PVBP o DV01) è la variazione di prezzo in valuta per 1 punto base: ≈ ModDur × prezzo × 0.0001.",
+            "Tutele per i creditori: covenant positivi (cosa l'emittente deve fare, es. mantenere assicurazioni) e negativi (cosa non può fare, es. dare in garanzia gli stessi beni ad altri). Il prezzo tel quel (full price) include il rateo (accrued interest) maturato dall'ultima cedola (coupon)."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Dimenticare il rateo quando si passa dal prezzo secco (flat price) al prezzo tel quel."
+      ],
+      "questions": [
+        {
+          "id": "fi-7",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A 5-year zero-coupon bond with a par value of 100 yields 4% (annual compounding). Its price is closest to:",
+          "choices": [
+            "80.00",
+            "82.19",
+            "96.15"
+          ],
+          "answer": 1,
+          "explanation": "P = 100/1.04^5 = 82.19. 80.00 usa uno sconto semplice (100 × (1 - 5 × 4%))."
+        },
+        {
+          "id": "fi-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "The Macaulay duration of a 7-year zero-coupon bond is:",
+          "choices": [
+            "less than 7 years",
+            "exactly 7 years",
+            "more than 7 years"
+          ],
+          "answer": 1,
+          "explanation": "C'è un solo flusso, alla scadenza: la vita media ponderata (weighted average) dei flussi coincide con i 7 anni."
+        },
+        {
+          "id": "fi-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An annual-pay bond has a Macaulay duration of 5.0 and a yield-to-maturity of 6%. Its modified duration is closest to:",
+          "choices": [
+            "4.72",
+            "5.00",
+            "5.30"
+          ],
+          "answer": 0,
+          "explanation": "ModDur = 5.0/1.06 = 4.72."
+        },
+        {
+          "id": "fi-10",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A bond with a full price of 100 has a modified duration of 6. Its price value of a basis point (PVBP) per 100 of par is closest to:",
+          "choices": [
+            "0.006",
+            "0.06",
+            "0.60"
+          ],
+          "answer": 1,
+          "explanation": "PVBP ≈ 6 × 100 × 0.0001 = 0.06: per ogni punto base di aumento del rendimento il prezzo scende di circa 6 centesimi."
+        },
+        {
+          "id": "fi-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A bond indenture requires the issuer to maintain a minimum interest coverage ratio and prohibits it from pledging the same collateral to other lenders. These provisions are, respectively:",
+          "choices": [
+            "a negative covenant and an affirmative covenant",
+            "an affirmative covenant and a negative covenant",
+            "both negative covenants"
+          ],
+          "answer": 1,
+          "explanation": "Mantenere un indice minimo è un obbligo di fare (affirmative covenant); il divieto di dare in pegno gli stessi beni è un obbligo di non fare (negative covenant)."
+        },
+        {
+          "id": "fi-12",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A bond's flat price is 98.00 and its accrued interest is 1.50. Its full price is closest to:",
+          "choices": [
+            "96.50",
+            "98.00",
+            "99.50"
+          ],
+          "answer": 2,
+          "explanation": "Prezzo tel quel (full price) = prezzo secco (flat price) + rateo (accrued interest) = 98.00 + 1.50 = 99.50: è quanto paga effettivamente l'acquirente."
+        }
+      ]
+    },
+    {
+      "topic": "deriv",
+      "sections": [
+        {
+          "title": "Strategie di base con opzioni",
+          "body": [
+            "Covered call: possiedi l'azione e vendi una call; incassi il premio ma rinunci al rialzo sopra lo strike. Profitto massimo = (strike - prezzo d'acquisto) + premio. Protective put: possiedi l'azione e compri una put; il punto di pareggio è prezzo d'acquisto + premio e la perdita massima è prezzo d'acquisto + premio - strike.",
+            "Arbitraggio sui forward: se il prezzo forward di mercato è superiore a S0(1 + r)^T, vendi il forward, prendi in prestito e compra il sottostante (cash-and-carry); se è inferiore, fai il contrario (reverse cash-and-carry)."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Calcolare il profitto massimo della covered call senza aggiungere il premio incassato."
+      ],
+      "questions": [
+        {
+          "id": "dv-7",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "An investor enters a short forward contract to sell an asset at $100. At expiration the spot price is $92. The investor's payoff is closest to:",
+          "choices": [
+            "-$8",
+            "$0",
+            "$8"
+          ],
+          "answer": 2,
+          "explanation": "Chi è corto vende a 100 un bene che vale 92: guadagna 8. La controparte lunga perde 8."
+        },
+        {
+          "id": "dv-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investor buys a put with an exercise price of $50 for a premium of $3. At expiration the stock price is $42. The investor's profit is closest to:",
+          "choices": [
+            "$5",
+            "$8",
+            "$11"
+          ],
+          "answer": 0,
+          "explanation": "Payoff = 50 - 42 = 8; profitto = 8 - 3 = 5."
+        },
+        {
+          "id": "dv-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investor buys a stock at $40 and sells a call with an exercise price of $45 for a premium of $2. The maximum profit of this covered call is closest to:",
+          "choices": [
+            "$2",
+            "$5",
+            "$7"
+          ],
+          "answer": 2,
+          "explanation": "Se il prezzo supera 45 l'azione viene ceduta a 45: guadagno 5 + premio 2 = 7. Oltre lo strike il rialzo è ceduto al compratore della call."
+        },
+        {
+          "id": "dv-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investor owns a stock bought at $40 and buys a put with an exercise price of $38 for $3. The breakeven stock price at expiration is closest to:",
+          "choices": [
+            "$37",
+            "$41",
+            "$43"
+          ],
+          "answer": 2,
+          "explanation": "Per pareggiare il titolo deve salire a 40 + 3 = 43, così da recuperare il premio pagato per la protezione."
+        },
+        {
+          "id": "dv-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A company that pays fixed and receives floating on an interest rate swap will most likely benefit if:",
+          "choices": [
+            "interest rates rise",
+            "interest rates fall",
+            "interest rates stay unchanged"
+          ],
+          "answer": 0,
+          "explanation": "Se i tassi salgono, il flusso variabile ricevuto aumenta mentre quello fisso pagato resta uguale: lo swap acquista valore per chi paga fisso."
+        },
+        {
+          "id": "dv-12",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A non-dividend-paying stock trades at $100, the one-year risk-free rate is 5% and the one-year forward price is quoted at $107. An arbitrageur should:",
+          "choices": [
+            "sell the forward, borrow $100 and buy the stock",
+            "buy the forward, short the stock and lend the proceeds",
+            "do nothing, since the forward is fairly priced"
+          ],
+          "answer": 0,
+          "explanation": "Il prezzo equo è 105: il forward a 107 è sopravvalutato. Si vende il forward e si compra l'azione a debito (cash-and-carry): a scadenza si consegna a 107 e si rimborsano 105, guadagnando 2 senza rischio."
+        }
+      ]
+    },
+    {
+      "topic": "alt",
+      "sections": [
+        {
+          "title": "Hurdle, high-water mark e infrastrutture",
+          "body": [
+            "Con hurdle rate rigido (hard) la commissione di performance (incentive fee) si applica solo al rendimento oltre la soglia; con hurdle morbido (soft), una volta superata la soglia, si applica a tutto il guadagno. L'high-water mark evita di pagare due volte la performance per lo stesso recupero dopo una perdita.",
+            "Infrastrutture: brownfield (asset esistenti, flussi più stabili e prevedibili) contro greenfield (da costruire, più rischio e potenziale). Multiplo del capitale investito (MOIC) = valore realizzato e residuo / capitale investito."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Confondere hurdle hard e soft: con il soft la commissione si calcola su tutto il guadagno."
+      ],
+      "questions": [
+        {
+          "id": "alt-6",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A fund has a high-water mark of $120 million. Its value fell to $100 million last year and rose to $115 million this year (before incentive fees). The incentive fee for this year is:",
+          "choices": [
+            "zero, because the fund remains below the high-water mark",
+            "20% of the $15 million gain",
+            "20% of the $5 million shortfall"
+          ],
+          "answer": 0,
+          "explanation": "Con l'high-water mark la commissione di performance (incentive fee) si paga solo sopra il massimo precedente (120). A 115 il fondo sta ancora recuperando: niente commissione."
+        },
+        {
+          "id": "alt-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A fund earns 15% gross with a 20% incentive fee and an 8% soft hurdle rate. Ignoring management fees, the incentive fee is calculated on:",
+          "choices": [
+            "7% (the return above the hurdle)",
+            "15% (the entire return, because the hurdle was exceeded)",
+            "8% (the hurdle rate)"
+          ],
+          "answer": 1,
+          "explanation": "Con hurdle soft, superata la soglia, la commissione si applica all'intero rendimento (15%). Con hurdle hard si applicherebbe solo al 7% oltre la soglia."
+        },
+        {
+          "id": "alt-8",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Holding net operating income constant, an increase in market capitalization rates will most likely cause property values to:",
+          "choices": [
+            "increase",
+            "decrease",
+            "remain unchanged"
+          ],
+          "answer": 1,
+          "explanation": "Valore = NOI / cap rate: con un cap rate più alto, a parità di reddito, il valore scende."
+        },
+        {
+          "id": "alt-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Compared with direct ownership of real estate, investing through publicly traded REITs most likely offers:",
+          "choices": [
+            "greater liquidity",
+            "greater control over individual properties",
+            "lower correlation with equity markets"
+          ],
+          "answer": 0,
+          "explanation": "I REIT si negoziano in borsa: sono molto più liquidi degli immobili diretti, ma sono più correlati con l'azionario e non danno controllo sugli asset."
+        },
+        {
+          "id": "alt-10",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "Compared with greenfield infrastructure investments, brownfield investments most likely have:",
+          "choices": [
+            "more predictable cash flows",
+            "higher construction risk",
+            "no operating history"
+          ],
+          "answer": 0,
+          "explanation": "Brownfield = asset già esistenti e operativi, con storia di flussi: più prevedibili. Il greenfield comporta rischio di costruzione e nessuno storico."
+        },
+        {
+          "id": "alt-11",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "A private equity fund invests $50 million in a company and exits for $125 million. The multiple on invested capital (MOIC) is closest to:",
+          "choices": [
+            "1.5x",
+            "2.5x",
+            "3.5x"
+          ],
+          "answer": 1,
+          "explanation": "MOIC = 125/50 = 2.5x. Non considera il tempo: per quello serve l'IRR."
+        }
+      ]
+    },
+    {
+      "topic": "pm",
+      "sections": [
+        {
+          "title": "Capital allocation line e misure risk-adjusted",
+          "body": [
+            "Combinando il titolo privo di rischio con il portafoglio di mercato (market portfolio): E(Rp) = w × E(Rm) + (1 - w) × rf e σp = w × σm (il titolo privo di rischio ha varianza (variance) zero). Tutti i portafogli stanno sulla capital market line.",
+            "Treynor = (Rp - rf)/β; alfa di Jensen = Rp - [rf + β(Rm - rf)]: un alfa positivo indica un rendimento superiore a quello richiesto dal CAPM. Un titolo che sta sopra la Security Market Line è sottovalutato (rende più di quanto il suo beta richieda)."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Calcolare la deviazione standard (standard deviation) di un mix con il titolo privo di rischio includendo una covarianza (è zero)."
+      ],
+      "questions": [
+        {
+          "id": "pm-7",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A portfolio has a return of 12% and a beta of 1.25. The risk-free rate is 2%. Its Treynor ratio is closest to:",
+          "choices": [
+            "0.08",
+            "8.0",
+            "9.6"
+          ],
+          "answer": 1,
+          "explanation": "Treynor = (12 - 2)/1.25 = 8.0 (in punti percentuali di rendimento in eccesso per unità di beta)."
+        },
+        {
+          "id": "pm-8",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A portfolio returned 12% with a beta of 1.25. The risk-free rate was 2% and the market returned 9%. The portfolio's Jensen's alpha is closest to:",
+          "choices": [
+            "1.25%",
+            "3.00%",
+            "10.75%"
+          ],
+          "answer": 0,
+          "explanation": "Rendimento richiesto (required return) = 2% + 1.25 × (9% - 2%) = 10.75%; alfa = 12% - 10.75% = 1.25%."
+        },
+        {
+          "id": "pm-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An investor puts 40% in the risk-free asset (3%) and 60% in the market portfolio (expected return 9%, standard deviation 15%). The portfolio's expected return and standard deviation are closest to:",
+          "choices": [
+            "6.6% and 9.0%",
+            "6.6% and 15.0%",
+            "7.2% and 9.0%"
+          ],
+          "answer": 0,
+          "explanation": "E(R) = 0.4 × 3% + 0.6 × 9% = 6.6%; σ = 0.6 × 15% = 9.0%, perché il titolo privo di rischio non ha volatilità né covarianza (covariance)."
+        },
+        {
+          "id": "pm-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A stock plots above the Security Market Line. According to the CAPM, the stock is most likely:",
+          "choices": [
+            "overvalued",
+            "undervalued",
+            "fairly valued"
+          ],
+          "answer": 1,
+          "explanation": "Sopra la SML il titolo offre un rendimento atteso superiore a quello richiesto per il suo beta: è sottovalutato, e il prezzo dovrebbe salire."
+        },
+        {
+          "id": "pm-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A university endowment must distribute a fixed amount every quarter to fund scholarships. In the investment policy statement, this is best described as a:",
+          "choices": [
+            "liquidity constraint",
+            "legal and regulatory constraint",
+            "return objective only"
+          ],
+          "answer": 0,
+          "explanation": "Le uscite di cassa prevedibili sono un vincolo di liquidità: il portafoglio deve poterle coprire senza vendite forzate."
+        },
+        {
+          "id": "pm-12",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "An analyst forecasts a company's earnings by starting from last year's figure and adjusting only slightly, despite strong new evidence of change. This is best described as:",
+          "choices": [
+            "anchoring",
+            "loss aversion",
+            "availability bias"
+          ],
+          "answer": 0,
+          "explanation": "Restare ancorati a un valore iniziale e correggerlo troppo poco di fronte a nuove informazioni è anchoring, un bias cognitivo."
+        }
+      ]
+    }
+  ]
+}

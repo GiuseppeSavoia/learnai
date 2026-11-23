@@ -1,0 +1,447 @@
+{
+  "exam": "gmat",
+  "modules": [
+    {
+      "topic": "ps",
+      "sections": [
+        {
+          "title": "Rapporti, interi consecutivi ed equazioni",
+          "body": [
+            "Rapporti: con a:b e un totale T, le parti valgono T × a/(a + b) e T × b/(a + b). Se cambia una sola parte, ricalcola il rapporto dai valori assoluti.",
+            "Interi consecutivi: la media è il numero centrale (o la media dei due centrali); la somma = media × numero di termini. Numero di divisori: fattorizza in primi e moltiplica gli esponenti aumentati di 1.",
+            "Equazioni di secondo grado: la somma delle radici di x² + bx + c = 0 è -b, il prodotto è c. Ricarico e sconto si moltiplicano come le variazioni percentuali successive."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Sommare ricarico e sconto invece di moltiplicarli."
+      ],
+      "questions": [
+        {
+          "id": "ps-9",
+          "difficulty": 1,
+          "vignette": "",
+          "stem": "If 40% of a number is 12, what is 25% of the same number?",
+          "choices": [
+            "3",
+            "4.8",
+            "7.5",
+            "10",
+            "30"
+          ],
+          "answer": 2,
+          "explanation": "Il numero è 12/0.4 = 30; il 25% di 30 è 7.5."
+        },
+        {
+          "id": "ps-10",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "In a class of 40 students, the ratio of boys to girls is 3 to 5. If 5 more boys join the class, what is the new ratio of boys to girls?",
+          "choices": [
+            "3:5",
+            "4:5",
+            "1:1",
+            "8:5",
+            "5:4"
+          ],
+          "answer": 1,
+          "explanation": "Maschi = 40 × 3/8 = 15, femmine = 25. Con 5 maschi in più: 20:25 = 4:5."
+        },
+        {
+          "id": "ps-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "The sum of five consecutive integers is 115. What is the largest of these integers?",
+          "choices": [
+            "21",
+            "23",
+            "24",
+            "25",
+            "27"
+          ],
+          "answer": 3,
+          "explanation": "La media, cioè il numero centrale, è 115/5 = 23; i numeri vanno da 21 a 25."
+        },
+        {
+          "id": "ps-12",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "How many positive divisors does 72 have?",
+          "choices": [
+            "6",
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "answer": 3,
+          "explanation": "72 = 2³ × 3²: divisori = (3 + 1)(2 + 1) = 12."
+        },
+        {
+          "id": "ps-13",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "In how many different ways can a committee of 3 people be selected from a group of 7?",
+          "choices": [
+            "21",
+            "35",
+            "42",
+            "210",
+            "343"
+          ],
+          "answer": 1,
+          "explanation": "L'ordine non conta: C(7, 3) = 7!/(3! × 4!) = 35. 210 conta i gruppi ordinati (permutazioni (permutations))."
+        },
+        {
+          "id": "ps-14",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "A retailer buys an item for $80, marks the price up by 25% and then sells the item at a 10% discount off the marked price. What is the retailer's profit as a percent of cost?",
+          "choices": [
+            "10%",
+            "12.5%",
+            "15%",
+            "22.5%",
+            "35%"
+          ],
+          "answer": 1,
+          "explanation": "Prezzo di listino 100, prezzo di vendita 90: profitto 10 su 80 = 12.5%. 15% somma +25% e -10%."
+        },
+        {
+          "id": "ps-15",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "If x + 2y = 11 and 3x - y = 5, what is the value of xy?",
+          "choices": [
+            "7",
+            "10",
+            "12",
+            "15",
+            "20"
+          ],
+          "answer": 2,
+          "explanation": "Dalla seconda y = 3x - 5; sostituendo: x + 6x - 10 = 11 → x = 3, y = 4; xy = 12."
+        },
+        {
+          "id": "ps-16",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "What is the sum of all values of x that satisfy x² - 5x + 6 = 0?",
+          "choices": [
+            "-5",
+            "-1",
+            "1",
+            "5",
+            "6"
+          ],
+          "answer": 3,
+          "explanation": "Radici 2 e 3 (si fattorizza (x - 2)(x - 3)); la somma è 5, cioè -b. 6 è il prodotto delle radici."
+        }
+      ]
+    },
+    {
+      "topic": "cr",
+      "sections": [
+        {
+          "title": "Difetti logici ricorrenti",
+          "body": [
+            "Generalizzazione da un campione non rappresentativo; confusione tra condizione necessaria e sufficiente; argomento circolare; falsa alternativa (solo due opzioni (options) quando ce ne sono altre); confronto tra percentuali e numeri assoluti.",
+            "Nelle domande sul piano (will the plan work?) chiediti: il piano raggiunge davvero l'obiettivo? Ci sono effetti collaterali che lo annullano? Le persone si comporteranno come previsto?"
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Confondere un aumento percentuale con un aumento del numero assoluto."
+      ],
+      "questions": [
+        {
+          "id": "cr-7",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "To reduce employee turnover, a software company plans to raise starting salaries by 10%. Management argues that because most departing employees cited pay in exit interviews, the raise will substantially reduce turnover.\n\nWhich of the following, if true, most seriously calls into question management's conclusion?",
+          "choices": [
+            "The company's competitors have recently raised their salaries by 20%.",
+            "Most employees enjoy the company's flexible work policy.",
+            "The company's revenue grew last year.",
+            "Some departing employees cited long commutes.",
+            "Starting salaries at the company were raised five years ago."
+          ],
+          "answer": 0,
+          "explanation": "Se i concorrenti hanno aumentato gli stipendi del 20%, un aumento del 10% lascia l'azienda ancora meno competitiva sul salario: il piano difficilmente ridurrà le uscite legate alla retribuzione."
+        },
+        {
+          "id": "cr-8",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "The number of reported bicycle thefts in Milltown doubled after the city installed hundreds of new bicycle racks. Clearly, the new racks have made bicycles easier to steal.\n\nWhich of the following, if true, most weakens the argument?",
+          "choices": [
+            "The new racks are made of a stronger steel than the old ones.",
+            "The number of people commuting by bicycle in Milltown tripled after the racks were installed.",
+            "Bicycle thefts also occur in neighboring towns.",
+            "The racks were installed near popular shops.",
+            "Some stolen bicycles were later recovered."
+          ],
+          "answer": 1,
+          "explanation": "Se le biciclette in circolazione sono triplicate, il raddoppio dei furti in numero assoluto significa un tasso di furto più basso: i nuovi parcheggi non hanno reso le bici più facili da rubare."
+        },
+        {
+          "id": "cr-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "A nutrition study found that people who eat breakfast daily weigh less, on average, than people who skip breakfast. The study's authors concluded that eating breakfast helps people control their weight.\n\nWhich of the following, if true, most strengthens the authors' conclusion?",
+          "choices": [
+            "People who eat breakfast tend to eat fewer calories later in the day than people who skip it.",
+            "Many people skip breakfast because they are in a hurry.",
+            "Breakfast foods vary widely in calorie content.",
+            "Some people who eat breakfast are overweight.",
+            "The study included adults of all ages."
+          ],
+          "answer": 0,
+          "explanation": "Indica un meccanismo causale plausibile (colazione → meno calorie dopo), rendendo più credibile che la colazione aiuti davvero e non sia solo correlata al peso."
+        },
+        {
+          "id": "cr-10",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Any employee who completes the advanced certification will be eligible for promotion. Marta is eligible for promotion. Therefore, Marta completed the advanced certification.\n\nThe reasoning above is flawed because it:",
+          "choices": [
+            "treats a condition sufficient for eligibility as if it were necessary",
+            "relies on an unrepresentative sample",
+            "assumes what it sets out to prove",
+            "confuses a percentage with an absolute number",
+            "ignores the possibility that Marta will decline the promotion"
+          ],
+          "answer": 0,
+          "explanation": "La certificazione basta per essere idonei (condizione sufficiente), ma non è detto che sia l'unico modo: si può essere idonei anche per altre vie. Dedurre il contrario confonde sufficiente e necessario."
+        },
+        {
+          "id": "cr-11",
+          "difficulty": 4,
+          "vignette": "",
+          "stem": "Regional airline Skyway reduced ticket prices by 15% last quarter, and its quarterly revenue rose. Analysts concluded that the price cut attracted enough new passengers to more than offset the lower fares.\n\nWhich of the following would be most useful to evaluate the analysts' conclusion?",
+          "choices": [
+            "Whether Skyway's revenue from baggage fees and other services changed significantly during the quarter",
+            "Whether Skyway plans further price cuts",
+            "Whether Skyway's pilots are unionized",
+            "Whether other airlines fly the same routes",
+            "Whether Skyway's planes are newer than its competitors'"
+          ],
+          "answer": 0,
+          "explanation": "Il ricavo totale (total revenue) potrebbe essere salito per altre entrate (bagagli, servizi) e non per i biglietti. Sapere come sono cambiate queste voci distingue le due spiegazioni."
+        },
+        {
+          "id": "cr-12",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "Every museum in the city that receives public funding offers free admission on Sundays. The Harbor Museum does not offer free admission on Sundays. Some museums in the city that do not receive public funding are open late on Fridays.\n\nIf the statements above are true, which of the following must be true?",
+          "choices": [
+            "The Harbor Museum is open late on Fridays.",
+            "The Harbor Museum does not receive public funding.",
+            "No publicly funded museum is open late on Fridays.",
+            "All museums open late on Fridays charge admission on Sundays.",
+            "The Harbor Museum charges admission every day."
+          ],
+          "answer": 1,
+          "explanation": "Finanziamento pubblico → ingresso gratis la domenica. Harbor non è gratis la domenica, quindi non riceve finanziamenti pubblici. Le altre opzioni (options) non sono garantite."
+        }
+      ]
+    },
+    {
+      "topic": "rc",
+      "item_sets": [
+        {
+          "id": "rc-set3",
+          "vignette": "When remote work expanded rapidly, many executives predicted a collapse in productivity, reasoning that employees outside the office would be distracted and harder to supervise. Early data told a different story: output per hour in many knowledge-based industries held steady or even rose, in part because employees no longer spent hours commuting.\n\nThe picture has since become more nuanced. Studies of software developers suggest that individual tasks requiring sustained concentration benefit from remote settings, while tasks that depend on spontaneous collaboration, such as brainstorming or mentoring new hires, suffer. Junior employees appear to lose the most, since much of their learning happens by observing experienced colleagues.\n\nAs a result, a growing number of firms are adopting hybrid arrangements that reserve office days for collaborative work. Whether this compromise captures the advantages of both models, or merely their drawbacks, remains an open question.",
+          "questions": [
+            {
+              "id": "rc-7",
+              "difficulty": 2,
+              "stem": "The passage is primarily concerned with:",
+              "choices": [
+                "proving that remote work always increases productivity",
+                "describing how evidence about remote work's effects on productivity has evolved",
+                "criticizing executives who oppose remote work",
+                "explaining how to mentor junior employees remotely",
+                "comparing software developers with other knowledge workers"
+              ],
+              "answer": 1,
+              "explanation": "Il brano parte dalle previsioni negative, passa ai primi dati positivi e arriva a un quadro più sfumato: descrive l'evoluzione delle evidenze. 'Sempre' è troppo estremo; le altre opzioni (options) coprono solo dettagli."
+            },
+            {
+              "id": "rc-8",
+              "difficulty": 3,
+              "stem": "According to the passage, which type of work is most likely to suffer in a remote setting?",
+              "choices": [
+                "Tasks requiring sustained individual concentration",
+                "Mentoring new employees",
+                "Writing code alone",
+                "Reading technical documentation",
+                "Answering email"
+              ],
+              "answer": 1,
+              "explanation": "Il secondo paragrafo indica che soffrono le attività basate sulla collaborazione spontanea, come il brainstorming e l'affiancamento dei nuovi assunti."
+            },
+            {
+              "id": "rc-9",
+              "difficulty": 4,
+              "stem": "The author's attitude toward hybrid arrangements can best be described as:",
+              "choices": [
+                "enthusiastic endorsement",
+                "uncertain about their effectiveness",
+                "strong opposition",
+                "complete indifference",
+                "confident that they combine only the drawbacks"
+              ],
+              "answer": 1,
+              "explanation": "L'ultima frase dice che resta una questione aperta se il modello ibrido unisca i vantaggi o solo gli svantaggi: l'autore è incerto, non favorevole né contrario."
+            }
+          ]
+        }
+      ],
+      "pitfalls": []
+    },
+    {
+      "topic": "ds",
+      "sections": [
+        {
+          "title": "Proprietà dei numeri nella Data Sufficiency",
+          "body": [
+            "Divisibilità (divisibility) combinata: se x è divisibile per due numeri primi (prime numbers) tra loro (es. 3 e 4), è divisibile per il loro prodotto (12) e quindi per tutti i suoi divisori. Valore assoluto: |x| = x se e solo se x ≥ 0.",
+            "Pari e dispari: 3k è dispari solo se k è dispari; k + 2 ha la stessa parità di k. Numeri primi: tutti dispari tranne 2; per decidere se un numero è primo spesso basta restringere l'intervallo e controllare i casi."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Dimenticare che lo 0 soddisfa |x| = x."
+      ],
+      "questions": [
+        {
+          "id": "ds-8",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Is the integer x divisible by 6?\n\n(1) x is divisible by 3.\n(2) x is divisible by 4.",
+          "choices": [],
+          "answer": 2,
+          "explanation": "(1): 3 sì, 9 no; non basta. (2): 4 no, 12 sì; non basta. Insieme x è divisibile per 12, quindi per 6. Risposta C."
+        },
+        {
+          "id": "ds-9",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "What is the value of n?\n\n(1) n² = 16\n(2) n > 0",
+          "choices": [],
+          "answer": 2,
+          "explanation": "(1): n = 4 o -4. (2): infiniti valori. Insieme n = 4. Risposta C."
+        },
+        {
+          "id": "ds-10",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Is a > b?\n\n(1) a - b > 0\n(2) a² > b²",
+          "choices": [],
+          "answer": 0,
+          "explanation": "(1) equivale ad a > b: basta. (2): a = -3, b = 1 dà a² > b² ma a < b; a = 3, b = 1 dà a > b: non basta. Risposta A."
+        },
+        {
+          "id": "ds-11",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "What is the total cost of 3 apples and 3 oranges?\n\n(1) One apple and one orange together cost $2.\n(2) One apple costs $0.80.",
+          "choices": [],
+          "answer": 0,
+          "explanation": "(1): 3 mele e 3 arance = 3 × 2 = 6 dollari, basta senza conoscere i prezzi singoli. (2): manca il prezzo delle arance. Risposta A."
+        },
+        {
+          "id": "ds-12",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Is the positive integer p a prime number?\n\n(1) p is odd.\n(2) 10 < p < 14",
+          "choices": [],
+          "answer": 2,
+          "explanation": "(1): 3 sì, 9 no. (2): p può essere 11, 12 o 13; 12 non è primo. Insieme p = 11 o 13, entrambi primi. Risposta C."
+        },
+        {
+          "id": "ds-13",
+          "difficulty": 2,
+          "vignette": "",
+          "stem": "What percent of a company's employees are women?\n\n(1) The company has 40 male employees.\n(2) The company has 60 female employees.",
+          "choices": [],
+          "answer": 2,
+          "explanation": "Servono sia le donne sia il totale. Da sole nessuna basta; insieme 60/100 = 60%. Risposta C."
+        },
+        {
+          "id": "ds-14",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "Is |x| = x?\n\n(1) x ≥ 0\n(2) x² = 4",
+          "choices": [],
+          "answer": 0,
+          "explanation": "|x| = x esattamente quando x ≥ 0: (1) basta. (2): x = 2 (sì) o -2 (no): non basta. Risposta A."
+        },
+        {
+          "id": "ds-15",
+          "difficulty": 3,
+          "vignette": "",
+          "stem": "If k is an integer, is k odd?\n\n(1) 3k is odd.\n(2) k + 2 is odd.",
+          "choices": [],
+          "answer": 3,
+          "explanation": "(1): un prodotto è dispari solo se tutti i fattori sono dispari, quindi k è dispari. (2): k + 2 ha la stessa parità di k, quindi k è dispari. Ciascuna basta: risposta D."
+        }
+      ]
+    },
+    {
+      "topic": "gi",
+      "item_sets": [
+        {
+          "id": "gi-set3",
+          "vignette": "Monthly sales by store\n\nStore | Units sold | Average price per unit ($)\nA | 1,200 | 15\nB | 800 | 25\nC | 500 | 42",
+          "questions": [
+            {
+              "id": "gi-7",
+              "difficulty": 2,
+              "stem": "Which store generated the highest revenue for the month?",
+              "choices": [
+                "Store A",
+                "Store B",
+                "Store C",
+                "Stores A and B equally",
+                "Stores B and C equally"
+              ],
+              "answer": 2,
+              "explanation": "Ricavi: A 18,000; B 20,000; C 21,000. Il negozio C vende meno unità ma al prezzo più alto."
+            },
+            {
+              "id": "gi-8",
+              "difficulty": 3,
+              "stem": "The average price per unit across all three stores is closest to:",
+              "choices": [
+                "$22.00",
+                "$23.60",
+                "$27.30",
+                "$29.50",
+                "$32.00"
+              ],
+              "answer": 1,
+              "explanation": "Ricavo totale (total revenue) 59,000 su 2,500 unità = 23.60. La media semplice dei prezzi (27.33) ignora che A vende molte più unità."
+            },
+            {
+              "id": "gi-9",
+              "difficulty": 4,
+              "stem": "If Store A raises its price by 20% and, as a result, its units sold fall by 10%, Store A's revenue will change by approximately:",
+              "choices": [
+                "-10%",
+                "+2%",
+                "+8%",
+                "+10%",
+                "+20%"
+              ],
+              "answer": 2,
+              "explanation": "Nuovo ricavo = 1.20 × 0.90 = 1.08 volte il precedente: +8% (da 18,000 a 19,440)."
+            }
+          ]
+        }
+      ],
+      "pitfalls": []
+    }
+  ]
+}

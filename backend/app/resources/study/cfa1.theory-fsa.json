@@ -1,0 +1,187 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "fsa",
+      "sections": [
+        {
+          "title": "Quadro dell'informativa finanziaria e revisione",
+          "body": [
+            "Lo scopo dell'informativa finanziaria (financial reporting) è fornire informazioni utili a investitori e creditori per decisioni sull'allocazione delle risorse. L'analisi di bilancio (financial statement analysis) usa queste informazioni per valutare performance passate, posizione finanziaria e prospettive. Fonti: i quattro prospetti (conto economico (income statement), stato patrimoniale (balance sheet), rendiconto finanziario (cash flow statement), prospetto delle variazioni del patrimonio netto (equity)), le note (politiche contabili, stime, dettagli), la relazione sulla gestione (management commentary, MD&A), comunicati sugli utili, conference call, dati di settore.",
+            "Quadro concettuale IASB: caratteristiche qualitative fondamentali = rilevanza (relevance, con materialità) e rappresentazione fedele (faithful representation: completa, neutrale, senza errori). Caratteristiche di miglioramento (enhancing): comparabilità, verificabilità, tempestività, comprensibilità. Vincolo: il costo dell'informazione non deve superare il beneficio. Ipotesi di base: competenza economica (accrual basis) e continuità aziendale (going concern). Elementi: attività, passività (liabilities), patrimonio netto, ricavi, costi.",
+            "Standard: IFRS (emessi dallo IASB, usati in oltre 140 giurisdizioni) e US GAAP (emessi dal FASB, imposti dalla SEC per le società USA). Le autorità di vigilanza (SEC, ESMA, autorità nazionali, coordinate da IOSCO) fanno rispettare le regole; i normatori (standard setters) le scrivono. Documenti SEC: 10-K annuale, 10-Q trimestrale, 8-K eventi rilevanti, proxy statement per le assemblee, Form 144 e Form 4 per operazioni degli insider.",
+            "Relazione del revisore (audit report): giudizio senza rilievi (unqualified/unmodified opinion), con rilievi (qualified: eccezioni specifiche), negativo (adverse: il bilancio non è rappresentato fedelmente), dichiarazione di impossibilità di esprimere un giudizio (disclaimer). Possono essere inclusi richiami d'informativa (emphasis of matter), dubbi sulla continuità aziendale e gli aspetti chiave della revisione (key audit matters per gli ISA, critical audit matters per il PCAOB). Negli USA il revisore si esprime anche sul controllo interno (Sarbanes-Oxley).",
+            "Processo di analisi in sei fasi: 1) definire scopo e contesto; 2) raccogliere dati; 3) elaborare i dati (rettifiche, ratio, common-size); 4) analizzare e interpretare; 5) sviluppare e comunicare conclusioni; 6) seguire e aggiornare.",
+            "Trappola: la revisione dà ragionevole sicurezza (reasonable assurance) che il bilancio sia privo di errori significativi, non garantisce l'assenza di frodi."
+          ]
+        },
+        {
+          "title": "Conto economico: riconoscimento dei ricavi e dei costi",
+          "body": [
+            "IFRS 15 e ASC 606 (convergenti) riconoscono i ricavi in cinque passi: 1) identificare il contratto con il cliente; 2) identificare le obbligazioni (bonds) di fare (performance obligations) distinte; 3) determinare il prezzo della transazione (incluso il corrispettivo variabile, solo se è altamente probabile che non sia stornato); 4) allocare il prezzo alle obbligazioni in base ai prezzi di vendita a sé stanti; 5) riconoscere il ricavo quando (o man mano che) l'obbligazione è soddisfatta, cioè quando il controllo passa al cliente.",
+            "Riconoscimento nel tempo (over time): contratti di lungo periodo, si misura l'avanzamento (es. costi sostenuti/costi totali stimati). Esempio: contratto da 10 milioni, costi stimati 8 milioni, sostenuti 2 milioni nell'anno 1 → avanzamento 25% → ricavo 2.5 milioni, margine 0.5 milioni. Se si prevede una perdita sul contratto, la si riconosce subito per intero.",
+            "Principale contro agente (principal vs agent): chi controlla il bene prima del trasferimento riporta il ricavo lordo; l'agente (es. piattaforma che fa da intermediario) riporta solo la commissione netta. L'utile è lo stesso ma i ricavi e i margini sono molto diversi: attenzione ai confronti. Costi per ottenere il contratto (commissioni di vendita) si capitalizzano e si ammortizzano.",
+            "Riconoscimento dei costi: principio di correlazione (matching) dei costi ai ricavi; costi di periodo (spese amministrative) spesi quando sostenuti. Crediti inesigibili stimati (allowance for credit losses), garanzie stimate (warranty), ammortamenti (depreciation): tutte stime che il management può usare per gestire gli utili.",
+            "Voci non ricorrenti: le attività operative cessate (discontinued operations) sono presentate separatamente al netto delle imposte; le voci insolite o non frequenti (unusual or infrequent) sono nel risultato continuativo ma spesso evidenziate. I cambiamenti di principio contabile si applicano retroattivamente (con riesposizione dei periodi precedenti); i cambiamenti di stima prospetticamente; le correzioni di errori con riesposizione.",
+            "Trappola: le «voci straordinarie» non esistono più né in IFRS né in US GAAP; voci ricorrenti etichettate come non ricorrenti ogni anno sono un segnale d'allarme."
+          ]
+        },
+        {
+          "title": "Utile per azione e conto economico complessivo",
+          "body": [
+            "Utile per azione (earnings per share) base (basic EPS) = (utile netto (net income) - dividendi (dividends) privilegiati)/numero medio ponderato di azioni ordinarie. Le emissioni e i riacquisti (share repurchase) si ponderano per la frazione d'anno; i frazionamenti (split) e i dividendi in azioni si applicano retroattivamente a tutto il periodo (come se fossero sempre esistiti).",
+            "EPS diluito (diluted EPS): considera i titoli potenzialmente diluitivi. Privilegiate convertibili (if-converted): al numeratore si aggiungono i dividendi privilegiati, al denominatore le azioni da conversione. Obbligazioni convertibili: al numeratore si aggiungono gli interessi al netto delle imposte, al denominatore le azioni. Opzioni (options) e warrant con il metodo delle azioni proprie (treasury stock method): si assume che i proventi dell'esercizio vengano usati per riacquistare azioni al prezzo medio di mercato; azioni aggiuntive = n × (P medio - prezzo di esercizio (strike price))/P medio. Solo se in the money.",
+            "Esempio: utile netto 1,000, dividendi privilegiati 0, 500 azioni medie, 100 opzioni con strike 20, prezzo medio 25. Azioni aggiuntive = 100 × (25 - 20)/25 = 20. EPS base = 2.00; diluito = 1,000/520 = 1.92. Obbligazione convertibile: interessi 60, aliquota 25%, convertibile in 40 azioni → effetto incrementale = 45/40 = 1.125 < 2.00, quindi diluitiva: EPS = 1,045/560 = 1.87.",
+            "Titoli antidiluitivi (antidilutive): se la loro inclusione aumenta l'EPS vanno esclusi. Regola pratica: confronta l'EPS incrementale del titolo con l'EPS base; se è più alto, è antidiluitivo. Una struttura di capitale semplice (senza titoli potenzialmente diluitivi) ha un solo EPS.",
+            "Conto economico complessivo (comprehensive income) = utile netto + altre componenti (other comprehensive income, OCI). Voci di OCI: differenze di conversione delle controllate estere, utili/perdite non realizzati su titoli di debito valutati a fair value in OCI, parte efficace delle coperture (hedging) di flussi di cassa, rimisurazioni dei piani pensionistici a benefici definiti (defined benefit pension plan), riserva di rivalutazione (solo IFRS). Il patrimonio netto si muove con il risultato complessivo, non solo con l'utile netto.",
+            "Analisi common-size del conto economico: ogni voce in percentuale dei ricavi; si confrontano margine lordo, operativo, ante imposte e netto nel tempo e con i concorrenti."
+          ]
+        },
+        {
+          "title": "Stato patrimoniale: attività, passività e strumenti finanziari",
+          "body": [
+            "Lo stato patrimoniale (balance sheet) è presentato classificato (correnti/non correnti) o per liquidità (banche). Attività correnti: liquidità, crediti commerciali (al netto del fondo svalutazione (impairment)), rimanenze (inventories), risconti attivi. Passività correnti: debiti commerciali, ratei passivi, quota corrente dei debiti finanziari, ricavi differiti (deferred/unearned revenue: incassi anticipati, un'obbligazione di fare).",
+            "Strumenti finanziari IFRS 9: costo ammortizzato (amortized cost) se il modello di business è incassare i flussi e i flussi sono solo capitale e interessi; fair value in OCI (FVOCI) se il modello è incassare e vendere (per le azioni è un'opzione irrevocabile, senza riciclo a conto economico); fair value a conto economico (FVPL) in tutti gli altri casi. US GAAP per i titoli di debito: detenuti fino a scadenza (held to maturity) al costo ammortizzato, disponibili per la vendita (available for sale) a fair value con variazioni in OCI, di negoziazione (trading) a fair value con variazioni a conto economico; le azioni sono a FVPL.",
+            "Esempio: titolo di debito acquistato a 100, a fine anno vale 104, cedola (coupon) incassata 5. Costo ammortizzato: utile netto 5, attivo 100. FVOCI: utile netto 5, OCI +4, attivo 104. FVPL: utile netto 9, attivo 104. Il patrimonio netto finale è uguale nei due casi a fair value.",
+            "Attività immateriali (intangible assets): identificabili (brevetti, licenze, marchi) acquistate al costo e ammortizzate se a vita definita, testate per perdita di valore se a vita indefinita. Avviamento (goodwill) = prezzo pagato in un'acquisizione - fair value delle attività nette identificabili; non si ammortizza, si sottopone a test di impairment almeno annuale. Le attività immateriali generate internamente non si capitalizzano in generale; ricerca sempre a costo; sviluppo capitalizzato in IFRS se ricorrono i criteri di fattibilità, spesato in US GAAP (salvo il software).",
+            "Patrimonio netto: capitale versato, riserve di utili (retained earnings), azioni proprie (treasury shares, in riduzione), OCI accumulato, interessi di minoranza (non-controlling interests) nelle controllate non interamente possedute.",
+            "Ratio dallo stato patrimoniale: liquidità corrente (current ratio) = attività correnti/passività correnti; quick ratio = (cassa + titoli negoziabili + crediti)/passività correnti; cash ratio = (cassa + titoli)/passività correnti; debito/patrimonio netto (debt-to-equity); patrimonio netto tangibile = patrimonio - avviamento e immateriali."
+          ]
+        },
+        {
+          "title": "Rendiconto finanziario: costruzione e collegamenti",
+          "body": [
+            "Tre sezioni: attività operative (CFO), d'investimento (CFI: acquisti e vendite di attività di lungo periodo e investimenti), di finanziamento (CFF: debiti e capitale proprio). Operazioni non monetarie significative (es. conversione di debito in azioni, acquisto di un immobile con un mutuo del venditore) non compaiono nel rendiconto ma vanno indicate nelle note.",
+            "Classificazioni IFRS vs US GAAP: interessi pagati: IFRS in CFO o CFF, US GAAP in CFO; interessi e dividendi incassati: IFRS in CFO o CFI, US GAAP in CFO; dividendi pagati: IFRS in CFO o CFF, US GAAP in CFF; imposte: IFRS in CFO salvo che siano specificamente legate a investimento o finanziamento, US GAAP in CFO. La scelta IFRS può rendere il CFO non confrontabile tra società.",
+            "Metodo indiretto (indirect method): utile netto + costi non monetari (ammortamenti, svalutazioni) - utili da cessione + perdite da cessione - aumento delle attività correnti operative + diminuzione delle stesse + aumento delle passività correnti operative - diminuzione delle stesse. Esempio: utile 200, ammortamenti 50, plusvalenza su cessione macchinario 10, crediti +30, rimanenze -20, debiti commerciali +15 → CFO = 200 + 50 - 10 - 30 + 20 + 15 = 245. L'incasso della cessione va in CFI per intero.",
+            "Metodo diretto (direct method): incassi da clienti = ricavi - aumento dei crediti (+ aumento dei ricavi differiti); pagamenti ai fornitori = - costo del venduto (cost of goods sold) - aumento delle rimanenze + aumento dei debiti verso fornitori; pagamenti al personale, interessi, imposte allo stesso modo. È incoraggiato da entrambi gli standard ma raramente usato; con US GAAP chi usa il diretto deve presentare anche la riconciliazione indiretta.",
+            "Ricostruire i flussi d'investimento: costo di un'attività venduta = costo iniziale + acquisti - costo finale; ammortamento accumulato dell'attività venduta = fondo iniziale + ammortamento dell'anno - fondo finale; valore contabile ceduto = costo - fondo; incasso = valore contabile + plusvalenza (o - minusvalenza). Flussi di finanziamento: emissioni e rimborsi dalla variazione dei debiti; dividendi pagati = utile netto - variazione delle riserve di utili (+ variazione dei dividendi da pagare).",
+            "Analisi: un'azienda sana in maturità ha CFO positivo che finanzia CFI e CFF; CFO cronicamente inferiore all'utile netto, o crescita sostenuta da finanziamenti, sono segnali d'allarme. Rapporti: CFO/ricavi, CFO/attivo, CFO/debito, copertura degli interessi con flussi = (CFO + interessi + imposte pagate)/interessi pagati, reinvestimento = CFO/investimenti."
+          ]
+        },
+        {
+          "title": "Free cash flow e rendiconto common-size",
+          "body": [
+            "Flusso di cassa disponibile per l'impresa (free cash flow to the firm, FCFF): liquidità disponibile per tutti i finanziatori dopo gli investimenti necessari. FCFF = CFO + interessi × (1 - t) - investimenti in capitale fisso (FCInv) (con CFO secondo US GAAP che include gli interessi pagati). Da utile netto: FCFF = NI + costi non monetari + Int(1 - t) - FCInv - WCInv.",
+            "Flusso di cassa per gli azionisti (free cash flow to equity, FCFE) = CFO - FCInv + indebitamento netto (net borrowing). Collegamento: FCFE = FCFF - Int(1 - t) + indebitamento netto.",
+            "Esempio: CFO 245, interessi pagati 20, aliquota 25%, capex 120, nuovo debito netto 30. FCFF = 245 + 15 - 120 = 140. FCFE = 245 - 120 + 30 = 155.",
+            "Rendiconto common-size: ogni voce in percentuale dei ricavi (o degli incassi totali); permette di vedere quanta parte dei ricavi si trasforma in cassa operativa e come vengono impiegati i flussi. Utile per confrontare aziende di dimensioni diverse.",
+            "Trappola: nel FCFF non si sottraggono gli interessi (sono pagati ai finanziatori, che il FCFF remunera); nel FCFE invece il debito netto si aggiunge perché è cassa disponibile agli azionisti."
+          ]
+        },
+        {
+          "title": "Rimanenze: metodi di costo, LIFO reserve, valutazione",
+          "body": [
+            "Costo delle rimanenze: acquisto, trasformazione e altri costi per portarle allo stato attuale. Esclusi: sprechi anomali, magazzinaggio successivo, spese amministrative e di vendita. Metodi: identificazione specifica (beni non fungibili), FIFO (first in, first out), media ponderata (weighted average), LIFO (last in, first out: solo US GAAP, vietato da IFRS).",
+            "Esempio: si comprano 100 unità a 10 e poi 100 a 12; se ne vendono 150 a 20 (ricavi 3,000). FIFO: costo del venduto 1,000 + 50 × 12 = 1,600, rimanenze finali 600, margine lordo 1,400. LIFO: costo del venduto 1,200 + 50 × 10 = 1,700, rimanenze 500, margine 1,300. Media ponderata (costo medio 11): costo del venduto 1,650, rimanenze 550.",
+            "Con prezzi crescenti il LIFO produce: costo del venduto più alto, utile e imposte più bassi, CFO più alto (meno imposte), rimanenze più basse (valori vecchi), ratio di liquidità e patrimonio più bassi, rotazione delle rimanenze più alta. Il FIFO dà un costo delle rimanenze aggiornato (migliore per lo stato patrimoniale); il LIFO un costo del venduto aggiornato (migliore per il conto economico).",
+            "Riserva LIFO (LIFO reserve) = rimanenze FIFO - rimanenze LIFO. Conversione da LIFO a FIFO: rimanenze FIFO = LIFO + riserva; costo del venduto FIFO = costo LIFO - variazione della riserva; utile netto FIFO = utile LIFO + variazione della riserva × (1 - t); patrimonio netto FIFO = patrimonio LIFO + riserva × (1 - t), passività per imposte differite (deferred taxes) + riserva × t. Liquidazione LIFO (LIFO liquidation): se le quantità scendono si vendono strati a costo vecchio basso, gonfiando temporaneamente l'utile; non è un miglioramento operativo.",
+            "Valutazione: IFRS al minore tra costo e valore netto di realizzo (net realisable value, NRV = prezzo di vendita stimato - costi di completamento e vendita), con ripristino di valore consentito fino al costo originario. US GAAP: per FIFO e media ponderata minore tra costo e NRV; per LIFO e metodo del dettaglio minore tra costo e mercato (market = costo di sostituzione compreso tra NRV e NRV meno margine normale). US GAAP non ammette ripristini.",
+            "Ratio: rotazione delle rimanenze = costo del venduto/rimanenze medie; giorni di giacenza (days of inventory on hand) = 365/rotazione. Rotazione alta con vendite in calo può indicare scorte insufficienti; rotazione bassa può indicare obsolescenza. Confrontando società LIFO e FIFO conviene convertire tutto a FIFO."
+          ]
+        },
+        {
+          "title": "Attività a lungo termine: capitalizzazione, ammortamento, impairment",
+          "body": [
+            "Capitalizzare (capitalize) un costo lo iscrive come attività e lo spesa nel tempo con l'ammortamento; spesarlo lo addebita subito. Effetti della capitalizzazione nel primo anno: utile netto più alto, attivo e patrimonio più alti, CFO più alto (l'uscita va in CFI), leva più bassa, utili più stabili; negli anni seguenti utile più basso per gli ammortamenti. Il flusso di cassa totale è identico (a parte le imposte). Gli interessi sui finanziamenti per costruire un'attività si capitalizzano e poi si ammortizzano con l'attività; nel rendiconto finiscono in CFI.",
+            "Metodi di ammortamento: a quote costanti (straight-line) = (costo - valore residuo)/vita utile; a quote decrescenti (double-declining balance) = 2/vita × valore contabile di inizio anno (ignorando il residuo finché non lo si raggiunge); per unità di prodotto (units of production). IFRS richiede l'ammortamento per componenti (component depreciation) se le parti hanno vite diverse. Le immateriali a vita definita si ammortizzano (amortization), di solito a quote costanti.",
+            "Stime d'età dalle note: età media = ammortamento accumulato/ammortamento annuo; vita utile totale media = immobilizzazioni lorde/ammortamento annuo; vita residua = immobilizzazioni nette/ammortamento annuo. Esempio: lordo 1,200, fondo 400, ammortamento 100 → età 4 anni, vita totale 12, residua 8. Un'età media in crescita può anticipare forti investimenti futuri.",
+            "Modelli di valutazione: costo (cost model) in entrambi gli standard; rideterminazione del valore (revaluation model) solo IFRS: l'aumento va in OCI come riserva di rivalutazione, salvo che storni una precedente svalutazione a conto economico; una diminuzione va a conto economico, salvo che storni una precedente rivalutazione. Investimenti immobiliari (investment property) IFRS: modello del costo o del fair value con variazioni a conto economico; US GAAP non ha una categoria specifica.",
+            "Perdite di valore (impairment): IFRS se il valore contabile supera il valore recuperabile (recoverable amount) = maggiore tra fair value meno costi di vendita e valore d'uso (value in use, valore attuale (present value) dei flussi); ripristino ammesso (tranne avviamento). US GAAP in due fasi: test di recuperabilità (il valore contabile supera i flussi non scontati?), poi perdita = valore contabile - fair value; nessun ripristino per attività in uso. Le svalutazioni sono non monetarie: riducono utile e attivo ma non il CFO.",
+            "Eliminazione: alla cessione, plus o minusvalenza = incasso - valore contabile. Attività destinate alla vendita (held for sale) non si ammortizzano e sono al minore tra valore contabile e fair value meno costi di vendita."
+          ]
+        },
+        {
+          "title": "Leasing, debiti obbligazionari, pensioni e compensi azionari",
+          "body": [
+            "Obbligazioni emesse: iscritte al valore attuale dei flussi al tasso di mercato all'emissione; costo per interessi (interest expense) = tasso effettivo (effective rate) × valore contabile di inizio periodo (metodo dell'interesse effettivo (effective interest method)). Se emesse sotto la pari, il costo per interessi supera la cedola e il valore contabile sale verso il nominale. Esempio: obbligazione 3 anni, cedola 5% annua, nominale 1,000, rendimento 6% → prezzo 973.27; anno 1 interessi 58.40, cedola 50, ammortamento dello sconto 8.40, valore contabile 981.67. Nel rendiconto (US GAAP) l'uscita in CFO è la cedola 50, non 58.40.",
+            "Costi di emissione: in entrambi gli standard riducono il valore contabile del debito. Estinzione anticipata: utile o perdita = valore contabile - prezzo di riacquisto, a conto economico. Il fair value del debito cambia con i tassi ma il bilancio di norma resta al costo ammortizzato (opzione fair value disponibile). Clausole (covenants): affermative (obblighi) e negative (divieti, es. limiti a dividendi e nuovo debito); la loro violazione può rendere il debito immediatamente esigibile.",
+            "Leasing lato locatario (lessee): IFRS 16 ha un modello unico: diritto d'uso (right-of-use asset) e passività per leasing al valore attuale dei canoni; a conto economico ammortamento + interessi (costo decrescente nel tempo); nel rendiconto quota interessi in CFO o CFF, quota capitale in CFF. Esenzioni per leasing brevi (≤ 12 mesi) e di basso valore. US GAAP distingue leasing finanziario (come IFRS) e operativo: anch'esso a bilancio, ma con un unico costo di leasing a quote costanti e tutto il pagamento in CFO. Lato locatore (lessor): leasing finanziario (si elimina il bene, si iscrive un credito) o operativo (il bene resta, si incassano canoni).",
+            "Pensioni: piano a contribuzione definita (defined contribution): il costo è il contributo dovuto, nessun rischio per l'impresa. Piano a benefici definiti (defined benefit): l'impresa sopporta il rischio; a bilancio la posizione netta = fair value delle attività del piano - obbligazione (defined benefit obligation). IFRS: costo del servizio (service cost) e interesse netto a conto economico, rimisurazioni in OCI senza riciclo. US GAAP: costo del servizio, interessi, rendimento atteso delle attività e ammortamento di perdite/utili attuariali a conto economico; le rimisurazioni prima in OCI, poi ammortizzate.",
+            "Compensi in azioni (share-based compensation): stock option e azioni vincolate sono costo per il personale al fair value alla data di assegnazione (grant date), ripartito sul periodo di maturazione (vesting). Le opzioni si valutano con modelli (Black-Scholes, binomiali) che richiedono stime di volatilità e durata attesa: un'altra area di discrezionalità.",
+            "Trappola: sotto IFRS 16 l'EBITDA di un'impresa con molti leasing sale (il canone diventa ammortamento + interessi), mentre il debito aumenta: confrontare EBITDA e leva prima e dopo il cambio di principio richiede attenzione."
+          ]
+        },
+        {
+          "title": "Imposte sul reddito: differite attive e passive",
+          "body": [
+            "Base contabile (financial reporting) e base fiscale (tax base) differiscono. Imposte correnti dovute (taxes payable) = reddito imponibile × aliquota. Costo per imposte (income tax expense) = imposte dovute + Δ passività per imposte differite (deferred tax liability, DTL) - Δ attività per imposte differite (deferred tax asset, DTA).",
+            "Differenze temporanee (temporary differences): si annullano nel tempo e generano imposte differite. DTL quando il reddito imponibile è temporaneamente inferiore all'utile contabile (es. ammortamento fiscale accelerato): si pagheranno più imposte in futuro. DTA quando il reddito imponibile è temporaneamente superiore (es. accantonamenti per garanzie deducibili solo quando pagati, perdite fiscali riportabili, costi di ristrutturazione).",
+            "Esempio: macchinario da 300, vita 3 anni. Ammortamento civilistico 100 all'anno; fiscale 150, 100, 50. Fine anno 1: valore contabile 200, base fiscale 150 → differenza 50 × aliquota 30% = DTL 15. Utile ante imposte 500, imponibile 450 → imposte dovute 135, costo per imposte = 135 + 15 = 150 (30% dell'utile contabile). Alla fine dell'anno 3 la differenza si annulla e la DTL torna a zero.",
+            "Differenze permanenti (permanent differences): costi non deducibili, ricavi esenti, crediti d'imposta; non generano imposte differite ma rendono l'aliquota effettiva (effective tax rate = costo per imposte/utile ante imposte) diversa da quella legale. La riconciliazione tra aliquota legale ed effettiva nelle note è fonte preziosa di analisi.",
+            "Recuperabilità delle DTA: US GAAP le iscrive per intero e crea un fondo di valutazione (valuation allowance) se è più probabile che no (more likely than not, > 50%) che non saranno realizzate; IFRS le iscrive solo se è probabile che ci sarà reddito imponibile sufficiente. Aumenti del fondo riducono l'utile: un'area di gestione degli utili.",
+            "Cambio di aliquota: DTA e DTL vengono rimisurate alla nuova aliquota; l'effetto passa dal costo per imposte. Un aumento dell'aliquota con DTL nette aumenta il costo per imposte. Gli analisti possono trattare come debito le DTL che si annulleranno davvero e come patrimonio netto quelle che non si annulleranno mai (es. investimenti in crescita continua)."
+          ]
+        },
+        {
+          "title": "Qualità dell'informativa finanziaria e segnali d'allarme",
+          "body": [
+            "Due dimensioni: qualità dell'informativa (reporting quality: le informazioni rappresentano fedelmente la realtà economica?) e qualità degli utili (earnings quality: gli utili sono sostenibili e sufficienti?). Spettro dal migliore al peggiore: conforme e utile alle decisioni con utili sostenibili → conforme e utile ma utili di bassa qualità → conforme ma con scelte distorte (biased: aggressive o conservative) → conforme ma con gestione degli utili (earnings management) reale o contabile → non conforme → fittizio.",
+            "Il triangolo delle frodi (fraud triangle): motivazione (pressione su obiettivi, bonus, covenant), opportunità (controlli deboli, discrezionalità degli standard), razionalizzazione (giustificazioni personali). Meccanismi d'intervento: tempistica di ricavi e costi, classificazione (es. spostare costi operativi tra le voci non ricorrenti, uscite operative in CFI), stime (vite utili, fondi, valori residui (residuals)).",
+            "Segnali d'allarme sui ricavi: crediti che crescono più delle vendite (DSO in aumento), vendite anticipate a fine periodo (channel stuffing), accordi bill-and-hold, cambio nella politica di riconoscimento, ricavi lordi al posto di netti. Sui costi e attivi: rimanenze che crescono più delle vendite, capitalizzazione aggressiva, vite utili più lunghe dei concorrenti, svalutazioni «una tantum» frequenti (big bath) seguite da utili gonfiati. Sui flussi: CFO stabilmente inferiore all'utile netto, aumento dei debiti verso fornitori per gonfiare il CFO, cessione di crediti (factoring) a fine periodo.",
+            "Rapporto di competenza (accruals ratio) = (utile netto - CFO)/attivo operativo netto medio: valori alti indicano utili meno convertiti in cassa, tipicamente meno persistenti. Indicatori statistici come il Beneish M-score combinano più variabili per stimare la probabilità di manipolazione.",
+            "Misure non conformi (non-GAAP / alternative performance measures): EBITDA rettificato, utile «core». Sono ammesse se riconciliate con la misura più vicina degli standard e non presentate con maggiore evidenza. L'analista deve verificare che cosa viene escluso e se le esclusioni si ripetono.",
+            "Conservatorismo e aggressività: una contabilità conservativa oggi (es. accantonamenti alti) crea «riserve» che possono essere rilasciate domani gonfiando gli utili (cookie jar reserves). Il pregiudizio in qualunque direzione riduce la qualità."
+          ]
+        },
+        {
+          "title": "Tecniche di analisi: ratio e scomposizione DuPont",
+          "body": [
+            "Ratio di attività (activity): rotazione crediti = ricavi/crediti medi, giorni d'incasso (DSO) = 365/rotazione; rotazione rimanenze = costo del venduto/rimanenze medie, giorni di giacenza (DOH); rotazione debiti = acquisti/debiti medi, giorni di pagamento (DPO); ciclo di conversione della cassa (cash conversion cycle) = DOH + DSO - DPO; rotazione del capitale circolante (working capital) = ricavi/capitale circolante medio; rotazione delle immobilizzazioni = ricavi/immobilizzazioni nette medie; rotazione dell'attivo = ricavi/attivo medio.",
+            "Ratio di liquidità (liquidity): corrente, quick, cash; intervallo difensivo (defensive interval) = (cassa + titoli + crediti)/uscite giornaliere stimate. Ratio di solvibilità (solvency): debito/attivo, debito/capitale investito, debito/patrimonio, leva finanziaria (financial leverage) = attivo medio/patrimonio medio, copertura interessi = EBIT/interessi, copertura oneri fissi = (EBIT + canoni)/(interessi + canoni).",
+            "Redditività: margine lordo, operativo, ante imposte, netto; ROA = utile netto/attivo medio (oppure EBIT/attivo per una misura indipendente dalla struttura finanziaria); ROE = utile netto/patrimonio medio; rendimento sul capitale investito (return on total capital) = EBIT/(debito + patrimonio).",
+            "DuPont a tre fattori: ROE = margine netto (net profit margin) × rotazione dell'attivo × leva = (NI/ricavi)(ricavi/attivo)(attivo/patrimonio). A cinque fattori: ROE = (NI/EBT) onere fiscale (tax burden) × (EBT/EBIT) onere degli interessi (interest burden) × (EBIT/ricavi) margine operativo × (ricavi/attivo) × (attivo/patrimonio). Esempio: NI 120, EBT 160, EBIT 200, ricavi 2,000, attivo 1,600, patrimonio 800 → 0.75 × 0.80 × 0.10 × 1.25 × 2.0 = 15% = 120/800.",
+            "Lettura: un ROE in crescita solo per leva più alta è di qualità inferiore a uno trainato da margini o rotazioni. Più debito aumenta la leva ma riduce l'interest burden: l'effetto netto sul ROE è positivo solo se il rendimento dell'attivo supera il costo del debito (cost of debt) al netto delle imposte.",
+            "Ratio di valutazione e per settore: P/E, P/CF, P/B, payout = dividendi/utile, tasso di ritenzione (retention rate) b = 1 - payout, crescita sostenibile g = b × ROE. Banche: patrimonio di vigilanza, margine d'interesse; retail: vendite a parità di negozi (same-store sales), vendite per metro quadro; compagnie aeree: ricavo per posto-chilometro. Analisi di credito: EBITDA/interessi, FFO/debito, debito/EBITDA.",
+            "Limiti: i ratio dipendono dalle scelte contabili, dalla stagionalità e dal settore; un ratio da solo non dice nulla, serve il confronto nel tempo (trend) e con i concorrenti (cross-section)."
+          ]
+        },
+        {
+          "title": "Modellizzazione dei bilanci e previsioni",
+          "body": [
+            "Previsione dei ricavi: approccio top-down (dal PIL o dal mercato totale alla quota di mercato dell'azienda), bottom-up (per prodotto, punto vendita, capacità × prezzo × utilizzo), ibrido. Le ipotesi chiave sono crescita del mercato, quota di mercato, prezzi e mix.",
+            "Previsione dei costi: costo del venduto come percentuale dei ricavi aggiustata per prezzi degli input e leva operativa (operating leverage); spese generali in parte fisse; ammortamenti legati al piano di investimenti (capex di mantenimento ≈ ammortamenti, capex di crescita in aggiunta); oneri finanziari dal debito medio per tasso; imposte dall'aliquota effettiva attesa (attenzione alle differenze permanenti una tantum).",
+            "Capitale circolante con i giorni: crediti = DSO × ricavi/365, rimanenze = DOH × costo del venduto/365, debiti = DPO × costo del venduto/365. Lo stato patrimoniale di previsione si chiude con la cassa o con il debito come variabile di quadratura.",
+            "Le forze competitive di Porter informano i margini: barriere all'ingresso alte e potere dei fornitori basso sostengono margini alti; inflazione (inflation) e deflazione dei costi colpiscono in modo diverso chi ha potere di prezzo. Gli analisti devono stimare l'effetto delle variazioni dei prezzi degli input sui margini.",
+            "Pregiudizi comportamentali nelle previsioni: ancoraggio ai dati passati, eccesso di fiducia (intervalli troppo stretti), conferma (cercare solo dati favorevoli), illusione di controllo, bias di rappresentatività. Rimedi: analisi di scenario e di sensibilità, confronto con la base storica dei casi simili (base rates), revisione da parte di colleghi.",
+            "Orizzonte: previsioni esplicite per 3-5 anni, poi un valore terminale (terminal value) con crescita normalizzata. Cambiamenti tecnologici dirompenti richiedono scenari con probabilità e non solo una proiezione lineare."
+          ]
+        },
+        {
+          "title": "Applicazioni: credito, screening e rettifiche dell'analista",
+          "body": [
+            "Valutazione della performance passata e previsione: si usano trend dei margini, ROIC, crescita organica separata da quella per acquisizioni. Analisi del credito: le quattro C (capacità, garanzie (collateral), covenant, carattere); i ratio principali sono leva (debito/EBITDA), copertura (EBITDA/interessi) e flussi (FFO/debito); scala, diversificazione (diversification) e volatilità operativa influenzano il rating.",
+            "Screening dei titoli: filtri su ratio (es. P/E basso, ROE alto, debito contenuto). Limiti: i backtest soffrono di survivorship e look-ahead bias, e i filtri possono selezionare aziende con problemi contabili o settori concentrati.",
+            "Rettifiche per confrontare società: convertire LIFO in FIFO con la riserva; uniformare la capitalizzazione dei leasing; aggiungere al debito i passivi pensionistici netti; togliere dall'utile le voci non ricorrenti; rettificare per differenze di stime (vite utili, fondi svalutazione); considerare i titoli valutati in modo diverso (FVOCI vs FVPL); rimuovere l'avviamento per confronti tangibili.",
+            "Esempio di rettifica: società A (LIFO) con rimanenze 400, riserva LIFO 100, aliquota 25%, patrimonio 1,000, debito 800. A valori FIFO: rimanenze 500, patrimonio 1,075, imposte differite +25. Debito/patrimonio passa da 0.80 a 0.744 e la liquidità corrente migliora.",
+            "Segmenti: le informazioni per segmento operativo (ricavi, risultato, attività) permettono di capire dove si crea valore; i margini di segmento rivelano sussidi incrociati.",
+            "Trappola: confrontare la rotazione delle rimanenze di una società LIFO con una FIFO senza rettifiche fa sembrare la prima più efficiente in periodi di prezzi crescenti."
+          ]
+        }
+      ],
+      "formulas": [
+        "Opzioni (treasury stock): nuove azioni = n × (P medio - X)/P medio",
+        "EPS diluito = (NI - div. priv. + div. priv. convertibili + int. convertibili × (1 - t)) / (azioni medie + azioni potenziali)",
+        "FCFF = CFO + Int(1 - t) - FCInv",
+        "FCFE = CFO - FCInv + indebitamento netto",
+        "Rimanenze FIFO = LIFO + riserva LIFO; COGS FIFO = COGS LIFO - Δriserva",
+        "Costo per imposte = imposte dovute + ΔDTL - ΔDTA",
+        "Età media = fondo amm./amm. annuo; vita residua = netto/amm. annuo",
+        "Interessi (metodo effettivo) = tasso di mercato all'emissione × valore contabile iniziale",
+        "Ciclo di conversione = DOH + DSO - DPO",
+        "ROE = (NI/EBT)(EBT/EBIT)(EBIT/Ricavi)(Ricavi/Attivo)(Attivo/PN)",
+        "Crescita sostenibile g = (1 - payout) × ROE",
+        "Accruals ratio = (NI - CFO)/attivo operativo netto medio"
+      ],
+      "pitfalls": [
+        "Includere titoli antidiluitivi nel calcolo dell'EPS diluito.",
+        "Classificare gli interessi pagati sempre in CFO: sotto IFRS possono stare in CFF.",
+        "Sommare tutto l'incasso di una cessione nel CFO invece che nel CFI (e dimenticare di togliere la plusvalenza dal CFO indiretto).",
+        "Pensare che un'impairment riduca il flusso di cassa operativo.",
+        "Dimenticare che l'IFRS vieta il LIFO e che solo l'IFRS ammette il ripristino delle svalutazioni.",
+        "Trattare la riserva LIFO come interamente patrimonio netto senza togliere la quota d'imposta.",
+        "Leggere un ROE alto senza scomporlo: può dipendere solo dalla leva."
+      ]
+    }
+  ]
+}

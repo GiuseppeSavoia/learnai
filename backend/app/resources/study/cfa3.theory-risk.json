@@ -1,0 +1,67 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "risk",
+      "sections": [
+        {
+          "title": "Strategie con opzioni: payoff e scelte",
+          "body": [
+            "Covered call (azione + call venduta): incassa il premio e rinuncia al rialzo oltre lo strike; usi: generare reddito, vendere a un prezzo obiettivo, ridurre la posizione. Profitto massimo = X - S0 + premio; pareggio = S0 - premio. Put protettiva (azione + put comprata): assicura un minimo, costo del premio; pareggio = S0 + premio; perdita massima = S0 - X + premio.",
+            "Collar (azione + put comprata + call venduta): limita perdite e guadagni; a costo zero se i premi si compensano. Spread rialzista (bull spread: call comprata con strike basso + call venduta con strike alto) e ribassista (bear spread con put): scommesse direzionali a costo ridotto. Straddle lungo (call + put stesso strike): guadagna da grandi movimenti in qualsiasi direzione, è una scommessa sulla volatilità; strangle con strike diversi, più economico. Calendar spread: vendere un'opzione (options) a breve e comprarne una a lunga (guadagna dal decadimento più rapido della breve se il prezzo resta vicino allo strike).",
+            "Esempio di collar: azione a 100, put 90 comprata a 3, call 115 venduta a 3. A scadenza il valore della posizione è compreso tra 90 e 115; costo netto zero. Con l'azione a 80 il valore è 90; a 130 è 115.",
+            "Scelta della strategia in base alle attese: rialzo moderato → bull spread o covered call; ribasso → put o bear spread; incertezza sulla direzione e aspettativa di alta volatilità → straddle lungo; aspettativa di bassa volatilità → straddle corto o iron condor (rischio elevato in caso di shock). Considerare il costo della volatilità implicita: comprare opzioni quando la volatilità implicita è bassa rispetto a quella attesa.",
+            "Copertura (hedging) delta e greche nelle strategie: una covered call ha delta inferiore all'azione e gamma negativo; una put protettiva ha gamma positivo. Le posizioni con vega positivo guadagnano se sale la volatilità implicita.",
+            "Trappola: una covered call non riduce il rischio di ribasso se non per l'importo del premio."
+          ]
+        },
+        {
+          "title": "Modificare duration, beta ed esposizioni con swap e futures",
+          "body": [
+            "Duration con swap: ricevere fisso aumenta la duration, pagare fisso la riduce. Nozionale = (duration obiettivo - duration attuale) × valore del portafoglio/duration dello swap (per chi riceve il fisso). Esempio: portafoglio da 200 milioni con duration 4, obiettivo 6, duration dello swap (ricevere fisso) 5 → nozionale = 2 × 200/5 = 80 milioni ricevendo fisso.",
+            "Duration con futures: numero di contratti = (BPV obiettivo - BPV portafoglio)/BPV del futures. Beta azionario con futures: N = [(β_obiettivo - β_portafoglio)/β_futures] × (valore del portafoglio/(prezzo del futures × moltiplicatore)). Esempio: portafoglio 100 milioni con beta 1.1, obiettivo 0.8, futures a 4,000 punti × 250 = 1 milione per contratto, beta 1 → N = -0.3 × 100 = -30: vendere 30 contratti.",
+            "Allocazione tra classi senza vendere titoli: vendere futures azionari e comprare futures obbligazionari per spostare temporaneamente il mix; creare esposizione sintetica alla liquidità (vendere futures su tutta la posizione azionaria). Equitizzare la liquidità (cash equitization): comprare futures sulla liquidità in attesa d'investimento per evitare cash drag.",
+            "Swap su azioni (equity swap) e total return swap per ottenere o eliminare esposizione senza trasferire la proprietà (ad esempio per motivi fiscali o di accesso a mercati). Varianza (variance) e volatilità: swap sulla varianza per scommettere sulla volatilità realizzata contro quella implicita; futures sul VIX per coprire crolli (con costo di rinnovo spesso elevato in contango).",
+            "Dalle aspettative alle strategie sulla curva: con futures e swap si modificano singoli punti della curva (key rate durations) per scommettere su pendenza (slope) e curvatura."
+          ]
+        },
+        {
+          "title": "Gestione del rischio valutario",
+          "body": [
+            "Rendimento in valuta domestica: R_DC = (1 + R_FC)(1 + R_FX) - 1 ≈ R_FC + R_FX. Esempio: rendimento locale 8%, valuta estera -3% → 4.76%. Rischio: σ²(R_DC) ≈ σ²(R_FC) + σ²(R_FX) + 2 ρ σ(R_FC) σ(R_FX). La valuta aggiunge poco rischio (o lo riduce) se è correlata negativamente con gli attivi locali.",
+            "Strategie: copertura passiva (rapporto di copertura fisso con ribilanciamento (rebalancing) periodico), discrezionale (scostamenti limitati dal target), gestione attiva della valuta (la valuta come fonte di alfa) e overlay valutario (gestore specializzato separato). Fattori della scelta: orizzonte (nel lungo periodo le valute tendono a ritornare alla media), avversione al rischio, costi di copertura (spread, rinnovo, liquidità richiesta dai margini), peso degli attivi esteri, correlazioni, fiscalità.",
+            "Costo o beneficio della copertura: il rendimento del rinnovo dei forward (roll yield) è positivo quando si vende a termine una valuta con tasso d'interesse più basso del domestico (forward a premio) e negativo nel caso opposto. Coprire un'esposizione in una valuta ad alto tasso è costoso: l'investitore rinuncia al differenziale di tasso.",
+            "Strumenti: forward e FX swap (rinnovo), opzioni (put protettive sulla valuta estera, collar, seagull: collar con una put aggiuntiva venduta per ridurre il costo ma con protezione limitata sotto il secondo strike), coperture incrociate (cross hedge) e con proxy (valuta correlata) quando la valuta originale è illiquida, rapporto di copertura a varianza minima (minimum-variance hedge ratio) stimato con una regressione dei rendimenti domestici sulle variazioni del cambio.",
+            "Strategie attive: carry trade (lungo valute ad alto tasso, corto a basso), basate sulla valutazione (PPP), sul momentum, sulla volatilità (comprare volatilità prima di eventi). Valute dei mercati emergenti: costi di copertura alti, mercati non consegnabili (non-deliverable forwards), rischio di crisi improvvise.",
+            "Errore di scadenza: con coperture rinnovate mensilmente, i flussi di cassa dei regolamenti dei forward richiedono liquidità; un portafoglio coperto può dover vendere attivi per pagare le perdite sui forward quando la valuta estera si apprezza."
+          ]
+        },
+        {
+          "title": "Gestione del rischio per gli individui",
+          "body": [
+            "Capitale umano (human capital: valore attuale (present value) dei redditi da lavoro futuri) e capitale finanziario formano la ricchezza totale; il bilancio economico include anche passività (liabilities) implicite come i consumi futuri. Un lavoratore giovane con reddito stabile (capitale umano simile a un'obbligazione (bonds)) può avere più azioni; un imprenditore o un dipendente di una società quotata con reddito legato al mercato dovrebbe diversificare evitando ulteriore esposizione allo stesso rischio.",
+            "Rischi: morte prematura (perdita di capitale umano per la famiglia), longevità (vivere più a lungo dei risparmi), invalidità, malattie, responsabilità civile, danni alla proprietà. Strumenti: assicurazioni vita (temporanee (term) pure protezione; permanenti con componente di risparmio), rendite vitalizie (annuities: immediate o differite, fisse o variabili; proteggono dalla longevità), assicurazioni contro l'invalidità, sanitarie e patrimoniali.",
+            "Esempio: una famiglia con un solo reddito di 80,000 euro netti e 25 anni di carriera residua; il capitale umano è circa il valore attuale di 80,000 per 25 anni (con un tasso del 4% ≈ 1.25 milioni). Un'assicurazione temporanea con capitale vicino a questa cifra (meno patrimonio e altre fonti) copre il rischio di morte prematura.",
+            "Gestione: le scelte di assicurazione e investimento sono integrate; più capitale umano a rischio → più protezione assicurativa; con l'avvicinarsi della pensione il capitale umano diminuisce e conta di più proteggere il capitale finanziario e la longevità (rendite).",
+            "Trappola: considerare solo il portafoglio finanziario ignorando la natura del reddito da lavoro porta a un'allocazione sbagliata."
+          ]
+        }
+      ],
+      "formulas": [
+        "Covered call: max profitto = X - S0 + c; pareggio = S0 - c",
+        "Put protettiva: perdita massima = S0 - X + p; pareggio = S0 + p",
+        "Nozionale swap = (D_obiettivo - D_attuale) × V/D_swap",
+        "Futures beta: N = [(β_T - β_S)/β_f] × V/(F × moltiplicatore)",
+        "R_DC = (1 + R_FC)(1 + R_FX) - 1",
+        "σ²(R_DC) ≈ σ²(R_FC) + σ²(R_FX) + 2ρ σ_FC σ_FX"
+      ],
+      "pitfalls": [
+        "Credere che coprire una valuta ad alto rendimento non costi nulla.",
+        "Usare uno straddle quando ci si aspetta bassa volatilità.",
+        "Sbagliare il segno dei futures quando si riduce il beta (bisogna vendere).",
+        "Ignorare il gamma negativo di una covered call nei grandi movimenti.",
+        "Trascurare il capitale umano nell'asset allocation di un individuo."
+      ]
+    }
+  ]
+}

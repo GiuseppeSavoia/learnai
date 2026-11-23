@@ -1,0 +1,81 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "deriv",
+      "sections": [
+        {
+          "title": "Forward su azioni, FRA e futures obbligazionari",
+          "body": [
+            "Principio generale: prezzo forward = valore futuro (future value) del sottostante al netto dei benefici e più i costi di detenzione (carrying costs); valore di un forward esistente = valore attuale (present value) della differenza tra il forward corrente e quello del contratto. Per un'azione con dividendi (dividends) discreti: F0 = (S0 - PV0(D)) × (1 + r)^T; valore del lungo in t: Vt = St - PVt(D) - F0/(1 + r)^(T - t). Con rendimento da dividendo continuo q: F0 = S0 e^((r - q)T).",
+            "Accordo su tassi futuri (forward rate agreement, FRA): il tasso FRA è il tasso forward (forward rates) implicito. Convenzione: FRA 3×6 = tasso a 3 mesi tra 3 mesi. Esempio con tassi add-on base 360: tasso a 90 giorni 4%, a 180 giorni 4.5% → tasso FRA = [(1 + 0.045 × 180/360)/(1 + 0.04 × 90/360) - 1] × 360/90 = 4.95%. Valore durante la vita: differenza tra il nuovo tasso FRA per lo stesso periodo e quello del contratto, per il nominale e la frazione d'anno, scontata alla data di valutazione. Regolamento a inizio periodo: importo = nominale × (tasso di mercato - tasso FRA) × giorni/360/(1 + tasso di mercato × giorni/360).",
+            "Futures su obbligazioni (bonds): il venditore consegna uno dei titoli ammessi; il prezzo del futures quotato si moltiplica per il fattore di conversione (conversion factor) del titolo consegnato. Prezzo di non arbitraggio (no-arbitrage): F0 = [(S0 + rateo (accrued interest) iniziale)(1 + r)^T - rateo finale - valore futuro delle cedole (coupon) incassate]/CF. Si consegna il titolo più conveniente (cheapest-to-deliver), quello che minimizza il costo rispetto all'incasso dalla consegna. Il venditore ha anche opzioni (options) di qualità, tempistica e fine mese, che riducono il prezzo del futures.",
+            "Forward su valute: F0 = S0 × (1 + r_quotata)^T/(1 + r_base)^T (o con convenzione add-on). Valore in t per chi ha venduto la valuta base a termine: Vt = (F0 - Ft) × nominale/(1 + r_quotata × (T - t)). Esempio: venduti a termine 10 milioni di euro a 1.1214 USD/EUR; dopo 6 mesi spot 1.08, tasso USD 5%, tasso EUR 3% → nuovo forward a 6 mesi = 1.08 × 1.025/1.015 = 1.0906; valore = (1.1214 - 1.0906) × 10 milioni/1.025 ≈ 300,000 dollari a favore di chi è corto euro.",
+            "Trappola: il valore di un forward valutario va scontato con il tasso della valuta in cui il valore è espresso (la valuta quotata, il prezzo), non con quello della valuta base."
+          ]
+        },
+        {
+          "title": "Swap su tassi, valute e azioni: valutazione",
+          "body": [
+            "Swap su tassi (interest rate swap): il tasso fisso dello swap è s = (1 - PV_N)/Σ PV_i con fattori di sconto per ogni pagamento (frazioni d'anno incluse). Valore dopo l'inizio per chi riceve il fisso = (s_contratto - s_corrente) × Σ PV_i residui (residuals) × nominale; per chi paga il fisso è l'opposto. Equivalenza: ricevere fisso = essere lunghi un'obbligazione a tasso fisso e corti una FRN; quindi la duration di chi riceve il fisso è positiva (circa quella dell'obbligazione meno quella della FRN, piccola).",
+            "Swap valutario (currency swap): scambio di nominali iniziali e finali in due valute e di interessi periodici. I tassi fissi di ciascuna valuta sono i tassi swap di quella valuta. Valore: valore attuale della gamba ricevuta (convertito al cambio corrente) meno valore attuale della gamba pagata. Esempio d'uso: un'impresa europea che emette in dollari ma ha ricavi in euro trasforma il debito in euro con uno swap valutario, eliminando rischio di cambio su interessi e capitale.",
+            "Swap su azioni (equity swap): una parte paga il rendimento di un'azione o di un indice (inclusi i dividendi, se total return), l'altra paga un tasso fisso o variabile o il rendimento di un altro indice. Il valore di chi riceve il rendimento azionario contro fisso in una data intermedia = (valore del capitale azionario nozionale aggiornato) - valore attuale della gamba fissa. Se il rendimento azionario è negativo, chi lo riceve paga anche quella perdita.",
+            "Esempio di swap su tassi: swap a 3 anni in cui si riceve il fisso al 3% su 50 milioni; dopo un anno il tasso swap a 2 anni è 2.5% e i fattori di sconto sono 0.976 e 0.951 → valore = (3% - 2.5%) × 1.927 × 50 milioni = 481,750 a favore di chi riceve il fisso.",
+            "Usi: modificare la duration di un portafoglio senza vendere titoli (ricevere fisso allunga la duration), coprire il rischio di tasso di un debito, sintetizzare posizioni in valute o in azioni evitando costi di negoziazione, tasse o vincoli di accesso. Rischio di controparte (counterparty risk): si misura con il valore di sostituzione positivo; ridotto da compensazione centrale, garanzie (collateral) e accordi di compensazione (netting)."
+          ]
+        },
+        {
+          "title": "Binomiale a più periodi e opzioni americane",
+          "body": [
+            "Il modello a due periodi si risolve all'indietro: valori a scadenza, poi in ogni nodo valore = [π V_alto + (1 - π) V_basso]/(1 + r). Esempio: S0 = 50, u = 1.2, d = 0.8, r = 5% per periodo, π = 0.625. Prezzi finali 72, 48, 32. Call con X = 50: valori finali 22, 0, 0; nodo alto = 0.625 × 22/1.05 = 13.10; nodo basso = 0; oggi = 0.625 × 13.10/1.05 = 7.79.",
+            "Put americana con X = 50: valori finali 0, 2, 18. Nodo alto: continuazione 0.375 × 2/1.05 = 0.71 (esercizio vale 0) → 0.71. Nodo basso (S = 40): continuazione (0.625 × 2 + 0.375 × 18)/1.05 = 7.62, esercizio immediato 10 → si esercita, valore 10. Oggi = (0.625 × 0.71 + 0.375 × 10)/1.05 = 4.00. La put europea vale 3.15: la differenza (0.85) è il valore dell'esercizio anticipato.",
+            "Call americane: su azioni senza dividendi non si esercitano in anticipo; con dividendi elevati può convenire esercitare subito prima dello stacco. Put americane: l'esercizio anticipato conviene quando sono profondamente in the money (il valore temporale (time value) dell'incasso di X supera il valore dell'opzionalità residua).",
+            "Coperture dinamiche: il rapporto di copertura (hedging) cambia a ogni nodo: h = (V_alto - V_basso)/(S_alto - S_basso). Per replicare l'opzione bisogna ribilanciare il portafoglio dopo ogni movimento. Alberi per tassi d'interesse e per opzioni su obbligazioni funzionano con la stessa logica (probabilità 0.5 nei modelli calibrati).",
+            "Trappola: in un albero per un'opzione americana bisogna confrontare in ogni nodo il valore di esercizio con quello di continuazione, non solo a scadenza."
+          ]
+        },
+        {
+          "title": "Black-Scholes-Merton e modello di Black",
+          "body": [
+            "Ipotesi del modello BSM: prezzo del sottostante lognormale (rendimenti continui normali), volatilità e tasso privo di rischio costanti e noti, nessuna frizione (costi, tasse), vendite allo scoperto possibili, negoziazione continua, nessun arbitraggio, opzioni europee. Formule: c = S e^(-qT) N(d1) - X e^(-rT) N(d2); p = X e^(-rT) N(-d2) - S e^(-qT) N(-d1); d1 = [ln(S/X) + (r - q + σ²/2)T]/(σ√T); d2 = d1 - σ√T.",
+            "Interpretazione: la call è una posizione lunga di N(d1) azioni finanziata da un prestito di X e^(-rT) N(d2); N(d2) è la probabilità neutrale al rischio (risk-neutral probability) che la call finisca in the money. La put è un investimento privo di rischio di X e^(-rT) N(-d2) finanziato vendendo allo scoperto N(-d1) azioni.",
+            "Esempio: S = 100, X = 100, r = 5%, σ = 20%, T = 1, q = 0. d1 = 0.35, d2 = 0.15; N(d1) = 0.6368, N(d2) = 0.5596. c = 63.68 - 95.12 × 0.5596 = 10.45; p dalla parità = 10.45 - 100 + 95.12 = 5.57.",
+            "Modello di Black per opzioni su futures o forward: c = e^(-rT)[F N(d1) - X N(d2)], con d1 = [ln(F/X) + σ²T/2]/(σ√T). Opzioni sui tassi: un cap è un portafoglio di caplet (call sul tasso), un floor di floorlet (put sul tasso); un collar compra un cap e vende un floor. Swaption: opzione su uno swap; payer swaption (diritto di pagare il fisso) = call sul tasso swap, utile per proteggersi da un rialzo dei tassi; receiver swaption = put sul tasso swap. Parità: payer - receiver = swap forward pagatore del fisso.",
+            "Volatilità implicita (implied volatility): la volatilità che fa coincidere il prezzo di mercato con quello del modello; i mercati mostrano sorriso o asimmetria (skewness) di volatilità (volatility smile/skew: le put fuori dal denaro hanno volatilità implicita più alta) e una struttura a termine (term structure); l'indice VIX misura la volatilità implicita a 30 giorni dell'S&P 500. Le opzioni si quotano spesso in volatilità."
+          ]
+        },
+        {
+          "title": "Greche e copertura delta",
+          "body": [
+            "Delta: variazione del prezzo dell'opzione per variazione unitaria del sottostante; call tra 0 e 1 (N(d1) e^(-qT)), put tra -1 e 0. Gamma: variazione del delta; massima per opzioni at the money vicine alla scadenza; posizioni lunghe in opzioni hanno gamma positivo. Vega: sensibilità alla volatilità, positiva per call e put lunghe, massima at the money e con scadenza lunga. Theta: perdita di valore con il tempo, di solito negativa per le posizioni lunghe. Rho: sensibilità al tasso, positiva per le call, negativa per le put.",
+            "Copertura delta (delta hedging): una posizione è delta neutrale se il suo delta totale è zero. Numero di opzioni per coprire = -delta del portafoglio/delta dell'opzione. Esempio: un dealer ha venduto 1,000 call con delta 0.637: delta della posizione = -637 azioni; per neutralizzarlo compra 637 azioni. Se il prezzo sale il delta delle call aumenta e il dealer deve comprare altre azioni (ribilanciamento (rebalancing)).",
+            "Rischio gamma: la copertura delta è esatta solo per piccoli movimenti; per grandi movimenti l'approssimazione Δc ≈ delta × ΔS + ½ gamma × ΔS² mostra l'errore. Chi ha gamma negativo (venditore di opzioni) perde con grandi movimenti in entrambe le direzioni; per neutralizzare il gamma serve un'altra opzione (non basta il sottostante, che ha gamma zero), poi si sistema il delta con il sottostante.",
+            "Esempio di stima: call con delta 0.6 e gamma 0.03, il sottostante sale di 2 → variazione ≈ 0.6 × 2 + 0.5 × 0.03 × 4 = 1.26.",
+            "Profili di rischio dei dealer: chi vende opzioni ed effettua copertura delta guadagna se la volatilità realizzata è inferiore a quella implicita incassata, perde se è superiore. Le coperture dei dealer possono amplificare i movimenti di mercato quando sono corti gamma (devono comprare quando il mercato sale e vendere quando scende)."
+          ]
+        }
+      ],
+      "formulas": [
+        "F0 (azione) = (S0 - PV(D))(1 + r)^T; Vt = St - PVt(D) - F0/(1 + r)^(T - t)",
+        "Tasso FRA = [(1 + r_lungo × t_l/360)/(1 + r_breve × t_b/360) - 1] × 360/(t_l - t_b)",
+        "F futures obbligazionario = [(S0 + AI0)(1 + r)^T - AI_T - FVCI]/CF",
+        "V forward valutario = (F_t - F_0) × nominale/(1 + r_quotata (T - t))",
+        "V swap (riceve fisso) = (s_contratto - s_corrente) × Σ PV_i × nominale",
+        "c = S e^(-qT) N(d1) - X e^(-rT) N(d2); p = X e^(-rT) N(-d2) - S e^(-qT) N(-d1)",
+        "d1 = [ln(S/X) + (r - q + σ²/2)T]/(σ√T); d2 = d1 - σ√T",
+        "Black: c = e^(-rT)[F N(d1) - X N(d2)]",
+        "Opzioni per copertura delta = -delta portafoglio/delta opzione",
+        "Δc ≈ delta ΔS + ½ gamma ΔS²",
+        "Payer swaption - receiver swaption = swap forward pagatore del fisso"
+      ],
+      "pitfalls": [
+        "Valutare un'opzione americana con BSM senza considerare l'esercizio anticipato.",
+        "Neutralizzare il gamma con il sottostante: serve un'altra opzione.",
+        "Confondere payer swaption (call sul tasso) con receiver swaption.",
+        "Scontare il valore di un forward valutario con il tasso della valuta sbagliata.",
+        "Dimenticare il fattore di conversione nel prezzo dei futures su obbligazioni.",
+        "Interpretare N(d1) come probabilità di esercizio: è N(d2) nel mondo neutrale al rischio."
+      ]
+    }
+  ]
+}

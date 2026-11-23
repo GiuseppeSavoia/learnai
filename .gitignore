@@ -1,0 +1,43 @@
+# Dipendenze
+node_modules/
+.venv/
+venv/
+
+# Build
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# App per Mac (macapp/build.sh): artefatti intermedi in build/, app finale in dist/ChessAI.app
+/build/
+/dist/
+*.spec
+*.iconset/
+
+# Dati locali (database utente, puzzle importati, download)
+backend/data/
+*.zst
+*.part
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Log e file di sistema
+*.log
+.DS_Store
+.env
+.env.local
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Impostazioni locali di Claude Code (launch.json resta versionato)
+.claude/settings.local.json
+.claude/

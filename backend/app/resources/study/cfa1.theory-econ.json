@@ -1,0 +1,125 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "econ",
+      "sections": [
+        {
+          "title": "Imprese: costi, ricavi, punto di pareggio e chiusura",
+          "body": [
+            "Ricavo totale (total revenue) TR = P × Q; ricavo medio AR = TR/Q; ricavo marginale (marginal revenue) MR = ΔTR/ΔQ. In concorrenza perfetta (perfect competition) l'impresa è price taker: P = AR = MR. Con curva di domanda inclinata MR < P e MR = P × (1 - 1/|E|), dove E è l'elasticità della domanda (elasticity of demand) al prezzo: il ricavo totale è massimo dove |E| = 1 (MR = 0).",
+            "Elasticità: al prezzo (price elasticity) = %ΔQ/%ΔP; elastica se |E| > 1 (aumentare il prezzo riduce il ricavo), anelastica se < 1. Determinanti: disponibilità di sostituti, quota della spesa sul reddito, orizzonte temporale (più elastica nel lungo periodo). Elasticità al reddito: positiva per beni normali, negativa per beni inferiori; incrociata: positiva per sostituti, negativa per complementi.",
+            "Costi: fissi (FC), variabili (VC), totali (TC); medi (ATC, AVC, AFC) e marginali (MC). Il costo marginale (marginal cost) taglia AVC e ATC nei loro minimi. Profitto massimo dove MR = MC (con MC crescente). Profitto economico = ricavi - costi espliciti - costi opportunità (incluso il rendimento normale del capitale); profitto contabile ignora i costi opportunità. Profitto economico nullo = profitto normale.",
+            "Punto di pareggio e chiusura (breakeven e shutdown): nel breve periodo l'impresa continua a produrre finché P ≥ AVC (copre i variabili e parte dei fissi), chiude se P < AVC. Nel lungo periodo esce se P < ATC. Esempio: ATC = 12, AVC = 9, prezzo 10 → in perdita ma continua a produrre nel breve periodo perché ogni unità contribuisce 1 alla copertura (hedging) dei costi fissi; nel lungo periodo esce.",
+            "Economie di scala (economies of scale): l'ATC di lungo periodo scende all'aumentare della produzione (specializzazione, tecnologie efficienti, potere d'acquisto); diseconomie (diseconomies) quando sale (complessità, burocrazia). La scala minima efficiente (minimum efficient scale) è il punto più basso della curva di lungo periodo: settori con scala minima grande rispetto alla domanda tendono a essere concentrati.",
+            "Trappola: «l'impresa è in perdita, quindi deve chiudere» è sbagliato nel breve periodo; conta il confronto tra prezzo e costo variabile medio."
+          ]
+        },
+        {
+          "title": "Strutture di mercato: concorrenza, monopolio, oligopolio",
+          "body": [
+            "Concorrenza perfetta (perfect competition): molti venditori, prodotto omogeneo, nessuna barriera, nessun potere di prezzo; nel lungo periodo P = MC = ATC minimo e profitto economico nullo. Concorrenza monopolistica (monopolistic competition): molti venditori, prodotti differenziati (marchi, pubblicità), barriere basse; curva di domanda inclinata ma elastica; nel lungo periodo profitto nullo ma P > MC e capacità in eccesso.",
+            "Oligopolio (oligopoly): pochi venditori interdipendenti, barriere alte. Modelli: domanda spezzata (kinked demand: i concorrenti seguono i ribassi ma non i rialzi, quindi i prezzi sono rigidi); Cournot (le imprese scelgono la quantità date quelle dei rivali; l'equilibrio sta tra concorrenza e monopolio); equilibrio di Nash (nessuno ha interesse a cambiare strategia date le scelte altrui; il dilemma del prigioniero spiega perché i cartelli sono instabili); Stackelberg (un leader sceglie per primo, il follower si adegua); leadership di prezzo dell'impresa dominante. La collusione è più probabile con pochi concorrenti, prodotti simili, costi simili, ordini piccoli e frequenti, nessuna minaccia esterna.",
+            "Monopolio (monopoly): un solo venditore, nessun sostituto stretto, barriere altissime (brevetti, licenze, risorse, economie di scala: monopolio naturale). Produce dove MR = MC e fissa il prezzo sulla curva di domanda: quantità minore e prezzo più alto che in concorrenza, con perdita secca (deadweight loss). La discriminazione di prezzo (price discrimination) aumenta quantità e profitti trasferendo surplus dai consumatori. Regolazione dei monopoli naturali: prezzo al costo medio (pareggio) o al costo marginale con sussidio.",
+            "Identificare la struttura: numero di imprese, differenziazione, barriere, potere di prezzo; misure di concentrazione (rapporto a N imprese, HHI) con il limite che ignorano la contendibilità (barriere basse rendono competitivo anche un mercato concentrato) e la concorrenza estera.",
+            "Implicazioni per l'analista: in concorrenza perfetta i margini tendono a zero e la redditività dipende dall'efficienza; in oligopolio contano la disciplina dei prezzi e la capacità installata; in monopolio il rischio principale è regolatorio. Il potere di prezzo sostiene ROIC superiori al costo del capitale (cost of capital) nel tempo."
+          ]
+        },
+        {
+          "title": "Cicli economici e indicatori",
+          "body": [
+            "Fasi del ciclo (business cycle): recupero (ripresa dalla fondo: il PIL torna a crescere, output gap negativo che si chiude), espansione (crescita sopra il potenziale, occupazione in aumento), rallentamento (crescita in calo, inflazione (inflation) elevata, banche centrali restrittive), contrazione (PIL in calo, disoccupazione (unemployment) in aumento). Una recessione è di solito definita come almeno due trimestri di calo del PIL reale.",
+            "Comportamenti tipici: le imprese assumono prima lavoratori temporanei e aumentano gli straordinari, poi assumono stabilmente; investimenti prima in software e attrezzature leggere, poi in strutture; le scorte rispetto alle vendite (inventory-to-sales) salgono all'inizio del rallentamento (accumulo involontario) e scendono nella ripresa. Consumi di beni durevoli molto ciclici, servizi e beni non durevoli più stabili. Gli immobili sono sensibili ai tassi e al credito.",
+            "Ciclo del credito (credit cycle): espansione e contrazione della disponibilità e del costo del credito; amplifica il ciclo economico (business cycle) perché il credito facile alza il prezzo delle garanzie (immobili) che a sua volta permette più credito. Le recessioni accompagnate da crisi del credito sono più profonde e lunghe.",
+            "Teorie: neoclassica (i mercati si autocorreggono), keynesiana (domanda aggregata insufficiente, serve intervento fiscale), monetarista (la stabilità della moneta è cruciale), austriaca (cicli da credito troppo facile), nuova classica e cicli reali (shock di produttività), neo-keynesiana (rigidità di prezzi e salari giustificano interventi).",
+            "Disoccupazione: frizionale (ricerca di lavoro), strutturale (squilibrio di competenze), ciclica. La disoccupazione è un indicatore ritardato: i lavoratori scoraggiati escono dalla forza lavoro. Inflazione da costi (cost-push) e da domanda (demand-pull); deflazione pericolosa perché aumenta il valore reale dei debiti; stagflazione = inflazione con crescita bassa. Indici di prezzo: CPI (paniere fisso, distorsioni da sostituzione, qualità e nuovi prodotti), deflatore del PIL; inflazione core esclude alimentari ed energia.",
+            "Indicatori: anticipatori (leading: ore settimanali nella manifattura, nuove richieste di sussidi, nuovi ordini, permessi di costruzione, indici azionari, spread tra tassi a lungo e breve, fiducia dei consumatori), coincidenti (coincident: occupazione non agricola, reddito personale, produzione industriale, vendite), ritardati (lagging: durata media della disoccupazione, scorte/vendite, costo del lavoro per unità di prodotto, tasso primario bancario, credito al consumo/reddito)."
+          ]
+        },
+        {
+          "title": "Politica fiscale",
+          "body": [
+            "Strumenti: spesa pubblica (trasferimenti, spesa corrente, investimenti) ed entrate (imposte dirette su redditi e patrimoni, indirette su consumi). Obiettivi: stabilizzare il ciclo, redistribuire, finanziare beni pubblici. Stabilizzatori automatici (automatic stabilizers): imposte progressive e sussidi di disoccupazione che agiscono senza decisioni nuove, riducendo l'ampiezza del ciclo. Politica discrezionale: decisioni esplicite di spesa e tasse.",
+            "Moltiplicatore fiscale (fiscal multiplier) = 1/[1 - c(1 - t)], dove c è la propensione marginale al consumo e t l'aliquota. Esempio: c = 0.8, t = 0.25 → 1/(1 - 0.6) = 2.5; un aumento di spesa di 100 aumenta il PIL fino a 250. Il moltiplicatore di bilancio in pareggio (balanced budget multiplier) è positivo: aumentare spesa e tasse dello stesso importo fa crescere il PIL perché una parte delle tasse viene pagata riducendo il risparmio.",
+            "Deficit e debito: saldo strutturale (corretto per il ciclo) e ciclico. Argomenti contro il timore del debito: se è detenuto internamente è un trasferimento tra cittadini, può finanziare investimenti produttivi, può essere sostenibile se la crescita nominale supera il tasso d'interesse. Argomenti preoccupanti: tassazione futura più alta e distorsiva, effetto spiazzamento (crowding out) degli investimenti privati per tassi più alti, rischio di monetizzazione e inflazione. Equivalenza ricardiana (Ricardian equivalence): se i cittadini anticipano le tasse future, un taglio delle tasse finanziato a debito non stimola i consumi.",
+            "Limiti e ritardi: di riconoscimento (recognition lag), di azione (action lag: tempi politici), di impatto (impact lag). Incertezza sul livello del PIL potenziale, conflitti tra obiettivi, possibile inefficacia vicino al pieno impiego (spinge l'inflazione).",
+            "Misure dell'orientamento: variazione del saldo strutturale; una politica espansiva aumenta il deficit strutturale. Mix di politiche: fiscale espansiva + monetaria espansiva → forte crescita della domanda aggregata, tassi a breve bassi; fiscale espansiva + monetaria restrittiva → tassi più alti, crescita della quota pubblica; fiscale restrittiva + monetaria espansiva → tassi bassi, investimenti privati favoriti; entrambe restrittive → tassi alti e domanda in calo."
+          ]
+        },
+        {
+          "title": "Politica monetaria",
+          "body": [
+            "Ruoli della banca centrale (central bank): monopolio dell'emissione di moneta, banca del governo e banca delle banche, prestatore di ultima istanza (lender of last resort), vigilanza, gestione delle riserve valutarie. Obiettivo principale: stabilità dei prezzi (spesso con target di inflazione intorno al 2%), talvolta anche occupazione (mandato duale della Fed). Qualità di una banca centrale efficace: indipendenza (operativa e negli obiettivi), credibilità, trasparenza.",
+            "Creazione di moneta: con riserva frazionaria le banche prestano i depositi; moltiplicatore della moneta (money multiplier) = 1/coefficiente di riserva: con il 10% un deposito di 100 genera fino a 1,000 di moneta. Teoria quantitativa (quantity theory of money): MV = PY; se V e Y sono stabili, la crescita della moneta si traduce in inflazione (neutralità della moneta nel lungo periodo). Equazione di Fisher: tasso nominale ≈ tasso reale + inflazione attesa (+ premio per il rischio (risk premium) d'inflazione).",
+            "Strumenti: tasso ufficiale (policy rate) applicato alle operazioni con le banche, operazioni di mercato aperto (open market operations: acquisto di titoli = immissione di riserve), coefficiente di riserva obbligatoria. Strumenti non convenzionali: allentamento quantitativo (quantitative easing, acquisti massicci di titoli a lungo termine), indicazioni prospettiche (forward guidance), tassi negativi.",
+            "Meccanismo di trasmissione: tasso ufficiale → tassi interbancari e di mercato → prezzi delle attività (azioni, obbligazioni (bonds), immobili) → aspettative → cambio → domanda interna ed estera → inflazione. Tasso neutrale (neutral rate) = crescita del PIL potenziale + inflazione obiettivo: tassi sopra il neutrale sono restrittivi. Esempio: crescita potenziale 1.5%, target 2% → neutrale 3.5%; con tasso al 5% la politica è restrittiva.",
+            "Limiti: trappola della liquidità (liquidity trap: con tassi vicino allo zero e preferenza per la liquidità le iniezioni non stimolano), banche che non prestano, deflazione, aspettative non ancorate, conflitto con la politica fiscale (fiscal policy). Le banche centrali delle economie emergenti hanno spesso credibilità minore e devono gestire flussi di capitale volatili.",
+            "Trappola: un acquisto di titoli da parte della banca centrale aumenta le riserve bancarie e la base monetaria (politica espansiva), non le riduce."
+          ]
+        },
+        {
+          "title": "Geopolitica e rischio geopolitico",
+          "body": [
+            "La geopolitica (geopolitics) studia come geografia, politica e relazioni tra Stati influenzano economia e mercati. Gli attori: Stati (con i loro interessi di sicurezza nazionale, economici e politici) e attori non statali (organizzazioni internazionali, multinazionali, ONG, gruppi armati).",
+            "Due assi: cooperazione vs non cooperazione tra Stati (cooperazione su standard, commercio, sicurezza; motivata da risorse, sicurezza, interessi economici) e globalizzazione vs nazionalismo (apertura agli scambi di beni, capitali, persone e idee vs chiusura). Archetipi: autarchia (autarky: non cooperazione + nazionalismo, autosufficienza), egemonia (hegemony: non cooperazione + globalizzazione, uno Stato dominante impone regole), bilateralismo (bilateralism: cooperazione tra coppie di paesi), multilateralismo (multilateralism: cooperazione e globalizzazione con istituzioni comuni).",
+            "Strumenti della geopolitica: di sicurezza nazionale (alleanze, presenza militare, conflitti), economici (accordi commerciali, dazi, sanzioni, sussidi, controlli alle esportazioni), finanziari (accesso ai mercati dei capitali, controllo delle valute di riserva, sanzioni finanziarie, restrizioni agli investimenti esteri).",
+            "Rischio geopolitico (geopolitical risk): rischio legato a tensioni, conflitti o cambi di relazione tra Stati. Tipi: eventi improvvisi (event risk, es. elezioni, colpi di Stato), shock esogeni (exogenous: invasioni, attentati) e rischi tematici (thematic: tendenze persistenti come i cyber-attacchi o i cambiamenti climatici). L'analista valuta probabilità, velocità d'impatto (rapida, ad esempio una guerra, o lenta, come la deglobalizzazione) e grandezza dell'impatto.",
+            "Effetti sui portafogli: nel breve periodo aumento della volatilità e fuga verso attivi rifugio (titoli di Stato (government bond) di alta qualità, valute rifugio, oro); nel lungo periodo cambi nelle catene del valore (reshoring, friend-shoring), nei costi delle materie prime (commodities), nei premi per il rischio paese. Strumenti: analisi di scenario, stress test, segnali (signposts) da monitorare per aggiornare le probabilità."
+          ]
+        },
+        {
+          "title": "Commercio internazionale e restrizioni",
+          "body": [
+            "Vantaggio assoluto (absolute advantage): produrre un bene con meno risorse. Vantaggio comparato (comparative advantage): costo opportunità più basso; è il vantaggio comparato a determinare i guadagni dal commercio (modello ricardiano basato sulla produttività del lavoro; modello di Heckscher-Ohlin basato sulla dotazione relativa di fattori: un paese ricco di capitale esporta beni ad alta intensità di capitale). Guadagni dal commercio: prezzi più bassi, più varietà, economie di scala, diffusione di tecnologia; costi: perdita di posti di lavoro nei settori esposti, disuguaglianze.",
+            "Esempio: il paese A produce 1 auto o 4 tonnellate di grano con un'unità di lavoro, il paese B 1 auto o 2 tonnellate. A ha vantaggio assoluto nel grano e costo opportunità di un'auto pari a 4 tonnellate; B rinuncia a sole 2 tonnellate per auto: B ha vantaggio comparato nelle auto, A nel grano.",
+            "Restrizioni: dazi (tariffs: aumentano il prezzo interno, riducono le importazioni, generano entrate pubbliche e una perdita secca); quote (quotas: limite quantitativo, la rendita va ai titolari delle licenze); restrizioni volontarie all'esportazione (voluntary export restraints: la rendita va agli esportatori stranieri); sussidi all'esportazione; requisiti di contenuto locale. Per un paese piccolo un dazio riduce sempre il benessere; un paese grande può migliorare le ragioni di scambio a spese dei partner. Controlli sui capitali (capital restrictions) limitano i flussi finanziari.",
+            "Blocchi commerciali in ordine di integrazione crescente: area di libero scambio (free trade area: niente dazi interni), unione doganale (customs union: più dazio esterno comune), mercato comune (common market: più libera circolazione di lavoro e capitale), unione economica (economic union: più istituzioni e politiche economiche comuni), unione monetaria (monetary union: più moneta unica). Effetti: creazione di commercio (trade creation, positiva) e deviazione di commercio (trade diversion, negativa se si sostituisce un fornitore esterno più efficiente).",
+            "Bilancia dei pagamenti (balance of payments): conto corrente (merci, servizi, redditi primari e secondari) + conto capitale (trasferimenti di capitale, attività non prodotte) + conto finanziario (investimenti diretti, di portafoglio, altri, riserve) ≈ 0. Un deficit corrente va finanziato da afflussi finanziari. Identità: saldo corrente = (S - I) + (T - G): un deficit corrente riflette risparmio privato o pubblico insufficiente rispetto agli investimenti.",
+            "Organizzazioni: FMI (stabilità del sistema monetario, sostegno alla bilancia dei pagamenti), Banca Mondiale (sviluppo e riduzione della povertà), OMC/WTO (regole del commercio e risoluzione delle controversie)."
+          ]
+        },
+        {
+          "title": "Flussi di capitale, mercato dei cambi e regimi",
+          "body": [
+            "Partecipanti al mercato dei cambi: lato vendita (sell side: grandi banche dealer), lato acquisto (buy side: imprese, gestori, hedge fund, fondi sovrani, banche centrali, privati). Operazioni: a pronti (spot, regolamento T+2), a termine (forward), swap valutari (FX swap: spot + forward opposto), futures e opzioni (options). Il mercato è il più grande al mondo per volumi.",
+            "Motivi dei flussi: commercio, investimenti diretti, investimenti di portafoglio, copertura dei rischi, speculazione. I flussi di capitale possono favorire la crescita (accesso al risparmio estero) ma anche bolle e arresti improvvisi (sudden stops). Strumenti per gestirli: controlli sui capitali, riserve valutarie, politiche macroprudenziali.",
+            "Regimi di cambio dal più rigido al più flessibile: nessuna valuta propria (dollarizzazione o unione monetaria), comitato valutario (currency board: base monetaria coperta interamente da riserve in valuta estera), parità fissa convenzionale con margini stretti, parità entro bande più ampie (target zone), crawling peg (parità aggiustata periodicamente), crawling band, fluttuazione gestita (managed float), fluttuazione libera (independent float). Trilemma (impossible trinity): un paese non può avere insieme cambio fisso, libera circolazione dei capitali e politica monetaria (monetary policy) indipendente.",
+            "Effetti del cambio sul commercio: condizione di Marshall-Lerner: un deprezzamento migliora la bilancia commerciale se la somma delle elasticità di esportazioni e importazioni (in valore assoluto) supera 1, ponderata per le quote. Curva J (J-curve): nel breve periodo la bilancia peggiora (contratti già fissati, importazioni più care), poi migliora. Approccio dell'assorbimento (absorption approach): il deprezzamento migliora la bilancia solo se la produzione nazionale aumenta rispetto alla spesa interna.",
+            "Cambio reale (real exchange rate): cambio nominale corretto per i livelli dei prezzi; misura la competitività. Con quotazione domestica per unità di valuta estera, cambio reale = S × (P estero/P domestico). Se l'inflazione interna supera quella estera e il cambio nominale non si deprezza abbastanza, la valuta si apprezza in termini reali e le esportazioni perdono competitività."
+          ]
+        },
+        {
+          "title": "Calcoli sui cambi: quotazioni, incroci, forward",
+          "body": [
+            "Convenzione: una quotazione A/B (o B per A secondo il testo del curriculum: prezzo di una unità della valuta base in valuta quotata) va letta con attenzione. Nel curriculum CFA la notazione «USD/EUR = 1.10» significa 1.10 dollari per 1 euro (euro = valuta base). Se USD/EUR sale da 1.10 a 1.21 l'euro si apprezza del 10%; il dollaro si deprezza: EUR/USD passa da 0.9091 a 0.8264, cioè -9.09% (non -10%).",
+            "Tassi incrociati (cross rates): USD/EUR = 1.10 e JPY/USD = 150 → JPY/EUR = 1.10 × 150 = 165 yen per euro. Per ottenere un incrocio si moltiplicano o dividono le quotazioni in modo che la valuta comune si elimini. Con quotazioni denaro-lettera: il bid di un incrocio si calcola con i bid, l'ask con gli ask (dopo aver invertito correttamente: l'inverso di un bid è un ask).",
+            "Parità coperta dei tassi d'interesse (covered interest rate parity): il forward elimina l'arbitraggio tra investire in casa o all'estero con copertura. F(f/d) = S(f/d) × (1 + i_f × giorni/360)/(1 + i_d × giorni/360), con f la valuta quotata (prezzo) e d la base. Esempio: USD/EUR spot 1.10, tasso USD 5%, tasso EUR 3%, un anno → F = 1.10 × 1.05/1.03 = 1.1214. La valuta con il tasso più basso (euro) è a premio a termine (forward premium).",
+            "Punti forward (forward points) = (F - S) × 10,000 per la maggior parte delle coppie: nell'esempio 214 punti. Il forward quotato = spot + punti/10,000. Percentuale di premio o sconto = F/S - 1 ≈ differenziale dei tassi (1.94% nell'esempio).",
+            "Esempio di arbitraggio: se il forward di mercato fosse 1.13 (sopra il valore di parità 1.1214) converrebbe prendere a prestito dollari, convertirli in euro a pronti, investirli in euro al 3% e vendere a termine gli euro a 1.13: profitto privo di rischio finché la parità non viene ristabilita.",
+            "Trappola: «la valuta si apprezza del 10%» non implica che l'altra si deprezzi del 10%: la variazione inversa è 1/1.10 - 1 = -9.09%."
+          ]
+        }
+      ],
+      "formulas": [
+        "MR = P(1 - 1/|E|); massimo profitto: MR = MC",
+        "Breve periodo: produci se P ≥ AVC; lungo periodo: esci se P < ATC",
+        "Moltiplicatore fiscale = 1/[1 - c(1 - t)]",
+        "Moltiplicatore della moneta = 1/coefficiente di riserva",
+        "MV = PY; nominale ≈ reale + inflazione attesa",
+        "Tasso neutrale = crescita potenziale + inflazione obiettivo",
+        "Saldo corrente = (S - I) + (T - G)",
+        "F(f/d) = S(f/d) × (1 + i_f t)/(1 + i_d t)",
+        "Punti forward = (F - S) × 10,000",
+        "Cambio reale (d/f) = S(d/f) × P_f/P_d"
+      ],
+      "pitfalls": [
+        "Calcolare il vantaggio comparato confrontando le quantità prodotte invece dei costi opportunità.",
+        "Chiudere un'impresa in perdita nel breve periodo quando il prezzo copre ancora il costo variabile medio.",
+        "Ritenere che la disoccupazione sia un indicatore anticipatore: è ritardato.",
+        "Applicare la stessa percentuale di apprezzamento e deprezzamento alle due valute di una coppia.",
+        "Dimenticare che la valuta con il tasso d'interesse più alto quota a sconto a termine.",
+        "Pensare che un deprezzamento migliori subito la bilancia commerciale (curva J)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "quant",
+      "sections": [
+        {
+          "title": "Regressione multipla: ipotesi e interpretazione",
+          "body": [
+            "Modello: Yi = b0 + b1 X1i + ... + bk Xki + εi. Ogni coefficiente di pendenza (partial slope coefficient) misura l'effetto di una variazione unitaria di Xj su Y tenendo costanti gli altri regressori. Usi: identificare relazioni (es. fattori che spiegano i rendimenti), testare teorie (es. se un fattore è prezzato), prevedere.",
+            "Ipotesi: 1) relazione lineare; 2) residui (residuals) con varianza (variance) costante (omoschedasticità (homoskedasticity)); 3) residui indipendenti (nessuna autocorrelazione); 4) residui normali (per i test su campioni piccoli); 5) regressori non stocastici o comunque non correlati con l'errore, e nessuna relazione lineare esatta tra regressori. Strumenti grafici: residui contro valori stimati e contro ciascun regressore, grafici Q-Q per la normalità.",
+            "Esempio di lettura: rendimento in eccesso di un fondo = 0.2% + 1.05 × mercato + 0.30 × SMB - 0.15 × HML. Il fondo ha beta di mercato poco sopra 1, esposizione positiva alle piccole capitalizzazioni e inclinazione growth (HML negativo). Un'alfa di 0.2% al mese va testata: con errore standard (standard error) 0.08% → t = 2.5, significativa al 5%.",
+            "Test su un coefficiente: t = (b̂j - Bj)/s(b̂j) con n - k - 1 gradi di libertà (degrees of freedom). Intervallo di confidenza (confidence interval) b̂j ± tc × s(b̂j). Previsione: Ŷ = b̂0 + Σ b̂j Xj; l'incertezza viene sia dall'errore del modello sia dall'errore di stima dei coefficienti.",
+            "Trappola: in regressione multipla (multiple regression) i gradi di libertà sono n - k - 1, non n - 2."
+          ]
+        },
+        {
+          "title": "Bontà dell'adattamento: R² corretto, ANOVA, AIC e BIC",
+          "body": [
+            "R² = SSR/SST aumenta sempre aggiungendo variabili, anche irrilevanti. R² corretto (adjusted R²) = 1 - [(n - 1)/(n - k - 1)](1 - R²) penalizza le variabili in più; può diminuire (anche diventare negativo) aggiungendo una variabile con t in valore assoluto inferiore a 1. Esempio: n = 60, k = 3, R² = 0.40 → R² corretto = 1 - (59/56) × 0.60 = 0.368.",
+            "Tabella ANOVA: SST = SSR + SSE; MSR = SSR/k; MSE = SSE/(n - k - 1); F = MSR/MSE con k e n - k - 1 gradi di libertà, testa H0: tutti i coefficienti di pendenza nulli. Esempio: SST = 200, SSE = 120, n = 60, k = 3 → F = (80/3)/(120/56) = 12.4, molto oltre il valore critico (circa 2.8): il modello ha potere esplicativo.",
+            "Criteri d'informazione: AIC = n ln(SSE/n) + 2(k + 1), preferito per la previsione; BIC = n ln(SSE/n) + ln(n)(k + 1), penalizza di più le variabili, preferito per scegliere il modello che descrive meglio i dati. Valori più bassi sono migliori; si confrontano solo modelli con la stessa variabile dipendente e lo stesso campione.",
+            "Test F congiunto (joint F-test) su un sottoinsieme di q coefficienti: si confronta il modello completo (non vincolato) con quello vincolato senza quelle variabili. F = [(SSE_vincolato - SSE_completo)/q]/[SSE_completo/(n - k - 1)]. Esempio: SSE vincolato 130, completo 120, q = 2, n - k - 1 = 56 → F = 5/2.143 = 2.33 < 3.16 (critico al 5%): le due variabili possono essere eliminate.",
+            "Test di ipotesi generali sui coefficienti (es. b1 = b2) si costruiscono come modelli vincolati. Lettura economica: un R² basso non rende inutile il modello se l'obiettivo è testare un coefficiente specifico; un R² alto non garantisce relazioni causali."
+          ]
+        },
+        {
+          "title": "Errori di specificazione e violazioni delle ipotesi",
+          "body": [
+            "Errata specificazione (misspecification): variabile omessa (se correlata con i regressori inclusi, i coefficienti sono distorti e inconsistenti), forma funzionale inadeguata (serviva il logaritmo o un termine quadratico), scala inadeguata (variabili in livelli invece che in rapporti), dati raggruppati impropriamente (pooling di regimi diversi), regressori correlati con l'errore (es. variabile dipendente ritardata con residui autocorrelati, errori di misura).",
+            "Eteroschedasticità (heteroskedasticity): incondizionata (non legata ai regressori, innocua) o condizionata (la varianza dei residui cresce con i regressori): i coefficienti restano non distorti ma gli errori standard sono sbagliati, di solito troppo piccoli, e i test t risultano troppo spesso significativi (errori di tipo I). Test di Breusch-Pagan: regressione dei residui al quadrato sui regressori; BP = n × R²_residui con distribuzione χ²(k). Esempio: n = 60, R² = 0.08 → 4.8 < 7.81 (χ² con 3 gdl al 5%): nessuna eteroschedasticità condizionata significativa. Rimedio: errori standard robusti (White).",
+            "Autocorrelazione dei residui (serial correlation): frequente nelle serie storiche (time series). Con regressori esogeni i coefficienti restano consistenti ma gli errori standard sono sottostimati se la correlazione è positiva; se tra i regressori c'è la variabile dipendente ritardata i coefficienti diventano inconsistenti. Test: Durbin-Watson (DW ≈ 2(1 - r); valori molto sotto 2 indicano correlazione positiva) e Breusch-Godfrey (più generale, per più ritardi). Rimedio: errori standard di Newey-West o modificare il modello.",
+            "Multicollinearità (multicollinearity): regressori molto correlati tra loro. Sintomi classici: F significativo e R² alto ma t individuali non significativi; coefficienti instabili con segno inatteso. Fattore di inflazione della varianza (variance inflation factor) VIF_j = 1/(1 - R²_j), dove R²_j è quello della regressione di Xj sugli altri regressori: VIF > 5 è preoccupante, > 10 serio. Rimedi: eliminare variabili, usare una diversa proxy, aumentare il campione, metodi penalizzati.",
+            "Sintesi da memorizzare: eteroschedasticità condizionata e autocorrelazione → errori standard sbagliati (coefficienti ok salvo ritardi della dipendente); multicollinearità → errori standard gonfiati (t troppo bassi, errori di tipo II); variabile omessa → coefficienti distorti."
+          ]
+        },
+        {
+          "title": "Estensioni: osservazioni influenti, dummy, logistica",
+          "body": [
+            "Osservazioni influenti (influential observations): punti che cambiano molto i coefficienti. Leva (leverage) h_ii: valori estremi dei regressori; preoccupante se h_ii > 3(k + 1)/n. Outlier nella variabile dipendente: residuo studentizzato (studentized residual) oltre il valore critico t. Distanza di Cook (Cook's D): combina le due; preoccupante se D > √(k/n), molto influente se > 1. Un punto influente va indagato (errore nei dati? evento eccezionale?), non eliminato automaticamente.",
+            "Variabili dummy: valgono 0 o 1. Per n categorie si usano n - 1 dummy (altrimenti collinearità perfetta: trappola delle dummy). Dummy d'intercetta (intercept dummy): sposta la retta; dummy di pendenza (slope dummy, prodotto D × X): cambia la pendenza per il gruppo. Esempio: rendimento = 1.0% + 0.8 × mercato + 0.5% × D_gennaio: a gennaio il rendimento atteso è più alto di 0.5% a parità di mercato.",
+            "Regressione logistica (logistic regression): per variabili dipendenti binarie (default sì/no, acquisizione sì/no). Modella il logaritmo delle quote (log odds): ln[p/(1 - p)] = b0 + b1 X1 + ...; stimata per massima verosimiglianza (maximum likelihood). Un coefficiente b1 indica la variazione delle log odds per una variazione unitaria di X1; e^b1 è il moltiplicatore delle odds. Si valuta con il test del rapporto di verosimiglianza (likelihood ratio test) e lo pseudo-R².",
+            "Esempio: logit della probabilità di default (probability of default) = -3 + 0.8 × leva. Con leva 2 → logit = -1.4 → p = 1/(1 + e^1.4) = 19.8%. Con leva 3 → logit = -0.6 → p = 35.4%. Le odds aumentano di e^0.8 = 2.23 volte per ogni punto di leva.",
+            "Trappola: in un modello logistico i coefficienti non sono variazioni di probabilità; l'effetto sulla probabilità dipende dal livello di partenza."
+          ]
+        },
+        {
+          "title": "Serie storiche: trend, modelli AR e stazionarietà",
+          "body": [
+            "Trend lineare (yt = b0 + b1 t) adatto a crescita costante in valore; trend log-lineare (ln yt = b0 + b1 t) per crescita a tasso costante. Se i residui di un modello di trend sono autocorrelati (DW lontano da 2), il modello non è adeguato e serve un modello autoregressivo.",
+            "Modello autoregressivo AR(p): xt = b0 + b1 xt-1 + ... + bp xt-p + εt. Validità richiede stazionarietà in covarianza (covariance stationarity: media, varianza e autocovarianze costanti nel tempo). Verifica dei residui: le autocorrelazioni dei residui devono essere non significative; test t = autocorrelazione/(1/√T). Se ci sono autocorrelazioni significative si aggiungono ritardi.",
+            "Livello di ritorno alla media (mean-reverting level) di un AR(1) = b0/(1 - b1), valido se |b1| < 1. Esempio: b0 = 1.2, b1 = 0.6 → livello 3.0. Con xt = 4 la previsione a un passo è 1.2 + 0.6 × 4 = 3.6, a due passi 1.2 + 0.6 × 3.6 = 3.36: la serie si avvicina a 3. Le previsioni a più passi sono più incerte (errore della catena).",
+            "Radice unitaria (unit root): se b1 = 1 la serie è un random walk (con o senza deriva): varianza crescente nel tempo, nessun livello di ritorno alla media, non stazionaria; i test t standard non valgono. Test di Dickey-Fuller: si stima xt - xt-1 = b0 + g1 xt-1 + ε e si testa g1 = 0 con valori critici speciali. Rimedio: differenze prime (first differencing) Δxt = xt - xt-1, che rendono stazionario un random walk.",
+            "Stagionalità (seasonality): autocorrelazione significativa al ritardo stagionale (4 per dati trimestrali, 12 per mensili): si aggiunge quel ritardo al modello. Confronto tra modelli: errore quadratico medio fuori campione (root mean squared error, RMSE) più basso è migliore; l'accuratezza fuori campione conta più di quella in campione. Instabilità dei coefficienti: periodi campionari diversi possono dare modelli diversi (regimi), più dati non è sempre meglio."
+          ]
+        },
+        {
+          "title": "ARCH, regressioni tra serie e cointegrazione",
+          "body": [
+            "Eteroschedasticità condizionale autoregressiva (autoregressive conditional heteroskedasticity, ARCH): la varianza dei residui dipende dai residui passati (volatilità a grappoli). Test ARCH(1): si regredisce ε²t su ε²t-1; se il coefficiente è significativo c'è ARCH. Allora gli errori standard dei coefficienti del modello sono inaffidabili; si può usare il modello per prevedere la varianza: σ²t+1 = a0 + a1 ε²t. Modelli GARCH generalizzano.",
+            "Regressione tra due serie storiche: valida se entrambe sono stazionarie, oppure se entrambe hanno radice unitaria e sono cointegrate (cointegrated: legate da una relazione economica di lungo periodo, i residui della loro regressione sono stazionari). Se una sola ha radice unitaria, o entrambe senza cointegrazione, la regressione è spuria (spurious regression).",
+            "Test di cointegrazione di Engle-Granger: regressione di una serie sull'altra, poi test di Dickey-Fuller (con valori critici di Engle-Granger) sui residui. Esempio: tassi a breve e a lungo termine hanno entrambi radice unitaria ma sono cointegrati: si può stimare una relazione tra loro.",
+            "Procedura completa per una serie: 1) grafico, cercare trend e stagionalità; 2) se non c'è trend apparente, provare un AR(1) e testare le autocorrelazioni dei residui; 3) testare la radice unitaria, differenziare se necessario; 4) aggiungere ritardi stagionali; 5) testare ARCH; 6) confrontare i modelli con RMSE fuori campione.",
+            "Trappola: un R² elevato tra due serie che crescono nel tempo (es. PIL nominale e prezzo dell'oro) non indica una relazione: senza cointegrazione è spurio."
+          ]
+        },
+        {
+          "title": "Machine learning: algoritmi supervisionati e non",
+          "body": [
+            "Supervisionato: regressione penalizzata (penalized regression, es. LASSO che somma una penalità sul valore assoluto dei coefficienti e ne azzera alcuni: selezione delle variabili, riduce l'overfitting), macchine a vettori di supporto (support vector machine, SVM: classificatore lineare con margine massimo, anche con margine morbido), k vicini più prossimi (k-nearest neighbor, KNN: classifica in base ai k casi più simili; scelta di k e della distanza cruciali), alberi di classificazione e regressione (CART: divisioni binarie successive, interpretabili ma inclini all'overfitting, controllato con potatura (pruning)), metodi d'insieme (ensemble: bagging e foreste casuali (random forest) che mediano molti alberi su campioni bootstrap e sottoinsiemi di variabili; boosting che costruisce alberi in sequenza per correggere gli errori).",
+            "Non supervisionato: analisi delle componenti principali (principal components analysis, PCA: trasforma variabili correlate in componenti non correlate ordinate per varianza spiegata; riduce la dimensionalità ma le componenti sono difficili da interpretare); clustering k-means (k gruppi definiti in anticipo, assegnazione al centroide più vicino) e gerarchico (agglomerativo dal basso o divisivo dall'alto, rappresentato con un dendrogramma).",
+            "Reti neurali (neural networks): strati di nodi con funzioni di attivazione non lineari; reti profonde (deep learning) con molti strati nascosti per immagini, testo, voce. Apprendimento per rinforzo (reinforcement learning): un agente impara per tentativi e ricompense (es. esecuzione degli ordini).",
+            "Sovra-adattamento e compromesso distorsione-varianza (bias-variance trade-off): modelli complessi hanno bassa distorsione e alta varianza fuori campione. Errore totale = distorsione + varianza + errore di base. Strumenti: campioni di addestramento, validazione e test; validazione incrociata a k gruppi (k-fold cross-validation); regolarizzazione; iperparametri (hyperparameters) scelti con la validazione.",
+            "Scelta dell'algoritmo: dati etichettati? sì → supervisionato (target continuo: regressione penalizzata, CART, foreste; categorico: logistica, SVM, KNN, CART); no → non supervisionato (riduzione con PCA, raggruppamento con k-means o gerarchico); dati complessi e non lineari → reti neurali o deep learning."
+          ]
+        },
+        {
+          "title": "Progetti di big data: preparazione, testi, valutazione",
+          "body": [
+            "Fasi: concettualizzazione del problema, raccolta dati, preparazione e pulizia (data cleansing: dati incompleti, non validi, inesatti, incoerenti, non uniformi, duplicati), manipolazione (wrangling: estrazione, aggregazione, filtraggio, selezione, conversione), esplorazione (statistiche, visualizzazioni, selezione e costruzione delle variabili (feature engineering)), addestramento del modello, valutazione e messa a punto.",
+            "Outlier: troncamento (trimming: eliminare gli estremi) o winsorizzazione (winsorization: sostituirli con il valore del percentile limite). Scala: normalizzazione (min-max) Xi' = (Xi - min)/(max - min), sensibile agli outlier; standardizzazione Xi' = (Xi - media)/σ, presuppone distribuzione normale (normal distribution).",
+            "Testi: pulizia (rimuovere tag HTML, punteggiatura, numeri), tokenizzazione (tokenization), minuscole, rimozione delle parole vuote (stop words), stemming (radice grezza) e lemmatizzazione (forma base del dizionario), rappresentazione come sacco di parole (bag-of-words) o n-grammi, matrice documento-termine (document term matrix). Selezione delle caratteristiche: frequenza dei termini, frequenza nei documenti, test chi-quadro, informazione mutua (mutual information). Ponderazione TF-IDF = frequenza del termine nel documento × log(numero documenti/documenti che contengono il termine): premia i termini rari ma presenti.",
+            "Valutazione di un classificatore con la matrice di confusione (confusion matrix): precisione (precision) = TP/(TP + FP); richiamo (recall) = TP/(TP + FN); accuratezza (accuracy) = (TP + TN)/totale; F1 = 2 × P × R/(P + R). Esempio: TP 80, FP 20, FN 40, TN 160 → precisione 0.80, richiamo 0.667, accuratezza 0.80, F1 0.727. Curva ROC (tasso di veri positivi contro falsi positivi) e area sotto la curva (AUC: 0.5 casuale, 1 perfetto). Per modelli continui: RMSE.",
+            "Scelta della metrica: se i falsi positivi sono costosi (es. segnalare una frode inesistente blocca clienti buoni) si guarda la precisione; se lo sono i falsi negativi (non individuare un default) si guarda il richiamo. Messa a punto: se l'errore di addestramento è alto → modello troppo semplice (underfitting); se l'errore di validazione è molto più alto di quello di addestramento → overfitting."
+          ]
+        }
+      ],
+      "formulas": [
+        "R² corretto = 1 - [(n - 1)/(n - k - 1)](1 - R²)",
+        "F = (SSR/k)/(SSE/(n - k - 1))",
+        "F congiunto = [(SSE_R - SSE_U)/q]/[SSE_U/(n - k - 1)]",
+        "AIC = n ln(SSE/n) + 2(k + 1); BIC = n ln(SSE/n) + ln(n)(k + 1)",
+        "Breusch-Pagan = n × R²_residui ~ χ²(k)",
+        "DW ≈ 2(1 - r); VIF = 1/(1 - R²_j)",
+        "Leva critica: h_ii > 3(k + 1)/n; Cook's D > √(k/n)",
+        "Logit: ln[p/(1 - p)] = b0 + b1X; p = 1/(1 + e^-(b0 + b1X))",
+        "AR(1): livello di ritorno = b0/(1 - b1)",
+        "Autocorrelazione residui: t = ρk/(1/√T)",
+        "Precisione = TP/(TP + FP); richiamo = TP/(TP + FN); F1 = 2PR/(P + R)",
+        "TF-IDF = TF × log(N/DF)"
+      ],
+      "pitfalls": [
+        "Usare l'R² non corretto per confrontare modelli con numero diverso di regressori.",
+        "Dire che l'eteroschedasticità condizionata rende distorti i coefficienti: rende sbagliati gli errori standard.",
+        "Includere n dummy per n categorie insieme all'intercetta.",
+        "Regredire due serie con radice unitaria senza verificarne la cointegrazione.",
+        "Valutare un modello di ML solo sull'accuratezza in campione.",
+        "Interpretare un coefficiente logistico come variazione diretta della probabilità."
+      ]
+    }
+  ]
+}

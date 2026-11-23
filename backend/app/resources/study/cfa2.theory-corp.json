@@ -1,0 +1,78 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "corp",
+      "sections": [
+        {
+          "title": "Politica dei dividendi: teorie e scelte",
+          "body": [
+            "Teorie: irrilevanza di Miller-Modigliani (in mercati perfetti l'investitore può creare dividendi fatti in casa (homemade dividends) vendendo azioni, quindi la politica non conta); uccello in mano (bird in hand: i dividendi certi sono preferiti ai guadagni incerti, riducendo il costo del capitale (cost of capital)); preferenza fiscale (se i dividendi sono tassati più delle plusvalenze, meglio trattenere o riacquistare). Fattori reali: segnalazione (signaling: un aumento del dividendo segnala fiducia del management, un taglio è punito duramente), effetto clientela (clientele effect: investitori diversi preferiscono politiche diverse), costi d'agenzia (i dividendi riducono la cassa libera che il management potrebbe sprecare; ma possono trasferire valore dai creditori, da cui i covenant).",
+            "Fattori della politica: opportunità d'investimento, volatilità degli utili, flessibilità finanziaria, tassazione, costi di emissione di nuove azioni, vincoli contrattuali e legali (dividendi solo da riserve disponibili). Imposte: sistema a doppia imposizione (aliquota effettiva = t_societaria + (1 - t_societaria) × t_personale; esempio 30% e 20% → 44%), a imputazione (le imposte societarie sono un credito per l'azionista), ad aliquota separata (split-rate).",
+            "Politiche: dividendo stabile (stable: cresce gradualmente verso un payout obiettivo; modello di Lintner: ΔD = aggiustamento × (payout obiettivo × E - D precedente)), payout costante (dividendi volatili come gli utili), residuale (residual: si paga ciò che avanza dopo aver finanziato gli investimenti con la struttura obiettivo; minimizza le emissioni ma rende i dividendi instabili).",
+            "Esempio di Lintner: utile atteso 4, payout obiettivo 50%, dividendo precedente 1.6, velocità di aggiustamento 0.4 → ΔD = 0.4 × (2.0 - 1.6) = 0.16; nuovo dividendo 1.76.",
+            "Sostenibilità: copertura (hedging) dei dividendi con gli utili (utile/dividendi) e con il FCFE (FCFE/(dividendi + riacquisti (share repurchase))): valori stabilmente sotto 1 segnalano un payout non sostenibile. In crisi i tagli ai dividendi sono annunciati spesso tardi."
+          ]
+        },
+        {
+          "title": "Riacquisti di azioni: metodi ed effetti",
+          "body": [
+            "Metodi: sul mercato aperto (open market: flessibile, costi bassi), offerta pubblica a prezzo fisso (fixed price tender offer: rapida, di solito con premio), asta olandese (Dutch auction: gli azionisti indicano quantità e prezzo minimo in un intervallo; si fissa il prezzo più basso che permette di comprare la quantità voluta), negoziazione diretta (direct negotiation: con un grande azionista, a volte per eliminare una minaccia di scalata (greenmail)).",
+            "Effetto sull'EPS: un riacquisto finanziato con debito aumenta l'EPS se il rendimento degli utili (E/P) supera il costo del debito (cost of debt) al netto delle imposte. Esempio: utile 10 milioni, 5 milioni di azioni, prezzo 40 (EPS 2, E/P 5%); debito di 20 milioni al 6% (4.5% netto) per riacquistare 500,000 azioni → interessi netti 0.9 milioni, utile 9.1 milioni su 4.5 milioni di azioni → EPS 2.02 (aumenta perché 5% > 4.5%). Con cassa propria il confronto è con il rendimento netto della cassa rinunciato.",
+            "Effetto sul valore contabile per azione: se il prezzo di riacquisto supera il valore contabile per azione, il BVPS scende; se è inferiore, sale. Un aumento dell'EPS non implica creazione di valore: conta se le azioni sono comprate sotto il valore intrinseco (intrinsic value).",
+            "Dividendi e riacquisti sono equivalenti per l'azionista in assenza di tasse e costi: un dividendo riduce il prezzo per azione, un riacquisto riduce il numero di azioni, il valore totale per azionista è lo stesso. Differenze reali: tassazione, flessibilità (i riacquisti non creano aspettative di continuità), segnalazione (riacquisti come segnale di sottovalutazione), compensazione della diluizione da stock option.",
+            "Motivi del riacquisto: segnalare sottovalutazione, distribuire cassa in eccesso in modo flessibile, aumentare la leva verso l'obiettivo, compensare la diluizione dei piani azionari, vantaggio fiscale. Critiche: possono servire a gonfiare l'EPS legato ai bonus o essere fatti a prezzi alti nei mercati rialzisti."
+          ]
+        },
+        {
+          "title": "ESG nell'analisi degli investimenti",
+          "body": [
+            "Materialità (materiality): un fattore ESG è rilevante se può influenzare in modo significativo flussi, rischio o valore. Dipende dal settore: emissioni per utility e energia, sicurezza dei dati per tecnologia e banche, condizioni di lavoro nella catena di fornitura per abbigliamento. Doppia materialità (double materiality, approccio europeo): impatto dell'ambiente sull'impresa e dell'impresa sull'ambiente e sulla società.",
+            "Standard e quadri: ISSB (IFRS S1 informazioni di sostenibilità, IFRS S2 clima, che integrano la raccomandazione TCFD su governance, strategia, gestione del rischio, metriche e obiettivi), SASB (indicatori settoriali), GRI (impatti su più stakeholder), norme europee (CSRD/ESRS, tassonomia, SFDR per i prodotti finanziari). Emissioni: Scope 1 (dirette), Scope 2 (energia acquistata), Scope 3 (catena del valore, spesso le più grandi).",
+            "Integrazione nella valutazione: correggere i flussi previsti (costi del carbonio, investimenti di adattamento, ricavi di nuovi prodotti), il tasso di sconto (premio per rischio ESG), il valore terminale (attività che diventano inutilizzabili (stranded assets)), i multipli (multiples) rispetto ai pari. Esempio: un produttore di cemento con 1 milione di tonnellate di CO2 e un prezzo del carbonio atteso in aumento da 80 a 130 euro dovrà sostenere costi aggiuntivi di 50 milioni l'anno se non riduce le emissioni.",
+            "Governance e azionariato attivo: voto alle assemblee, dialogo con il management (engagement), dichiarazioni di stewardship. Rischi dell'analisi ESG: dati non uniformi, rating ESG molto divergenti tra fornitori, greenwashing.",
+            "Trappola: un rating ESG alto non implica rendimenti migliori; l'analista deve tradurre i fattori in effetti su flussi e rischio."
+          ]
+        },
+        {
+          "title": "Costo del capitale: temi avanzati",
+          "body": [
+            "Fattori dall'alto (top-down): disponibilità di capitale nel paese, condizioni di mercato (tassi, spread, premi), contesto legale e regolatorio, rischio paese, inflazione (inflation). Fattori dal basso (bottom-up): dimensione e diversificazione (diversification), leva, stabilità dei flussi, liquidità e natura delle attività (tangibili e utilizzabili come garanzia), rischio settoriale.",
+            "Costo del debito: rendimento a scadenza (yield to maturity) delle obbligazioni (bonds) dell'emittente; se non quotate, rendimento di emittenti con lo stesso rating o rating stimato dai ratio; debito bancario a tasso variabile: tasso di riferimento + spread; leasing come debito al tasso implicito. Si usa il costo al netto delle imposte.",
+            "Premio per il rischio paese (country risk premium): metodo dello spread sovrano corretto per la volatilità relativa: CRP = spread sovrano × σ_azionario/σ_obbligazioni sovrane. Esempio: spread sovrano 3%, volatilità azionaria 30%, volatilità dei titoli di Stato (government bond) 20% → CRP = 4.5%. Si aggiunge al premio del mercato sviluppato (eventualmente con un lambda di esposizione dell'impresa).",
+            "Costo del capitale proprio: CAPM (beta da comparabili, corretto per la leva), modelli multifattoriali, metodo per somma per società non quotate (rf + ERP + premio dimensionale + premio specifico + premio settoriale), rendimento obbligazionario più premio. ERP: storico (scegliere periodo, media aritmetica (arithmetic mean) o geometrica, titolo di riferimento), prospettico (Gordon, modelli macro), sondaggi.",
+            "Costi di collocamento (flotation costs): trattarli come costo iniziale del progetto (riduce l'NPV) è più corretto che aumentare il costo del capitale per sempre.",
+            "Coerenza: valuta e inflazione del tasso di sconto devono essere quelle dei flussi; i pesi del WACC devono riflettere la struttura obiettivo a valori di mercato; per un progetto con rischio diverso si usa il beta del settore del progetto."
+          ]
+        },
+        {
+          "title": "Ristrutturazioni societarie e fusioni",
+          "body": [
+            "Azioni d'investimento: partecipazioni di minoranza, joint venture, acquisizioni (di solito per crescita, sinergie, capacità, diversificazione). Disinvestimenti: vendita di una divisione, scissione proporzionale (spin-off: azioni della nuova società distribuite agli azionisti), scissione con scambio (split-off: gli azionisti scelgono se scambiare le azioni della capogruppo con quelle della società separata), quotazione parziale (equity carve-out: IPO di una quota della controllata). Ristrutturazioni: riduzione dei costi, ristrutturazione dello stato patrimoniale (cessione e riaffitto (sale-leaseback), ricapitalizzazioni), riorganizzazione in procedura concorsuale o liquidazione.",
+            "Valutazione: società comparabili (multipli più un premio di controllo (control premium)), transazioni comparabili (già includono il premio), analisi dei premi pagati, DCF del target con sinergie. Le sinergie di costo sono più affidabili di quelle di ricavo; spesso si sopravvalutano.",
+            "Guadagni: premio al target = prezzo pagato - valore del target pre-annuncio; guadagno dell'acquirente = sinergie - premio; valore post-fusione = V_A + V_T + sinergie - corrispettivo in contanti. Esempio: V_A = 500, V_T = 100, sinergie 30, pagamento in contanti 120 → premio 20, guadagno dell'acquirente 10, valore combinato per gli azionisti dell'acquirente 510. Con pagamento in azioni il target condivide rischi e sinergie.",
+            "Effetti pro forma: acquisizione con azioni di un target con P/E più basso dell'acquirente è accrescitiva dell'EPS (accretive) nel primo anno; con P/E più alto è diluitiva; l'effetto sull'EPS non dice nulla sulla creazione di valore. Con debito, accrescitiva se il rendimento degli utili del target supera il costo netto del debito.",
+            "Motivazioni discutibili: diversificazione (gli azionisti possono diversificare da soli), aumento dell'EPS da bootstrapping, crescita per la crescita, interessi personali del management. Difese e regole: offerte ostili, pillole avvelenate, regole sulle offerte obbligatorie.",
+            "Esempio di spin-off: un conglomerato con due divisioni scambiato a sconto della somma delle parti separa la divisione in crescita; il valore totale aumenta se scompare lo sconto e se il management delle due società diventa più focalizzato."
+          ]
+        }
+      ],
+      "formulas": [
+        "Aliquota effettiva doppia imposizione = tc + (1 - tc) × tp",
+        "Lintner: ΔD = velocità × (payout obiettivo × E - D precedente)",
+        "Riacquisto con debito accresce EPS se E/P > rd(1 - t)",
+        "Copertura FCFE = FCFE/(dividendi + riacquisti)",
+        "CRP = spread sovrano × σ_azioni/σ_titoli sovrani",
+        "Valore post-fusione = V_A + V_T + S - contanti pagati",
+        "Guadagno acquirente = S - premio; premio = prezzo - V_T"
+      ],
+      "pitfalls": [
+        "Credere che un riacquisto che aumenta l'EPS crei necessariamente valore.",
+        "Confondere spin-off (distribuzione proporzionale) con split-off (scambio volontario).",
+        "Pensare che la politica residuale dia dividendi stabili.",
+        "Ignorare che i costi di collocamento vanno trattati come esborso iniziale del progetto.",
+        "Valutare un'acquisizione solo dall'effetto accrescitivo sull'EPS."
+      ]
+    }
+  ]
+}

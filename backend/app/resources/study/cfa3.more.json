@@ -1,0 +1,431 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "alloc",
+      "sections": [
+        {
+          "title": "Rendimento del surplus e rendimento atteso delle obbligazioni",
+          "body": [
+            "Rendimento del surplus = (variazione degli asset - variazione delle passività (liabilities))/surplus iniziale. Anche con asset in crescita il surplus può scendere se le passività crescono di più, per esempio quando i tassi di sconto (discount rate) calano.",
+            "Rendimento atteso di un'obbligazione (bonds) su un orizzonte breve ≈ rendimento corrente + effetto roll-down - duration × variazione attesa dei rendimenti - perdite attese su crediti ± effetto cambi. Il modello di Black-Litterman parte dai rendimenti impliciti nel mercato e li corregge con le opinioni dell'investitore, ottenendo allocazioni più stabili e diversificate."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Valutare un piano pensionistico solo sul rendimento degli asset ignorando le passività."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-al-set2",
+          "vignette": "Riccardo Fontana advises a corporate pension plan with assets of $1,000 million and liabilities of $900 million. Over the past year plan assets returned 6% while the present value of liabilities rose 8% because discount rates fell. Fontana's colleague forecasts the one-year return on a bond portfolio: current yield 4.0%, expected roll-down return 0.3%, modified duration 5, and an expected rise in yields of 0.5%. No credit losses or currency effects are expected. For another client, Fontana uses market-capitalization weights to derive implied returns and then adjusts them for his own views.",
+          "questions": [
+            {
+              "id": "l3-al-5",
+              "difficulty": 3,
+              "stem": "The pension plan's surplus return for the year is closest to:",
+              "choices": [
+                "-12%",
+                "-2%",
+                "+6%"
+              ],
+              "answer": 0,
+              "explanation": "Asset 1,060, passività (liabilities) 972: surplus da 100 a 88, cioè -12%. Pur con asset in crescita, le passività sono cresciute di più in valore assoluto."
+            },
+            {
+              "id": "l3-al-6",
+              "difficulty": 3,
+              "stem": "The expected one-year return on the bond portfolio is closest to:",
+              "choices": [
+                "1.8%",
+                "4.3%",
+                "6.8%"
+              ],
+              "answer": 0,
+              "explanation": "4.0% + 0.3% - 5 × 0.5% = 1.8%. L'aumento atteso dei rendimenti fa perdere 2.5% di prezzo."
+            },
+            {
+              "id": "l3-al-7",
+              "difficulty": 2,
+              "stem": "Fontana's approach for the other client is best described as:",
+              "choices": [
+                "the Black-Litterman model",
+                "resampled mean-variance optimization",
+                "risk parity"
+              ],
+              "answer": 0,
+              "explanation": "Partire dai rendimenti impliciti nei pesi di mercato (reverse optimization) e correggerli con le proprie opinioni è il modello di Black-Litterman."
+            },
+            {
+              "id": "l3-al-8",
+              "difficulty": 2,
+              "stem": "To protect the pension plan's surplus against further declines in discount rates, Fontana should most likely:",
+              "choices": [
+                "increase the duration of plan assets toward that of the liabilities",
+                "shorten the duration of plan assets",
+                "increase the allocation to cash"
+              ],
+              "answer": 0,
+              "explanation": "Le passività (liabilities) hanno duration lunga: quando i tassi scendono crescono più degli asset. Allungare la duration degli asset (o usare swap riceventi fisso) riduce questo divario."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "constr",
+      "sections": [
+        {
+          "title": "Contributo al rendimento attivo e rendimento in eccesso del credito",
+          "body": [
+            "Contributo di un titolo al rendimento attivo (active return) = peso attivo × (rendimento del titolo - rendimento del benchmark). Un sovrappeso aggiunge valore solo se il titolo batte il benchmark complessivo.",
+            "Rendimento in eccesso atteso di un'obbligazione (bonds) societaria ≈ spread - spread duration × variazione dello spread - perdita attesa (expected loss) su crediti. Gli spread tendono ad allargarsi nelle recessioni: la qualità del credito conta più vicino a una fase di contrazione."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Calcolare il contributo attivo con il rendimento assoluto del titolo invece che con la differenza dal benchmark."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-co-set2",
+          "vignette": "Valentina Serra manages an active equity portfolio. Stock Q has a 5% weight in her portfolio and a 2% weight in the benchmark; over the year Stock Q returned 10% while the benchmark returned 6%. Serra also holds a corporate bond with a credit spread of 2.0%, a spread duration of 5 and an expected annual credit loss of 0.4%; she expects the spread to widen by 0.3% over the next year. Her portfolio has an active share of 85% and a tracking error of 2%.",
+          "questions": [
+            {
+              "id": "l3-co-5",
+              "difficulty": 2,
+              "stem": "Stock Q's contribution to the portfolio's active return is closest to:",
+              "choices": [
+                "0.12%",
+                "0.30%",
+                "0.50%"
+              ],
+              "answer": 0,
+              "explanation": "Peso attivo 3% × (10% - 6%) = 0.12%. 0.30% usa il rendimento assoluto del titolo (3% × 10%)."
+            },
+            {
+              "id": "l3-co-6",
+              "difficulty": 3,
+              "stem": "The bond's expected excess return over the next year is closest to:",
+              "choices": [
+                "0.1%",
+                "1.6%",
+                "2.0%"
+              ],
+              "answer": 0,
+              "explanation": "2.0% - 5 × 0.3% - 0.4% = 0.1%: l'allargamento atteso dello spread e le perdite attese assorbono quasi tutto lo spread."
+            },
+            {
+              "id": "l3-co-7",
+              "difficulty": 3,
+              "stem": "A high active share combined with a low tracking error, as in Serra's portfolio, is most consistent with:",
+              "choices": [
+                "diversified stock picking",
+                "concentrated sector bets",
+                "closet indexing"
+              ],
+              "answer": 0,
+              "explanation": "Pesi molto diversi dal benchmark (active share alta) ma rischio attivo (active risk) contenuto: molte scommesse sui singoli titoli che si compensano, tipico dello stock picking diversificato. Il closet indexing ha active share bassa."
+            },
+            {
+              "id": "l3-co-8",
+              "difficulty": 2,
+              "stem": "Compared with immunization through duration matching, cash flow matching most likely:",
+              "choices": [
+                "has lower risk of not meeting liabilities but higher cost",
+                "requires frequent rebalancing for yield curve shifts",
+                "allows for any shape of yield curve change to cause shortfalls"
+              ],
+              "answer": 0,
+              "explanation": "Il cash flow matching fa coincidere flussi degli asset e passività (liabilities): elimina quasi del tutto il rischio di tasso e di reinvestimento, ma è più costoso e rigido."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "perf",
+      "sections": [
+        {
+          "title": "Misure di rischio al ribasso e capacità dei gestori",
+          "body": [
+            "Sortino = (Rp - rendimento minimo accettabile)/deviazione al ribasso. Capture ratio = up-capture/down-capture: un valore sopra 1 indica che il gestore cattura più rialzi che ribassi del benchmark, con un profilo convesso.",
+            "Appraisal ratio = alfa/rischio non sistematico (deviazione standard (standard deviation) dei residui (residuals)): misura l'alfa per unità di rischio specifico (idiosyncratic risk) assunto. Il drawdown massimo misura la peggior perdita da un massimo e il tempo di recupero."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Confondere information ratio (alfa su tracking error) e appraisal ratio (alfa su rischio residuo)."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-pf-set2",
+          "vignette": "Lorenzo Gatti compares hedge fund managers. Manager X returned 8% with a downside deviation of 10%; the client's minimum acceptable return is 3%. Manager Y has an up-capture ratio of 110% and a down-capture ratio of 90%. Manager Z generated an alpha of 2% with a residual (non-systematic) standard deviation of 8%. Gatti also discovers that one manager changed its benchmark at the end of the year to one it had outperformed.",
+          "questions": [
+            {
+              "id": "l3-pf-5",
+              "difficulty": 2,
+              "stem": "Manager X's Sortino ratio is closest to:",
+              "choices": [
+                "0.30",
+                "0.50",
+                "0.80"
+              ],
+              "answer": 1,
+              "explanation": "Sortino = (8% - 3%)/10% = 0.50."
+            },
+            {
+              "id": "l3-pf-6",
+              "difficulty": 2,
+              "stem": "Manager Y's capture ratio is closest to, and indicates:",
+              "choices": [
+                "1.22, a positively asymmetric (convex) return profile",
+                "0.82, a concave return profile",
+                "1.00, a symmetric return profile"
+              ],
+              "answer": 0,
+              "explanation": "110/90 = 1.22 > 1: il gestore partecipa più ai rialzi che ai ribassi del benchmark."
+            },
+            {
+              "id": "l3-pf-7",
+              "difficulty": 2,
+              "stem": "Manager Z's appraisal ratio is closest to:",
+              "choices": [
+                "0.16",
+                "0.25",
+                "4.00"
+              ],
+              "answer": 1,
+              "explanation": "Appraisal ratio = alfa/rischio residuo = 2%/8% = 0.25."
+            },
+            {
+              "id": "l3-pf-8",
+              "difficulty": 2,
+              "stem": "Changing the benchmark at year-end to one the manager outperformed most clearly violates which property of a valid benchmark?",
+              "choices": [
+                "Specified in advance",
+                "Investable",
+                "Measurable"
+              ],
+              "answer": 0,
+              "explanation": "Un benchmark valido deve essere stabilito prima del periodo di valutazione (SAMURAI): sceglierlo a posteriori rende la valutazione inutile e fuorviante."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "risk",
+      "sections": [
+        {
+          "title": "Collar, risk reversal e futures obbligazionari",
+          "body": [
+            "Un collar a costo zero limita la perdita sotto lo strike della put e il guadagno sopra lo strike della call. Risk reversal: comprare una call e vendere una put (o viceversa) per esprimere un'opinione sulla direzione o sull'asimmetria (skewness) della volatilità.",
+            "Per modificare la duration con futures obbligazionari: numero di contratti = (BPV target - BPV portafoglio)/BPV del futures, dove il BPV del futures si ricava da quello del cheapest-to-deliver diviso per il fattore di conversione."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Dimenticare che il collar limita anche il rialzo."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-rk-set2",
+          "vignette": "Beatrice Longo holds a stock currently priced at $100. She buys a 95-strike put for $3 and sells a 110-strike call for $3, both expiring in six months. Separately, she manages a bond portfolio with a basis point value (BPV) of $50,000 and wants to raise it to $70,000 using Treasury futures whose BPV is $100 per contract. A colleague who expects a large rally in an equity index but wants to limit upfront cost buys calls and sells puts on the index.",
+          "questions": [
+            {
+              "id": "l3-rk-5",
+              "difficulty": 2,
+              "stem": "If the stock price at expiration is $120, Longo's position (stock plus options) is worth:",
+              "choices": [
+                "$110",
+                "$117",
+                "$120"
+              ],
+              "answer": 0,
+              "explanation": "La call venduta a 110 viene esercitata: la posizione vale 110. Il collar rinuncia al rialzo oltre lo strike della call; i premi si compensano."
+            },
+            {
+              "id": "l3-rk-6",
+              "difficulty": 2,
+              "stem": "If the stock price at expiration is $80, Longo's loss relative to today's price is closest to:",
+              "choices": [
+                "$5",
+                "$17",
+                "$20"
+              ],
+              "answer": 0,
+              "explanation": "La put a 95 protegge: la posizione vale 95, perdita 100 - 95 = 5 (i premi si annullano)."
+            },
+            {
+              "id": "l3-rk-7",
+              "difficulty": 3,
+              "stem": "To raise the bond portfolio's BPV to the target, Longo should:",
+              "choices": [
+                "buy 200 futures contracts",
+                "sell 200 futures contracts",
+                "buy 700 futures contracts"
+              ],
+              "answer": 0,
+              "explanation": "N = (70,000 - 50,000)/100 = +200: si comprano futures per aumentare la duration."
+            },
+            {
+              "id": "l3-rk-8",
+              "difficulty": 2,
+              "stem": "The colleague's strategy is best described as a:",
+              "choices": [
+                "long risk reversal",
+                "protective put",
+                "short straddle"
+              ],
+              "answer": 0,
+              "explanation": "Comprare call e vendere put, con i premi che si compensano in parte, è un risk reversal lungo: esprime una visione rialzista a basso costo, ma espone alle perdite in caso di ribasso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Allocazione delle operazioni e operazioni personali",
+          "body": [
+            "Quando un ordine in blocco viene eseguito solo in parte, va allocato tra i conti partecipanti in proporzione all'ordine originario (pro-rata), allo stesso prezzo medio. Le procedure vanno scritte prima e applicate in modo uniforme.",
+            "Il gestore non può investire per sé in collocamenti (IPO) che potrebbero interessare i clienti senza pre-autorizzazione; se i clienti non ricevono tutte le azioni desiderate, l'investimento personale crea un conflitto."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Allocare le esecuzioni parziali privilegiando i conti con commissioni di performance."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-et-set2",
+          "vignette": "Daniele Riva, CFA, manages several accounts at Coastline Advisors: three fee-only accounts and two accounts that pay performance fees. He places a block order to buy 10,000 shares of a small-cap stock, with each of the five accounts requesting 2,000 shares. Only 6,000 shares are filled. Riva allocates 3,000 shares to each of the two performance-fee accounts and none to the others. The next month, Riva buys shares in an oversubscribed IPO for his personal account; several clients had also requested shares but received partial allocations. Riva did not seek pre-clearance.",
+          "questions": [
+            {
+              "id": "l3-et-5",
+              "difficulty": 2,
+              "stem": "Riva's allocation of the partially filled block order most likely violated the Standard on:",
+              "choices": [
+                "Fair Dealing",
+                "Record Retention",
+                "Misconduct"
+              ],
+              "answer": 0,
+              "explanation": "Favorire i conti che pagano commissioni di performance viola il trattamento equo (fair dealing) dei clienti (Standard III(B)). L'esecuzione parziale va allocata pro-rata."
+            },
+            {
+              "id": "l3-et-6",
+              "difficulty": 2,
+              "stem": "Under a pro-rata allocation, each of the five accounts should have received:",
+              "choices": [
+                "1,200 shares",
+                "2,000 shares",
+                "3,000 shares"
+              ],
+              "answer": 0,
+              "explanation": "È stato eseguito il 60% dell'ordine (6,000/10,000): ogni conto riceve il 60% delle 2,000 azioni richieste, cioè 1,200."
+            },
+            {
+              "id": "l3-et-7",
+              "difficulty": 2,
+              "stem": "Riva's personal IPO purchase most likely violated the Standard on:",
+              "choices": [
+                "Priority of Transactions",
+                "Suitability",
+                "Communication with Clients"
+              ],
+              "answer": 0,
+              "explanation": "Comprare per sé in un'IPO sovrascritta mentre i clienti ricevono allocazioni parziali antepone l'interesse personale a quello dei clienti (Standard VI(B)); serviva la pre-autorizzazione."
+            },
+            {
+              "id": "l3-et-8",
+              "difficulty": 2,
+              "stem": "To prevent similar problems, Coastline should most appropriately:",
+              "choices": [
+                "adopt written allocation procedures applied consistently before trades are executed",
+                "allow managers to allocate based on account size",
+                "stop using block orders entirely"
+              ],
+              "answer": 0,
+              "explanation": "Procedure di allocazione scritte, definite prima dell'esecuzione e applicate in modo uniforme, sono la raccomandazione degli Standards per garantire un trattamento equo (fair dealing)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "pathway",
+      "sections": [
+        {
+          "title": "Costi impliciti di negoziazione e scelta degli algoritmi",
+          "body": [
+            "Spread effettivo (effective spread) = 2 × |prezzo di esecuzione - punto medio al momento dell'ordine|: misura il costo implicito di un'operazione, e può essere inferiore allo spread quotato se si ottiene un miglioramento di prezzo.",
+            "Scelta dell'algoritmo: arrival price o implementation shortfall per ordini urgenti dove il rischio di prezzo pesa più dell'impatto; VWAP o TWAP per ordini grandi e poco urgenti su titoli liquidi; liquidity-seeking per titoli poco liquidi, anche in dark pool."
+          ]
+        }
+      ],
+      "pitfalls": [
+        "Usare un algoritmo VWAP per un ordine urgente basato su informazioni che decadono rapidamente."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-pw-set2",
+          "vignette": "Simone Leone, head trader at Harbor Asset Management, reviews recent trades. A buy order for a liquid stock was executed at $50.06 when the bid-ask midpoint at order entry was $50.00; the quoted spread was $0.10. A portfolio manager has a time-sensitive buy order based on information he expects to be reflected in prices within hours. Another manager wants to rebalance a large position in a liquid large-cap stock over the full trading day with minimal market impact. A third order involves an illiquid small-cap stock.",
+          "questions": [
+            {
+              "id": "l3-pw-5",
+              "difficulty": 2,
+              "stem": "The effective spread on the liquid stock trade is closest to:",
+              "choices": [
+                "$0.06",
+                "$0.10",
+                "$0.12"
+              ],
+              "answer": 2,
+              "explanation": "Spread effettivo = 2 × (50.06 - 50.00) = 0.12: più alto dello spread quotato (0.10), quindi l'esecuzione è stata peggiore del lato ask quotato."
+            },
+            {
+              "id": "l3-pw-6",
+              "difficulty": 2,
+              "stem": "The most appropriate algorithm for the time-sensitive order is:",
+              "choices": [
+                "an arrival price (implementation shortfall) algorithm",
+                "a VWAP algorithm over the full day",
+                "a liquidity-seeking algorithm in dark pools only"
+              ],
+              "answer": 0,
+              "explanation": "Quando l'informazione decade rapidamente conta eseguire presto vicino al prezzo di arrivo: l'algoritmo arrival price bilancia urgenza e impatto meglio di un VWAP su tutta la giornata."
+            },
+            {
+              "id": "l3-pw-7",
+              "difficulty": 2,
+              "stem": "For the large, non-urgent rebalancing trade in the liquid large-cap stock, the most appropriate algorithm is:",
+              "choices": [
+                "VWAP",
+                "a single market order at the open",
+                "arrival price with high urgency"
+              ],
+              "answer": 0,
+              "explanation": "Un ordine grande e senza urgenza su un titolo liquido si distribuisce nella giornata seguendo i volumi (VWAP) per ridurre l'impatto di mercato."
+            },
+            {
+              "id": "l3-pw-8",
+              "difficulty": 2,
+              "stem": "For the illiquid small-cap stock, the trader should most likely use:",
+              "choices": [
+                "a liquidity-seeking algorithm that accesses multiple venues, including dark pools",
+                "a market order for the full size",
+                "a TWAP algorithm over five minutes"
+              ],
+              "answer": 0,
+              "explanation": "Sui titoli poco liquidi serve cercare la liquidità opportunisticamente su più sedi, anche non visibili, senza rivelare la dimensione dell'ordine."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

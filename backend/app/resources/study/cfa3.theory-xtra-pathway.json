@@ -1,0 +1,109 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "pathway",
+      "sections": [
+        {
+          "title": "Strategie azionarie indicizzate e fattoriali",
+          "body": [
+            "Indicizzazione per capitalizzazione: rappresenta il mercato investibile, ha rotazione bassa e capacità quasi illimitata. Strategie fattoriali (factor-based, smart beta): ponderano o selezionano i titoli in base a caratteristiche come valore, dimensione, momentum, qualità, bassa volatilità, dividendi (dividends). Si distinguono strategie orientate al rendimento (value, momentum, qualità), al rischio (minima varianza (variance), bassa volatilità, parità di rischio) e alla diversificazione (equiponderazione, massima diversificazione).",
+            "Confronto: le strategie fattoriali offrono premi di lungo periodo documentati ma hanno rotazione e costi più alti, possono sottoperformare per molti anni (rischio di tracking rispetto all'indice di mercato), soffrono di affollamento (crowding) e di esposizioni involontarie (un indice a bassa volatilità è spesso sovrappesato in utility e beni di consumo, quindi sensibile ai tassi). Multi-fattore: combinare fattori poco correlati riduce la ciclicità, ma la scelta tra combinare portafogli monofattoriali o selezionare titoli con punteggi combinati cambia esposizioni e costi.",
+            "Modalità d'accesso: fondi comuni indicizzati, ETF, conti separati o fondi istituzionali dedicati (più personalizzabili), esposizioni sintetiche con futures e swap. Criteri: costi, tracking error tollerato, gestione fiscale, prestito titoli, voto e engagement.",
+            "Fonti di rendimento e rischio di un portafoglio indicizzato: rendimento dell'indice, più proventi del prestito titoli, meno costi e tracking error; rischi: costi di ribilanciamento (rebalancing) dell'indice, liquidità non investita, errori di replica, rischio di controparte (counterparty risk) con i derivati (derivatives). Controllo del tracking error: replicare meglio le posizioni più grandi, usare futures per la liquidità, negoziare in anticipo i cambi di composizione noti dell'indice, ottimizzazione con vincoli settoriali.",
+            "Esempio: un fondo pensione (defined benefit pension plan) vuole un'esposizione al valore senza deviare troppo dall'indice globale. Sceglie un indice value con vincolo di tracking error del 2% rispetto all'indice di mercato invece di un indice value puro (tracking error 6%): rinuncia a parte del premio atteso ma riduce il rischio di dover abbandonare la strategia dopo anni negativi.",
+            "Trappola: una strategia «a bassa volatilità» non è priva di rischio di mercato; ha beta sotto 1 e un rischio di tasso implicito elevato."
+          ]
+        },
+        {
+          "title": "Strategie azionarie attive: dal basso, dall'alto, fattoriali, attiviste",
+          "body": [
+            "Approccio fondamentale (fundamental): giudizio dell'analista, pochi titoli, ricerca approfondita, orizzonte medio-lungo, rischio di pregiudizi comportamentali e capacità limitata. Approccio quantitativo (quantitative): modelli su molti titoli, segnali sistematici, diversificazione elevata, rischio di modello e di overfitting, dipendenza dalla qualità dei dati.",
+            "Strategie dal basso (bottom-up): orientate al valore (titoli a sconto rispetto al valore intrinseco (intrinsic value); versioni: valore relativo, contrarian, valore profondo, ricerca di aziende di alta qualità a prezzi ragionevoli; rischio di trappola del valore) e alla crescita (aziende con crescita superiore e sostenibile, vantaggi competitivi; rischio di pagare troppo e di delusioni sugli utili). Strategie dall'alto (top-down): partono dalla macroeconomia per scegliere paesi, settori, stili o temi (rotazione settoriale nel ciclo, temi strutturali come invecchiamento o digitalizzazione); il rischio è sbagliare la previsione macro.",
+            "Strategie fattoriali attive: sovrappesare dinamicamente i fattori in base a valutazioni o regimi (factor timing), fattori proprietari. Costruzione dei fattori: portafogli lungo-corti (titoli migliori meno peggiori per il fattore) o regressioni trasversali. Attenzione alla correlazione (correlation) tra fattori e alla deriva delle esposizioni.",
+            "Attivismo (activist investing): acquisire quote significative per spingere cambiamenti (strategia, struttura del capitale (capital structure), cessioni, governance, remunerazioni) con lettere al consiglio, campagne pubbliche, battaglie per le deleghe (proxy fights). Rendimenti legati al successo della campagna; rischi: concentrazione, costi legali, tempi lunghi.",
+            "Altre strategie: arbitraggio statistico (statistical arbitrage: coppie di titoli correlati e ritorno alla media (mean reversion) dei loro spread, modelli a breve termine), market microstructure (fornire liquidità e sfruttare inefficienze di brevissimo periodo), strategie basate su eventi (fusioni, scissioni, inclusioni negli indici).",
+            "Creazione di una strategia fondamentale: definire universo e filosofia, prefiltrare (screening), analizzare settore e azienda, prevedere, valutare, costruire il portafoglio, monitorare. Quantitativa: definire l'ipotesi, raccogliere e pulire i dati, costruire i segnali (information coefficient), testarli fuori campione, combinarli, ottimizzare il portafoglio con costi e vincoli. Classificazione degli stili: per caratteristiche delle posizioni (holdings-based, matrici valore-crescita e dimensione) o per regressione dei rendimenti su indici di stile (returns-based)."
+          ]
+        },
+        {
+          "title": "Costruzione del portafoglio azionario attivo in profondità",
+          "body": [
+            "Pilastri: esposizioni ai fattori sistematici (rewarded factors), alfa specifico dei titoli, dimensionamento delle posizioni (position sizing), ampiezza delle scommesse. La filosofia del gestore (concentrato o diversificato, stile, orizzonte) determina come si combinano.",
+            "Approcci: sistematici o discrezionali; dal basso o dall'alto; concentrati o diversificati. Benchmark-aware (pesi costruiti come scostamenti dall'indice) o benchmark-agnostic (portafoglio costruito senza riferimento ai pesi dell'indice, tipico dei gestori concentrati).",
+            "Quota attiva e rischio attivo (active risk): la quota attiva misura la differenza dei pesi, il rischio attivo la volatilità del rendimento attivo (active return). Il rischio attivo aumenta con la quota attiva, con la concentrazione settoriale e fattoriale e con la volatilità dei titoli scelti. Quattro tipi: diversificato su più titoli (quota attiva alta, rischio moderato), scommesse fattoriali (quota attiva moderata, rischio alto), concentrato (entrambi alti), indicizzatore nascosto (entrambi bassi).",
+            "Budget di rischio: il rischio attivo totale si alloca tra fattori, settori e titoli; il contributo di ogni posizione al rischio dipende dal peso attivo e dalla covarianza (covariance) con le altre posizioni. Misure di rischio: tracking error, volatilità assoluta, beta, VaR e CVaR, esposizioni fattoriali, drawdown. Limiti formali (peso massimo per titolo, settore, paese, liquidità) e informali.",
+            "Patrimonio gestito e liquidità: all'aumentare degli attivi crescono i costi d'impatto e diminuisce la capacità di investire in piccole capitalizzazioni; si riducono le posizioni o si aumenta il numero di titoli, con il rischio di diluire l'alfa. Un portafoglio efficiente ottiene il rendimento attivo con il minimo rischio attivo coerente con il mandato.",
+            "Strutture: solo lungo (long-only), estensione lunga (long extension, es. 130/30: lunghi 130%, corti 30%, beta vicino a 1, coefficiente di trasferimento (transfer coefficient) più alto), lungo-corto (long/short con esposizione netta variabile) ed equitizzato neutrale al mercato (equitized market-neutral: un portafoglio market neutral più futures sull'indice per ottenere il beta). Rischi delle posizioni corte: costi di prestito, richiami, short squeeze, perdite potenzialmente illimitate."
+          ]
+        },
+        {
+          "title": "LDI e gestione indicizzata obbligazionaria: casi e rischi",
+          "body": [
+            "Singola passività (liabilities): oltre alla duration uguale all'orizzonte serve la convessità (convexity) minima sufficiente (dispersione dei flussi minima) per ridurre il rischio strutturale di cambi di forma della curva. Confronto tra strategie per una o più passività: cash flow matching (rischio minimo, costo alto), duration matching (più economico, richiede ribilanciamento), immunizzazione (immunization) condizionale e strategie ibride (horizon matching: flussi corrispondenti nei primi anni, duration matching dopo).",
+            "Esempio di scenario: un portafoglio immunizzato con barbell (convessità alta) contro una passività con dispersione bassa guadagna in caso di spostamenti paralleli grandi, ma può perdere con un irripidimento se le scadenze lunghe del barbell perdono più di quanto guadagnano le brevi: la scelta della struttura va testata su scenari paralleli e non paralleli.",
+            "Rischi: errori di modello sulle passività, spread tra il tasso di sconto (discount rate) delle passività e il rendimento degli attivi, curva, controparte e collateral dei derivati, liquidità (chiamate di margine), rischio di reinvestimento (reinvestment risk) delle cedole (coupon). Le strategie con derivati richiedono una riserva di liquidità per i margini.",
+            "Indici obbligazionari: universo molto ampio, titoli illiquidi, frequenti cambi di composizione; difficile replicare completamente. Metodi: campionamento (sampling) stratificato, ottimizzazione, fondi ed ETF, total return swap, futures. Selezione del benchmark: coerente con obiettivi di duration, rischio di credito (credit risk), valuta, liquidità; per un investitore con passività un indice generico può avere una duration sbagliata.",
+            "Esempio di scelta: una compagnia assicurativa danni con passività di 3 anni non dovrebbe usare un indice aggregato con duration 6: meglio un indice a breve-medio termine o un benchmark su misura."
+          ]
+        },
+        {
+          "title": "Strategie sulla curva con i tassi forward",
+          "body": [
+            "Fattori del rendimento per variazioni della curva: spostamenti paralleli (duration), di pendenza (slope) e di curvatura (key rate durations), oltre a rolldown e carry. Il punto di partenza sono i tassi forward (forward rates): sono il «pareggio» del mercato. Se il gestore si aspetta che i tassi futuri siano sotto i forward, conviene allungare la duration; se sopra, accorciare.",
+            "Curva statica attesa: comprare scadenze con rolldown alto, carry trade (finanziarsi a breve e investire a lungo, anche con futures o swap ricevendo fisso). Variazioni attese di livello: aumentare o ridurre la duration. Pendenza: irripidimento atteso → bullet o posizione steepener (lungo sul breve, corto sul lungo a duration neutrale); appiattimento atteso → barbell o flattener. Curvatura: butterfly (lunga sulle ali e corta sul centro se ci si aspetta che il centro salga rispetto alle ali).",
+            "Uso delle key rate durations: si confronta il profilo del portafoglio con quello del benchmark; uno scostamento positivo sul tratto a 10 anni guadagna se quel tasso scende più degli altri. Convessità: le opzioni (o la struttura barbell) aggiungono convessità utile se si prevede alta volatilità; se si prevede stabilità si può vendere convessità per aumentare il rendimento.",
+            "Strategie tra valute: confrontare curve di paesi diversi; investire nella curva estera con copertura (hedging) valutaria significa ottenere il rendimento estero più il differenziale dei tassi a breve (costo o beneficio della copertura). Con la parità coperta (covered interest rate parity), la scelta dipende dalla forma relativa delle curve oltre il breve periodo.",
+            "Valutazione: rendimento atteso = carry + rolldown + variazione di prezzo dalle variazioni previste di livello, pendenza e curvatura; si confronta con scenari alternativi e si misura il rischio (perdita se lo scenario non si realizza).",
+            "Esempio: il forward 1y1y è 3.5% e il gestore prevede che fra un anno il tasso a un anno sarà 3%: comprare il titolo a 2 anni rende più che il titolo a 1 anno rinnovato. Se prevedesse 4%, converrebbe restare sul breve."
+          ]
+        },
+        {
+          "title": "Credito: rischio di coda, liquidità e strutturati",
+          "body": [
+            "Rischi di un portafoglio di spread: rischio di credito (default e migrazione), di spread (allargamenti di mercato), di liquidità, di concentrazione. Misure di spread: G-spread e I-spread semplici ma imprecisi con curve non piatte; Z-spread e OAS più corretti per titoli con opzioni; spread in punti assoluti contro spread relativi (in percentuale del livello).",
+            "Rischio di coda (tail risk): perdite rare ma grandi per default correlati e allargamenti violenti. Misure: VaR e CVaR di credito, scenari di stress (recessione, crisi di liquidità). Gestione: limiti di concentrazione per emittente, settore e rating, protezione con CDS su indici, opzioni sugli indici di CDS (swaption di credito), diversificazione tra cicli.",
+            "Liquidità: i titoli di credito sono negoziati OTC, con spread denaro-lettera che si allargano nelle crisi e capacità dei dealer limitata. Gestione: detenere una parte in titoli liquidi (titoli di Stato (government bond), ETF, CDS su indici), scaglionare le scadenze, evitare concentrazioni in emissioni piccole, usare ETF e CDS per aggiustare rapidamente l'esposizione.",
+            "Strategie con CDS: lungo o corto credito su singoli nomi o indici, strategie sulla curva, basis trade (comprare l'obbligazione (bonds) e la protezione quando lo spread dell'obbligazione supera quello del CDS), strategie di valore relativo tra emittenti o tra indice e componenti. Posizionamento nel ciclo: sovrappeso di high yield in ripresa, qualità in rallentamento.",
+            "Portafogli globali: rischio valutario, differenze legali e di priorità nei fallimenti, liquidità diversa. Strumenti strutturati (ABS, MBS, CLO, covered bond) come alternativa all'esposizione diretta: diversificano collateral e struttura, ma con rischio di modello e di liquidità. Strumenti analitici: modelli di rischio che stimano rendimenti attesi, scenari e contributi al rischio; vanno usati sapendo che dipendono dalle ipotesi su correlazione e recupero."
+          ]
+        },
+        {
+          "title": "Strategia e valutazione dell'esecuzione",
+          "body": [
+            "Motivazioni a negoziare: profitto da informazioni (urgenza alta se l'informazione è a breve vita), ribilanciamento e gestione del rischio (urgenza media), flussi di cassa (sottoscrizioni e rimborsi), coperture, raccolta di perdite fiscali, cambi di benchmark (transizione). La motivazione guida l'urgenza e quindi la strategia.",
+            "Input della strategia: caratteristiche dell'ordine (dimensione rispetto al volume medio, lato, motivazione), del titolo (liquidità, volatilità, spread), del mercato (condizioni, volatilità del momento), avversione al rischio del gestore (rischio di prezzo durante l'esecuzione contro impatto). Benchmark: prima della negoziazione (prezzo di decisione, chiusura del giorno precedente, prezzo di apertura, prezzo d'arrivo), durante (VWAP, TWAP), dopo (chiusura), price target per ordini opportunistici.",
+            "Selezione dell'algoritmo: ordini piccoli e liquidi → al mercato o algoritmi d'arrivo; ordini grandi con bassa urgenza → programmati (VWAP, POV); titoli illiquidi o ordini molto grandi → ricerca di liquidità o broker su blocchi; ribilanciamenti di molti titoli → program trading con coperture. Mercati: azioni (frammentati, elettronici), reddito fisso (OTC, richieste di quotazione, piattaforme elettroniche), valute (mercato OTC liquidissimo), ETF (liquidità dei sottostanti), derivati quotati e OTC.",
+            "Misura dei costi: implementation shortfall con le sue componenti; costi rispetto al VWAP; spread effettivo = 2 × |prezzo eseguito - punto medio|. Esempio: denaro 49.95, lettera 50.05, punto medio 50.00; acquisto eseguito a 50.04 → spread effettivo 0.08 contro spread quotato 0.10: miglioramento di prezzo.",
+            "Valutazione dell'esecuzione: confronti con benchmark coerenti con la strategia, con stime pre-trade (modelli di costo), per broker e algoritmo; analisi statistiche su molti ordini, non su singoli. Procedure aziendali: politica di best execution scritta, comitato di supervisione, registrazione e conservazione dei dati, informativa ai clienti sulle pratiche di esecuzione e sull'uso delle commissioni.",
+            "Trappola: un trader che esegue sempre sotto il VWAP può semplicemente rinviare gli acquisti nei giorni di ribasso; il VWAP non misura il costo di ritardo né l'opportunità persa."
+          ]
+        },
+        {
+          "title": "Caso endowment: liquidità, premio di illiquidità e overlay",
+          "body": [
+            "Strumenti di gestione della liquidità: classificare gli attivi per livelli di liquidità (giorni o mesi per liquidarli), stress test della liquidità con scenari di mercato e di richiami di capitale, previsione dei flussi dei fondi privati, linee di credito, riserve in titoli liquidi, possibilità di vendere quote sul mercato secondario.",
+            "Premio di illiquidità (illiquidity): un investitore con orizzonte lungo e bisogni di liquidità prevedibili può ottenere un rendimento extra investendo in attivi illiquidi. Il premio si cattura solo se la governance mantiene la rotta nelle crisi (non vendere a sconto sui secondari) e se si scelgono gestori di qualità; altrimenti si paga illiquidità senza esserne compensati.",
+            "Allocazione e costruzione: il peso dei privati va pianificato con impegni annuali, considerando il rischio che un crollo dei mercati quotati aumenti il peso relativo e riduca la liquidità disponibile per la spesa. La regola di spesa (spending rule) con media mobile riduce la pressione a vendere nei periodi negativi.",
+            "Etica nella selezione dei gestori: membri del comitato con rapporti personali con un gestore candidato devono dichiararlo e astenersi; regali e inviti dai gestori vanno rifiutati; la due diligence deve essere documentata e basata su criteri oggettivi.",
+            "Derivati contro mercato a pronti: per ribilanciamenti e allocazione tattica i futures e gli swap sono più rapidi ed economici e non disturbano i gestori sottostanti (overlay), ma richiedono margini, gestione del rinnovo e controllo della controparte. Esempio: dopo un rally azionario l'endowment è sovrappesato del 4% in azioni; vende futures azionari e compra futures obbligazionari per il 4% del patrimonio invece di riscattare quote dai gestori.",
+            "ESG nei portafogli istituzionali di lungo periodo: integrazione nei processi di selezione dei gestori, politiche di voto e engagement, esclusioni coerenti con la missione, misurazione delle esposizioni climatiche; equilibrio tra obiettivi della missione e dovere fiduciario di rendimento."
+          ]
+        }
+      ],
+      "formulas": [
+        "Spread effettivo = 2 × |prezzo eseguito - punto medio|",
+        "Allungare la duration se i tassi futuri attesi < tassi forward",
+        "Rendimento atteso curva = carry + rolldown + Δprezzo (livello, pendenza, curvatura)",
+        "130/30: esposizione lorda 160%, netta 100%"
+      ],
+      "pitfalls": [
+        "Considerare un indice a bassa volatilità come privo di rischio di tasso.",
+        "Usare i tassi attuali invece dei forward come riferimento per decidere la duration.",
+        "Giudicare un trader solo con il VWAP.",
+        "Inseguire il premio di illiquidità senza una regola di spesa e una governance stabili.",
+        "Ignorare la liquidità necessaria per i margini delle coperture con derivati."
+      ]
+    }
+  ]
+}

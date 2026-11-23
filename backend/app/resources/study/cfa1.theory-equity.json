@@ -1,0 +1,124 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "equity",
+      "sections": [
+        {
+          "title": "Sistema finanziario, mercati e posizioni",
+          "body": [
+            "Funzioni del sistema finanziario: risparmiare (trasferire potere d'acquisto nel futuro), prendere a prestito, raccogliere capitale proprio, gestire i rischi, scambiare attività per esigenze immediate e future, negoziare sulla base di informazioni (information-motivated trading). Un sistema che funziona bene ha efficienza operativa (costi di transazione bassi), informativa (prezzi che riflettono rapidamente le informazioni) e allocativa (il capitale va agli usi più produttivi).",
+            "Classificazioni: mercati primari (emissione di nuovi titoli: IPO, aumenti di capitale, collocamenti privati) e secondari (scambio tra investitori, che dà liquidità e informazioni di prezzo ai mercati primari); mercati monetari (scadenza ≤ 1 anno) e dei capitali; mercati a pronti (spot) e dei derivati (derivatives); mercati pubblici e privati. Intermediari: broker, dealer, banche d'investimento, borse, depositari, controparti centrali (clearinghouse), arbitraggisti, cartolarizzatori.",
+            "Posizioni: lunga (long: si possiede l'attività e si guadagna se il prezzo sale), corta (short: si vende un titolo preso in prestito e lo si riacquista più tardi; guadagno massimo limitato, perdita potenzialmente illimitata; il venditore allo scoperto deve pagare al prestatore i dividendi (dividends)). Leva tramite acquisto a margine (margin): rapporto di leva = 1/margine iniziale (initial margin).",
+            "Prezzo di chiamata a margine (margin call) per una posizione lunga: P = P0 × (1 - margine iniziale)/(1 - margine di mantenimento (maintenance margin)). Esempio: acquisto a 50 con margine iniziale 40% e di mantenimento 25% → 50 × 0.60/0.75 = 40. Per una posizione corta: P = P0 × (1 + margine iniziale)/(1 + margine di mantenimento).",
+            "Esempio di rendimento con margine: si comprano 100 azioni a 50 (valore 5,000) versando 2,000 e prendendo a prestito 3,000 al 6%. Dopo un anno prezzo 60 e dividendo 1 per azione. Guadagno = 1,000 + 100 - 180 interessi = 920 → rendimento sul capitale 46%, contro 22% senza leva ((60 + 1 - 50)/50). Se il prezzo fosse sceso a 40 la perdita sarebbe -1,000 + 100 - 180 = -1,080, cioè -54%.",
+            "Ordini: istruzioni di esecuzione (al mercato (market order): esecuzione immediata al miglior prezzo disponibile; con limite di prezzo (limit order): prezzo massimo d'acquisto o minimo di vendita, rischio di non esecuzione), di validità (giornaliero, valido fino a revoca (good-till-cancelled), immediato o cancellato (immediate or cancel), all'apertura o alla chiusura), di stop (stop order: diventa attivo quando il prezzo raggiunge una soglia, usato come stop-loss). Un limite d'acquisto sopra il prezzo migliore in vendita è marketable (aggressivo); molto sotto il mercato è behind the market."
+          ]
+        },
+        {
+          "title": "Strutture di mercato e regolamentazione",
+          "body": [
+            "Mercati guidati dalle quotazioni (quote-driven o dealer markets): si negozia con i dealer che espongono prezzi denaro e lettera (bid/ask), tipico di obbligazioni (bonds), valute e derivati OTC. Mercati guidati dagli ordini (order-driven): gli ordini degli investitori si incontrano secondo regole di precedenza (prezzo, poi visibilità, poi tempo) e di determinazione del prezzo (asta a chiamata (call market) all'apertura e chiusura, negoziazione continua). Mercati intermediati (brokered): il broker cerca una controparte per beni unici (immobili, grandi blocchi, opere d'arte).",
+            "Trasparenza: mercati pre-trade transparent mostrano gli ordini prima dell'esecuzione; post-trade transparent pubblicano prezzi e volumi eseguiti dopo. Le dark pool non mostrano gli ordini per ridurre l'impatto di grandi operazioni.",
+            "Spread denaro-lettera (bid-ask spread) = prezzo lettera - prezzo denaro: il costo di negoziazione implicito per chi chiede liquidità immediata. Il miglior bid e il miglior ask di tutti i dealer formano l'inside quote; la differenza è l'inside spread.",
+            "Obiettivi della regolamentazione: controllare le frodi, i problemi agente-principale, promuovere l'equità e la trasparenza, stabilire standard minimi (capitale, professionalità), prevenire comportamenti che destabilizzano il sistema (rischio sistemico), regolare le entità finanziate dal governo e i fondi pensione (defined benefit pension plan). Strumenti: obblighi informativi, requisiti di capitale delle banche, autorizzazioni, sorveglianza delle negoziazioni.",
+            "Trappola: un ordine limite non garantisce l'esecuzione; un ordine al mercato non garantisce il prezzo. Nei mercati illiquidi un ordine al mercato può essere eseguito molto lontano dall'ultimo prezzo."
+          ]
+        },
+        {
+          "title": "Indici di mercato: costruzione, ponderazione, usi",
+          "body": [
+            "Un indice rappresenta un mercato o un segmento. Decisioni di costruzione: mercato obiettivo, selezione dei titoli, ponderazione, ribilanciamento (rebalancing, riportare i pesi al target), ricostituzione (reconstitution, cambiare i componenti). L'indice di prezzo (price return) considera solo i prezzi; l'indice di rendimento totale (total return) reinveste anche i dividendi; la differenza si accumula nel tempo.",
+            "Ponderazione per prezzo (price-weighted): valore = somma dei prezzi/divisore; i titoli con prezzo alto pesano di più indipendentemente dalla dimensione. Dopo uno split il divisore va ridotto per mantenere il valore dell'indice. Esempio: titoli a 10, 20 e 70, divisore 3 → indice 33.33. Se il titolo da 70 fa uno split 2:1 (prezzo 35), il nuovo divisore D risolve (10 + 20 + 35)/D = 33.33 → D = 1.95.",
+            "Equiponderazione (equal-weighted): ogni titolo ha lo stesso peso; sovrappesa le piccole capitalizzazioni e richiede ribilanciamenti frequenti (costi). Ponderazione per capitalizzazione (market-cap weighted), di solito corretta per il flottante (float-adjusted, solo le azioni realmente negoziabili): rappresenta il portafoglio di mercato (market portfolio) e si ribilancia da sola, ma sovrappesa i titoli sopravvalutati e cresciuti di più (effetto momentum). Ponderazione fondamentale (fundamental weighting) su utili, dividendi o vendite: inclinazione value (contrarian).",
+            "Usi degli indici: misura del sentimento di mercato, proxy del rischio sistematico (systematic risk) e del portafoglio di mercato nei modelli (CAPM), benchmark per i gestori, base per prodotti passivi (fondi indicizzati, ETF), modelli di asset allocation. Indici obbligazionari: universo enorme e titoli illiquidi, ricostituzione frequente per scadenze e nuove emissioni, prezzi spesso stimati (matrix pricing). Indici di alternativi: commodity (basati sui futures: il rendimento include il roll), immobiliari (basati su perizie, vendite ripetute o REIT), hedge fund (dati autodichiarati, survivorship e backfill bias).",
+            "Esempio di rendimento di indice ponderato per capitalizzazione: A vale 600 di capitalizzazione e sale del 10%, B vale 400 e scende del 5% → rendimento = 0.6 × 10% + 0.4 × (-5%) = 4%. Con equiponderazione = 2.5%."
+          ]
+        },
+        {
+          "title": "Efficienza dei mercati e anomalie",
+          "body": [
+            "Un mercato è efficiente (informationally efficient) se i prezzi riflettono rapidamente e in modo non distorto le informazioni rilevanti, così che non sia possibile ottenere sistematicamente rendimenti in eccesso aggiustati per il rischio, al netto dei costi. Forma debole (weak form): i prezzi riflettono i dati storici di prezzi e volumi; l'analisi tecnica non funziona. Forma semi-forte (semi-strong): riflettono tutte le informazioni pubbliche; nemmeno l'analisi fondamentale su dati pubblici funziona. Forma forte (strong): riflettono anche le informazioni private; neanche gli insider guadagnano (empiricamente respinta).",
+            "Valore di mercato vs valore intrinseco (intrinsic value): nei mercati efficienti coincidono. Fattori che aumentano l'efficienza: molti partecipanti e analisti, disponibilità e tempestività delle informazioni, divieto di insider trading, possibilità di vendere allo scoperto, costi di transazione bassi. Paradosso di Grossman-Stiglitz: se i mercati fossero perfettamente efficienti nessuno avrebbe incentivo a raccogliere informazioni, quindi i prezzi non potrebbero diventare efficienti.",
+            "Test: forma debole con test di autocorrelazione e regole di trading; forma semi-forte con studi di evento (event studies) sui rendimenti anomali dopo annunci; forma forte con i rendimenti degli insider. Implicazioni: se il mercato è semi-forte efficiente conviene una gestione passiva a basso costo; il ruolo del gestore resta definire l'IPS, la diversificazione (diversification), l'allocazione e la gestione fiscale.",
+            "Anomalie: di calendario (effetto gennaio, rendimenti più alti delle piccole capitalizzazioni a inizio anno, in parte per vendite fiscali di dicembre; effetto weekend), di serie storiche (momentum a breve-medio termine, ipereazione (overreaction) e inversione a lungo termine), trasversali (effetto dimensione, effetto valore: titoli con P/E o P/B bassi), altre (sconto dei fondi chiusi rispetto al NAV, deriva dopo l'annuncio degli utili (post-earnings announcement drift), rendimenti iniziali positivi e di lungo periodo negativi delle IPO).",
+            "Molte anomalie spariscono una volta pubblicate, possono derivare da data mining o da un rischio non misurato (es. il premio value può remunerare un rischio di difficoltà), e i limiti all'arbitraggio (costi, vincoli allo scoperto, rischio di finanziamento) impediscono di sfruttarle. La finanza comportamentale (behavioral finance) le spiega con pregiudizi come avversione alle perdite (loss aversion), eccesso di fiducia (overconfidence), comportamento gregario (herding), contabilità mentale.",
+            "Trappola: un'anomalia statisticamente significativa non viola l'efficienza se non è sfruttabile dopo costi e rischio."
+          ]
+        },
+        {
+          "title": "Titoli azionari: caratteristiche e tipologie",
+          "body": [
+            "Azioni ordinarie (common shares): diritto residuale su utili e attività, voto, dividendi discrezionali. Voto statutario (statutory voting): un voto per azione per ciascun amministratore; voto cumulativo (cumulative voting): i voti totali = azioni × amministratori da eleggere, concentrabili su un solo candidato, favorisce le minoranze. Azioni a più classi (dual-class) danno ai fondatori il controllo con meno capitale: rischio di governance.",
+            "Azioni privilegiate (preference shares): dividendo fisso con priorità sulle ordinarie, priorità in liquidazione, di solito senza voto. Cumulative (dividendi non pagati si accumulano e vanno saldati prima delle ordinarie) o non cumulative; partecipanti (participating: dividendo extra se gli utili superano una soglia); convertibili in ordinarie; con opzione (options) di rimborso dell'emittente (callable, meno valore per l'investitore) o dell'investitore (putable, più valore).",
+            "Capitale privato (private equity): niente quotazione, liquidità bassa, informativa ridotta, orizzonte lungo, possibilità di gestire con meno pressione degli utili trimestrali. Tipi: venture capital, leveraged buyout (management buyout, management buy-in), private investment in public equity (PIPE).",
+            "Investire all'estero: acquisto diretto sul mercato estero; ricevute di deposito (depositary receipts) emesse da una banca depositaria contro azioni estere custodite: sponsorizzate (con partecipazione dell'emittente, voto per l'investitore, obblighi informativi maggiori) o non sponsorizzate; ADR (mercato USA, in dollari, a livelli 1-3 e Rule 144A per investitori qualificati), GDR (fuori dagli USA); azioni registrate globali (global registered shares) negoziate in più valute; panieri di ricevute (basket of listed depositary receipts, es. ETF su paesi).",
+            "Rischio e rendimento: le ordinarie sono le più rischiose ma con il potenziale di rendimento più alto; le privilegiate sono meno rischiose (dividendo fisso, priorità). Rendimento totale = dividendi + variazione di prezzo (e per gli investitori esteri anche il cambio). Valore contabile (book value) del patrimonio = attivo - passivo; valore di mercato = prezzo × azioni; ROE = utile netto (net income)/patrimonio medio. Il costo del capitale (cost of capital) proprio (cost of equity) è il rendimento minimo richiesto dagli investitori, stimato con CAPM o con modelli a dividendi.",
+            "Trappola: le privilegiate callable valgono meno delle non callable (l'opzione è dell'emittente); le putable valgono di più (l'opzione è dell'investitore)."
+          ]
+        },
+        {
+          "title": "Analisi del settore e della concorrenza",
+          "body": [
+            "Classificazione: per prodotti e attività (GICS, ICB, sistemi statistici nazionali), per sensibilità al ciclo (cicliche: auto, beni durevoli, lusso; difensive (non cicliche): alimentari, utility, sanità), per statistiche (correlazione (correlation) dei rendimenti, meno usata). Il gruppo di pari (peer group) comprende aziende con modelli di business simili, stessi driver di domanda e costi; si costruisce partendo dalla classificazione standard e rifinendo con le informazioni per segmento.",
+            "Ciclo di vita del settore (industry life cycle): embrionale (crescita lenta, prezzi alti, rischio elevato), crescita (domanda in rapido aumento, profitti in crescita, poca competizione sui prezzi), consolidamento (shakeout: rallentamento, sovracapacità, competizione sui prezzi, uscite), maturità (crescita bassa, consolidamento, barriere alte, cash flow elevato), declino (sostituzione tecnologica, sovracapacità, prezzi in calo). Limite: non tutti i settori seguono il ciclo, e le transizioni sono difficili da datare.",
+            "Cinque forze (five forces) di Porter: minaccia di nuovi entranti (barriere all'ingresso: economie di scala, capitale richiesto, regolamentazione, brevetti, marchi), potere dei fornitori, potere dei clienti, minaccia di prodotti sostitutivi, rivalità tra concorrenti (concentrazione, crescita del settore, costi fissi alti, prodotti indifferenziati, barriere all'uscita). Più forti sono le forze, più bassa la redditività sostenibile.",
+            "Concentrazione: rapporto di concentrazione a N imprese (somma delle quote dei primi N) e indice Herfindahl-Hirschman (HHI) = somma dei quadrati delle quote di mercato. Esempio: quote 40%, 30%, 20%, 10% → HHI = 1,600 + 900 + 400 + 100 = 3,000 (in percentuale) oppure 0.30 in decimali; numero equivalente di imprese = 1/0.30 = 3.3. Alta concentrazione suggerisce minore competizione sui prezzi, ma non è garantito (es. concorrenti con capacità in eccesso).",
+            "Fattori esterni (analisi PESTLE): politici, economici (ciclo, tassi, cambi), sociali e demografici (invecchiamento, urbanizzazione), tecnologici (dirompenti), legali e regolatori, ambientali (ESG, transizione energetica). Strategie competitive: leadership di costo (cost leadership), differenziazione (prodotti unici e prezzi premium), focalizzazione (nicchia con costo o differenziazione).",
+            "Elementi del confronto con i concorrenti: quota di mercato e sua tendenza, potere di prezzo, struttura dei costi, intensità di capitale, qualità del management, rendimento sul capitale investito rispetto al costo del capitale (creazione di valore)."
+          ]
+        },
+        {
+          "title": "Analisi della società: modello di business e previsioni",
+          "body": [
+            "Modello di business: chi sono i clienti, che cosa compra il cliente (proposta di valore), come si vende (canali), come si prezza, come si consegna e come si guadagna (fonti di ricavo e struttura dei costi). Driver di ricavo: volume × prezzo, mix di prodotti, cambi, acquisizioni. Driver di costo: fissi e variabili, leva operativa (operating leverage): più costi fissi → più variazione dell'utile operativo per variazione dei ricavi.",
+            "Analisi del passato: crescita dei ricavi scomposta tra organica, prezzo/volume, cambio e perimetro; margini lordi e operativi e loro stabilità; capitale circolante (giorni) e intensità di capitale (capex/ricavi, ricavi/immobilizzazioni); ROIC = NOPAT/capitale investito confrontato con il WACC; conversione dell'utile in cassa.",
+            "Previsioni: orizzonte esplicito di solito 3-5 anni o un intero ciclo per le cicliche; ipotesi su crescita, margini, capex, capitale circolante e struttura finanziaria; analisi di scenario (base, ottimista, pessimista) e di sensibilità sulle variabili più incerte. La previsione deve essere coerente con le forze competitive: margini superiori alla media tendono a ridursi (mean reversion) se le barriere all'ingresso sono basse.",
+            "Esempio di leva operativa: costi fissi 400, margine di contribuzione 60% dei ricavi. Con ricavi 1,000 l'EBIT è 200; con ricavi 1,100 (+10%) l'EBIT è 260 (+30%): grado di leva operativa = 3.",
+            "Trappola: proiettare linearmente la crescita storica di un'azienda in fase di crescita ignora il passaggio alla maturità; la crescita futura deve convergere verso quella del settore e dell'economia."
+          ]
+        },
+        {
+          "title": "Valutazione: modelli a dividendi e FCFE",
+          "body": [
+            "Valore intrinseco (intrinsic value) vs prezzo di mercato: se il valore stimato supera il prezzo il titolo è sottovalutato. Tre famiglie di modelli: attualizzazione dei flussi (present value models: dividendi, FCFE), multipli (multiplier models), basati sulle attività (asset-based).",
+            "Modello di Gordon (crescita costante): V0 = D1/(r - g) con r > g; adatto a imprese mature con payout stabile. Privilegiate non convertibili e perpetue: V0 = D/r; esempio dividendo 5 e rendimento richiesto (required return) 8% → 62.5. Privilegiate con scadenza: come un'obbligazione.",
+            "Modello a più stadi: valore attuale (present value) dei dividendi nella fase di alta crescita + valore attuale del valore terminale (Gordon all'inizio della crescita stabile). Esempio: D0 = 1, crescita 20% per 3 anni, poi 5%; r = 10%. D1 = 1.20, D2 = 1.44, D3 = 1.728, D4 = 1.8144; P3 = 1.8144/0.05 = 36.29. V0 = 1.20/1.10 + 1.44/1.21 + (1.728 + 36.29)/1.331 = 1.09 + 1.19 + 28.56 = 30.84.",
+            "Flusso di cassa per gli azionisti (FCFE) = CFO - investimenti in capitale fisso + indebitamento netto: si usa quando l'azienda non paga dividendi o il payout non riflette la capacità di distribuire. V0 = FCFE1/(r - g) nel caso a crescita costante.",
+            "Tasso di crescita sostenibile (sustainable growth rate) g = b × ROE (b = tasso di ritenzione (retention rate)). Rendimento richiesto r da CAPM: r = rf + β[E(Rm) - rf]. Il valore è molto sensibile a r - g: con r = 9% e g = 4% un errore di un punto su g cambia il valore del 25%.",
+            "Trappola: il Gordon applicato con g ≥ r non ha senso economico; e il valore terminale usa D(n+1), non D(n)."
+          ]
+        },
+        {
+          "title": "Multipli, enterprise value e valutazione patrimoniale",
+          "body": [
+            "Multipli basati sui fondamentali (justified): dal Gordon, P/E prospettico (leading) P0/E1 = (D1/E1)/(r - g) = payout/(r - g); P/E storico (trailing) P0/E0 = payout × (1 + g)/(r - g). Esempio: payout 40%, r = 10%, g = 6% → P/E prospettico 10, storico 10.6. Il P/E giustificato sale con il payout e la crescita e scende con il rendimento richiesto.",
+            "Metodo dei comparabili (method of comparables): si confronta il multiplo con la media o mediana dei pari, del settore o della storia del titolo; dice se il titolo è caro relativamente, non in assoluto (se tutto il settore è sopravvalutato lo è anche il «conveniente»). Multipli: P/E (molto usato, ma inutile con utili negativi o volatili), P/B (adatto a banche e aziende con attività a fair value, poco significativo per aziende di servizi), P/S (per utili negativi, difficile da manipolare ma ignora i costi), P/CF (più stabile e meno manipolabile).",
+            "Valore d'impresa (enterprise value, EV) = capitalizzazione + debito + privilegiate + interessi di minoranza - liquidità e investimenti a breve. EV/EBITDA confronta aziende con leva diversa e utili netti negativi; EV/vendite per aziende in perdita. Coerenza: numeratore e denominatore devono riferirsi agli stessi finanziatori (EV con grandezze prima degli oneri finanziari, prezzo con grandezze per gli azionisti).",
+            "Esempio: capitalizzazione 800, debito 300, liquidità 100, interessi di minoranza 20 → EV = 1,020. EBITDA 170 → EV/EBITDA = 6.0x. Se i pari trattano a 7.0x, EV implicito = 1,190 e valore implicito del capitale = 1,190 - 300 + 100 - 20 = 970.",
+            "Valutazione basata sulle attività (asset-based valuation): valore di mercato delle attività - valore di mercato delle passività (liabilities); adatta a holding, aziende in liquidazione, risorse naturali, imprese con molte attività tangibili; poco adatta a imprese con molti intangibili. Le tre famiglie vanno spesso usate insieme come verifica incrociata.",
+            "Trappola: confrontare un P/E prospettico con uno storico, o EV/EBITDA con prezzo/utile, porta a conclusioni sbagliate; i multipli vanno calcolati in modo omogeneo."
+          ]
+        }
+      ],
+      "formulas": [
+        "Chiamata a margine (lungo) = P0 × (1 - IM)/(1 - MM)",
+        "Chiamata a margine (corto) = P0 × (1 + IM)/(1 + MM)",
+        "Leva da margine = 1/margine iniziale",
+        "Indice price-weighted = Σ prezzi/divisore",
+        "HHI = Σ (quota di mercato)²",
+        "Voti cumulativi = azioni × amministratori da eleggere",
+        "V privilegiata perpetua = D/r",
+        "P/E prospettico = payout/(r - g); P/E storico = payout × (1 + g)/(r - g)",
+        "EV = capitalizzazione + debito + privilegiate + minoranze - cassa"
+      ],
+      "pitfalls": [
+        "Credere che un indice price-weighted rifletta la dimensione delle aziende.",
+        "Pensare che in un mercato efficiente la gestione attiva sia impossibile per definizione: lo è sistematicamente solo al netto di costi e rischio.",
+        "Confondere ribilanciamento (riportare i pesi) e ricostituzione (cambiare i componenti).",
+        "Calcolare il valore terminale con il dividendo dell'ultimo anno di alta crescita invece che con quello successivo.",
+        "Dedurre il valore del capitale dall'EV dimenticando di aggiungere la cassa o di togliere le minoranze."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "fixed",
+      "sections": [
+        {
+          "title": "Caratteristiche delle obbligazioni e contratto",
+          "body": [
+            "Elementi base: emittente (governi sovrani, enti locali, agenzie e sovranazionali, società, veicoli di cartolarizzazione (securitization)), scadenza (maturity; perpetue senza scadenza), valore nominale (par/face value), cedola (coupon rate) e frequenza, valuta (anche obbligazioni (bonds) duali (dual-currency) con cedole in una valuta e capitale in un'altra). Rendimento a scadenza (yield to maturity) come misura del rendimento richiesto (required return).",
+            "Il contratto (indenture o trust deed) definisce diritti e obblighi; un trustee vigila nell'interesse degli obbligazionisti. Clausole (covenants) affermative: pagare interessi e capitale, mantenere attività e assicurazioni, rispettare le leggi, fornire bilanci. Negative: limiti a nuovo debito, alle garanzie a terzi (negative pledge), a cessioni di attività, a dividendi (dividends) e riacquisti (share repurchase), a fusioni; vincoli finanziari (es. debito/EBITDA massimo). Le clausole negative proteggono dal trasferimento di valore verso gli azionisti.",
+            "Garanzie e supporti al credito (credit enhancements): obbligazioni garantite (secured) da attività specifiche (ipoteca, macchinari, titoli) vs non garantite (unsecured, debentures in USA); interni: subordinazione (strutture a tranche), sovra-collateralizzazione (overcollateralization), spread in eccesso (excess spread); esterni: garanzie di terzi (surety bonds, garanzie bancarie), lettere di credito. Obbligazioni garantite (covered bonds): emesse da banche con un pool di attività a garanzia che resta nel bilancio dell'emittente e viene sostituito se si deteriora; doppia rivalsa (dual recourse) su emittente e pool.",
+            "Aspetti legali e fiscali: obbligazioni nazionali (domestic), estere (foreign: emittente estero sul mercato locale, es. Yankee, Samurai), eurobbligazioni (Eurobonds: emesse fuori dalla giurisdizione della valuta, di solito al portatore), globali (global bonds). Le cedole sono tassate come reddito, le plusvalenze in modo diverso; le obbligazioni emesse sotto la pari possono avere lo sconto tassato come interesse (original issue discount). Le obbligazioni degli enti locali USA sono spesso esenti.",
+            "Trappola: negative pledge non vieta di emettere debito, vieta di dare garanzie ad altri creditori che peggiorerebbero la posizione degli obbligazionisti esistenti."
+          ]
+        },
+        {
+          "title": "Strutture dei flussi e opzioni incorporate",
+          "body": [
+            "Rimborso del capitale: in un'unica soluzione a scadenza (bullet); ammortamento (depreciation) completo (fully amortizing) o parziale con rata finale (balloon); fondo di ammortamento (sinking fund) che ritira ogni anno una parte dell'emissione (riduce il rischio di credito (credit risk) ma introduce un rischio di reinvestimento (reinvestment risk) e il rimborso può avvenire al prezzo più basso tra mercato e pari).",
+            "Cedole: fisse; variabili (floating-rate notes, FRN) = tasso di riferimento (es. SOFR, €STR, Euribor) + margine fisso (quoted margin), con possibili tetti (cap) e minimi (floor); inverse floater (cedola che scende quando i tassi salgono); cedole crescenti (step-up); differite (deferred coupon); pagabili in natura (payment-in-kind, PIK, con nuove obbligazioni, tipiche dell'high yield); indicizzate all'inflazione (capitale o cedola indicizzati: es. TIPS, BTP Italia), legate al credito (credit-linked, cedola che sale se il rating scende).",
+            "Opzioni (options) dell'emittente: obbligazioni rimborsabili anticipatamente (callable): all'emittente conviene richiamarle quando i tassi scendono, quindi l'investitore subisce rischio di reinvestimento e vuole un rendimento più alto. Valore callable = valore non callable - valore della call. Esercizio europeo (una data), americano (in qualsiasi momento dopo il periodo di protezione), bermudiano (date prefissate). Clausola make-whole: il prezzo di rimborso è il valore attuale (present value) dei flussi a un tasso pari al Treasury + piccolo spread, quindi la call è raramente conveniente.",
+            "Opzioni dell'investitore: obbligazioni con opzione di vendita (putable): l'investitore può rivendere alla pari se i tassi salgono o il credito peggiora; valore putable = non putable + valore della put; rendimento più basso. Convertibili: possono essere convertite in azioni; rapporto di conversione (conversion ratio) = azioni per obbligazione; prezzo di conversione = nominale/rapporto; valore di conversione (conversion value) = rapporto × prezzo dell'azione; premio di conversione = prezzo dell'obbligazione - valore di conversione. Esempio: rapporto 25, azione 36 → valore di conversione 900; obbligazione a 1,000 → premio 100 (11.1%).",
+            "Strumenti affini: obbligazioni con warrant staccabili; convertibili contingenti (contingent convertible bonds, CoCo): si convertono automaticamente o subiscono una svalutazione (impairment) se il patrimonio di vigilanza della banca scende sotto una soglia.",
+            "Trappola: la callable ha convessità (convexity) negativa vicino al prezzo di richiamo: quando i tassi scendono il prezzo sale meno di quello di un'obbligazione equivalente non callable (price compression)."
+          ]
+        },
+        {
+          "title": "Emissione, negoziazione e mercati del debito",
+          "body": [
+            "Mercato primario: offerta pubblica sottoscritta a fermo (underwritten offering: la banca compra l'emissione e la rivende, sopportando il rischio di prezzo), al meglio (best efforts: la banca colloca senza garanzia), asta (tipica dei titoli di Stato (government bond)), registrazione a scaffale (shelf registration: un'unica documentazione per emissioni ripetute nel tempo); collocamenti privati (private placements) a investitori qualificati, con condizioni più personalizzate e meno liquidità.",
+            "Aste dei titoli di Stato: asta a prezzo unico (single-price, tutti pagano il rendimento più alto accettato) o a prezzi multipli (multiple-price/discriminatory, ciascuno paga il proprio). Offerte competitive (specificano rendimento) e non competitive (accettano il rendimento risultante). I titoli on-the-run (ultime emissioni) sono i più liquidi e servono da riferimento per la curva.",
+            "Mercato secondario: soprattutto fuori borsa (over-the-counter) con dealer; liquidità molto variabile tra emissioni; spread denaro-lettera più ampi per titoli piccoli, vecchi o di qualità inferiore. Regolamento T+1/T+2 per i corporate, spesso T+1 per i governativi; i mercati monetari regolano lo stesso giorno.",
+            "Debito delle imprese: prestiti bancari bilaterali e sindacati (syndicated loans, spesso a tasso variabile e poi negoziati sul mercato secondario), carta commerciale (commercial paper: debito non garantito a breve, scadenze fino a 270 giorni negli USA, rinnovata continuamente; rischio di rollover coperto da linee di credito di riserva (backup lines)), obbligazioni a medio termine (medium-term notes) emesse in modo continuativo, obbligazioni societarie a lungo termine.",
+            "Debito pubblico: sovrani (emessi nella propria valuta con il potere di imposizione fiscale e, per i paesi con banca centrale (central bank) propria, di creare moneta; i titoli in valuta estera sono più rischiosi), non sovrani (regioni, comuni: obbligazioni garantite dalla capacità fiscale (general obligation) o dai ricavi di un progetto (revenue bonds)), agenzie e enti parastatali, sovranazionali (Banca Mondiale, BEI).",
+            "Mercati monetari e di finanziamento: pronti contro termine (repurchase agreements, repo): vendita di titoli con impegno di riacquisto a un prezzo più alto; il tasso repo è il costo implicito; lo scarto di garanzia (haircut) aumenta con la rischiosità del collaterale e la durata. Repo inverso (reverse repo) dal punto di vista di chi presta liquidità."
+          ]
+        },
+        {
+          "title": "Prezzo delle obbligazioni e rateo",
+          "body": [
+            "Prezzo = valore attuale dei flussi scontati al tasso di mercato (market discount rate). Cedola > rendimento → sopra la pari (premium); cedola < rendimento → sotto la pari (discount); cedola = rendimento → alla pari. Esempio: 5 anni, cedola annua 6%, rendimento 5% → prezzo 104.33.",
+            "Relazioni fondamentali: 1) prezzo e rendimento si muovono in direzione opposta; 2) convessità: per la stessa variazione di rendimento il prezzo sale di più di quanto scenda; 3) a parità di altre condizioni un'obbligazione con cedola più bassa è più sensibile ai tassi; 4) di solito un'obbligazione con scadenza più lunga è più sensibile (con eccezioni per obbligazioni a sconto molto lunghe); 5) con rendimento costante il prezzo converge alla pari con il passare del tempo (constant-yield price trajectory, «pull to par»).",
+            "Prezzo con i tassi spot (spot rates): ogni flusso si sconta con il tasso zero coupon della sua scadenza; è il prezzo privo di arbitraggio. Il rendimento a scadenza è una sorta di media dei tassi spot ponderata per i flussi.",
+            "Tra due date di cedola: prezzo pieno (full price, dirty) = prezzo secco (flat price, clean) + rateo (accrued interest). Rateo = (giorni dall'ultima cedola/giorni del periodo) × cedola periodica. Convenzioni: effettivi/effettivi (actual/actual) per i titoli di Stato, 30/360 per molti corporate. Prezzo pieno = PV all'ultima data di cedola × (1 + r)^(t/T). Esempio: cedola semestrale 2 per 100, 60 giorni su 182 → rateo = 0.659; si quota il secco per evitare il salto di prezzo alla data di stacco.",
+            "Prezzo a matrice (matrix pricing): per titoli illiquidi si stima il rendimento interpolando i rendimenti di titoli comparabili con rating e scadenza simili, poi si calcola il prezzo. Usato anche per prezzare nuove emissioni.",
+            "Trappola: il rateo si paga al venditore, che ha diritto agli interessi maturati; il prezzo secco non include questo importo."
+          ]
+        },
+        {
+          "title": "Misure di rendimento e spread",
+          "body": [
+            "Rendimento a scadenza (YTM): tasso interno di rendimento (internal rate of return) dei flussi; presuppone che si tenga il titolo a scadenza, che non ci siano default e che le cedole siano reinvestite allo stesso rendimento. Si esprime con una periodicità: un'obbligazione semestrale ha un rendimento semestrale × 2 (bond equivalent yield). Conversione: (1 + r_s/2)² = (1 + r_annuo); 6% semestrale = 6.09% annuo effettivo. Rendimento corrente (current yield) = cedola annua/prezzo (ignora capitale e reinvestimento). Convenzione di mercato (street convention) vs rendimento effettivo (true yield, che considera i giorni festivi).",
+            "Rendimento al richiamo (yield to call) per ogni data di call; rendimento peggiore (yield to worst) = il più basso tra YTM e i vari yield to call: conservativo per i callable sopra la pari. Rendimento corretto per le opzioni (option-adjusted yield) dal modello di valutazione dell'opzione.",
+            "Obbligazioni a tasso variabile: margine quotato (quoted margin) = spread contrattuale sul tasso di riferimento; margine di sconto (discount margin, required margin) = spread richiesto dal mercato. Se il margine richiesto supera quello quotato la FRN quota sotto la pari, e viceversa. Il prezzo di una FRN torna vicino alla pari a ogni data di revisione se il merito di credito non cambia.",
+            "Mercato monetario: base sconto (discount basis): PV = FV × (1 - giorni/anno × DR); base aggiunta (add-on): PV = FV/(1 + giorni/anno × AOR). Il rendimento equivalente obbligazionario (bond equivalent yield) è un tasso add-on su 365 giorni. Esempio: titolo a 90 giorni, nominale 100, tasso di sconto (discount rate) 4% su 360 → prezzo 99.00; rendimento add-on su 365 = (100/99 - 1) × 365/90 = 4.10%.",
+            "Spread: spread sul titolo di Stato (G-spread) = rendimento - rendimento del governativo di pari durata; spread sullo swap (I-spread) = rendimento - tasso swap; spread zero-volatility (Z-spread) = spread costante da aggiungere a ogni tasso spot per uguagliare il prezzo; spread corretto per le opzioni (option-adjusted spread, OAS) = Z-spread - costo dell'opzione (per una callable OAS < Z-spread). Lo spread compensa rischio di credito, liquidità e tassazione.",
+            "Trappola: confrontare un rendimento semestrale con uno annuale senza convertirli alla stessa periodicità."
+          ]
+        },
+        {
+          "title": "Struttura a termine: spot, par e forward",
+          "body": [
+            "Curva dei tassi spot (spot curve): rendimenti di zero coupon per scadenza. Curva par (par curve): cedole che fanno prezzare alla pari ogni scadenza. Curva forward: tassi per prestiti futuri impliciti oggi. Curva dei rendimenti (yield curve) delle obbligazioni con cedola: meno pura perché mescola flussi diversi.",
+            "Bootstrap (bootstrapping): dai tassi par si ricavano gli spot uno alla volta. Esempio: par a 1 anno 2%, a 2 anni 3%. Il titolo a 2 anni con cedola 3 vale 100: 3/1.02 + 103/(1 + S2)² = 100 → (1 + S2)² = 103/97.059 → S2 = 3.015%. Con una curva crescente gli spot sono sopra i par.",
+            "Tassi forward (forward rates): (1 + S_B)^B = (1 + S_A)^A × (1 + f_{A,B-A})^(B-A). Esempio: S1 = 2%, S2 = 3% → tasso a un anno fra un anno (1y1y) = 1.03²/1.02 - 1 = 4.01%. Gli spot sono medie geometriche dei forward; una curva crescente implica forward sopra gli spot.",
+            "Teorie della struttura a termine (term structure): aspettative pure (unbiased expectations: i forward sono stime non distorte dei futuri spot), preferenza per la liquidità (liquidity preference: i forward includono un premio per il rischio (risk premium) crescente con la scadenza), segmentazione dei mercati (domanda e offerta per scadenza indipendenti), habitat preferito (preferred habitat: gli investitori lasciano il loro habitat se compensati). Forme: crescente (normale), piatta, invertita (spesso anticipa recessioni).",
+            "Rendimento dell'investitore: se gli spot futuri coincidono con i forward attuali, tutte le strategie danno lo stesso rendimento; se i tassi restano invariati e la curva è crescente, comprare scadenze più lunghe di quelle dell'orizzonte e venderle prima (riding the yield curve) aumenta il rendimento grazie al rolldown.",
+            "Trappola: il tasso 2y3y indica un tasso di 3 anni che parte tra 2 anni, non un tasso di 2 anni tra 3 anni."
+          ]
+        },
+        {
+          "title": "Rischio di tasso: fonti di rendimento e duration",
+          "body": [
+            "Fonti di rendimento: cedole, reinvestimento delle cedole, plus o minusvalenza (incluso il pull to par). Se i tassi salgono subito dopo l'acquisto: il reinvestimento rende di più, ma il prezzo scende. Per un investitore con orizzonte breve domina il rischio di prezzo (market price risk); con orizzonte lungo domina il rischio di reinvestimento. Gli effetti si compensano quando l'orizzonte è pari alla duration di Macaulay; il divario (duration gap) = Macaulay - orizzonte: positivo = esposto al rialzo dei tassi.",
+            "Duration di Macaulay (Macaulay duration): media ponderata (weighted average) dei tempi dei flussi, con pesi = PV di ciascun flusso/prezzo. Esempio: 3 anni, cedola 5%, rendimento 6% → PV 4.717, 4.450, 88.160 su 97.327 → Macaulay = (1 × 4.717 + 2 × 4.450 + 3 × 88.160)/97.327 = 2.857 anni. Duration modificata (modified duration) = Macaulay/(1 + r) = 2.696: variazione percentuale (percent change) del prezzo per 1 punto di rendimento.",
+            "Duration modificata approssimata (approximate modified duration) = (PV- - PV+)/(2 × Δy × PV0). Con lo stesso titolo a rendimenti 5.9% e 6.1% → (97.590 - 97.065)/(2 × 0.001 × 97.327) = 2.70. Convessità approssimata = (PV- + PV+ - 2PV0)/(Δy² × PV0) ≈ 10.0.",
+            "Proprietà: la duration è minore della scadenza per titoli con cedola, uguale per lo zero coupon; scende con cedole più alte e con rendimenti più alti; generalmente sale con la scadenza; per una FRN è circa il tempo alla prossima revisione; una perpetua ha Macaulay = (1 + r)/r. Duration di portafoglio ≈ media ponderata per valore di mercato delle duration dei titoli (corretta se la curva si sposta in parallelo).",
+            "Duration monetaria (money duration) = duration modificata × prezzo pieno (o valore della posizione): variazione in euro per 1 punto di rendimento. Valore di un punto base (price value of a basis point, PVBP) = variazione del prezzo per 1 punto base ≈ ModDur × P × 0.0001. Esempio: posizione da 10 milioni con ModDur 6 → PVBP = 6,000 euro.",
+            "Trappola: la duration di Macaulay non misura la sensibilità di prezzo; quella è la modificata (o effettiva)."
+          ]
+        },
+        {
+          "title": "Convessità, duration effettiva e key rate",
+          "body": [
+            "La duration è un'approssimazione lineare; la convessità (convexity) corregge la curvatura: %ΔP ≈ -ModDur × Δy + ½ × Convessità × (Δy)². Esempio: ModDur 7, convessità 60, rendimenti +100 bp → -7% + 0.5 × 60 × 0.0001 = -6.7%; per -100 bp → +7.3%. La convessità positiva è un vantaggio per l'investitore: a parità di duration e rendimento si preferisce più convessità. Convessità monetaria = convessità × prezzo.",
+            "Duration effettiva (effective duration) = (PV- - PV+)/(2 × Δcurva × PV0) calcolata spostando la curva di riferimento (non il rendimento del titolo) e ricalcolando il prezzo con un modello: necessaria quando i flussi cambiano con i tassi (callable, putable, MBS). Convessità effettiva analoga. Una callable ha convessità effettiva negativa quando i tassi scendono vicino al prezzo di richiamo; una putable ha convessità più positiva quando i tassi salgono. Per le passività (liabilities) con flussi incerti (es. assicurazioni) si usa la duration effettiva.",
+            "Duration di tasso chiave (key rate duration): sensibilità del prezzo a uno spostamento di un singolo punto della curva (es. il 5 anni), mantenendo gli altri invariati. La somma delle key rate duration è la duration effettiva. Serve a misurare il rischio di cambi di forma della curva (irripidimento, appiattimento, curvatura), non solo di spostamenti paralleli.",
+            "Volatilità dei rendimenti: il rischio di prezzo dipende dalla duration e da quanto si muove il rendimento; i rendimenti a breve sono di solito più volatili di quelli a lungo. Un titolo con duration alta su un tratto di curva poco volatile può essere meno rischioso del previsto.",
+            "Rischio di credito e liquidità nella duration: il rendimento = tasso benchmark + spread. La duration misura l'effetto di una variazione di entrambi; per le obbligazioni corporate si usa anche la duration di spread (spread duration). Se peggiora la liquidità, si allarga lo spread denaro-lettera e il prezzo di realizzo scende."
+          ]
+        },
+        {
+          "title": "Rischio di credito: concetti e rating",
+          "body": [
+            "Rischio di credito (credit risk): rischio di perdita perché il debitore non paga in tutto o in parte. Componenti: probabilità di default (probability of default, PD), perdita in caso di default (loss given default, LGD = 1 - tasso di recupero (recovery rate)). Perdita attesa (expected loss) = PD × LGD. Esempio: PD 2% annua, recupero 40% → perdita attesa 1.2% annuo. Rischio di spread (spread risk): il prezzo scende se lo spread si allarga per downgrade o minore liquidità; variazione percentuale ≈ -duration di spread × Δspread + ½ convessità × Δspread².",
+            "Rating: agenzie (S&P, Moody's, Fitch); investment grade da AAA/Aaa a BBB-/Baa3, speculative grade (high yield) da BB+/Ba1 in giù; D per default. Rating dell'emittente (corporate family rating) e delle singole emissioni (issue rating): la differenza (notching) riflette la priorità; per l'high yield il notching è più ampio perché il recupero conta di più. Limiti dei rating: cambiano lentamente, possono sbagliare (crisi 2008), non catturano eventi specifici (contenziosi, catastrofi), i prezzi di mercato anticipano i rating.",
+            "Ordine di priorità (seniority ranking): primo pegno o ipoteca (first lien/mortgage), senior garantito, junior garantito, senior non garantito, senior subordinato, subordinato, junior subordinato. Obbligazioni dello stesso grado sono pari passu. Nei fallimenti l'ordine assoluto può non essere rispettato per accordi negoziati: i creditori senior possono accettare meno per evitare tempi lunghi.",
+            "Le quattro C dell'analisi di credito: capacità (capacity: capacità di rimborso, flussi, settore, posizione competitiva), garanzie (collateral), clausole (covenants), carattere (character: integrità e strategia del management, contabilità prudente). Ratio: debito/EBITDA, FFO/debito, EBITDA/interessi, (FFO + interessi)/interessi, debito/capitale; la tendenza e il confronto con i pari contano più del valore singolo.",
+            "Fattori che influenzano gli spread: ciclo del credito (si allargano in recessione), condizioni dei mercati finanziari, offerta di nuove emissioni, liquidità del mercato e capacità dei dealer. Gli spread high yield sono più sensibili al ciclo; quelli investment grade più ai tassi.",
+            "Trappola: un rating alto non elimina il rischio di spread; un titolo AA può perdere valore anche senza default se lo spread di mercato si allarga."
+          ]
+        },
+        {
+          "title": "Analisi di credito di governi e imprese",
+          "body": [
+            "Emittenti sovrani: valutazione istituzionale (efficacia del governo, stabilità politica, stato di diritto, corruzione), economica (PIL pro capite, crescita, diversificazione (diversification)), esterna (posizione della valuta, riserve, debito estero, saldo delle partite correnti; vantaggio per chi emette una valuta di riserva), fiscale (debito/PIL, deficit, costo degli interessi rispetto alle entrate), monetaria (credibilità e indipendenza della banca centrale, regime di cambio). Il rating in valuta locale è di solito superiore a quello in valuta estera perché lo Stato può tassare e creare moneta propria.",
+            "Enti non sovrani: obbligazioni a garanzia generale (general obligation) basate sulla capacità fiscale (base imponibile, economia locale, pensioni non finanziate); obbligazioni a reddito (revenue bonds) basate sui ricavi di un progetto (pedaggi, aeroporti, utility), valutate con l'indice di copertura (hedging) del servizio del debito (debt service coverage ratio).",
+            "Imprese investment grade: analisi della capacità di rimborso, stabilità dei flussi, struttura finanziaria e politiche di distribuzione. Imprese high yield: attenzione a liquidità (scadenze vicine, accesso al credito), struttura del debito (complessità, subordinazione strutturale delle obbligazioni emesse dalla capogruppo rispetto ai debiti delle controllate), covenant, valutazione della società come se fosse un'azienda in vendita (enterprise value vs debito), garanzie.",
+            "Esempio di subordinazione strutturale: la holding emette obbligazioni e possiede le controllate operative, che hanno debiti bancari. I flussi arrivano alla holding solo dopo che le controllate pagano i loro creditori: le obbligazioni della holding sono di fatto subordinate anche se nominalmente senior.",
+            "ESG nel credito: rischi ambientali (asset stranded, costi di transizione), sociali (sicurezza del prodotto, relazioni sindacali), di governance (qualità del consiglio, struttura proprietaria) possono influenzare PD e LGD; esistono obbligazioni verdi (green bonds) con proventi destinati a progetti ambientali."
+          ]
+        },
+        {
+          "title": "Cartolarizzazione: struttura e partecipanti",
+          "body": [
+            "La cartolarizzazione (securitization) raggruppa attività finanziarie (mutui, prestiti auto, crediti da carte, prestiti alle imprese) e le trasferisce a un veicolo (special purpose entity, SPE) che emette titoli garantiti dai flussi del portafoglio. Partecipanti: originatore/cedente (originator/seller), veicolo emittente (issuer), gestore degli incassi (servicer), trustee.",
+            "La cessione è una vendita vera (true sale): il veicolo è separato dal fallimento del cedente (bankruptcy remote), quindi il rating dei titoli dipende dalla qualità del portafoglio e dalla struttura, non dal cedente. Vantaggi: le banche liberano capitale e possono concedere nuovi prestiti, gli investitori accedono a esposizioni diversificate e su misura, migliorano liquidità ed efficienza dei mercati (market efficiency). Rischi: complessità, conflitti d'interesse dell'originatore (minore incentivo alla selezione: per questo esistono obblighi di trattenere una quota (risk retention)).",
+            "Tranche: a subordinazione di credito (credit tranching): le perdite colpiscono prima la tranche più junior (equity/first loss), poi la mezzanine, infine la senior; la cascata dei pagamenti (waterfall) segue l'ordine inverso. A scaglionamento temporale (time tranching): le tranche ricevono il capitale (e i rimborsi anticipati) in sequenza, ridistribuendo il rischio di rimborso anticipato (prepayment).",
+            "Esempio di struttura: portafoglio da 100 con tranche senior 80, mezzanine 15, junior 5. Perdite di 7 → la junior perde tutto (5), la mezzanine perde 2, la senior nulla. La senior è protetta da 20 di subordinazione: per questo può avere rating AAA anche se i prestiti sottostanti sono di qualità inferiore.",
+            "Collateralized debt obligation (CDO) e collateralized loan obligation (CLO): veicoli gestiti attivamente che acquistano un portafoglio di obbligazioni o prestiti a leva e lo finanziano con tranche; il gestore deve rispettare test di copertura e sovra-collateralizzazione. Il rendimento della tranche equity dipende dal differenziale tra rendimento degli attivi e costo delle tranche (arbitraggio)."
+          ]
+        },
+        {
+          "title": "ABS e titoli garantiti da mutui (MBS)",
+          "body": [
+            "ABS su prestiti auto: ammortizzanti, con rimborsi anticipati moderati; supporto al credito da subordinazione, sovra-collateralizzazione, spread in eccesso e fondo di riserva. ABS su carte di credito: crediti rotativi (revolving) senza ammortamento; durante il periodo di blocco (lockout/revolving period) i rimborsi dei titolari servono a comprare nuovi crediti, poi inizia l'ammortamento; possono esserci clausole di rimborso anticipato in caso di peggioramento del portafoglio.",
+            "Mutui residenziali: a tasso fisso, variabile (adjustable-rate), con rata finale (balloon), solo interessi (interest-only); con o senza ricorso sul debitore; rapporto prestito/valore (loan-to-value, LTV) basso = più garanzia. Agency MBS (garantiti da enti come Ginnie Mae, Fannie Mae, Freddie Mac negli USA: rischio di credito minimo) e non-agency (con supporti al credito propri).",
+            "Rischio di rimborso anticipato (prepayment risk): i debitori rimborsano quando i tassi scendono (rifinanziamento) o quando vendono casa. Rischio di contrazione (contraction risk): tassi in calo → rimborsi più rapidi → vita media più breve e reinvestimento a tassi bassi (convessità negativa). Rischio di estensione (extension risk): tassi in salita → rimborsi più lenti → vita media più lunga proprio quando si vorrebbe reinvestire a tassi alti.",
+            "Misure: tasso di rimborso condizionato annuo (conditional prepayment rate, CPR) e mensile (single monthly mortality, SMM): SMM = 1 - (1 - CPR)^(1/12); CPR 6% → SMM 0.514%. Riferimento PSA: 100 PSA = CPR che cresce dello 0.2% al mese fino al 6% al mese 30, poi costante. Vita media ponderata (weighted average life), cedola media ponderata (WAC), scadenza media ponderata (WAM). Il tasso del pass-through è inferiore al WAC per le commissioni di servicing e garanzia.",
+            "Collateralized mortgage obligations (CMO): ridistribuiscono il rischio di rimborso anticipato. Sequenziali (sequential pay): la tranche A riceve tutto il capitale finché non è rimborsata, poi la B: A ha meno rischio di estensione, le ultime meno rischio di contrazione. Tranche a ammortamento pianificato (planned amortization class, PAC) con calendario di rimborso protetto entro un intervallo di velocità, finanziato da tranche di supporto (support) che assorbono la variabilità. Floater e inverse floater, interest-only e principal-only strip.",
+            "Mutui commerciali (CMBS): prestiti senza ricorso su immobili commerciali; rischio di credito analizzato con l'indice di copertura del servizio del debito (debt service coverage ratio = reddito operativo netto (net operating income)/servizio del debito) e l'LTV. Protezione dai rimborsi anticipati a livello di prestito (blocco, defeasance, yield maintenance, penali) e di struttura; rischio di rata finale (balloon risk): se il debitore non rifinanzia alla scadenza, il prestito si estende."
+          ]
+        }
+      ],
+      "formulas": [
+        "Rateo = (t/T) × cedola periodica; prezzo pieno = prezzo secco + rateo",
+        "Valore di conversione = rapporto di conversione × prezzo dell'azione",
+        "Base sconto: PV = FV(1 - giorni/anno × DR); add-on: PV = FV/(1 + giorni/anno × AOR)",
+        "Forward: (1 + S_B)^B = (1 + S_A)^A (1 + f)^(B - A)",
+        "ModDur = MacDur/(1 + r per periodo)",
+        "ApproxModDur = (PV- - PV+)/(2 Δy PV0)",
+        "ApproxConv = (PV- + PV+ - 2PV0)/(Δy² PV0)",
+        "%ΔP ≈ -ModDur Δy + ½ Conv (Δy)²",
+        "PVBP ≈ ModDur × P × 0.0001; money duration = ModDur × P",
+        "Duration gap = MacDur - orizzonte d'investimento",
+        "Perdita attesa = PD × LGD = PD × (1 - recupero)",
+        "SMM = 1 - (1 - CPR)^(1/12)",
+        "Callable = non callable - call; putable = non putable + put"
+      ],
+      "pitfalls": [
+        "Usare la duration modificata su un'obbligazione con opzioni: serve la duration effettiva.",
+        "Pensare che lo yield to maturity sia il rendimento realizzato anche se le cedole sono reinvestite a tassi diversi.",
+        "Confondere rischio di contrazione (tassi in calo) e di estensione (tassi in salita) negli MBS.",
+        "Credere che OAS > Z-spread per una callable: l'OAS toglie il valore dell'opzione, quindi è minore.",
+        "Dimenticare che un aumento della convessità riduce le perdite e aumenta i guadagni a parità di duration.",
+        "Sommare duration di titoli con pesi nominali invece che per valore di mercato."
+      ]
+    }
+  ]
+}

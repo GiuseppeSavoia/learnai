@@ -1,0 +1,36 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "ethics",
+      "sections": [
+        {
+          "title": "Guida standard per standard nel contesto della gestione",
+          "body": [
+            "I - Professionalità: un gestore che opera su più giurisdizioni applica la regola più severa per ogni cliente; se scopre che il proprio team usa dati ottenuti violando contratti di riservatezza (confidentiality) deve dissociarsi e segnalarlo. Regali da broker legati al volume di ordini compromettono l'indipendenza nella scelta degli intermediari. Le presentazioni di marketing non devono esagerare capacità, risorse o risultati (I(C)).",
+            "II - Integrità dei mercati: le informazioni ricevute in riunioni private con il management, nei comitati dei creditori o come membro di un consiglio sono spesso MNPI; un gestore attivista che conosce i piani di un'offerta prima dell'annuncio non può operare. Ribilanciamenti a fine trimestre per gonfiare i NAV, o operazioni tra fondi gestiti per sostenere i prezzi, sono manipolazione.",
+            "III - Doveri verso i clienti: per gli istituzionali la lealtà va ai beneficiari; per i fondi al mandato. Voto per delega coerente con l'interesse economico dei clienti; politica sui soft dollar; allocazione delle operazioni tra fondi; IPS aggiornati; presentazione dei risultati conforme ai GIPS; riservatezza anche verso altri clienti.",
+            "IV - Doveri verso il datore di lavoro: i gestori che lavorano per un fondo e offrono consulenze personali a terzi devono ottenere il consenso scritto; supervisori responsabili dei sistemi di controllo su negoziazioni personali e allocazioni.",
+            "V - Analisi e comunicazione: modelli quantitativi testati e compresi, rischi spiegati (leva, derivati (derivatives), liquidità), cambiamenti nel processo comunicati; documentazione delle decisioni d'investimento e della selezione dei gestori esterni.",
+            "VI e VII: conflitti tra conti con commissioni diverse, partecipazione personale a fondi privati di gestori che si selezionano per i clienti (va dichiarata e spesso evitata), compensi per segnalazioni a consulenti; uso corretto della designazione nei materiali di marketing."
+          ]
+        },
+        {
+          "title": "Procedure raccomandate per una società di gestione",
+          "body": [
+            "Politiche scritte: codice etico, conflitti d'interesse, operazioni personali (preautorizzazione, rendicontazione, periodi di blocco, divieto di partecipare a IPO senza autorizzazione), regali e intrattenimenti, allocazione degli ordini e delle IPO, best execution e uso delle commissioni, voto per delega, valutazione dei titoli illiquidi, gestione delle informazioni privilegiate (firewall, liste), conservazione dei documenti, continuità operativa.",
+            "Strutture: responsabile della conformità indipendente con accesso al consiglio, formazione periodica, controlli e test delle procedure, canali per le segnalazioni interne (whistleblowing) con protezione.",
+            "Comunicazioni ai clienti: processo d'investimento, rischi, commissioni (incluse quelle indirette), conflitti, politica di voto, risultati della verifica GIPS se presente, cambiamenti di personale chiave.",
+            "Esempio di valutazione: una società ha una policy sulle operazioni personali ma non verifica mai le rendicontazioni; un gestore compra titoli prima degli ordini dei clienti per mesi. La violazione del gestore è VI(B); il responsabile che non ha attuato i controlli viola IV(C) perché un sistema non applicato non è adeguato.",
+            "Metodo d'esame: per ogni procedura descritta chiedersi se è adeguata alla dimensione e ai rischi della società e se è effettivamente applicata; una procedura che esiste solo sulla carta non protegge."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Pensare che una policy scritta basti senza controlli sulla sua applicazione.",
+        "Considerare lecito operare su informazioni ottenute in un comitato dei creditori prima della loro pubblicazione."
+      ]
+    }
+  ]
+}

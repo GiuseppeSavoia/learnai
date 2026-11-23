@@ -1,0 +1,68 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "alt",
+      "sections": [
+        {
+          "title": "Materie prime: teorie della curva e rendimenti dei futures",
+          "body": [
+            "Settori: energia (petrolio, gas, prodotti raffinati), metalli industriali, metalli preziosi, agricoltura (cereali, soft come caffè e zucchero), bestiame. Ogni settore ha un proprio ciclo di produzione e consumo (stagionalità dei raccolti, domanda di riscaldamento) che influenza la forma della curva dei futures. Partecipanti: produttori e consumatori che coprono (hedgers), speculatori, arbitraggisti, borse, autorità.",
+            "Teorie della struttura dei futures: assicurativa (insurance theory, Keynes: i produttori coprono vendendo futures e pagano un premio agli speculatori, quindi i futures sono sotto lo spot atteso: normale backwardation); pressione delle coperture (hedging pressure: la curva dipende da chi copre di più, produttori o consumatori; spiega sia backwardation sia contango); stoccaggio (theory of storage: futures = spot + costi di stoccaggio - rendimento di convenienza; con scorte scarse il rendimento di convenienza sale e si ha backwardation).",
+            "Rendimento totale di una posizione lunga completamente collateralizzata: rendimento del prezzo (spot) + rendimento del rinnovo (roll return: positivo in backwardation, negativo in contango) + rendimento del collaterale (tasso privo di rischio sui margini) + rendimento da ribilanciamento (rebalance return, per indici con pesi fissi). Esempio: spot +3%, roll -4% (contango marcato), collaterale +4% → rendimento totale ≈ 3%.",
+            "Swap su materie prime (commodities): total return swap (si riceve il rendimento totale di un indice di futures contro un tasso più spread), excess return swap (si riceve il rendimento oltre una soglia), basis swap (differenza tra due prezzi correlati, es. due qualità di petrolio), swap sulla varianza (variance) o volatilità.",
+            "Indici: S&P GSCI (pesi per produzione mondiale, molta energia), Bloomberg Commodity Index (pesi su liquidità e produzione, con limiti per settore), altri con regole di rinnovo diverse. La costruzione dell'indice determina i rendimenti: esposizione settoriale, contratti scelti sulla curva, frequenza del rinnovo e del ribilanciamento."
+          ]
+        },
+        {
+          "title": "Immobili: valutazione per reddito e indebitamento",
+          "body": [
+            "Caratteristiche: eterogeneità, indivisibilità, scarsa liquidità, costi di transazione e gestione elevati, valori stimati da perizie. Tipi: uffici (contratti lunghi, sensibili all'occupazione), commercio (affitti con percentuale sulle vendite), industriale e logistica (domanda dall'e-commerce), residenziale multifamiliare (contratti brevi, domanda demografica), alberghiero (ricavi giornalieri, molto ciclico).",
+            "Capitalizzazione diretta: valore = NOI dell'anno successivo/cap rate; il cap rate ≈ rendimento richiesto (required return) - crescita del NOI. Esempio: NOI atteso 2 milioni, rendimento richiesto 9%, crescita 2% → cap rate 7%, valore 28.57 milioni. Altro metodo: moltiplicatore del reddito lordo (gross income multiplier) = prezzo/reddito lordo, più grezzo perché ignora le spese.",
+            "Flussi attualizzati: NOI anno per anno più valore di rivendita (terminale) = NOI dell'anno successivo all'uscita/cap rate terminale (di solito più alto del cap rate iniziale per l'invecchiamento dell'immobile). Si considerano contratti in essere, scadenze, rinnovi, sfitto, costi di rinnovo e incentivi ai locatari. Il NOI esclude ammortamenti (depreciation) e interessi.",
+            "Approccio del costo: valore del terreno + costo di ricostruzione - deprezzamento fisico, funzionale (design obsoleto) ed esterno (zona in declino). Approccio dei comparabili: transazioni simili corrette per dimensione, età, posizione, condizioni.",
+            "Indebitamento: rapporto prestito/valore (loan-to-value, LTV), copertura del servizio del debito (debt service coverage ratio, DSCR = NOI/servizio del debito), rendimento sul capitale proprio al primo anno (equity dividend rate o cash-on-cash = flusso dopo il debito/capitale). Esempio: immobile da 28.57 milioni, LTV 60% (17.14 milioni) a solo interessi al 6% → interessi 1.03 milioni; flusso per l'equity 0.97 milioni su 11.43 di capitale → 8.5%; DSCR = 1.94.",
+            "Due diligence: contratti di locazione, situazione ambientale, titolo di proprietà, conformità urbanistica, stato fisico, conti operativi. Rischi: ciclo, tassi (cap rate in aumento), locatari, sviluppo, leva, liquidità."
+          ]
+        },
+        {
+          "title": "REIT: valutazione con NAV, FFO e AFFO",
+          "body": [
+            "Investire tramite società quotate: REIT (esenti da imposte a livello societario se distribuiscono gran parte del reddito), società immobiliari operative tassate, MBS e fondi immobiliari quotati. Vantaggi: liquidità, gestione professionale, diversificazione (diversification), trasparenza, accesso a immobili di grande dimensione. Svantaggi: correlazione (correlation) con le azioni nel breve periodo, poco controllo, ridotta capacità di reinvestire (payout obbligatorio), costi di struttura.",
+            "Valore netto delle attività per azione (net asset value per share, NAVPS): NOI stimato/cap rate di mercato = valore degli immobili; più altre attività (cassa, crediti); meno debiti e passività (liabilities); diviso per le azioni. Esempio: NOI 120 milioni, cap rate 6% → 2,000; + cassa 50; - debito 800 → 1,250; 50 milioni di azioni → NAVPS 25. Un REIT che tratta a 22 è a sconto del 12% sul NAV: occasione o segnale di problemi (gestione, leva, qualità degli immobili).",
+            "Fondi dalle operazioni (funds from operations, FFO) = utile netto (net income) + ammortamenti immobiliari - plusvalenze da cessione (+ minusvalenze). FFO rettificato (adjusted FFO, AFFO) = FFO - affitti non monetari (straight-line rent) - investimenti di manutenzione ricorrenti e incentivi ai locatari: migliore misura della capacità di distribuire. Multipli (multiples) P/FFO e P/AFFO confrontati con i pari; rendimento da dividendo (dividends).",
+            "Esempio: utile netto 80, ammortamenti 60, plusvalenze 10 → FFO 130; affitti lineari non monetari 5, capex ricorrenti 25 → AFFO 100. Con 50 milioni di azioni AFFO per azione 2; prezzo 30 → P/AFFO 15.",
+            "DCF: dividendi o AFFO attualizzati; il NAV è più usato per REIT con portafogli stabili, il multiplo per confronti relativi. Le diverse specializzazioni (uffici, centri commerciali, logistica, residenziale, sanità, magazzini, data center, torri di telecomunicazioni) hanno driver economici diversi."
+          ]
+        },
+        {
+          "title": "Strategie degli hedge fund in profondità",
+          "body": [
+            "Azionario: long/short fondamentale (net long, guadagna da selezione e mercato), short dedicato e short bias (beta negativo, ricerca di frodi e aziende sopravvalutate), market neutral (beta e settori neutralizzati; strategie di coppia (pairs trading), basate su fattori quantitativi, stub trading che sfrutta la relazione tra capogruppo e controllata quotata). Rischi: leva per amplificare rendimenti piccoli, crowding (molti fondi con le stesse posizioni, come nel quant crash del 2007).",
+            "Event driven: merger arbitrage (operazioni in contanti: comprare il target; in azioni: comprare il target e vendere l'acquirente secondo il rapporto di cambio; il rischio principale è che l'operazione fallisca: profilo simile a una put venduta), distressed e ristrutturazioni (acquisto di debito di imprese in difficoltà, partecipazione ai comitati dei creditori), attivisti, situazioni speciali (scissioni, ristrutturazioni di capitale).",
+            "Valore relativo: arbitraggio obbligazionario (differenze tra titoli simili, curva, swap spread; leva elevata; esempio LTCM nel 1998), arbitraggio su convertibili (comprare convertibili sottovalutate e vendere l'azione in proporzione al delta: si guadagna dalla volatilità realizzata e dalla cedola (coupon); rischi di liquidità, di credito e di prestito titoli), arbitraggio di volatilità.",
+            "Opportunistiche: global macro (posizioni discrezionali su tassi, valute, indici, materie prime basate su temi macro; rendimenti asimmetrici positivi nelle crisi se ben posizionati), managed futures (sistematici, trend following su molti mercati; spesso guadagnano in crisi prolungate). Specialistiche: volatilità (vendita o acquisto di volatilità implicita), riassicurazione e polizze vita (rischi non correlati ai mercati). Multi-gestore: fondi multi-strategia (piattaforme con capitale allocato dinamicamente) e fondi di fondi.",
+            "Modelli a fattori condizionali (conditional factor models): le esposizioni degli hedge fund ai fattori cambiano tra periodi normali e di crisi (ad esempio market neutral che diventano correlati al mercato nelle crisi di liquidità). Valutare il contributo di una strategia in portafoglio significa considerare anche le correlazioni in crisi, non solo le medie.",
+            "Esempio di rischio di crisi: una strategia di arbitraggio su convertibili con correlazione 0.1 con le azioni in periodi normali può subire perdite del 20-30% quando le vendite forzate degli altri fondi allargano gli spread e il prestito titoli diventa caro (2008): la diversificazione si riduce proprio quando serve."
+          ]
+        }
+      ],
+      "formulas": [
+        "Rendimento futures commodity = spot + roll + collaterale + ribilanciamento",
+        "Teoria dello stoccaggio: F = S + stoccaggio - rendimento di convenienza",
+        "Valore immobile = NOI1/cap rate; cap rate ≈ r - g",
+        "DSCR = NOI/servizio del debito; LTV = prestito/valore",
+        "Equity dividend rate = flusso dopo il debito/capitale proprio",
+        "NAVPS = (NOI/cap rate + altre attività - passività)/azioni",
+        "AFFO = FFO - affitti non monetari - capex ricorrenti"
+      ],
+      "pitfalls": [
+        "Confondere FFO e AFFO: l'AFFO toglie gli investimenti ricorrenti.",
+        "Usare il cap rate attuale come cap rate terminale per immobili che invecchiano.",
+        "Pensare che il contango sia sempre una perdita: incide sul roll, non sullo spot.",
+        "Considerare neutrale al mercato una strategia senza verificarne le esposizioni in crisi.",
+        "Ignorare che il merger arbitrage ha un profilo di rischio simile a una put venduta."
+      ]
+    }
+  ]
+}

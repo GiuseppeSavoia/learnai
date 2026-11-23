@@ -1,0 +1,555 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "alloc",
+      "title": "Aspettative di mercato e asset allocation",
+      "summary": "Capital market expectations, asset allocation strategica (asset-only, liability-relative, goals-based), allocation tattica e ribilanciamento (rebalancing).",
+      "sections": [
+        {
+          "title": "Capital market expectations",
+          "body": [
+            "Modello di Grinold-Kroner per l'azionario: E(R) ≈ D/P + (i + g - ΔS) + ΔP/E, cioè rendimento da dividendi (dividends), crescita nominale degli utili (inflazione (inflation) + crescita reale) corretta per la variazione del numero di azioni (i riacquisti (share repurchase) netti aumentano il rendimento), più la variazione attesa dei multipli (multiples).",
+            "Obbligazioni (bonds): il rendimento atteso parte dal rendimento corrente, aggiustato per roll-down, variazioni attese dei tassi, perdite su crediti e cambi. Il ciclo economico (business cycle) e la politica monetaria (monetary policy) orientano le previsioni; attenzione ai limiti delle previsioni (bias psicologici, dati, modelli)."
+          ]
+        },
+        {
+          "title": "Approcci di asset allocation",
+          "body": [
+            "Asset-only: ottimizzazione media-varianza (sensibile agli input; si usano vincoli, ricampionamento, modello di Black-Litterman). Liability-relative: si ottimizza il surplus (asset - passività (liabilities)) o si costruisce un portafoglio di copertura (hedging) delle passività più un portafoglio di rendimento. Goals-based: sotto-portafogli per obiettivi con orizzonti e probabilità di successo diversi.",
+            "Le classi di attività devono essere omogenee al loro interno, distinte tra loro e insieme coprire l'universo investibile. La risk parity alloca in base al contributo al rischio di ciascuna classe."
+          ]
+        },
+        {
+          "title": "Ribilanciamento",
+          "body": [
+            "Ribilanciamento a calendario o a soglie (corridoi). Il corridoio di una classe va allargato se i costi di transazione sono più alti, se l'investitore tollera di più il rischio o se la classe è molto correlata con il resto del portafoglio; va ristretto se la volatilità della classe (o del resto del portafoglio) è più alta.",
+            "Allocazione tattica: deviazioni temporanee dalla strategica per sfruttare opportunità di breve; va valutata sul rischio attivo (active risk) aggiunto."
+          ]
+        }
+      ],
+      "formulas": [
+        "E(R) ≈ D/P + (i + g - ΔS) + ΔP/E",
+        "Surplus = asset - passività"
+      ],
+      "pitfalls": [
+        "Sbagliare il segno di ΔS: i riacquisti netti (ΔS negativo) aumentano il rendimento atteso.",
+        "Pensare che una classe più volatile meriti un corridoio più largo (va ristretto)."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-al-set1",
+          "vignette": "Vittoria Sala, CFA, advises the Lambert Foundation. For the domestic equity market she estimates a dividend yield of 2.0%, expected inflation of 2.5%, real earnings growth of 2.0%, net share buybacks reducing shares outstanding by 0.5% per year, and no change in the P/E ratio. The foundation's investment committee is reviewing rebalancing corridors. Asset class X has high transaction costs and high correlation with the rest of the portfolio; asset class Y is highly volatile and inexpensive to trade. The committee also discusses a defined benefit pension client whose priority is funding its liabilities; Sala suggests splitting its assets into a hedging portfolio and a return-seeking portfolio.",
+          "questions": [
+            {
+              "id": "l3-al-1",
+              "difficulty": 3,
+              "stem": "Using the Grinold-Kroner model, the expected return on domestic equities is closest to:",
+              "choices": [
+                "6.0%",
+                "6.5%",
+                "7.0%"
+              ],
+              "answer": 2,
+              "explanation": "E(R) = 2.0% + (2.5% + 2.0% - (-0.5%)) + 0 = 7.0%. I riacquisti (share repurchase) riducono le azioni: ΔS = -0.5%, che si sottrae e quindi aumenta il rendimento. 6.0% sbaglia il segno."
+            },
+            {
+              "id": "l3-al-2",
+              "difficulty": 3,
+              "stem": "Compared with asset class Y, asset class X should most likely have a:",
+              "choices": [
+                "wider rebalancing corridor",
+                "narrower rebalancing corridor",
+                "corridor of the same width"
+              ],
+              "answer": 0,
+              "explanation": "Costi di transazione alti e alta correlazione (correlation) con il resto del portafoglio giustificano un corridoio più largo. La classe Y, molto volatile e poco costosa da negoziare, merita un corridoio stretto."
+            },
+            {
+              "id": "l3-al-3",
+              "difficulty": 2,
+              "stem": "Sala's suggestion for the pension client is best described as:",
+              "choices": [
+                "an asset-only mean-variance approach",
+                "a liability-relative approach",
+                "a goals-based approach for individuals"
+              ],
+              "answer": 1,
+              "explanation": "Dividere tra un portafoglio di copertura delle passività (liabilities) e uno di rendimento è l'approccio liability-relative (hedging/return-seeking portfolios)."
+            },
+            {
+              "id": "l3-al-4",
+              "difficulty": 2,
+              "stem": "A known weakness of unconstrained mean-variance optimization is that it:",
+              "choices": [
+                "produces highly concentrated allocations that are very sensitive to expected return inputs",
+                "cannot incorporate correlations",
+                "always results in an equally weighted portfolio"
+              ],
+              "answer": 0,
+              "explanation": "Piccole variazioni dei rendimenti attesi spostano molto i pesi e producono portafogli concentrati. Si usano vincoli, ricampionamento o Black-Litterman per stabilizzare."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "constr",
+      "title": "Costruzione del portafoglio",
+      "summary": "Gestione azionaria e obbligazionaria attiva e passiva, rischio attivo (active risk), immunizzazione (immunization) delle passività (liabilities), strategie sulla curva e overlay.",
+      "sections": [
+        {
+          "title": "Gestione azionaria",
+          "body": [
+            "Passiva: replica completa, campionamento (sampling) stratificato, ottimizzazione; il tracking error dipende da costi, liquidità e cash drag. Attiva: approcci fondamentali (bottom-up, top-down) e quantitativi; stili value, growth, momentum, qualità.",
+            "Rischio attivo (tracking error) = deviazione standard (standard deviation) del rendimento attivo (active return); information ratio = rendimento attivo / rischio attivo. Active share misura quanto i pesi differiscono dal benchmark: alta active share con basso tracking error indica stock picking diversificato."
+          ]
+        },
+        {
+          "title": "Obbligazioni e passività",
+          "body": [
+            "Immunizzazione di una singola passività: Macaulay duration del portafoglio pari all'orizzonte, valore attuale (present value) degli asset ≥ passività, convessità (convexity) minima. Per più passività: duration e valore abbinati, dispersione (convessità) degli asset superiore a quella delle passività. Cash flow matching: più sicuro ma più costoso.",
+            "Per colmare un divario di duration si usano futures o swap: ricevere fisso in uno swap aumenta la duration. Nozionale dello swap ≈ (duration target - duration attuale) × valore del portafoglio / duration netta dello swap.",
+            "Strategie sulla curva: bullet (concentrata su una scadenza), barbell (estremi, più convessità), ladder. Con un appiattimento atteso della curva conviene una barbell o una posizione lunga sulle scadenze lunghe."
+          ]
+        },
+        {
+          "title": "Credito e overlay",
+          "body": [
+            "Gestione attiva del credito: bottom-up (selezione degli emittenti con spread interessanti rispetto al rischio) e top-down (esposizione per settore, rating, duration di spread). La spread duration misura la sensibilità del prezzo allo spread; il rendimento in eccesso atteso ≈ spread - spread duration × Δspread - perdita attesa (expected loss).",
+            "Overlay: un gestore separato usa derivati (derivatives) per gestire esposizioni comuni (cambi, duration, beta) per l'intero portafoglio. Completion portfolio: riporta le esposizioni aggregate dei gestori attivi verso quelle del benchmark."
+          ]
+        }
+      ],
+      "formulas": [
+        "IR = rendimento attivo / tracking error",
+        "Nozionale swap = (D_target - D_attuale) × V / D_swap",
+        "Rendimento attivo = IR × rischio attivo"
+      ],
+      "pitfalls": [
+        "Confondere ricevere fisso (aumenta la duration) e pagare fisso (la riduce).",
+        "Dimenticare la condizione sulla convessità nell'immunizzazione."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-co-set1",
+          "vignette": "Nicola Ferraro manages a $100 million bond portfolio with a modified duration of 5. The client's liabilities require a duration of 7. Ferraro plans to use a receive-fixed interest rate swap with a net modified duration of 4. He also manages an equity fund that has generated an annualized active return of 1.2% with a tracking error of 4%. Ferraro expects the yield curve to flatten, with long-term yields falling relative to short-term yields, and is choosing between a bullet and a barbell structure with the same duration.",
+          "questions": [
+            {
+              "id": "l3-co-1",
+              "difficulty": 3,
+              "stem": "The notional principal of the receive-fixed swap needed to reach the target duration is closest to:",
+              "choices": [
+                "$28.6 million",
+                "$50.0 million",
+                "$175.0 million"
+              ],
+              "answer": 1,
+              "explanation": "Nozionale = (7 - 5) × 100 / 4 = 50 milioni. Ricevere fisso aggiunge duration, come comprare un'obbligazione (bonds) finanziata a tasso variabile."
+            },
+            {
+              "id": "l3-co-2",
+              "difficulty": 2,
+              "stem": "The equity fund's information ratio is closest to:",
+              "choices": [
+                "0.30",
+                "3.33",
+                "4.80"
+              ],
+              "answer": 0,
+              "explanation": "IR = 1.2% / 4% = 0.30."
+            },
+            {
+              "id": "l3-co-3",
+              "difficulty": 3,
+              "stem": "Given Ferraro's expectation of a flattening yield curve, which structure is most appropriate?",
+              "choices": [
+                "A bullet concentrated in intermediate maturities",
+                "A barbell with short and long maturities",
+                "Either, since both have the same duration"
+              ],
+              "answer": 1,
+              "explanation": "Con un appiattimento i rendimenti lunghi scendono rispetto ai brevi: la barbell, che ha la parte lunga, ne beneficia, e ha anche più convessità (convexity). La stessa duration non implica la stessa esposizione alla forma della curva."
+            },
+            {
+              "id": "l3-co-4",
+              "difficulty": 2,
+              "stem": "Entering a pay-fixed swap instead of a receive-fixed swap would most likely:",
+              "choices": [
+                "increase portfolio duration",
+                "decrease portfolio duration",
+                "have no effect on duration"
+              ],
+              "answer": 1,
+              "explanation": "Pagare fisso e ricevere variabile equivale a vendere un'obbligazione (bonds) a tasso fisso: la duration del portafoglio diminuisce."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "perf",
+      "title": "Misurazione e attribuzione della performance",
+      "summary": "Attribuzione (performance attribution) del rendimento (Brinson), attribuzione del rischio, misure risk-adjusted, benchmark e valutazione dei gestori.",
+      "sections": [
+        {
+          "title": "Attribuzione di Brinson",
+          "body": [
+            "Effetto allocazione (allocation effect) per settore = (wp - wb) × (Rb_settore - Rb_totale): premia il sovrappeso di settori che battono il benchmark complessivo. Effetto selezione (selection effect) = wb × (Rp_settore - Rb_settore). Effetto interazione = (wp - wb) × (Rp_settore - Rb_settore). La somma è il rendimento attivo (active return).",
+            "Per le obbligazioni (bonds) l'attribuzione usa fattori: duration, curva, spread, selezione. Per l'analisi macro, si scompone tra rendimento della politica d'investimento, scelte tattiche e selezione."
+          ]
+        },
+        {
+          "title": "Benchmark e misure",
+          "body": [
+            "Un buon benchmark è non ambiguo, investibile, misurabile, appropriato allo stile, coerente con le opinioni del gestore, specificato in anticipo e accettato (SAMURAI). Benchmark per gli alternativi: problematici per illiquidità (illiquidity) e smoothing.",
+            "Misure: Sharpe, Treynor, information ratio, Sortino (usa la deviazione al ribasso), appraisal ratio (alfa / rischio specifico (idiosyncratic risk)), capture ratio (up-capture / down-capture) e drawdown."
+          ]
+        },
+        {
+          "title": "Valutazione dei gestori",
+          "body": [
+            "Si valuta il processo, non solo i risultati: filosofia d'investimento, coerenza di stile, capacità del team, persistenza della performance. Errori di tipo I (assumere un gestore senza abilità) e di tipo II (scartare un gestore abile): gli investitori tendono a temere di più il secondo, ma il primo costa di più."
+          ]
+        }
+      ],
+      "formulas": [
+        "Allocazione = (wp - wb) × (Rb_i - Rb)",
+        "Selezione = wb × (Rp_i - Rb_i)",
+        "Interazione = (wp - wb) × (Rp_i - Rb_i)",
+        "Sortino = (Rp - MAR) / downside deviation"
+      ],
+      "pitfalls": [
+        "Usare (Rb_settore) al posto di (Rb_settore - Rb_totale) nell'effetto allocazione.",
+        "Calcolare la selezione con i pesi del portafoglio invece che del benchmark (nel modello BHB)."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-pf-set1",
+          "vignette": "Irene Costa evaluates a balanced fund against its benchmark for the past year. The fund held 70% equities and 30% bonds; the benchmark holds 60% equities and 40% bonds. Benchmark returns were 10.0% for equities and 2.5% for bonds, so the total benchmark return was 7.0%. The fund's equity holdings returned 12.0% and its bond holdings returned 3.0%. Costa uses the Brinson-Hood-Beebower model. A trustee asks which risk-adjusted measure best captures downside risk for a fund with an asymmetric return distribution.",
+          "questions": [
+            {
+              "id": "l3-pf-1",
+              "difficulty": 3,
+              "stem": "The total allocation effect is closest to:",
+              "choices": [
+                "0.30%",
+                "0.75%",
+                "1.40%"
+              ],
+              "answer": 1,
+              "explanation": "Azioni: (0.70 - 0.60) × (10% - 7%) = 0.30%. Obbligazioni (bonds): (0.30 - 0.40) × (2.5% - 7%) = +0.45%. Totale 0.75%: sottopesare un settore che rende meno del benchmark aggiunge valore."
+            },
+            {
+              "id": "l3-pf-2",
+              "difficulty": 3,
+              "stem": "The total security selection effect is closest to:",
+              "choices": [
+                "1.40%",
+                "1.55%",
+                "2.30%"
+              ],
+              "answer": 0,
+              "explanation": "Azioni: 0.60 × (12% - 10%) = 1.20%. Obbligazioni (bonds): 0.40 × (3% - 2.5%) = 0.20%. Totale 1.40%. L'interazione vale 0.15% e il rendimento attivo (active return) totale 2.30%."
+            },
+            {
+              "id": "l3-pf-3",
+              "difficulty": 2,
+              "stem": "The fund's active return is closest to:",
+              "choices": [
+                "1.40%",
+                "2.30%",
+                "9.30%"
+              ],
+              "answer": 1,
+              "explanation": "Rendimento del fondo = 0.7 × 12% + 0.3 × 3% = 9.30%; attivo = 9.30% - 7.00% = 2.30% = 0.75% + 1.40% + 0.15%."
+            },
+            {
+              "id": "l3-pf-4",
+              "difficulty": 2,
+              "stem": "The measure that best addresses the trustee's concern is the:",
+              "choices": [
+                "Treynor ratio",
+                "Sortino ratio",
+                "information ratio"
+              ],
+              "answer": 1,
+              "explanation": "Il Sortino usa la deviazione al ribasso rispetto a un rendimento minimo accettabile: misura il rischio di perdite, più adatto con distribuzioni asimmetriche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "risk",
+      "title": "Derivati e gestione del rischio",
+      "summary": "Uso di opzioni (options), futures, forward e swap per modificare esposizioni azionarie, di tasso e valutarie; strategie con opzioni; copertura (hedging) del rischio di cambio.",
+      "sections": [
+        {
+          "title": "Strategie con opzioni",
+          "body": [
+            "Covered call: azioni + call vendute, rinuncia al rialzo oltre lo strike in cambio del premio. Protective put: azioni + put comprate, assicura un minimo. Collar: put comprata finanziata da una call venduta. Spread (bull, bear), straddle (scommessa sulla volatilità), calendar spread.",
+            "Per scegliere una strategia parti dalla visione: direzione del prezzo e della volatilità. Volatilità attesa in aumento: comprare opzioni (straddle lungo); in calo: venderle."
+          ]
+        },
+        {
+          "title": "Modificare beta e duration",
+          "body": [
+            "Numero di futures azionari = (βT - βP)/βF × V / (F × moltiplicatore); negativo = vendere. Per la duration: numero di futures = (BPV_target - BPV_portafoglio)/BPV_futures.",
+            "Overlay e sintetici: si può spostare l'allocazione tra azioni e obbligazioni (bonds) con futures senza vendere i titoli sottostanti, riducendo costi e tempi."
+          ]
+        },
+        {
+          "title": "Rischio di cambio",
+          "body": [
+            "Copertura statica con forward e roll periodico; il roll yield dipende dal differenziale dei tassi (coprire una valuta con tassi più alti di quelli domestici costa). Copertura dinamica, opzioni valutarie per proteggersi lasciando il rialzo, cross hedge e proxy hedge quando la valuta non è coperta direttamente.",
+            "Scegliere quanto coprire dipende da orizzonte, costi, correlazione (correlation) tra rendimenti locali e cambio, e dalle opinioni del gestore (copertura discrezionale o active currency management)."
+          ]
+        }
+      ],
+      "formulas": [
+        "N futures azionari = (βT - βP)/βF × V/(F × moltiplicatore)",
+        "N futures obbligazionari = (BPV_T - BPV_P)/BPV_F"
+      ],
+      "pitfalls": [
+        "Sbagliare il segno: per ridurre il beta si vendono futures.",
+        "Pensare che una protective put limiti anche il rialzo (lo limita il collar)."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-rk-set1",
+          "vignette": "Davide Greco manages a $50 million equity portfolio with a beta of 1.1. Anticipating market weakness, he wants to reduce the beta to 0.8 for three months using index futures priced at 4,000 with a multiplier of 50 and a beta of 1.0. A client holding a concentrated stock position wants downside protection at minimal upfront cost while keeping some upside. Another client expects the stock market to move sharply after an election but has no view on the direction.",
+          "questions": [
+            {
+              "id": "l3-rk-1",
+              "difficulty": 3,
+              "stem": "To reduce the portfolio beta to 0.8, Greco should:",
+              "choices": [
+                "sell 75 futures contracts",
+                "buy 75 futures contracts",
+                "sell 275 futures contracts"
+              ],
+              "answer": 0,
+              "explanation": "N = (0.8 - 1.1)/1.0 × 50,000,000/(4,000 × 50) = -0.3 × 250 = -75: si vendono 75 contratti. 275 coprirebbe l'intero beta di 1.1."
+            },
+            {
+              "id": "l3-rk-2",
+              "difficulty": 2,
+              "stem": "The strategy best suited to the client with the concentrated position is a:",
+              "choices": [
+                "covered call",
+                "zero-cost collar",
+                "long straddle"
+              ],
+              "answer": 1,
+              "explanation": "Il collar compra una put (protezione) finanziata vendendo una call (limita il rialzo oltre lo strike): costo iniziale minimo e un po' di rialzo conservato. La covered call non protegge dal ribasso."
+            },
+            {
+              "id": "l3-rk-3",
+              "difficulty": 2,
+              "stem": "The strategy best suited to the client expecting a large move in an unknown direction is a:",
+              "choices": [
+                "long straddle",
+                "short straddle",
+                "bull call spread"
+              ],
+              "answer": 0,
+              "explanation": "Comprare call e put con lo stesso strike guadagna se il prezzo si muove molto in una delle due direzioni, più del costo dei due premi."
+            },
+            {
+              "id": "l3-rk-4",
+              "difficulty": 3,
+              "stem": "A US investor hedges euro exposure with forward contracts when euro interest rates are higher than US rates. The forward hedge will most likely:",
+              "choices": [
+                "generate a positive roll yield",
+                "generate a negative roll yield (a hedging cost)",
+                "have no cost because forwards are free"
+              ],
+              "answer": 1,
+              "explanation": "Per coprire vende euro a termine; con tassi europei più alti l'euro quota a sconto a termine, quindi la copertura (hedging) vende la valuta a un prezzo inferiore allo spot: roll yield negativo, cioè un costo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "ethics",
+      "title": "Etica per il gestore di portafoglio",
+      "summary": "Standards e Asset Manager Code applicati alla gestione: allocazione delle operazioni, soft dollar, conflitti con i clienti, performance e GIPS.",
+      "sections": [
+        {
+          "title": "Operatività e clienti",
+          "body": [
+            "Best execution e soft dollar: le commissioni appartengono ai clienti; i servizi di ricerca pagati con soft dollar devono beneficiare i clienti i cui ordini li generano. Le operazioni in blocco vanno allocate in modo equo e documentato.",
+            "Asset Manager Code: lealtà verso i clienti, operazioni di investimento con indipendenza, gestione dei conflitti, comunicazione completa di costi e performance. Il cliente diretto può dare istruzioni specifiche (directed brokerage), ma il gestore deve informarlo dei possibili costi."
+          ]
+        },
+        {
+          "title": "Performance e GIPS",
+          "body": [
+            "La performance va presentata in modo corretto e completo: niente cherry-picking dei portafogli migliori, niente simulazioni presentate come reali. I GIPS richiedono composite che includano tutti i portafogli discrezionali a pagamento.",
+            "Cambiare il benchmark di un composite richiede comunicazione e motivazione; non si può cambiare retroattivamente per migliorare il confronto."
+          ]
+        },
+        {
+          "title": "Conflitti personali",
+          "body": [
+            "Partecipazioni personali nei titoli raccomandati vanno comunicate; IPO e collocamenti privati richiedono pre-autorizzazione. I regali dei clienti vanno comunicati al datore; quelli dei fornitori o degli emittenti, che possono influenzare il giudizio, vanno rifiutati se sostanziosi."
+          ]
+        }
+      ],
+      "formulas": [],
+      "pitfalls": [
+        "Usare soft dollar per beni che non beneficiano i clienti (es. spese d'ufficio generali).",
+        "Presentare solo i portafogli migliori come rappresentativi della strategia."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-et-set1",
+          "vignette": "Martina Bruno, CFA, is chief investment officer at Alpine Asset Management. Alpine uses client commissions to pay for third-party research used for all accounts, and also for a new office coffee machine and subscriptions to general business magazines. A pension client instructs Alpine to direct its trades to a specific broker that provides services to the plan sponsor; Bruno complies after informing the client that this may increase trading costs. To market a new strategy, an Alpine salesperson presents the performance of the three best-performing accounts as 'representative results'. Bruno also learns that a portfolio manager received a large personal gift from a broker that handles much of Alpine's trading.",
+          "questions": [
+            {
+              "id": "l3-et-1",
+              "difficulty": 2,
+              "stem": "Alpine's use of client commissions is best described as:",
+              "choices": [
+                "consistent with the Standards",
+                "a violation, because the coffee machine and magazines do not benefit clients",
+                "a violation, because soft dollars may never be used for research"
+              ],
+              "answer": 1,
+              "explanation": "Le commissioni appartengono ai clienti: si possono usare per ricerca che li beneficia, non per spese generali dell'ufficio come macchina del caffè e riviste."
+            },
+            {
+              "id": "l3-et-2",
+              "difficulty": 2,
+              "stem": "Bruno's handling of the directed brokerage request is:",
+              "choices": [
+                "consistent with the Standards",
+                "a violation of best execution",
+                "a violation of the duty of confidentiality"
+              ],
+              "answer": 0,
+              "explanation": "Il cliente può indirizzare le proprie commissioni; il gestore deve informarlo che ciò può compromettere la best execution. Bruno lo ha fatto."
+            },
+            {
+              "id": "l3-et-3",
+              "difficulty": 2,
+              "stem": "The salesperson's presentation of performance most likely violates the Standard on:",
+              "choices": [
+                "Performance Presentation",
+                "Suitability",
+                "Preservation of Confidentiality"
+              ],
+              "answer": 0,
+              "explanation": "Presentare solo i tre conti migliori come rappresentativi è cherry-picking: la performance non è corretta, accurata e completa (Standard III(D)) e non sarebbe conforme ai GIPS."
+            },
+            {
+              "id": "l3-et-4",
+              "difficulty": 3,
+              "stem": "The portfolio manager who received the broker's gift should most appropriately have:",
+              "choices": [
+                "accepted it without disclosure, since it is personal",
+                "declined it, because it could reasonably compromise independence",
+                "accepted it and shared it with clients"
+              ],
+              "answer": 1,
+              "explanation": "Un regalo consistente da un broker che riceve molti ordini può compromettere l'indipendenza nella scelta dell'intermediario (Standard I(B)): andava rifiutato."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "pathway",
+      "title": "Pathway Portfolio Management: investitori istituzionali e trading",
+      "summary": "Il pathway di gestione di portafoglio: investitori istituzionali (fondi pensione (defined benefit pension plan), endowment, assicurazioni, banche), costi di negoziazione, implementation shortfall e integrazione ESG.",
+      "sections": [
+        {
+          "title": "Investitori istituzionali",
+          "body": [
+            "Fondi pensione a benefici definiti: obiettivo coprire le passività (liabilities); la tolleranza al rischio (risk tolerance) dipende dal funded status e dalla forza dello sponsor. Endowment e fondazioni: orizzonte perpetuo, regola di spesa (spesso una percentuale della media mobile del patrimonio per stabilizzare i flussi) e obiettivo di preservare il potere d'acquisto.",
+            "Assicurazioni: vincoli regolamentari e di liquidità, attivi legati alle passività per durata. Banche: gestione asset-liability e capitale regolamentare. Fondi sovrani: obiettivi diversi (stabilizzazione, risparmio intergenerazionale, sviluppo)."
+          ]
+        },
+        {
+          "title": "Trading e costi di esecuzione",
+          "body": [
+            "Implementation shortfall = rendimento del portafoglio cartaceo (ipotetico, al prezzo di decisione) - rendimento reale. Si scompone in costo di ritardo, costo di esecuzione (prezzo pagato vs prezzo di riferimento), costo opportunità (parte non eseguita) e commissioni fisse.",
+            "Strategie: ordini urgenti per trade piccoli o informazioni che decadono rapidamente; algoritmi (VWAP, TWAP, implementation shortfall) per ordini grandi; dark pool per limitare l'impatto di mercato."
+          ]
+        },
+        {
+          "title": "ESG nel portafoglio",
+          "body": [
+            "Approcci: esclusione (screening negativo), best-in-class, integrazione dei fattori ESG nelle stime, investimento tematico e a impatto, engagement e voto. Il materiale conta: un fattore ESG è rilevante se incide su flussi e rischi."
+          ]
+        }
+      ],
+      "formulas": [
+        "Implementation shortfall = rendimento cartaceo - rendimento reale",
+        "Spesa endowment = tasso × media del patrimonio degli ultimi anni"
+      ],
+      "pitfalls": [
+        "Dimenticare il costo opportunità della parte non eseguita nell'implementation shortfall.",
+        "Applicare la tolleranza al rischio di un endowment a un fondo pensione maturo e sottofinanziato."
+      ],
+      "item_sets": [
+        {
+          "id": "l3-pw-set1",
+          "vignette": "Alessio Riva, a trader at Orbis Capital, decides to buy 1,000 shares of a stock when its price is $50.00. He executes 800 shares at an average price of $50.50 and cancels the rest; the stock closes at $52.00. Commissions total $100. Orbis also advises the Hartwell University endowment, which spends 5% of the average of its asset values over the last three years; those values were $100 million, $110 million and $120 million. Separately, Orbis manages a mature corporate pension plan that is 75% funded and whose sponsor is financially weak.",
+          "questions": [
+            {
+              "id": "l3-pw-1",
+              "difficulty": 3,
+              "stem": "The implementation shortfall as a percentage of the paper portfolio value is closest to:",
+              "choices": [
+                "1.0%",
+                "1.8%",
+                "2.2%"
+              ],
+              "answer": 1,
+              "explanation": "Paper: 1,000 × (52 - 50) = 2,000. Reale: 800 × (52 - 50.50) - 100 = 1,100. Shortfall = 900 su 50,000 = 1.8%. Componenti: esecuzione 400, opportunità 200 × 2 = 400, commissioni 100."
+            },
+            {
+              "id": "l3-pw-2",
+              "difficulty": 2,
+              "stem": "The opportunity cost component of the shortfall is closest to:",
+              "choices": [
+                "$100",
+                "$400",
+                "$900"
+              ],
+              "answer": 1,
+              "explanation": "Le 200 azioni non comprate avrebbero guadagnato 52 - 50 = 2 ciascuna: costo opportunità (opportunity cost) 400."
+            },
+            {
+              "id": "l3-pw-3",
+              "difficulty": 2,
+              "stem": "Hartwell's spending for the coming year is closest to:",
+              "choices": [
+                "$5.0 million",
+                "$5.5 million",
+                "$6.0 million"
+              ],
+              "answer": 1,
+              "explanation": "Media = (100 + 110 + 120)/3 = 110 milioni; spesa = 5% × 110 = 5.5 milioni. La media mobile stabilizza la spesa rispetto all'uso del solo valore più recente (6.0)."
+            },
+            {
+              "id": "l3-pw-4",
+              "difficulty": 2,
+              "stem": "Compared with a well-funded plan with a strong sponsor, the mature underfunded pension plan most likely has:",
+              "choices": [
+                "a higher ability to take risk",
+                "a lower ability to take risk",
+                "the same ability to take risk"
+              ],
+              "answer": 1,
+              "explanation": "Sottofinanziamento, sponsor debole e passività (liabilities) vicine riducono la capacità di sopportare perdite: tolleranza al rischio (risk tolerance) più bassa e maggiore enfasi sulla copertura (hedging) delle passività."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

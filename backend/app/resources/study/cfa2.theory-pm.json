@@ -1,0 +1,77 @@
+{
+  "exam": "cfa2",
+  "modules": [
+    {
+      "topic": "pm",
+      "sections": [
+        {
+          "title": "Economia e mercati: tassi, ciclo e premi per il rischio",
+          "body": [
+            "Il prezzo di ogni attività è il valore attuale (present value) atteso dei flussi scontati con un fattore che dipende dal tasso reale privo di rischio, dall'inflazione (inflation) attesa e dai premi per il rischio. Il tasso reale privo di rischio è legato alla crescita attesa dei consumi e al tasso di preferenza intertemporale: con crescita più alta gli individui vogliono prendere a prestito per consumare oggi e il tasso reale sale. Rapporto intertemporale dei tassi marginali di sostituzione (intertemporal rate of substitution) m = utilità marginale futura/utilità marginale attuale: le attività che pagano molto quando m è alto (nei momenti difficili) valgono di più e rendono meno.",
+            "Obbligazioni (bonds) prive di rischio: rendimento = reale + inflazione attesa + premio per l'incertezza sull'inflazione. Curva dei rendimenti (yield curve): tende a essere ripida all'uscita dalle recessioni (tassi a breve bassi) e piatta o invertita prima delle recessioni. Premio a termine (term premium) più alto quando l'inflazione è incerta. I titoli di Stato (government bond) sono una copertura (hedging) nelle recessioni con shock di domanda, non con shock d'offerta inflazionistici (correlazione (correlation) azioni-obbligazioni positiva negli anni Settanta e nel 2022).",
+            "Credito: gli spread sono anticiclici (si allargano in recessione) e più ampi per rating bassi; le perdite attese salgono quando l'economia rallenta. Azioni: il premio per il rischio (risk premium) azionario è anticiclico; gli utili sono più volatili del PIL; P/E alti quando i tassi reali e i premi sono bassi e la crescita attesa alta. Azioni growth vs value: i titoli growth sono più sensibili ai tassi (duration più lunga).",
+            "Immobili commerciali: rendimento simile a un'obbligazione per gli affitti contrattuali più una componente azionaria per il valore residuo; sensibili al ciclo e ai tassi.",
+            "Esempio: se la banca centrale (central bank) alza i tassi per un'inflazione in aumento, i tassi a breve salgono più di quelli a lungo (appiattimento), gli spread si allargano se cresce il rischio di recessione, i P/E si comprimono; le azioni di settori difensivi e i titoli a breve sono relativamente favoriti."
+          ]
+        },
+        {
+          "title": "Gestione attiva: valore aggiunto e legge fondamentale",
+          "body": [
+            "Rendimento attivo (active return) = rendimento del portafoglio - benchmark = Σ (w_portafoglio - w_benchmark) × R_i: il valore aggiunto deriva dai pesi attivi. Rischio attivo (active risk, tracking error) = deviazione standard (standard deviation) del rendimento attivo. Rapporto d'informazione (information ratio, IR) = rendimento attivo medio/rischio attivo; non cambia aggiungendo il benchmark o liquidità (a differenza dello Sharpe, che può essere modificato con la leva).",
+            "Combinazione ottima di benchmark e portafoglio attivo: SR_P² = SR_B² + IR²: il miglior Sharpe ottenibile aumenta con l'IR del gestore. Livello ottimale di rischio attivo σ_A* = (IR/SR_B) × σ_B. Esempio: IR 0.5, Sharpe del benchmark 0.4, volatilità del benchmark 16% → rischio attivo ottimale 20%, Sharpe complessivo √(0.16 + 0.25) = 0.64. Se il gestore ha più rischio attivo dell'ottimo, l'investitore può combinarlo con il benchmark.",
+            "Legge fondamentale della gestione attiva (fundamental law of active management): IR ≈ TC × IC × √BR, dove IC è il coefficiente d'informazione (information coefficient: correlazione tra rendimenti previsti e realizzati), BR l'ampiezza (breadth: numero di scommesse indipendenti all'anno), TC il coefficiente di trasferimento (transfer coefficient: quanto i vincoli permettono di tradurre le previsioni in pesi; 1 senza vincoli). Esempio: IC 0.05, BR 400, TC 0.6 → IR = 0.05 × 20 × 0.6 = 0.6.",
+            "Rendimento attivo atteso = TC × IC × √BR × σ_A; rendimento realizzato = componente attesa + rumore (dovuto al fatto che l'IC realizzato varia). Applicazioni: tattica di asset allocation su pochi mercati ha ampiezza bassa e richiede un IC alto; la selezione di titoli su molti nomi ha ampiezza alta. Limiti: le scommesse non sono indipendenti (l'ampiezza effettiva è minore), l'IC è difficile da stimare e instabile.",
+            "Trappola: aumentare il numero di titoli non aumenta l'ampiezza se le scommesse sono correlate (es. 200 titoli bancari con la stessa scommessa sui tassi)."
+          ]
+        },
+        {
+          "title": "ETF: funzionamento, costi e usi",
+          "body": [
+            "Meccanismo di creazione e rimborso: i partecipanti autorizzati (authorized participants) consegnano al fondo un paniere di titoli e ricevono quote (creazione) o restituiscono quote e ricevono titoli (rimborso), in natura. L'arbitraggio tra prezzo di mercato e valore netto (NAV) mantiene il prezzo vicino al NAV; il rimborso in natura rende gli ETF fiscalmente efficienti perché il fondo non vende titoli realizzando plusvalenze.",
+            "Differenza di replica (tracking difference: differenza tra rendimento dell'ETF e dell'indice) e errore di replica (tracking error: sua volatilità). Cause: commissioni di gestione, campionamento (sampling) o ottimizzazione invece di replica completa, costi di ribilanciamento (rebalancing), liquidità non investita (cash drag), dividendi (dividends) e ritenute fiscali, proventi dal prestito titoli (che migliorano il rendimento), uso di derivati (derivatives).",
+            "Premi e sconti rispetto al NAV: più ampi per ETF su mercati chiusi negli orari di negoziazione (prezzi stantii del NAV), su titoli poco liquidi (obbligazioni high yield, emergenti), in periodi di stress quando gli arbitraggisti non riescono a operare. Il valore indicativo intraday (iNAV) aiuta a valutare il prezzo.",
+            "Costi totali di detenzione: commissione di gestione (management fee) × periodo + costi di negoziazione (commissioni, metà dello spread denaro-lettera in entrata e in uscita, premio o sconto pagato). Esempio: commissione 0.20% annua, spread 0.10% (costo di andata e ritorno 0.10%), orizzonte 6 mesi → costo ≈ 0.10% + 0.10% = 0.20%. Per orizzonti brevi conta lo spread, per orizzonti lunghi la commissione.",
+            "Rischi: di controparte per ETN e ETF sintetici con swap, chiusura del fondo, sconti in crisi, uso di leva e indici inversi a ribilanciamento giornaliero (rendimenti diversi dal multiplo dichiarato su orizzonti lunghi). Usi: esposizioni tattiche ed efficienti, nucleo del portafoglio a basso costo, inclinazioni fattoriali (smart beta), gestione della liquidità, gestione della transizione tra gestori, copertura e ribilanciamento rapidi."
+          ]
+        },
+        {
+          "title": "Modelli multifattoriali e scomposizione del rischio attivo",
+          "body": [
+            "Teoria dell'arbitraggio (arbitrage pricing theory, APT): E(R) = rf + Σ β_k λ_k, dove λ_k è il premio per il rischio del fattore k; ipotesi: rendimenti generati da un modello a fattori, possibilità di diversificare il rischio specifico (idiosyncratic risk), assenza di arbitraggio (no-arbitrage). Esempio: rf 3%, sensibilità 1.2 al fattore 1 con premio 4% e 0.5 al fattore 2 con premio 2% → 8.8%. Un portafoglio con sensibilità uguali ma rendimento atteso diverso permette un arbitraggio.",
+            "Tipi di modelli: macroeconomici (fattori = sorprese nelle variabili macro come crescita e inflazione; sensibilità stimate con regressioni sulle serie storiche (time series)), fondamentali (fattori = caratteristiche delle aziende come dimensione, valore, momentum, settore; sensibilità standardizzate e premi stimati con regressioni trasversali), statistici (fattori estratti dai dati, es. con PCA; difficili da interpretare).",
+            "Scomposizione del rendimento attivo: rendimento attivo = Σ (sensibilità del portafoglio - del benchmark) × rendimento del fattore + selezione specifica. Rischio attivo al quadrato = rischio attivo dei fattori + rischio attivo specifico. Esempio: rischio attivo totale 4%, di cui varianza (variance) attiva dei fattori 10 (%²) e specifica 6 (%²) → 62.5% del rischio attivo viene da scommesse fattoriali: il gestore che dice di fare stock picking sta soprattutto inclinando su fattori.",
+            "Usi: attribuzione della performance (performance attribution), budget di rischio, costruzione di portafogli che replicano un fattore (factor portfolio: sensibilità 1 a un fattore e 0 agli altri) per coprire o inclinare l'esposizione, controllo di portafogli indicizzati (tracking portfolio).",
+            "Trappola: un alfa del CAPM può essere solo l'esposizione a fattori non inclusi (dimensione, valore); per valutare un gestore serve il modello a fattori adeguato."
+          ]
+        },
+        {
+          "title": "Rischio di mercato: VaR, stress test e limiti",
+          "body": [
+            "VaR parametrico (varianza-covarianza (covariance)): VaR = (z × σ - μ) × valore del portafoglio per l'orizzonte scelto. Esempio: 10 milioni, media giornaliera 0.05%, deviazione standard 1.2%, confidenza 95% (z = 1.645) → (1.974% - 0.05%) × 10 milioni = 192,400 euro. Si annualizza con la radice del tempo (se i rendimenti sono indipendenti). Limiti: assume normalità, sottostima le code, difficile per le opzioni (non linearità).",
+            "VaR storico: si applicano ai pesi attuali i rendimenti storici e si prende il percentile; non assume distribuzioni ma dipende dal periodo scelto. Monte Carlo: si simulano scenari dalle distribuzioni ipotizzate, adatto a portafogli non lineari, ma costoso e dipendente dal modello.",
+            "Estensioni: VaR condizionale (CVaR/expected shortfall: media delle perdite oltre il VaR, misura coerente), VaR incrementale (variazione del VaR aggiungendo o togliendo una posizione), VaR marginale (sensibilità del VaR a un piccolo aumento della posizione), VaR relativo (sul rendimento attivo rispetto al benchmark). Vantaggi del VaR: semplice, confrontabile, utile per i limiti; svantaggi: soggettivo nei parametri, ignora la coda oltre la soglia, può dare un falso senso di sicurezza.",
+            "Misure di sensibilità: beta, duration e convessità (convexity), greche delle opzioni. Analisi di scenario: storici (ripetere il 2008 o il 2020) e ipotetici (shock costruiti su debolezze specifiche); stress test inverso (reverse stress test: quale scenario porterebbe a una perdita inaccettabile?).",
+            "Vincoli: budget di rischio (risk budgeting), limiti per posizione, limiti di scenario, stop-loss, allocazione del capitale in base al rischio. Utenti diversi: banche (VaR regolamentare, liquidità, leva), gestori (rischio attivo, liquidità dei fondi), fondi pensione (rischio di surplus rispetto alle passività (liabilities)), assicurazioni (abbinamento attivi-passivi, rischi catastrofali).",
+            "Backtesting e simulazione delle strategie: approccio a finestra mobile (rolling window) con dati disponibili solo alla data; distorsioni: survivorship, look-ahead, data snooping (con molte prove servono soglie t più alte, intorno a 3), costi di transazione trascurati, regimi diversi. Si usano anche simulazioni storiche e Monte Carlo per le distribuzioni dei rendimenti e analisi di sensibilità sui parametri."
+          ]
+        }
+      ],
+      "formulas": [
+        "Rendimento attivo = Σ Δw_i R_i; IR = rendimento attivo/rischio attivo",
+        "SR_P² = SR_B² + IR²; σ_A* = (IR/SR_B) σ_B",
+        "Legge fondamentale: IR ≈ TC × IC × √BR",
+        "APT: E(R) = rf + Σ β_k λ_k",
+        "Rischio attivo² = rischio fattoriale attivo + rischio specifico attivo",
+        "VaR parametrico = (z σ - μ) × V",
+        "Costo ETF ≈ commissione × periodo + spread round-trip + premio/sconto"
+      ],
+      "pitfalls": [
+        "Pensare che la leva aumenti l'information ratio: lo lascia invariato.",
+        "Contare come ampiezza scommesse fortemente correlate.",
+        "Leggere il VaR come la perdita massima: è la soglia superata con la probabilità scelta.",
+        "Credere che un ETF rimborsato in natura generi plusvalenze tassabili come un fondo tradizionale.",
+        "Fidarsi di un backtest senza correggere per data snooping e costi."
+      ]
+    }
+  ]
+}

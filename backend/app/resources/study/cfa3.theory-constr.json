@@ -1,0 +1,87 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "constr",
+      "sections": [
+        {
+          "title": "Reddito fisso: ruoli e scomposizione del rendimento atteso",
+          "body": [
+            "Ruoli delle obbligazioni (bonds): diversificazione (diversification) rispetto alle azioni (correlazione (correlation) bassa o negativa con shock di domanda), reddito regolare, copertura (hedging) delle passività (liabilities), protezione dall'inflazione (titoli indicizzati). Mandati: basati sulle passività (liability-based) o sul rendimento totale (total return: passivi, gestione aumentata (enhanced indexing) o attivi con budget di tracking error crescente).",
+            "Scomposizione del rendimento atteso: reddito da rendimento (yield income = cedole (coupon)/prezzo, più l'effetto del pull to par) + rendimento da rolldown (rolldown return: variazione di prezzo se la curva resta invariata e il titolo invecchia) + variazione attesa del prezzo da variazioni dei rendimenti (≈ -ModDur × Δy + ½ Conv × Δy²) - perdite di credito attese + rendimento valutario. Rendimento rotolante (rolling yield) = yield income + rolldown.",
+            "Esempio: titolo con rendimento 4%, rolldown atteso 0.5%, duration 6, rendimenti attesi in aumento di 30 punti base (convessità (convexity) trascurabile), perdite di credito 0.2% → rendimento atteso ≈ 4 + 0.5 - 1.8 - 0.2 = 2.5%.",
+            "Leva: con repo, futures, swap, prestito titoli; rendimento con leva = r_portafoglio + (debito/capitale)(r_portafoglio - costo del debito (cost of debt)). Rischi della leva: aumento della volatilità, chiamate di margine e vendite forzate quando i mercati sono in tensione. Fiscalità: compensazione di plusvalenze e minusvalenze, scelta dei titoli da vendere (lotti con costo più alto).",
+            "Strutture di portafoglio: a proiettile (bullet: scadenze concentrate intorno a un punto), a bilanciere (barbell: scadenze brevi e lunghe), a scala (laddered: scadenze distribuite uniformemente, diversificazione del rischio di reinvestimento (reinvestment risk) e liquidità regolare). A parità di duration il barbell ha più convessità del bullet."
+          ]
+        },
+        {
+          "title": "Strategie basate sulle passività e immunizzazione",
+          "body": [
+            "Tipi di passività: tipo I (importo e data certi: zero coupon emesso), II (importo certo, data incerta: obbligazione callable, assicurazione vita), III (data certa, importo incerto: FRN, titoli indicizzati), IV (entrambi incerti: pensioni, sinistri). Più incertezza → più servono duration effettiva e convessità.",
+            "Immunizzazione (immunization) di una singola passività: duration di Macaulay del portafoglio uguale all'orizzonte, valore attuale (present value) degli attivi ≥ a quello della passività, minimizzare la dispersione dei flussi (convessità) intorno all'orizzonte per ridurre il rischio strutturale (cambi di forma della curva), ribilanciare con il passare del tempo e con le variazioni dei tassi. Un portafoglio zero coupon con scadenza uguale all'orizzonte è immunizzato perfettamente.",
+            "Passività multiple: corrispondenza dei flussi (cash flow matching: ogni passività coperta da titoli con scadenza precedente, poco rischio ma costoso e con reinvestimento al tasso minimo), corrispondenza della duration (duration matching: valore attuale degli attivi = passività, duration monetaria o BPV uguali, convessità degli attivi maggiore di quella delle passività ma non troppo), immunizzazione condizionale (contingent immunization: gestione attiva finché il surplus resta sopra una soglia, poi immunizzazione).",
+            "Copertura con derivati (derivatives): numero di futures = (BPV obiettivo - BPV del portafoglio)/BPV del futures, con BPV del futures ≈ BPV del titolo più conveniente da consegnare/fattore di conversione. Esempio: BPV delle passività 50,000, degli attivi 35,000, BPV del CTD 80 con fattore 0.80 → BPV del futures 100 → comprare 150 contratti. Con swap: ricevere fisso aumenta la duration; il nozionale si calcola dividendo (dividends) il BPV mancante per il BPV dello swap per unità di nozionale.",
+            "Rapporto di copertura (hedge ratio) del rischio di tasso nei piani pensionistici: 0% = nessuna copertura, 100% = surplus immunizzato; molti piani coprono parzialmente per mantenere spazio per la crescita del surplus. Le swaption (receiver) danno protezione asimmetrica: compensano se i tassi scendono, lasciano il beneficio se salgono.",
+            "Rischi dei modelli LDI: rischio di modello sulle passività (ipotesi attuariali), rischio di spread (le passività pensionistiche sono scontate con tassi corporate AA mentre gli attivi possono essere titoli di Stato (government bond)), rischio di curva, di controparte e di liquidità sui derivati (chiamate di margine come nella crisi dei fondi LDI britannici nel 2022)."
+          ]
+        },
+        {
+          "title": "Gestione indicizzata e strategie sulla curva",
+          "body": [
+            "Gestione indicizzata obbligazionaria: replica completa difficile (molti titoli illiquidi); campionamento stratificato (stratified sampling: celle per duration, settore, rating, scadenza) o ottimizzazione; si replicano le principali esposizioni (duration, key rate durations, spread duration per settore, qualità, convessità, rendimento). Errore di replica (tracking error) da costi e differenze. Alternative: ETF obbligazionari, total return swap sull'indice. Problema degli indici ponderati per debito in essere: gli emittenti più indebitati pesano di più.",
+            "Strategie sulla curva statica (se si prevede che non cambi): cavalcare la curva, carry trade su scadenze più lunghe, vendere convessità (es. comprare callable o MBS per ottenere rendimento in più se la volatilità sarà bassa). Strategie dinamiche: aumentare la duration se si prevedono tassi in calo (con titoli o futures), barbell se si prevede un appiattimento (le scadenze lunghe guadagnano più di quelle medie), bullet se si prevede un irripidimento, butterfly (corto sul centro e lungo sulle ali o viceversa) per scommettere sulla curvatura.",
+            "Esempio: si prevede un appiattimento con tassi a lungo in calo e tassi a breve stabili. Portafoglio a duration neutrale: vendere il 5 anni e comprare una combinazione di 2 anni e 30 anni (barbell) con la stessa duration: guadagna dalla discesa del 30 anni e dalla maggiore convessità.",
+            "Con opzioni (options): comprare opzioni sui futures o swaption aumenta la convessità (utile se ci si aspetta alta volatilità); venderle aumenta il carry ma espone a grandi movimenti. Valute: gestire separatamente esposizione ai tassi esteri e al cambio.",
+            "Misure di valutazione delle strategie: duration e convessità del portafoglio e delle passività, key rate durations attive rispetto al benchmark, scenario analysis su spostamenti paralleli, irripidimenti, appiattimenti e curvatura."
+          ]
+        },
+        {
+          "title": "Strategie di credito",
+          "body": [
+            "Rendimento in eccesso del credito (excess spread return) ≈ spread × periodo - duration di spread effettiva × Δspread - probabilità di default (probability of default) × perdita in caso di default. Esempio: spread 2%, duration di spread 5, allargamento atteso 0.2%, perdita attesa (expected loss) 0.3% annua → 2 - 1 - 0.3 = 0.7% in un anno.",
+            "Misure di spread: G-spread, I-spread, Z-spread, OAS, spread di sconto per le FRN; per i portafogli conta la duration di spread ponderata e la qualità media. Il rischio di credito (credit risk) è asimmetrico (guadagno limitato allo spread, perdita fino alla LGD): la diversificazione per emittente è più importante che nelle azioni.",
+            "Approcci: dal basso (bottom-up: selezione degli emittenti con analisi fondamentale, valore relativo dello spread rispetto a rating e settore) e dall'alto (top-down: posizionamento in base al ciclo del credito, ai settori, alla qualità; aumentare il rischio di credito all'inizio della ripresa quando gli spread sono ampi, ridurlo in fase avanzata). Fattori: spread, qualità, liquidità (gli spread includono un premio di liquidità che esplode nelle crisi).",
+            "Strumenti: CDS per coprire o assumere esposizione a singoli nomi o indici, strategie sulla curva dei CDS, basis trade, tranche di indici. Strategie globali: rischi valutari, differenze legali nelle procedure di insolvenza, liquidità diversa tra mercati. Titoli cartolarizzati per diversificare con struttura e collateral diversi.",
+            "Rischi specifici: liquidità (il mercato secondario si secca in crisi), rischio di evento (leveraged buyout che peggiora il credito di un emittente), concentrazione, correlazione dei default che aumenta in recessione. Misure di rischio: duration di spread, VaR di credito, scenari di default."
+          ]
+        },
+        {
+          "title": "Gestione azionaria passiva e costruzione dei benchmark",
+          "body": [
+            "Ruoli delle azioni in portafoglio: crescita del capitale, protezione dall'inflazione nel lungo periodo, reddito da dividendi, diversificazione internazionale. Segmenti: per dimensione e stile, per area geografica (sviluppati, emergenti, frontiera), per settore. Fonti di rendimento: dividendi, crescita del prezzo, prestito titoli (securities lending), premi da gestione attiva o da inclinazioni fattoriali.",
+            "Scelta dell'indice: copertura del mercato, metodo di ponderazione (capitalizzazione, uguale, fondamentale, fattoriale), regole di ricostituzione e ribilanciamento (più frequenti = più costi), investibilità e liquidità. Ribilanciamenti di indici popolari creano pressione sui prezzi (effetto inclusione).",
+            "Metodi di replica: completa (full replication: tutti i titoli con i pesi dell'indice, minimo tracking error, adatta a indici liquidi con pochi titoli), campionamento stratificato (titoli rappresentativi per celle), ottimizzazione (minimizza il tracking error rispetto a un modello di rischio; rischio di modello), esposizione sintetica con futures o swap (bassi costi, rischio di controparte (counterparty risk) e di rinnovo).",
+            "Errore di replica: costi di negoziazione, commissioni, liquidità non investita, ritenute sui dividendi, ritardi nella gestione degli eventi societari; il prestito titoli può compensare parte dei costi. Strategie fattoriali passive (smart beta): esposizioni sistematiche a valore, momentum, qualità, bassa volatilità, dimensione; richiedono pazienza perché i fattori possono sottoperformare per anni.",
+            "Proprietà ed engagement: i gestori passivi detengono quote importanti di molte società e influenzano la governance con il voto; politiche di stewardship."
+          ]
+        },
+        {
+          "title": "Gestione azionaria attiva e costruzione del portafoglio",
+          "body": [
+            "Approcci: fondamentale (analisi approfondita di poche società, giudizio), quantitativo (modelli su molti titoli, segnali sistematici); dal basso o dall'alto; stili (valore: titoli a buon mercato con il rischio della trappola del valore (value trap); crescita: aziende con crescita superiore con il rischio di pagare troppo; GARP; momentum; qualità; mercato neutrale). Attivismo: posizioni significative per spingere cambiamenti.",
+            "Costruzione del portafoglio: si decide l'esposizione ai fattori sistematici (rischio attivo (active risk) da fattori) e alle scommesse specifiche (rischio idiosincratico attivo). Quota attiva (active share) = ½ Σ|w_portafoglio - w_benchmark|: misura quanto il portafoglio differisce dal benchmark. Gestori con alta quota attiva e basso tracking error fanno scommesse diversificate sui titoli; con bassa quota attiva e alto tracking error fanno scommesse fattoriali concentrate; bassa e bassa = indicizzatori nascosti (closet indexers).",
+            "Budget di rischio: allocare il rischio attivo tra le fonti di rendimento attese (fattori, settori, titoli) in proporzione alla fiducia. Limiti: peso massimo per titolo, settore, paese; liquidità (quota del volume medio giornaliero); vincoli di benchmark e tracking error.",
+            "Costi: commissioni di gestione e performance, costi di negoziazione e impatto, costi impliciti di rotazione elevata. La capacità di una strategia è limitata dalla liquidità dei titoli: strategie su piccole capitalizzazioni hanno capacità bassa.",
+            "Long/short e strategie 130/30: la vendita allo scoperto (short sale) permette di sfruttare le opinioni negative; rischi: perdita illimitata, costi di prestito, short squeeze. Strategie long extension (es. 130 lunghi e 30 corti) mantengono il beta vicino a 1 ma aumentano il trasferimento delle opinioni (coefficiente di trasferimento (transfer coefficient)).",
+            "Esempio: portafoglio di 40 titoli con quota attiva 85% e tracking error 4% → gestore concentrato su selezione dei titoli. Un fondo con quota attiva 25% e commissione dell'1.2% fa pagare caro un'esposizione quasi indicizzata."
+          ]
+        }
+      ],
+      "formulas": [
+        "E(R) obbligazioni ≈ yield income + rolldown - ModDur Δy + ½ Conv Δy² - perdite di credito ± valuta",
+        "Futures per BPV = (BPV obiettivo - BPV portafoglio)/BPV futures; BPV futures ≈ BPV CTD/CF",
+        "Immunizzazione: PV attivi ≥ PV passività; MacDur = orizzonte; dispersione minima",
+        "Rendimento in eccesso credito ≈ spread × t - SpreadDur × Δspread - PD × LGD",
+        "Quota attiva = ½ Σ |w_p - w_b|",
+        "Rendimento con leva = r_p + (D/E)(r_p - r_D)"
+      ],
+      "pitfalls": [
+        "Immunizzare solo la duration ignorando dispersione e convessità.",
+        "Usare un bullet per scommettere sull'appiattimento: serve un barbell.",
+        "Scambiare quota attiva e tracking error: misurano cose diverse.",
+        "Ignorare il rischio di liquidità dei derivati nelle strategie LDI con leva.",
+        "Pensare che un indice ponderato per debito in essere premi gli emittenti più solidi."
+      ]
+    }
+  ]
+}

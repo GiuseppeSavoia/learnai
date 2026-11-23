@@ -1,0 +1,167 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "quant",
+      "sections": [
+        {
+          "title": "Tassi d'interesse: componenti e capitalizzazione",
+          "body": [
+            "Un tasso d'interesse si scompone in: tasso reale privo di rischio (real risk-free rate) + premio per l'inflazione (inflation premium) + premio per il rischio di default (default risk premium) + premio di liquidità (liquidity premium) + premio di scadenza (maturity premium). Tasso nominale privo di rischio ≈ reale + inflazione attesa; il rendimento di un titolo di Stato (government bond) a breve è la migliore approssimazione. Relazione esatta (Fisher): (1 + nominale) = (1 + reale)(1 + inflazione).",
+            "Il tasso dichiarato annuo (stated annual rate) non tiene conto della frequenza di capitalizzazione. Il tasso annuo effettivo (effective annual rate, EAR) sì: EAR = (1 + rs/m)^m - 1. Più frequente è la capitalizzazione, più alto è l'EAR; il limite è la capitalizzazione continua (continuous compounding) EAR = e^rs - 1. Per convertire un EAR in tasso periodico: (1 + EAR)^(1/m) - 1.",
+            "Esempio: tasso dichiarato 8% con capitalizzazione trimestrale → EAR = 1.02^4 - 1 = 8.2432%. Continua → e^0.08 - 1 = 8.3287%. Mensile → (1 + 0.08/12)^12 - 1 = 8.30%. Un deposito al 7.9% con capitalizzazione continua (EAR 8.22%) rende meno di uno all'8% trimestrale.",
+            "Rendimento composto continuo (continuously compounded return): r = ln(P1/P0) = ln(1 + HPR). È additivo nel tempo: il rendimento continuo su più periodi è la somma dei rendimenti continui dei singoli periodi. Per questo i modelli assumono rendimenti continui normali e prezzi lognormali.",
+            "Trappola: con la calcolatrice BA II Plus imposta P/Y = 1 e lavora con tassi e periodi coerenti (tasso periodico e numero di periodi). La maggior parte degli errori nasce da P/Y lasciato a 12."
+          ]
+        },
+        {
+          "title": "Misure di rendimento: medie, annualizzazione, rendimenti netti e reali",
+          "body": [
+            "Rendimento del periodo di detenzione (holding period return, HPR) = (P1 - P0 + D1) / P0. Su più periodi: HPR totale = (1 + R1)(1 + R2)...(1 + Rn) - 1.",
+            "Media aritmetica (arithmetic mean): stima non distorta del rendimento di un singolo periodo futuro. Media geometrica (geometric mean): [(1 + R1)...(1 + Rn)]^(1/n) - 1, misura la crescita composta effettiva; è sempre ≤ aritmetica e la differenza cresce con la volatilità (approssimazione: geometrica ≈ aritmetica - σ²/2). Media armonica (harmonic mean): n / Σ(1/Xi), usata per il costo medio per azione in un piano di acquisti a importo costante (cost averaging); armonica ≤ geometrica ≤ aritmetica. Media troncata (trimmed) e winsorizzata (winsorized) riducono l'effetto degli outlier.",
+            "Esempio: rendimenti +50% e -50%. Aritmetica = 0%; geometrica = (1.5 × 0.5)^(1/2) - 1 = -13.4%. Il patrimonio è passato da 100 a 75: la geometrica descrive la realtà, l'aritmetica no.",
+            "Annualizzare: R annuo = (1 + R periodo)^(c) - 1, dove c è il numero di periodi in un anno (365/giorni, 52 settimane, 12 mesi). Esempio: 2% in 3 mesi → 1.02^4 - 1 = 8.24% annuo. Rendimento di un periodo superiore all'anno: 30% in 2 anni → 1.30^(1/2) - 1 = 14.02% annuo.",
+            "Altre misure: rendimento lordo (gross, prima delle commissioni di gestione) vs netto (net, dopo tutte le commissioni); rendimento pre-tasse vs post-tasse; rendimento reale = (1 + nominale)/(1 + inflazione) - 1; rendimento con leva (leveraged return) = Rp + (Vb/Ve) × (Rp - rD), dove Vb è il debito, Ve il capitale proprio, rD il costo del debito (cost of debt). La leva amplifica rendimenti positivi e negativi.",
+            "Esempio di leva: portafoglio da 1 milione finanziato con 400k di capitale e 600k di debito al 4%. Rendimento del portafoglio 10% → rendimento sul capitale = 10% + (600/400)(10% - 4%) = 19%. Se il portafoglio rende -5% → -5% + 1.5 × (-9%) = -18.5%."
+          ]
+        },
+        {
+          "title": "Money-weighted e time-weighted return",
+          "body": [
+            "Il rendimento ponderato per il denaro (money-weighted return, MWR) è il tasso interno di rendimento (internal rate of return, IRR) dei flussi dell'investitore: versamenti negativi, prelievi e valore finale positivi. Riflette sia le scelte del gestore sia il timing dei versamenti del cliente. Il rendimento ponderato per il tempo (time-weighted return, TWR) concatena i rendimenti dei sottoperiodi tra un flusso e l'altro, eliminando l'effetto dei versamenti: è la misura corretta per valutare un gestore che non controlla i flussi.",
+            "Esempio: al tempo 0 compri 1 azione a 100. Al tempo 1 (prezzo 120) ne compri un'altra. Al tempo 2 (prezzo 130) vendi entrambe a 260. TWR: sottoperiodo 1 = +20%, sottoperiodo 2 = 130/120 - 1 = +8.33%; totale 1.20 × 1.0833 - 1 = 30%, annualizzato √1.30 - 1 = 14.02%. MWR: 100 = -120/(1+r) + 260/(1+r)² risolto con la funzione IRR (CF0 = -100, CF1 = -120, CF2 = 260) dà r = 12.05%.",
+            "Interpretazione: MWR < TWR perché l'investitore ha messo più denaro proprio nel periodo con rendimento più basso. Se avesse aumentato l'investimento prima del periodo migliore, MWR > TWR.",
+            "Calcolo pratico del TWR: 1) dividi l'orizzonte in sottoperiodi a ogni flusso; 2) calcola l'HPR di ciascuno usando il valore subito prima del flusso successivo; 3) concatena; 4) annualizza se l'orizzonte supera l'anno (geometricamente). Il MWR è adatto quando il gestore controlla i flussi (es. private equity, dove il general partner decide quando richiamare capitale).",
+            "Trappola: in un esercizio TWR i dividendi (dividends) incassati vanno inclusi nell'HPR del sottoperiodo, e un dividendo reinvestito non è un nuovo versamento dell'investitore."
+          ]
+        },
+        {
+          "title": "Valore del denaro nel tempo applicato agli strumenti finanziari",
+          "body": [
+            "Tutti gli strumenti si valutano come valore attuale (present value) dei flussi attesi. Il principio di additività dei flussi (cash flow additivity) consente di scomporre uno strumento in pezzi e sommarne i valori; insieme all'assenza di arbitraggio (no-arbitrage) è la base della valutazione di forward, swap e opzioni (options).",
+            "Obbligazione (bonds) a cedola fissa: P = Σ C/(1+r)^t + FV/(1+r)^N. Esempio: 3 anni, cedola annua 5%, nominale 100, rendimento 6%. P = 5/1.06 + 5/1.06² + 105/1.06³ = 4.717 + 4.450 + 88.160 = 97.33. Prezzo sotto la pari perché la cedola è inferiore al rendimento. Titolo zero coupon: P = FV/(1+r)^N. Perpetuità (perpetuity): P = C/r.",
+            "Azioni: dividendo costante (azione privilegiata) P = D/r; crescita costante (modello di Gordon) P0 = D1/(r - g), con r > g. Esempio: D1 = 2, r = 9%, g = 4% → P0 = 40. Crescita a due stadi: valore attuale dei dividendi della fase di alta crescita + valore attuale del valore terminale (terminal value) calcolato con Gordon alla fine della fase.",
+            "Rendimenti impliciti: dato il prezzo si ricava il tasso. Dal modello di Gordon: r = D1/P0 + g (rendimento da dividendo + crescita). Crescita implicita: g = r - D1/P0. Esempio: P0 = 50, D1 = 1.5, r = 8% → g = 8% - 3% = 5%.",
+            "Problemi a più flussi: rendite (annuity) ordinarie con pagamento a fine periodo, anticipate (annuity due) con pagamento a inizio periodo; flussi irregolari con le funzioni CF/NPV/IRR della calcolatrice. Esempio pianificazione: per avere 1 milione tra 30 anni al 6% annuo con versamenti annuali posticipati, PMT = 1,000,000 × 0.06 / (1.06^30 - 1) = 12,649.",
+            "Trappola: in una rendita differita che inizia al tempo 5, il PV della rendita calcolato con la formula è al tempo 4 (un periodo prima del primo pagamento) e va poi scontato di 4 periodi, non 5."
+          ]
+        },
+        {
+          "title": "Statistica descrittiva dei rendimenti",
+          "body": [
+            "Tendenza centrale: media, mediana (robusta agli outlier), moda; quantili (quartili, quintili, decili, percentili) con posizione Ly = (n + 1) × y/100 nell'insieme ordinato. Range interquartile = Q3 - Q1. I box plot mostrano mediana, quartili e outlier.",
+            "Dispersione: range, deviazione assoluta media (mean absolute deviation) MAD = Σ|Xi - media|/n, varianza (variance) campionaria s² = Σ(Xi - media)²/(n - 1) con n - 1 gradi di libertà (degrees of freedom) per correggere la distorsione, deviazione standard (standard deviation) s. Rischio di ribasso: semideviazione target (target semideviation) = √[Σ(Xi - B)²/(n - 1)] considerando solo le osservazioni sotto il valore B. Coefficiente di variazione (coefficient of variation) CV = s/media: rischio per unità di rendimento.",
+            "Disuguaglianza di Chebyshev: per qualsiasi distribuzione la quota di osservazioni entro k deviazioni standard dalla media è almeno 1 - 1/k² (k > 1). Con k = 2 almeno il 75%, con k = 3 almeno l'89%. Per una normale le quote sono molto più alte (95% e 99.7%).",
+            "Forma: asimmetria (skewness) positiva = coda destra lunga, media > mediana > moda (rendimenti tipo lotteria, opzioni call); negativa = coda sinistra lunga, media < mediana < moda (molte strategie che vendono volatilità). Curtosi (kurtosis): normale = 3; curtosi in eccesso = curtosi - 3; leptocurtica (> 0 in eccesso) = più osservazioni al centro e nelle code, eventi estremi più frequenti del previsto. Gli investitori preferiscono asimmetria positiva e bassa curtosi.",
+            "Esempio: rendimenti 4%, 8%, -2%, 10%. Media 5%. Scarti: -1, 3, -7, 5 → quadrati 1, 9, 49, 25 → somma 84 → s² = 84/3 = 28 (%²) → s = 5.29%. CV = 5.29/5 = 1.06. Semideviazione con target 5%: solo 4% e -2% sono sotto, (1 + 49)/3 = 16.67 → 4.08%.",
+            "Correlazione campionaria: r = sXY/(sX sY). Correlazione spuria (spurious correlation): può nascere per caso, da una terza variabile comune, o da rapporti con lo stesso denominatore; non implica causalità e la correlazione misura solo relazioni lineari. Gli scatter plot rivelano relazioni non lineari e outlier."
+          ]
+        },
+        {
+          "title": "Probabilità, alberi e aspettative condizionate",
+          "body": [
+            "Regole: P(A o B) = P(A) + P(B) - P(AB); P(AB) = P(A|B) P(B); eventi indipendenti se P(A|B) = P(A), allora P(AB) = P(A)P(B); mutuamente esclusivi se P(AB) = 0 (eventi esclusivi non vuoti non possono essere indipendenti). Probabilità totale: P(A) = Σ P(A|Si) P(Si) su scenari esaustivi ed esclusivi. Odds a favore = P/(1 - P).",
+            "Valore atteso E(X) = Σ P(xi) xi; varianza σ² = Σ P(xi)[xi - E(X)]². Valore atteso condizionato: E(X|S) calcolato con le probabilità condizionate allo scenario S; regola dell'aspettativa totale (total probability rule for expected value): E(X) = Σ E(X|Si) P(Si). Gli alberi delle probabilità (probability trees) rendono visibile questa scomposizione.",
+            "Esempio: economia forte (40%) o debole (60%). Con economia forte l'EPS sarà 3 (prob. 70%) o 2.5 (30%); con economia debole 2 (50%) o 1.5 (50%). E(EPS|forte) = 2.85; E(EPS|debole) = 1.75; E(EPS) = 0.4 × 2.85 + 0.6 × 1.75 = 2.19.",
+            "Teorema di Bayes (Bayes' theorem): P(evento|informazione) = P(informazione|evento) × P(evento) / P(informazione). Aggiorna una probabilità a priori (prior) in una a posteriori (posterior) dopo un'informazione nuova. Esempio: il 40% delle aziende ha un buon management; con buon management c'è una sorpresa positiva sugli utili nel 70% dei casi, altrimenti nel 20%. P(sorpresa) = 0.4 × 0.7 + 0.6 × 0.2 = 0.40. P(buon management|sorpresa) = 0.28/0.40 = 70%: l'informazione fa salire la probabilità dal 40% al 70%.",
+            "Conteggio: fattoriale n! per ordinare n oggetti; combinazioni (combinations) nCr = n!/[(n - r)! r!] quando l'ordine non conta (scegliere 3 titoli su 10 = 120); permutazioni (permutations) nPr = n!/(n - r)! quando conta (classificare 3 vincitori su 10 = 720); formula multinomiale n!/(n1! n2! ... nk!) per assegnare n oggetti a k gruppi di dimensione data.",
+            "Trappola: confondere P(A|B) con P(B|A). La probabilità che un'azienda in default avesse un rating basso non è la probabilità che un'azienda con rating basso vada in default."
+          ]
+        },
+        {
+          "title": "Matematica di portafoglio",
+          "body": [
+            "Rendimento atteso di portafoglio E(Rp) = Σ wi E(Ri). Varianza a due titoli: σp² = wA²σA² + wB²σB² + 2 wA wB Cov(A,B), con Cov(A,B) = ρAB σA σB. Con n titoli servono n varianze e n(n - 1)/2 covarianze distinte. Covarianza (covariance) da una distribuzione congiunta: Cov = Σ P(s)[RA,s - E(RA)][RB,s - E(RB)].",
+            "Esempio: wA = 60%, σA = 20%; wB = 40%, σB = 10%; ρ = 0.3. σp² = 0.36 × 0.04 + 0.16 × 0.01 + 2 × 0.6 × 0.4 × 0.3 × 0.2 × 0.1 = 0.0144 + 0.0016 + 0.00288 = 0.01888 → σp = 13.74%, meno della media ponderata (weighted average) 16%: è l'effetto diversificazione (diversification). Con ρ = 1 σp sarebbe esattamente 16%; con ρ = -1 si può costruire un portafoglio a rischio zero.",
+            "Primo criterio di sicurezza di Roy (safety-first ratio): SFRatio = [E(Rp) - RL]/σp, dove RL è il rendimento minimo accettabile. Si sceglie il portafoglio con SFRatio più alto, che minimizza la probabilità di scendere sotto RL (shortfall risk) se i rendimenti sono normali. Esempio: portafoglio A con E = 9%, σ = 12%; B con E = 11%, σ = 20%; soglia 3%. SFR(A) = 0.50, SFR(B) = 0.40 → A, probabilità di shortfall N(-0.5) ≈ 30.9% contro N(-0.4) ≈ 34.5%. Se RL è il tasso privo di rischio, il SFRatio coincide con l'indice di Sharpe.",
+            "Distribuzione normale (normal distribution): definita da media e varianza, simmetrica, curtosi 3; z = (x - μ)/σ. Intervalli: 68% entro ±1σ, 90% entro ±1.65σ, 95% entro ±1.96σ, 99% entro ±2.58σ. Una combinazione lineare di variabili normali è normale. Distribuzione lognormale: se ln(X) è normale, X è lognormale; è asimmetrica a destra e limitata a zero, adatta ai prezzi.",
+            "Trappola: la deviazione standard di un portafoglio non è la media ponderata delle deviazioni standard (lo è solo con correlazione perfetta +1)."
+          ]
+        },
+        {
+          "title": "Simulazione, campionamento e stima",
+          "body": [
+            "Simulazione Monte Carlo: si specificano le distribuzioni delle variabili di rischio, si generano migliaia di scenari casuali, si calcola il valore dello strumento o del portafoglio in ciascuno e si analizza la distribuzione dei risultati. Utile per strumenti path-dependent, piani pensionistici, VaR. Limiti: dipende dalle ipotesi di input (garbage in, garbage out), non fornisce relazioni causali, è intensiva dal punto di vista computazionale. Il ricampionamento (bootstrap) estrae con reinserimento dal campione osservato invece di assumere una distribuzione teorica; il jackknife ricalcola la statistica escludendo un'osservazione alla volta.",
+            "Metodi di campionamento probabilistico: casuale semplice (simple random), sistematico (ogni k-esimo elemento), stratificato (stratified: si divide la popolazione in strati e si campiona proporzionalmente, usato per replicare indici obbligazionari), a grappolo (cluster: si estraggono interi gruppi). Non probabilistico: di convenienza (convenience) e a giudizio (judgmental). Errore di campionamento (sampling error) = statistica campionaria - parametro della popolazione.",
+            "Teorema del limite centrale (central limit theorem): per n ≥ 30 la distribuzione della media campionaria è approssimativamente normale, qualunque sia la distribuzione della popolazione (con varianza finita), con media μ e varianza σ²/n. Errore standard (standard error) della media: σ/√n (o s/√n se σ è ignota). Quadruplicare il campione dimezza l'errore standard.",
+            "Stimatori desiderabili: non distorti (unbiased, valore atteso = parametro), efficienti (varianza minima tra i non distorti), consistenti (consistent, l'accuratezza aumenta con n). Intervallo di confidenza (confidence interval): stima puntuale ± fattore di affidabilità × errore standard; si usa z se la popolazione è normale con varianza nota, t se la varianza è ignota (sempre accettabile con n grande).",
+            "Distorsioni nei dati: data snooping (cercare pattern finché se ne trova uno), selezione del campione (sample selection) e sopravvivenza (survivorship: i fondi chiusi spariscono dai database, gonfiando i rendimenti medi), look-ahead (usare dati non disponibili alla data), periodo temporale (time-period: risultati validi solo in un regime).",
+            "Esempio: media campionaria 1.2% al mese, s = 4%, n = 36. Errore standard = 4/6 = 0.667%. Intervallo al 95% ≈ 1.2% ± 2.03 × 0.667% = da -0.15% a 2.55% (t con 35 gradi di libertà)."
+          ]
+        },
+        {
+          "title": "Test d'ipotesi: procedura e test parametrici",
+          "body": [
+            "Procedura: 1) formulare ipotesi nulla (null hypothesis) H0 (contiene sempre l'uguaglianza) e alternativa Ha (ciò che si vuole dimostrare); 2) scegliere la statistica test e la sua distribuzione; 3) fissare il livello di significatività (significance level) α; 4) definire la regola di decisione (valori critici); 5) raccogliere i dati e calcolare la statistica; 6) decidere statisticamente e poi economicamente (un risultato significativo può non essere sfruttabile dopo costi e tasse).",
+            "Errori: tipo I = rifiutare H0 vera, probabilità α; tipo II = non rifiutare H0 falsa, probabilità β; potenza (power of a test) = 1 - β. Ridurre α aumenta β a parità di campione; solo un campione più grande riduce entrambi. Il p-value è il più piccolo livello di significatività al quale H0 è rifiutata: si rifiuta se p-value < α.",
+            "Test bilaterale (two-tailed): Ha: μ ≠ μ0, α divisa tra le due code (al 5% valori critici ±1.96 con z). Unilaterale (one-tailed): Ha: μ > μ0, tutta α in una coda (al 5% valore critico 1.645).",
+            "Esempio: H0: μ = 0, campione n = 36, media 1.2%, s = 4%. t = 1.2/0.667 = 1.80. Test bilaterale al 5% (critico ≈ 2.03): non si rifiuta. Test unilaterale Ha: μ > 0 (critico ≈ 1.69): si rifiuta. La formulazione dell'ipotesi cambia la conclusione.",
+            "Test principali: t per una media t = (media - μ0)/(s/√n) con n - 1 gradi di libertà; t per differenza tra medie di campioni indipendenti; t per differenza in media di dati appaiati (paired comparisons: stessi soggetti prima/dopo, o due strategie negli stessi mesi), più potente perché elimina la variabilità comune; chi-quadro per una singola varianza χ² = (n - 1)s²/σ0² con n - 1 gradi di libertà (distribuzione asimmetrica, non negativa); F per l'uguaglianza di due varianze F = s1²/s2² con la varianza maggiore al numeratore.",
+            "Trappola: «non rifiutare H0» non significa «accettare che H0 è vera»; significa che i dati non bastano per rifiutarla."
+          ]
+        },
+        {
+          "title": "Test di indipendenza e test non parametrici",
+          "body": [
+            "Test sulla correlazione (parametrico, presuppone normalità): H0: ρ = 0; t = r√(n - 2)/√(1 - r²) con n - 2 gradi di libertà. Esempio: r = 0.40, n = 27 → t = 0.4 × 5/√0.84 = 2.18 > 2.06 (critico al 5% bilaterale con 25 gdl) → correlazione significativa. Con lo stesso r ma n = 12 → t = 1.38 → non significativa: la significatività dipende dalla dimensione del campione.",
+            "Correlazione di rango di Spearman (Spearman rank correlation): si sostituiscono i valori con i ranghi; rS = 1 - 6Σd²/[n(n² - 1)], dove d è la differenza dei ranghi. Non richiede normalità ed è robusta agli outlier. Utile per confrontare classifiche (es. ranking di fondi in due anni).",
+            "Test chi-quadro di indipendenza su tabella di contingenza (contingency table): per due variabili categoriche (es. stile del fondo e classe di rischio). Frequenza attesa Eij = (totale riga i × totale colonna j)/totale generale; χ² = Σ(Oij - Eij)²/Eij con (r - 1)(c - 1) gradi di libertà. Valori alti di χ² → si rifiuta l'indipendenza.",
+            "Quando usare test non parametrici: dati che violano le ipotesi distributive, presenza di outlier, dati espressi in ranghi o categorie, ipotesi che non riguardano parametri. Esempi: test dei segni o di Wilcoxon al posto del t su una mediana, Mann-Whitney al posto del t per due campioni indipendenti.",
+            "Trappola: in un test di correlazione i gradi di libertà sono n - 2, non n - 1."
+          ]
+        },
+        {
+          "title": "Regressione lineare semplice: stima, ANOVA, previsione",
+          "body": [
+            "Modello Yi = b0 + b1 Xi + εi. I minimi quadrati ordinari (ordinary least squares, OLS) scelgono b0 e b1 minimizzando la somma dei quadrati dei residui (SSE). b1 = Cov(X,Y)/Var(X); b0 = media(Y) - b1 × media(X): la retta passa sempre per il punto delle medie. b1 è la variazione di Y per una variazione unitaria di X; b0 è il valore di Y quando X = 0 (spesso senza significato economico).",
+            "Ipotesi: 1) relazione lineare tra Y e X; 2) omoschedasticità (varianza dei residui costante); 3) indipendenza dei residui (niente autocorrelazione); 4) residui normalmente distribuiti. La violazione si diagnostica con i grafici dei residui: ventaglio = eteroschedasticità (heteroskedasticity); pattern ciclici = residui dipendenti; curvatura = relazione non lineare.",
+            "Scomposizione della varianza: SST (totale) = SSR (spiegata dalla regressione) + SSE (residua). R² = SSR/SST = 1 - SSE/SST. MSR = SSR/k con k = 1; MSE = SSE/(n - 2). F = MSR/MSE con 1 e n - 2 gradi di libertà; in regressione semplice F = t² del coefficiente angolare. Errore standard della stima (standard error of estimate) SEE = √MSE: più è piccolo, migliore l'adattamento.",
+            "Esempio: n = 32, SST = 100, SSE = 40. SSR = 60, R² = 0.60, MSE = 40/30 = 1.333, F = 60/1.333 = 45, SEE = 1.155. Con correlazione r = √0.60 = 0.775 (segno uguale a b1).",
+            "Test sui coefficienti: t = (b̂1 - B1)/s(b̂1) con n - 2 gradi di libertà; spesso H0: b1 = 0 (nessuna relazione). Previsione: Ŷ = b0 + b1 Xf; intervallo di previsione Ŷ ± tc × sf, dove sf² = SEE² × [1 + 1/n + (Xf - media X)²/((n - 1) sX²)]: più Xf è lontano dalla media, più l'intervallo si allarga.",
+            "Forme funzionali: log-lineare (ln Y = b0 + b1 X, crescita a tasso costante), lineare-log (Y = b0 + b1 ln X), log-log (ln Y = b0 + b1 ln X, b1 è un'elasticità). Si sceglie la forma con R² più alto, F maggiore, SEE minore e residui senza pattern; R² di modelli con Y diversa (Y vs ln Y) non sono confrontabili direttamente."
+          ]
+        },
+        {
+          "title": "Big data e machine learning",
+          "body": [
+            "Big data: caratteristiche volume, velocità (velocity), varietà (variety) e veridicità (veracity). Fonti tradizionali (bilanci, prezzi) e alternative (alternative data): generate da individui (social, recensioni), processi aziendali (transazioni con carta, scanner), sensori (satelliti, geolocalizzazione, IoT). Dati strutturati (tabelle) e non strutturati (testi, immagini, audio).",
+            "Apprendimento automatico (machine learning, ML): algoritmi che imparano relazioni dai dati senza regole esplicite. Supervisionato (supervised learning): dati etichettati con target noto; regressione (target continuo) o classificazione (target categorico, es. default sì/no). Non supervisionato (unsupervised learning): senza etichette; clustering (raggruppare titoli simili) e riduzione della dimensionalità (dimension reduction). Apprendimento profondo (deep learning) con reti neurali a molti strati; apprendimento per rinforzo (reinforcement learning) per tentativi ed errori.",
+            "Problemi tipici: sovra-adattamento (overfitting): il modello impara il rumore del campione di addestramento e generalizza male; sotto-adattamento (underfitting): il modello è troppo semplice. Si usano campioni separati di addestramento (training), validazione e test, e la validazione incrociata (cross-validation). Errore in campione basso e fuori campione alto è il segnale tipico di overfitting.",
+            "Applicazioni: analisi testuale (text analytics) ed elaborazione del linguaggio naturale (natural language processing) per leggere documenti societari e notizie (sentiment), previsione del rischio di credito (credit risk), rilevazione delle frodi, robo-advisor, algorithmic trading. Il ruolo dell'analista resta quello di dare significato economico ai risultati e controllare la qualità dei dati.",
+            "Trappola: un modello ML con altissima accuratezza in campione non è per forza migliore; conta la performance sui dati mai visti."
+          ]
+        }
+      ],
+      "formulas": [
+        "Continua: EAR = e^r - 1; r continuo = ln(1 + HPR)",
+        "(1 + nominale) = (1 + reale)(1 + inflazione)",
+        "Media geometrica = [Π(1 + Ri)]^(1/n) - 1 ≈ aritmetica - σ²/2",
+        "Media armonica = n / Σ(1/Xi)",
+        "Rendimento con leva = Rp + (Vb/Ve)(Rp - rD)",
+        "MWR: Σ CFt/(1 + IRR)^t = 0; TWR = Π(1 + HPRi) - 1",
+        "Gordon: P0 = D1/(r - g); r = D1/P0 + g",
+        "s² = Σ(X - media)²/(n - 1); CV = s/media",
+        "Semideviazione target = √[Σ_{Xi<B}(Xi - B)²/(n - 1)]",
+        "Chebyshev: quota entro kσ ≥ 1 - 1/k²",
+        "Bayes: P(E|I) = P(I|E) P(E) / P(I)",
+        "nCr = n!/[(n - r)! r!]; nPr = n!/(n - r)!",
+        "σp² = wA²σA² + wB²σB² + 2wAwBρσAσB",
+        "SFRatio = [E(Rp) - RL]/σp",
+        "Errore standard = s/√n",
+        "t correlazione = r√(n - 2)/√(1 - r²)",
+        "χ² varianza = (n - 1)s²/σ0²; F = s1²/s2²",
+        "F regressione = MSR/MSE; SEE = √[SSE/(n - 2)]",
+        "Spearman: rS = 1 - 6Σd²/[n(n² - 1)]"
+      ],
+      "pitfalls": [
+        "Valutare un gestore con il MWR quando il cliente controlla i versamenti: serve il TWR.",
+        "Dividere per n invece che per n - 1 nella varianza campionaria.",
+        "Usare n - 1 gradi di libertà nel test sulla correlazione o in regressione semplice (sono n - 2).",
+        "Interpretare un p-value di 3% come «probabilità che H0 sia vera».",
+        "Confrontare R² di modelli con variabile dipendente diversa (Y e ln Y).",
+        "Ignorare il survivorship bias nei database di fondi.",
+        "Dimenticare che una rendita differita va scontata dal periodo precedente al primo pagamento."
+      ]
+    }
+  ]
+}

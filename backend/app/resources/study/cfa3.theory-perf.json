@@ -1,0 +1,65 @@
+{
+  "exam": "cfa3",
+  "modules": [
+    {
+      "topic": "perf",
+      "sections": [
+        {
+          "title": "Misurazione, attribuzione e valutazione: le tre fasi",
+          "body": [
+            "Valutazione della performance (performance evaluation) in tre fasi: misurazione (quanto ha reso il portafoglio: rendimenti time-weighted per il gestore, money-weighted per l'investitore o per i fondi chiusi), attribuzione (perché: da quali decisioni viene il rendimento attivo (active return) o il rischio), apprezzamento (appraisal: il risultato è dovuto ad abilità o fortuna? misure aggiustate per il rischio, significatività statistica).",
+            "Attribuzione basata sui rendimenti (returns-based: regressione dei rendimenti del portafoglio su indici di stile; semplice, richiede solo i rendimenti, ma è meno precisa) vs basata sulle posizioni (holdings-based: usa i pesi a inizio periodo; ignora le operazioni infra-periodo) vs basata sulle transazioni (transactions-based: la più precisa, richiede tutti i dati di negoziazione).",
+            "Attribuzione macro (decisioni del cliente o del comitato: allocazione tra classi e gestori) e micro (decisioni del singolo gestore: settori e titoli). Attribuzione del rischio: quanto del rischio attivo (active risk) viene da ogni decisione; deve essere coerente con il processo d'investimento (un gestore bottom-up va valutato soprattutto sulla selezione).",
+            "Proprietà di un benchmark valido (acronimo inglese SAMURAI): specificato in anticipo, appropriato allo stile, misurabile, non ambiguo (titoli e pesi identificabili), riflette le opinioni correnti del gestore, accettato dal gestore (accountable), investibile. Tipi: rendimento assoluto, universo di gestori (non investibile, distorto da sopravvivenza), indici di mercato, indici di stile, modelli fattoriali, benchmark personalizzati (custom security-based) e portafogli normali (normal portfolio: universo da cui il gestore sceglie abitualmente).",
+            "Benchmark per alternativi: hedge fund (difficile: rendimento assoluto, indici di peer group distorti, regressioni fattoriali), private equity (IRR confrontati con il public market equivalent), immobili (indici basati su perizie), materie prime (indici di futures)."
+          ]
+        },
+        {
+          "title": "Attribuzione di Brinson e attribuzione obbligazionaria",
+          "body": [
+            "Modello di Brinson-Fachler per settori: allocazione_i = (w_p,i - w_b,i) × (R_b,i - R_b) (premia il sovrappeso di settori che battono il benchmark totale); selezione_i = w_b,i × (R_p,i - R_b,i); interazione_i = (w_p,i - w_b,i) × (R_p,i - R_b,i). Nel modello Brinson-Hood-Beebower l'allocazione usa R_b,i invece di R_b,i - R_b (somma uguale, distribuzione tra settori diversa).",
+            "Esempio: benchmark con pesi 60/40 e rendimenti 10%/5% (totale 8%); portafoglio con pesi 70/30 e rendimenti 12%/4% (totale 9.6%). Rendimento attivo 1.6%. Allocazione: A (0.1 × 2%) = 0.2%, B (-0.1 × -3%) = 0.3% → 0.5%. Selezione: A (0.6 × 2%) = 1.2%, B (0.4 × -1%) = -0.4% → 0.8%. Interazione: A (0.1 × 2%) = 0.2%, B (-0.1 × -1%) = 0.1% → 0.3%. Totale 1.6%.",
+            "Attribuzione fattoriale per le azioni: rendimento attivo = Σ (esposizioni attive ai fattori × rendimenti dei fattori) + rendimento specifico. Rivela se un apparente talento nella selezione è un'inclinazione verso valore o piccole capitalizzazioni.",
+            "Attribuzione per il reddito fisso: approcci per esposizione (exposure decomposition: duration, curva, settori, qualità; adatti a gestori top-down), per duration e spread, per fattori di rendimento completi (full repricing: si scompone il rendimento in effetto del passare del tempo (carry e rolldown), variazione della curva dei titoli di Stato (parallelo, pendenza (slope), curvatura), variazione degli spread, selezione, valuta).",
+            "Attribuzione del rischio: contributo di ogni posizione al rischio attivo; un gestore può avere rendimento attivo positivo dalla selezione ma rischio attivo concentrato in un fattore: l'attribuzione del rischio mostra il disallineamento tra rischio assunto e fonte del rendimento."
+          ]
+        },
+        {
+          "title": "Misure di apprezzamento e capture ratio",
+          "body": [
+            "Misure: Sharpe (rendimento in eccesso/σ totale), Treynor (/beta), M², rapporto d'informazione (rendimento attivo/tracking error), rapporto di apprezzamento (appraisal ratio = alfa di Jensen/deviazione standard (standard deviation) dei residui (residuals): alfa per unità di rischio specifico (idiosyncratic risk)), Sortino (rendimento oltre il minimo accettabile/deviazione al ribasso), adatto a distribuzioni asimmetriche.",
+            "Rapporti di cattura (capture ratios): cattura al rialzo (upside capture) = rendimento del gestore nei periodi di benchmark positivo/rendimento del benchmark in quei periodi; al ribasso (downside capture) analogo nei periodi negativi. Rapporto di cattura = upside/downside: > 1 indica asimmetria (skewness) positiva. Esempio: upside 95%, downside 75% → rapporto 1.27, profilo difensivo che vince nel lungo periodo con meno volatilità.",
+            "Drawdown: perdita dal massimo al minimo; drawdown massimo e durata del recupero misurano il rischio percepito dagli investitori. Utile per strategie non lineari e hedge fund.",
+            "Abilità o fortuna: test t sull'alfa = alfa/errore standard (standard error); con un IR di 0.5 servono circa 16 anni per avere un t di 2 (t ≈ IR × √anni). Orizzonti brevi rendono quasi impossibile distinguere abilità da fortuna: conta anche la coerenza del processo.",
+            "Esempio: alfa annuo 2%, tracking error 4% (IR 0.5), 9 anni di dati → t ≈ 0.5 × 3 = 1.5: non significativo al 5%."
+          ]
+        },
+        {
+          "title": "Selezione dei gestori",
+          "body": [
+            "Processo: definire l'universo (gestori che rispondono al mandato), analisi quantitativa (rendimenti, rischio, coerenza con lo stile dichiarato, capture ratio, drawdown, attribuzione), analisi qualitativa: due diligence d'investimento (filosofia, processo, persone, portafoglio, coerenza: il gestore fa ciò che dice?) e operativa (operational due diligence: controlli, valutazione, custodia, conformità, sistemi informatici, conflitti, condizioni contrattuali).",
+            "Errori nella selezione: tipo I (assumere o mantenere un gestore senza abilità) e tipo II (non assumere o licenziare un gestore con abilità). La cattiva abitudine di licenziare dopo periodi di sottoperformance e assumere dopo periodi di sovraperformance genera errori di tipo II costosi, perché la performance di breve periodo è in gran parte rumore.",
+            "Strutture commissionali: fisse sul patrimonio (semplici, nessun incentivo a rischi eccessivi), a performance (allineano gli interessi ma possono incentivare il rischio, specialmente con opzione (options) asimmetrica: solo guadagni), simmetriche (fulcrum fees che si riducono anche con sottoperformance), con soglia e high-water mark, con clawback. Le commissioni di performance dovrebbero premiare l'alfa, non il beta: pagarle su un rendimento assoluto premia anche l'esposizione al mercato.",
+            "Veicoli: fondi aperti (liquidi, regolamentati, condizioni uguali per tutti), conti separati (trasparenza, personalizzazione, ma costi e minimi elevati), fondi chiusi e in accomandita per gli alternativi.",
+            "Esempio: un gestore azionario ha battuto il benchmark per tre anni, ma l'attribuzione mostra che tutto il rendimento attivo viene dall'inclinazione verso i titoli growth in un periodo favorevole; il processo dichiarato era la selezione bottom-up di titoli a buon mercato. Incoerenza: segnale d'allarme (style drift) anche con buoni risultati."
+          ]
+        }
+      ],
+      "formulas": [
+        "Allocazione (BF) = (w_p,i - w_b,i)(R_b,i - R_b)",
+        "Selezione = w_b,i (R_p,i - R_b,i); interazione = (w_p,i - w_b,i)(R_p,i - R_b,i)",
+        "Appraisal ratio = alfa/σ residui",
+        "Sortino = (R_p - MAR)/deviazione al ribasso",
+        "Capture ratio = upside capture/downside capture",
+        "t alfa ≈ IR × √anni"
+      ],
+      "pitfalls": [
+        "Valutare un gestore bottom-up soprattutto sull'allocazione settoriale.",
+        "Usare un universo di gestori come benchmark senza considerarne la non investibilità e il survivorship.",
+        "Licenziare un gestore dopo un breve periodo di sottoperformance senza analisi del processo.",
+        "Pagare commissioni di performance su rendimenti che dipendono dal beta.",
+        "Confondere attribuzione (perché) con apprezzamento (abilità o fortuna)."
+      ]
+    }
+  ]
+}

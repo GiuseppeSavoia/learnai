@@ -1,0 +1,111 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "alt",
+      "sections": [
+        {
+          "title": "Caratteristiche, metodi d'investimento e strutture",
+          "body": [
+            "Gli investimenti alternativi (alternative investments) comprendono private capital (private equity e private debt), immobili, infrastrutture, risorse naturali (materie prime (commodities), terreni agricoli, foreste), hedge fund e asset digitali. Tratti comuni: gestione specializzata, scarsa liquidità, orizzonti lunghi, poca regolamentazione e trasparenza, dati storici limitati e distorti, commissioni elevate e strutture complesse, uso della leva, correlazione (correlation) storicamente bassa con le attività tradizionali (vantaggio di diversificazione (diversification), spesso sovrastimato).",
+            "Metodi d'investimento: diretto (direct: l'investitore compra l'attività, controllo pieno e costi bassi ma richiede competenze e capitali enormi), co-investimento (co-investment: insieme al fondo, in singole operazioni, commissioni ridotte e impara dal gestore, ma rischio di selezione avversa: il GP può offrire le operazioni meno attraenti), tramite fondo (fund investing: diversificazione e competenza del gestore, ma commissioni piene e poco controllo).",
+            "Struttura tipica: società in accomandita (limited partnership) con il gestore come socio accomandatario (general partner, GP) e gli investitori come accomandanti (limited partners, LP). Documenti: accordo di accomandita (limited partnership agreement), lettere laterali (side letters) con condizioni speciali per alcuni LP (es. riduzione delle commissioni, clausola della nazione più favorita (most favored nation)). Il capitale è impegnato (committed) e richiamato (called) nel tempo; la vita del fondo è di 10-12 anni.",
+            "Altre strutture: conti separati (separately managed accounts) con trasparenza e controllo per grandi investitori; fondi di fondi (fund of funds) che danno diversificazione e accesso a gestori ma aggiungono un secondo livello di commissioni; joint venture per progetti immobiliari e infrastrutturali; veicoli quotati (REIT, società di investimento in private equity, fondi chiusi infrastrutturali) che offrono liquidità ma con correlazione più alta con le azioni.",
+            "Due diligence sul gestore: strategia e vantaggio competitivo, processo d'investimento, team e successione, track record verificato, gestione del rischio e della valutazione, struttura legale e commissioni, infrastruttura operativa (custode, revisore, amministratore indipendente), allineamento degli interessi (capitale del GP nel fondo)."
+          ]
+        },
+        {
+          "title": "Commissioni, cascata e calcolo dei rendimenti",
+          "body": [
+            "Struttura «2 e 20»: commissione di gestione (management fee) circa 1-2% annuo sul capitale impegnato (private equity) o sugli attivi gestiti (hedge fund), più commissione di performance (incentive fee/carried interest) circa 20% dei profitti. Soglia minima (hurdle rate): rendimento minimo prima della commissione di performance; soglia rigida (hard hurdle): incentivo solo sui profitti oltre la soglia; morbida (soft hurdle): una volta superata la soglia l'incentivo si calcola su tutto il profitto. Recupero (catch-up): il GP riceve una quota maggiore dopo la soglia finché non raggiunge la percentuale concordata.",
+            "Livello massimo precedente (high-water mark): la commissione di performance si paga solo sopra il massimo valore netto raggiunto in passato, così l'investitore non paga due volte per recuperare le stesse perdite. Clausola di restituzione (clawback): il GP restituisce commissioni di performance incassate in eccesso se i risultati successivi peggiorano.",
+            "Cascata dei pagamenti (distribution waterfall): europea o sull'intero fondo (whole-of-fund): il GP prende il carried interest solo dopo che gli LP hanno recuperato tutto il capitale versato più la soglia; più favorevole agli LP. Americana o per operazione (deal-by-deal): il GP incassa su ogni operazione chiusa con profitto; più favorevole al GP e richiede clawback.",
+            "Esempio: fondo da 100 milioni, valore lordo a fine anno 120, commissione di gestione 2% sul capitale iniziale (2), performance 20% dei profitti al netto della commissione di gestione. Profitto netto prima dell'incentivo = 120 - 100 - 2 = 18 → incentivo 3.6; valore per l'investitore 114.4 → rendimento netto 14.4% contro 20% lordo. Con soglia rigida dell'8% (8 milioni) l'incentivo = 20% × (18 - 8) = 2.0 e il rendimento netto 16%; con soglia morbida dell'8% l'incentivo resta 3.6.",
+            "Esempio di high-water mark: anno 1 il fondo passa da 100 a 90 (nessuna performance fee); anno 2 sale a 105. La commissione di performance dell'anno 2 si calcola solo sui 5 milioni sopra il massimo precedente (100), non sui 15 di guadagno.",
+            "Misure di rendimento: IRR (money-weighted) per fondi chiusi in cui il GP controlla i flussi; multiplo del capitale investito (multiple of invested capital, MOIC) = (valore realizzato + non realizzato)/capitale investito, non tiene conto del tempo; TVPI, DPI (distribuzioni/capitale versato) e RVPI. Problemi: valutazioni basate su perizie che smorzano la volatilità (appraisal smoothing) e sottostimano rischio e correlazione; distorsioni dei database (survivorship, backfill); leva che amplifica i rendimenti; illiquidità (illiquidity); commissioni che fanno divergere rendimenti lordi e netti."
+          ]
+        },
+        {
+          "title": "Private equity e venture capital",
+          "body": [
+            "Acquisizioni a leva (leveraged buyout, LBO): il fondo compra un'impresa matura con flussi stabili usando molto debito (spesso 50-70%); il valore si crea con miglioramenti operativi, riduzione del debito con i flussi, espansione del multiplo all'uscita e disciplina della governance. Varianti: management buyout (il management esistente compra con il fondo), management buy-in (un management esterno). Struttura del debito: prestiti bancari senior, obbligazioni (bonds) high yield, mezzanine.",
+            "Capitale di rischio (venture capital): investimento in imprese giovani ad alto potenziale. Fasi: pre-seed e seed (idea, prototipo), early stage (startup e prime vendite, serie A), late stage (espansione, serie B e successive), mezzanine o pre-IPO. Rischio elevato, pochi successi che generano la maggior parte dei rendimenti; valutazione basata su round di finanziamento (pre-money e post-money).",
+            "Esempio di valutazione: un VC investe 5 milioni per il 25% di una startup. Valore post-money = 5/0.25 = 20 milioni; pre-money = 15 milioni.",
+            "Altre strategie: capitale per la crescita (growth equity: quote di minoranza in imprese in espansione con poca leva), investimenti in società in crisi, secondari (acquisto di quote di fondi da altri LP, spesso a sconto, che riduce il J-curve), fondi di fondi.",
+            "Uscite (exit): offerta pubblica iniziale (IPO, valutazioni più alte ma costi e tempi), vendita a un acquirente strategico (trade sale, spesso il prezzo più alto per le sinergie), vendita a un altro fondo (secondary buyout), ricapitalizzazione (recapitalization: nuovo debito per pagare un dividendo (dividends) ai proprietari), cancellazione (write-off). Curva J (J-curve): rendimenti negativi nei primi anni (commissioni e investimenti iniziali), positivi quando arrivano le uscite.",
+            "Rischi e diversificazione: rischio d'impresa e di leva, illiquidità, dispersione dei rendimenti molto ampia tra i gestori (la scelta del gestore conta più dell'asset class); i rendimenti di private equity sono correlati con le azioni quotate più di quanto mostrino le valutazioni smorzate."
+          ]
+        },
+        {
+          "title": "Private debt",
+          "body": [
+            "Prestito diretto (direct lending): prestiti senior garantiti, a tasso variabile, concessi da fondi a imprese di medie dimensioni, spesso legati a operazioni di buyout; covenant più stringenti e spread più alti rispetto ai prestiti sindacati. Unitranche: un unico prestito che combina debito senior e subordinato con un solo tasso.",
+            "Mezzanine: debito subordinato tra il senior e il capitale proprio, spesso con warrant o opzioni (options) di conversione (equity kicker); rendimenti più alti per la subordinazione. Venture debt: prestiti a startup già finanziate da VC, con warrant, per allungare la liquidità tra un round e l'altro senza diluire troppo.",
+            "Debito in difficoltà (distressed debt): acquisto a sconto di obbligazioni o prestiti di imprese in crisi o in procedura; il rendimento dipende dalla ristrutturazione; alcuni investitori puntano a convertire il debito in controllo dell'impresa (loan-to-own). Richiede competenze legali e di ristrutturazione.",
+            "Finanziamenti specializzati: finanziamento di aerei, crediti commerciali, royalty, litigation finance, prestiti con garanzia di proprietà intellettuale.",
+            "Rischi: credito, illiquidità (difficile vendere prima della scadenza), concentrazione; vantaggi: rendimenti più alti dei bond quotati, tassi variabili che proteggono dal rialzo dei tassi, flussi regolari. Il private debt ha avuto una forte crescita dopo il 2008 perché le banche, con requisiti di capitale più elevati, hanno ridotto i prestiti alle medie imprese."
+          ]
+        },
+        {
+          "title": "Immobili e infrastrutture",
+          "body": [
+            "Immobili (real estate): residenziali e commerciali (uffici, commercio, industriale e logistica, alberghiero, multifamiliare). Modalità: dirette (proprietà o mutui, private) e indirette (fondi immobiliari privati, REIT quotati, MBS). Quattro quadranti: capitale proprio privato (immobili diretti), debito privato (mutui), capitale proprio pubblico (REIT), debito pubblico (MBS). Stili: core (immobili stabili e affittati, poca leva), value-add (riposizionamento), opportunistico (sviluppo, alta leva).",
+            "Valutazione: approccio del reddito (income approach): valore = reddito operativo netto (net operating income, NOI)/tasso di capitalizzazione (cap rate), o attualizzazione dei flussi; approccio dei comparabili (sales comparison) basato su transazioni simili corrette per caratteristiche; approccio del costo (cost approach) = costo di ricostruzione meno deprezzamento più valore del terreno. Esempio: NOI 5 milioni, cap rate 6.25% → valore 80 milioni. Se il cap rate sale al 7% il valore scende a 71.4 milioni: gli immobili sono sensibili ai tassi.",
+            "REIT (real estate investment trust): società quotate che distribuiscono gran parte del reddito (in cambio di esenzione fiscale a livello di società), liquide e diversificate ma correlate con il mercato azionario nel breve periodo. Valutate con il valore netto delle attività (NAV), il prezzo/fondi dalle operazioni (FFO, utile + ammortamenti (depreciation) immobiliari - plusvalenze), AFFO (FFO - capex di manutenzione).",
+            "Indici: basati su perizie (appraisal-based, smorzano la volatilità e ritardano), su vendite ripetute (repeat sales, possibili distorsioni di selezione), su REIT (prezzi di mercato). Rischi: ciclo economico (business cycle), tassi, liquidità, leva, sviluppo, locatari, obsolescenza (anche climatica).",
+            "Infrastrutture (infrastructure): attività a lunga vita che forniscono servizi essenziali: economiche (trasporti, energia, utility, telecomunicazioni) e sociali (scuole, ospedali). Investimenti brownfield (attività esistenti con flussi stabili, spesso regolati o in concessione, rischio basso) e greenfield (da costruire: rischio di costruzione e di domanda più elevato). Partenariati pubblico-privati (public-private partnerships). Flussi spesso indicizzati all'inflazione (inflation) e domanda poco elastica; rischi regolatori e politici, leva e illiquidità.",
+            "Trappola: un indice immobiliare (real estate) basato su perizie mostra volatilità e correlazione con le azioni più basse di quelle reali; la diversificazione apparente è in parte un artefatto contabile."
+          ]
+        },
+        {
+          "title": "Risorse naturali e materie prime",
+          "body": [
+            "Materie prime (commodities): energetiche, metalli industriali e preziosi, agricole (grani, soft), bestiame. Si investe soprattutto con i futures (anche tramite ETF e indici), raramente fisicamente (costi di stoccaggio). Prezzo a termine e costo di mantenimento: F ≈ S × (1 + r) + stoccaggio - rendimento di convenienza.",
+            "Componenti del rendimento di una posizione lunga in futures completamente collateralizzata: rendimento del collaterale (interessi sulla liquidità a garanzia), rendimento spot (variazione del prezzo a pronti), rendimento del rinnovo (roll yield): positivo in backwardation (si vende il contratto in scadenza a un prezzo più alto di quello del nuovo contratto), negativo in contango. Molti investitori in futures su petrolio hanno perso in contango anche con prezzi spot stabili.",
+            "Esempio di roll: un investitore detiene il futures a un mese a 80 e lo rinnova nel contratto a due mesi che quota 82 (contango). A parità di prezzo spot, per mantenere l'esposizione compra meno contratti a un prezzo più alto: il rendimento del rinnovo è circa -2.4% in quel passaggio.",
+            "Terreni agricoli (farmland) e foreste (timberland): rendimenti da produzione (raccolti, crescita biologica degli alberi, che è un'opzione sul momento del taglio), da variazione del valore del terreno e da reddito d'affitto; protezione dall'inflazione e bassa correlazione con i mercati; rischi climatici, regolatori e di liquidità.",
+            "Ruolo in portafoglio: copertura (hedging) dall'inflazione (specie inattesa), diversificazione in alcuni periodi, esposizione a temi strutturali (transizione energetica). Le materie prime non producono flussi propri: il valore deriva da domanda e offerta, ciclo economico e costi di estrazione; la volatilità è alta e la correlazione con le azioni aumenta nelle crisi globali."
+          ]
+        },
+        {
+          "title": "Hedge fund: strategie e rischi",
+          "body": [
+            "Gli hedge fund sono veicoli poco regolati che usano leva, vendite allo scoperto, derivati (derivatives) e strategie flessibili, puntando a rendimenti assoluti. Condizioni: periodi di blocco (lockup) iniziali, preavvisi di rimborso (notice periods), finestre di rimborso trimestrali o annuali, possibili cancelli (gates) che limitano i rimborsi nelle crisi.",
+            "Long/short azionario (equity hedge): fondamentale long/short (posizioni lunghe sui titoli sottovalutati e corte su quelli sopravvalutati, esposizione netta di solito positiva), market neutral (esposizione netta e beta vicini a zero, guadagna dalla selezione), short bias (esposizione netta corta), settoriali e quantitativi.",
+            "Event driven: arbitraggio su fusioni (merger arbitrage: comprare il target e, se l'offerta è in azioni, vendere l'acquirente; rischio che l'operazione salti), situazioni di crisi (distressed/restructuring), attivismo (activist: acquisire quote per spingere cambiamenti), eventi speciali (scissioni, riacquisti (share repurchase)). Valore relativo (relative value): arbitraggio su convertibili (comprare la convertibile e vendere l'azione per catturare la volatilità e il valore dell'opzione), arbitraggio obbligazionario (spread tra titoli simili, spesso con molta leva), strategie su volatilità. Opportunistiche: global macro (scommesse su tassi, valute, materie prime in base alla visione macro), managed futures o CTA (strategie sistematiche di trend following sui futures). Multi-strategia e multi-gestore.",
+            "Esempio di merger arbitrage: un acquirente offre 50 in contanti per un target che quota 47. Il fondo compra a 47; se l'operazione va in porto guadagna 3 (6.4% in pochi mesi); se salta, il prezzo può tornare a 38. Il rendimento atteso dipende dalla probabilità di chiusura: è una strategia che vende un'assicurazione contro il fallimento delle operazioni.",
+            "Rischi: leva e liquidità (crisi di finanziamento come nel 1998 o 2008), rischio di modello, concentrazione, rischio operativo e di frode (serve due diligence operativa), rischio di stile (deriva della strategia (style drift)). Distorsioni dei dati: survivorship (i fondi chiusi spariscono dagli indici), backfill (i fondi entrano nel database con la storia migliore), autodichiarazione.",
+            "Fondi di fondi: diversificazione, due diligence professionale, accesso a gestori chiusi; costo: doppio livello di commissioni e possibile duplicazione di posizioni opposte."
+          ]
+        },
+        {
+          "title": "Asset digitali",
+          "body": [
+            "Gli asset digitali (digital assets) si basano su registri distribuiti (distributed ledger technology, DLT): database condivisi tra più nodi; la blockchain registra le transazioni in blocchi collegati crittograficamente, rendendo difficile alterare la storia. Reti senza permesso (permissionless: chiunque può partecipare e validare, es. Bitcoin, Ethereum) e con permesso (permissioned: partecipanti autorizzati, usate da istituzioni).",
+            "Meccanismi di consenso: prova di lavoro (proof of work: i miner risolvono problemi computazionali, alto consumo energetico, sicurezza elevata) e prova di partecipazione (proof of stake: i validatori bloccano token come garanzia, più efficiente). Contratti intelligenti (smart contracts): programmi che si eseguono automaticamente al verificarsi di condizioni.",
+            "Tipi: criptovalute (cryptocurrencies) come mezzo di scambio o riserva di valore, stablecoin ancorate a una valuta o a un paniere (con rischi di riserva e di ancoraggio), token di utilità (utility tokens) per accedere a servizi, token di sicurezza (security tokens) che rappresentano attività finanziarie, token non fungibili (non-fungible tokens, NFT) per beni unici, finanza decentralizzata (decentralized finance, DeFi) con prestiti e scambi senza intermediari.",
+            "Modalità d'investimento: possesso diretto (con portafogli digitali (wallets) e chiavi private: rischio di perdita o furto), fondi ed ETF (anche spot, dove autorizzati), futures regolamentati, azioni di società del settore (exchange, miner).",
+            "Rischi e caratteristiche: volatilità molto elevata, assenza di flussi di cassa (valutazione difficile), rischi regolatori e legali, frodi e fallimenti di piattaforme, rischio tecnologico, rischio di custodia, concentrazione della proprietà. La correlazione con le azioni è aumentata negli ultimi anni, riducendo l'argomento della diversificazione.",
+            "Trappola: la decentralizzazione della rete non elimina il rischio di controparte (counterparty risk) quando si detengono asset presso una piattaforma centralizzata."
+          ]
+        }
+      ],
+      "formulas": [
+        "Rendimento netto = (valore finale - commissione di gestione - incentivo)/valore iniziale - 1",
+        "Soglia rigida: incentivo = % × (profitto - soglia); soglia morbida: % × profitto se profitto > soglia",
+        "MOIC = (valore realizzato + non realizzato)/capitale investito",
+        "Valore immobile = NOI/cap rate",
+        "Post-money = investimento/quota acquisita; pre-money = post-money - investimento",
+        "Rendimento futures commodity = collaterale + spot + roll yield",
+        "FFO = utile netto + ammortamenti immobiliari - plusvalenze da cessioni"
+      ],
+      "pitfalls": [
+        "Confondere soglia rigida e morbida nel calcolo della commissione di performance.",
+        "Credere che la cascata per operazione (americana) favorisca gli LP: favorisce il GP.",
+        "Prendere per buone volatilità e correlazioni basse di indici costruiti su perizie.",
+        "Pensare che il rendimento di un ETF su futures di petrolio replichi il prezzo spot: conta il roll yield.",
+        "Dimenticare il high-water mark: dopo una perdita la commissione di performance si paga solo oltre il massimo precedente."
+      ]
+    }
+  ]
+}

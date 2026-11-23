@@ -1,0 +1,114 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "deriv",
+      "sections": [
+        {
+          "title": "Caratteristiche dei derivati e dei mercati",
+          "body": [
+            "Un derivato (derivative) è un contratto il cui valore dipende da un sottostante (underlying): azioni e indici, tassi d'interesse, valute, materie prime (commodities), credito, altri derivati (derivatives), anche variabili come il meteo. Due famiglie: impegni a termine (forward commitments: forward, futures, swap), con obblighi per entrambe le parti, e diritti condizionati (contingent claims: opzioni (options), credit default swap), con un diritto per l'acquirente in cambio di un premio.",
+            "Mercati regolamentati (exchange-traded): contratti standardizzati, controparte centrale (central clearinghouse) che si interpone tra le parti eliminando quasi del tutto il rischio di controparte (counterparty risk), margini giornalieri, trasparenza, liquidità. Fuori borsa (over-the-counter, OTC): contratti su misura tra dealer e clienti, più flessibili ma con rischio di controparte e meno trasparenza; dopo la crisi del 2008 molti OTC standard (es. swap su tassi) devono essere compensati presso controparti centrali (central clearing) e segnalati a repository.",
+            "Credit default swap (CDS): l'acquirente di protezione paga un premio periodico; se l'entità di riferimento subisce un evento di credito (default, ristrutturazione), il venditore copre la perdita (pagamento ≈ nominale × (1 - recupero)). È un diritto condizionato sul credito.",
+            "Vantaggi: scoperta del prezzo (price discovery, specialmente con i futures), allocazione del rischio a chi è più disposto a sopportarlo, efficienza transazionale (costi bassi, possibilità di vendere allo scoperto facilmente), leva implicita. Rischi: leva che amplifica le perdite, complessità e poca trasparenza, rischio di base (basis risk: copertura (hedging) imperfetta tra derivato e posizione), rischio di liquidità (margini da versare in contanti), rischio di controparte, rischio sistemico (interconnessione e contagio, come nel 2008).",
+            "Uso da parte degli emittenti: copertura di valore equo (fair value hedge: es. swap da fisso a variabile su un debito), copertura dei flussi (cash flow hedge: es. forward su acquisti futuri in valuta), copertura dell'investimento netto in una controllata estera (net investment hedge). La contabilizzazione di copertura (hedge accounting) allinea il riconoscimento degli effetti del derivato e della posizione coperta. Gli investitori usano i derivati per modificare rapidamente l'esposizione, ridurre i costi di negoziazione, creare profili di rendimento non ottenibili altrimenti."
+          ]
+        },
+        {
+          "title": "Payoff e profitto di forward, futures e opzioni",
+          "body": [
+            "Forward: accordo oggi per comprare (posizione lunga) o vendere (corta) il sottostante a una data futura a un prezzo fissato F0. Payoff alla scadenza per il lungo = ST - F0; per il corto = F0 - ST. Il contratto vale zero all'inizio: nessun premio. Si può regolare con consegna fisica o in contanti (cash settlement). Accordo su tassi futuri (forward rate agreement, FRA): forward su un tasso d'interesse, regolato in contanti all'inizio del periodo di riferimento scontando il differenziale.",
+            "Futures: forward standardizzato in borsa con regolamento giornaliero (mark-to-market). Margine iniziale (initial margin) versato all'apertura; ogni giorno il conto viene accreditato o addebitato per la variazione del prezzo di regolamento; se il saldo scende sotto il margine di mantenimento (maintenance margin) bisogna versare il margine di variazione (variation margin) per tornare al margine iniziale. Esempio: margine iniziale 5,000, mantenimento 3,500; una perdita di 2,000 porta il saldo a 3,000 → si versano 2,000 per tornare a 5,000. Limiti di prezzo giornalieri possono sospendere le negoziazioni.",
+            "Opzione call: diritto di comprare a un prezzo di esercizio (exercise/strike price) X. Payoff del compratore = max(0, ST - X); profitto = payoff - premio. Opzione put: diritto di vendere a X; payoff = max(0, X - ST). Il venditore (writer) incassa il premio e ha payoff opposto: perdita potenzialmente illimitata per chi vende call scoperte, massima pari a X - premio per chi vende put.",
+            "Esempio: call con X = 50 comprata a 3. Pareggio (breakeven) = 53. A ST = 60 profitto 7; a ST = 45 perdita 3 (il premio). Put con X = 50 comprata a 2: pareggio 48, guadagno massimo 48 (se il prezzo va a zero).",
+            "Moneyness: una call è in the money se S > X, at the money se S = X, out of the money se S < X (al contrario per la put). Esercizio europeo (solo a scadenza) o americano (in qualsiasi momento); l'americana vale almeno quanto l'europea.",
+            "Swap: scambio di una serie di flussi; il più comune è lo swap su tassi d'interesse (interest rate swap) fisso contro variabile su un nominale (notional) che non si scambia. Chi paga il fisso (payer) guadagna se i tassi salgono. Uno swap equivale a una serie di forward (o FRA) con lo stesso prezzo fisso, ciascuno dei quali da solo ha valore diverso da zero."
+          ]
+        },
+        {
+          "title": "Arbitraggio, replica e costo di mantenimento",
+          "body": [
+            "Legge del prezzo unico (law of one price): due portafogli con gli stessi flussi futuri devono avere lo stesso prezzo oggi; altrimenti esiste un arbitraggio (arbitrage): profitto privo di rischio senza capitale proprio. I prezzi dei derivati si ricavano per non-arbitraggio, cioè replicando il derivato con il sottostante e un prestito o deposito privo di rischio, non con le aspettative sul prezzo futuro né con la propensione al rischio (willingness to take risk).",
+            "Replica di un forward lungo: prendere a prestito S0 e comprare il sottostante oggi; alla scadenza si possiede il sottostante e si devono S0(1 + r)^T. Quindi F0 = S0(1 + r)^T in assenza di costi o benefici di detenzione. Se F0 è più alto: cash-and-carry (comprare il sottostante a pronti con denaro preso a prestito e vendere il forward). Se è più basso: reverse cash-and-carry (vendere allo scoperto il sottostante, investire il ricavato, comprare il forward).",
+            "Costo di mantenimento (cost of carry): benefici della detenzione (dividendi (dividends), cedole (coupon), rendimento di convenienza (convenience yield) delle materie prime) riducono il prezzo forward; costi (stoccaggio, assicurazione) lo aumentano. F0 = (S0 - PV(benefici) + PV(costi))(1 + r)^T; in forma continua F0 = S0 × e^((r + c - i)T). Esempio: S0 = 100, r = 5%, T = 1 anno, valore attuale (present value) dei dividendi 2 → F0 = 98 × 1.05 = 102.90.",
+            "Valute: il beneficio è il tasso d'interesse estero: F = S × (1 + r quotata)^T/(1 + r base)^T (parità coperta (covered interest rate parity)). Indici azionari: rendimento da dividendo continuo F0 = S0 e^((r - q)T).",
+            "Struttura dei prezzi a termine delle materie prime: contango (forward > spot, tipico con costi di stoccaggio alti) e backwardation (forward < spot, quando il rendimento di convenienza è alto, ad esempio con scorte scarse). Il rendimento di un investimento in futures su commodity = rendimento del collaterale + rendimento a pronti (spot) + rendimento del rinnovo (roll yield, positivo in backwardation).",
+            "Trappola: il prezzo forward non è la previsione del prezzo futuro atteso; è il prezzo che elimina l'arbitraggio dato il costo di mantenimento."
+          ]
+        },
+        {
+          "title": "Prezzo e valore dei forward e dei futures",
+          "body": [
+            "Distinguere prezzo (price, F0: fissato all'inizio, costante per tutta la vita del contratto) e valore (value: zero all'inizio, poi varia). Valore del forward lungo al tempo t: Vt = St - PV(benefici residui (residuals)) + PV(costi residui) - F0/(1 + r)^(T - t). A scadenza VT = ST - F0. Il valore del corto è l'opposto.",
+            "Esempio: forward a un anno con F0 = 102.90 (come sopra). Dopo 6 mesi, dividendi già pagati, St = 108, r = 5%: Vt = 108 - 102.90/1.05^0.5 = 108 - 100.42 = 7.58 a favore del lungo.",
+            "FRA: il prezzo è il tasso forward (forward rates) implicito nella curva. Esempio di un FRA 3×6 (parte fra 3 mesi, dura 3 mesi): si ricava il tasso forward dai tassi a 3 e 6 mesi. Alla data di regolamento il pagamento = nominale × (tasso di mercato - tasso FRA) × (giorni/360) scontato per il periodo di riferimento al tasso di mercato. Chi è lungo un FRA (riceve il variabile) guadagna se i tassi salgono.",
+            "Futures vs forward: con tassi costanti e rischio di credito (credit risk) trascurabile i prezzi coincidono. Se i prezzi dei futures sono correlati positivamente con i tassi, il lungo futures preferisce il regolamento giornaliero (guadagni reinvestiti a tassi più alti), quindi il futures vale più del forward; con correlazione (correlation) negativa vale meno. I futures hanno rischio di controparte minimo ma richiedono liquidità per i margini.",
+            "Futures su obbligazioni (bonds): il venditore sceglie quale titolo consegnare tra quelli ammessi, con fattori di conversione; si consegna il titolo più conveniente (cheapest to deliver). Futures su indici azionari e su tassi a breve sono regolati in contanti.",
+            "Trappola: quando il prezzo spot sale dopo la stipula, il valore del forward lungo aumenta, ma il prezzo F0 del contratto esistente resta lo stesso; cambia solo il prezzo dei nuovi contratti."
+          ]
+        },
+        {
+          "title": "Swap: prezzo e valore",
+          "body": [
+            "Il tasso swap (swap rate) è il tasso fisso che rende uguale il valore attuale dei flussi fissi e variabili all'inizio, cioè lo swap vale zero. Con fattori di sconto PV_i per ogni data di pagamento: s = (1 - PV_N)/Σ PV_i (per periodo). Esempio: fattori di sconto 0.97, 0.94, 0.91 per 1, 2 e 3 anni → s = (1 - 0.91)/2.82 = 3.19% annuo.",
+            "Intuizione: la gamba variabile vale la pari a ogni data di revisione, come una FRN; la gamba fissa è un'obbligazione con cedola s. Il tasso swap è la cedola che fa valere la gamba fissa alla pari: per questo il tasso swap coincide con il tasso par della curva swap.",
+            "Valore dopo l'inizio: per chi paga il fisso e riceve il variabile, valore = (tasso swap corrente di mercato - tasso swap del contratto) × Σ PV_i dei pagamenti residui × nominale. Se i tassi salgono il pagatore del fisso guadagna. Esempio: swap a 3 anni al 3% con due anni residui; il tasso swap a 2 anni è ora 4%, fattori di sconto 0.96 e 0.92 → valore per il pagatore del fisso = (4% - 3%) × 1.88 × 10 milioni = 188,000.",
+            "Equivalenze: pagare fisso e ricevere variabile = essere corti un'obbligazione a tasso fisso e lunghi una FRN. Le imprese usano gli swap per trasformare debito fisso in variabile e viceversa; ad esempio un emittente che preferisce il variabile può emettere a fisso (dove ha un costo relativo migliore) e poi ricevere fisso nello swap.",
+            "Altri swap: valutari (currency swaps, con scambio dei nominali all'inizio e alla fine), su azioni (equity swaps: rendimento di un indice contro un tasso), sulla varianza (variance), sul credito (CDS). Lo swap è un derivato a valore zero all'inizio come i forward."
+          ]
+        },
+        {
+          "title": "Valore delle opzioni: limiti e fattori",
+          "body": [
+            "Valore dell'opzione = valore intrinseco (intrinsic/exercise value: quanto varrebbe esercitarla subito, max(0, S - X) per la call) + valore temporale (time value: probabilità che diventi più conveniente prima della scadenza). Il valore temporale si azzera a scadenza (decadimento temporale (theta)).",
+            "Fattori: prezzo del sottostante ↑ → call ↑, put ↓; prezzo di esercizio ↑ → call ↓, put ↑; tempo alla scadenza ↑ → generalmente entrambe ↑ (eccezione: alcune put europee profondamente in the money); volatilità ↑ → entrambe ↑ (il fattore più importante, perché il ribasso è limitato e il rialzo no); tasso privo di rischio ↑ → call ↑, put ↓ (il valore attuale dello strike scende); dividendi o redditi del sottostante ↑ → call ↓, put ↑; costi di detenzione (carrying costs) ↑ → call ↑, put ↓.",
+            "Limiti europei: call: max(0, S0 - X/(1 + r)^T) ≤ c0 ≤ S0; put: max(0, X/(1 + r)^T - S0) ≤ p0 ≤ X/(1 + r)^T. Per un'americana il limite inferiore usa X non scontato e la put americana vale al massimo X. Una call americana su un'azione senza dividendi non viene mai esercitata in anticipo (vale più viva che morta), quindi vale come l'europea; una put americana può essere esercitata in anticipo se profondamente in the money.",
+            "Esempio: S = 55, X = 50, r = 4%, T = 1 → limite inferiore della call europea = 55 - 50/1.04 = 6.92. Se la call quotasse 6, si potrebbe comprare la call, vendere l'azione allo scoperto e investire 50/1.04: arbitraggio.",
+            "Trappola: confondere valore intrinseco e prezzo: una call out of the money ha valore intrinseco nullo ma un prezzo positivo grazie al valore temporale."
+          ]
+        },
+        {
+          "title": "Parità put-call e posizioni sintetiche",
+          "body": [
+            "Parità put-call (put-call parity) per opzioni europee con stesso X e scadenza: S0 + p0 = c0 + X/(1 + r)^T. A sinistra la put protettiva (protective put: azione + put), a destra la call fiduciaria (fiduciary call: call + titolo zero coupon che rimborsa X): a scadenza entrambe valgono max(ST, X).",
+            "Posizioni sintetiche riordinando l'equazione: call sintetica = S + p - PV(X); put sintetica = c - S + PV(X); azione sintetica = c - p + PV(X); titolo privo di rischio sintetico = S + p - c. Esempio: con S = 50, X = 50, r = 5%, c = 5.95 la put deve valere 5.95 + 47.62 - 50 = 3.57. Se quotasse 4.50 si venderebbe la put cara e si comprerebbe la put sintetica (comprare la call, vendere l'azione allo scoperto, investire PV(X)) incassando 0.93 senza rischio.",
+            "Parità put-call con il forward: F0/(1 + r)^T + p0 = c0 + X/(1 + r)^T, quindi c0 - p0 = [F0 - X]/(1 + r)^T. Se X = F0, call e put hanno lo stesso valore.",
+            "Applicazione al valore dell'impresa: gli azionisti hanno una call sulle attività dell'impresa con strike pari al valore nominale del debito (responsabilità limitata); gli obbligazionisti possiedono debito privo di rischio meno una put venduta agli azionisti sulle attività. Più aumenta il rischio delle attività, più vale la call degli azionisti e meno vale il debito: è la radice del conflitto azionisti-obbligazionisti.",
+            "Trappola: la parità vale per opzioni europee; con americane si ottengono solo disuguaglianze."
+          ]
+        },
+        {
+          "title": "Binomiale: copertura, replica e probabilità neutrali al rischio",
+          "body": [
+            "Il prezzo del sottostante può salire a S × u o scendere a S × d. Si costruisce un portafoglio privo di rischio con h azioni per ogni call venduta: rapporto di copertura (hedge ratio) h = (c_u - c_d)/(S_u - S_d). Poiché il portafoglio è privo di rischio deve rendere il tasso privo di rischio; da qui il valore della call, che non dipende dalle probabilità reali né dalla propensione al rischio.",
+            "Probabilità neutrale al rischio (risk-neutral probability): π = (1 + r - d)/(u - d). Valore dell'opzione = [π × valore in alto + (1 - π) × valore in basso]/(1 + r). Condizione di non arbitraggio (no-arbitrage): d < 1 + r < u.",
+            "Esempio: S0 = 50, u = 1.2 (60), d = 0.8 (40), r = 5%, call con X = 50. c_u = 10, c_d = 0. π = (1.05 - 0.8)/(1.2 - 0.8) = 0.625. c0 = 0.625 × 10/1.05 = 5.95. h = 10/20 = 0.5: comprare mezza azione per ogni call venduta. Put con X = 50: p_u = 0, p_d = 10 → p0 = 0.375 × 10/1.05 = 3.57. Verifica della parità: 50 + 3.57 = 5.95 + 50/1.05 = 53.57.",
+            "Replica: la call si replica comprando h azioni e prendendo a prestito il valore attuale di (h × S_d - c_d). Nell'esempio: 0.5 × 50 = 25 di azioni, prestito di 0.5 × 40/1.05 = 19.05 → costo netto 5.95. Se la call quotasse sopra 5.95 si venderebbe la call e si comprerebbe la replica.",
+            "Il modello si estende a più periodi (alberi binomiali) e converge, con periodi sempre più brevi, al modello di Black-Scholes-Merton (Livello II). Con opzioni americane si confronta a ogni nodo il valore di esercizio immediato con quello di continuazione.",
+            "Trappola: le probabilità neutrali al rischio non sono le probabilità reali; usarle con un tasso di sconto (discount rate) diverso da quello privo di rischio dà un prezzo sbagliato."
+          ]
+        }
+      ],
+      "formulas": [
+        "Forward lungo a scadenza: ST - F0",
+        "F0 = (S0 - PV(benefici) + PV(costi))(1 + r)^T; continuo: F0 = S0 e^((r + c - i)T)",
+        "Vt (forward lungo) = St - PV(benefici residui) - F0/(1 + r)^(T - t)",
+        "Tasso swap: s = (1 - PV_N)/Σ PV_i",
+        "Valore swap (pagatore fisso) = (s corrente - s contratto) × Σ PV_i × nominale",
+        "Call: max(0, ST - X); put: max(0, X - ST); profitto = payoff - premio",
+        "c0 ≥ max(0, S0 - X/(1 + r)^T); p0 ≥ max(0, X/(1 + r)^T - S0)",
+        "S0 + p0 = c0 + X/(1 + r)^T",
+        "c0 - p0 = (F0 - X)/(1 + r)^T",
+        "π = (1 + r - d)/(u - d); h = (c_u - c_d)/(S_u - S_d)"
+      ],
+      "pitfalls": [
+        "Usare le probabilità reali nel modello binomiale invece di quelle neutrali al rischio.",
+        "Pensare che il prezzo di un forward esistente cambi con il mercato: cambia il suo valore.",
+        "Ritenere conveniente esercitare in anticipo una call americana su un'azione senza dividendi.",
+        "Confondere il margine di mantenimento con l'importo da versare: si torna al margine iniziale.",
+        "Credere che un aumento dei tassi riduca il valore della call: lo aumenta.",
+        "Applicare la parità put-call a opzioni con strike o scadenze diverse."
+      ]
+    }
+  ]
+}

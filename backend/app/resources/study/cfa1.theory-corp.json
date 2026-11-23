@@ -1,0 +1,111 @@
+{
+  "exam": "cfa1",
+  "modules": [
+    {
+      "topic": "corp",
+      "sections": [
+        {
+          "title": "Forme organizzative e proprietà",
+          "body": [
+            "Le forme si distinguono per personalità giuridica, responsabilità dei proprietari, separazione tra proprietà e controllo, accesso al capitale e fiscalità. Impresa individuale (sole proprietorship): nessuna separazione, responsabilità illimitata, redditi tassati in capo al titolare, capitale limitato. Società di persone (general partnership): più soci con responsabilità illimitata e solidale. Società in accomandita (limited partnership): soci accomandatari (general partners) che gestiscono con responsabilità illimitata e soci accomandanti (limited partners) che apportano capitale con responsabilità limitata: è la forma tipica dei fondi di private equity e degli hedge fund.",
+            "Società di capitali (corporation): entità giuridica separata, responsabilità limitata degli azionisti, proprietà trasferibile, vita illimitata, governata da un consiglio eletto dagli azionisti che nomina il management. Svantaggio fiscale possibile: doppia imposizione (double taxation) degli utili, tassati prima in capo alla società e poi ai soci come dividendi (attenuata in molti paesi da crediti d'imposta o aliquote ridotte).",
+            "Società quotate (public) vs non quotate (private): le quotate hanno accesso a capitali ampi e liquidità per gli azionisti ma obblighi informativi e pressione sui risultati di breve periodo. Modi di quotarsi: offerta pubblica iniziale (IPO, con sottoscrizione delle banche), quotazione diretta (direct listing, senza nuove azioni), fusione con una società veicolo già quotata (special purpose acquisition company, SPAC). Uscita dalla borsa (going private) tramite buyout, spesso a leva.",
+            "Esempio di doppia imposizione: utile ante imposte 100, aliquota societaria 25%, aliquota sui dividendi 20%. Utile netto (net income) 75, dividendo netto al socio 60: aliquota effettiva complessiva 40%. In una società di persone con aliquota personale 35% il socio terrebbe 65.",
+            "Trappola: nei fondi in accomandita le perdite degli accomandanti sono limitate al capitale impegnato, ma il general partner risponde illimitatamente; nella pratica il GP è spesso a sua volta una società a responsabilità limitata."
+          ]
+        },
+        {
+          "title": "Investitori, stakeholder e conflitti d'interesse",
+          "body": [
+            "Investitori in capitale proprio: diritto residuale, guadagno potenziale illimitato e perdita limitata all'investimento; preferiscono progetti più rischiosi (la loro posizione somiglia a una call sul valore dell'impresa). Investitori in debito: rendimento limitato agli interessi, preferiscono stabilità e basso rischio. Questa asimmetria (skewness) crea conflitti: gli azionisti possono trasferire valore dagli obbligazionisti con più debito, dividendi straordinari o progetti rischiosi.",
+            "Stakeholder: azionisti, creditori, consiglio di amministrazione (board of directors), management, dipendenti, clienti, fornitori, governi e regolatori, comunità. Teoria degli azionisti (shareholder theory: massimizzare il valore per gli azionisti) vs teoria degli stakeholder (stakeholder theory: bilanciare gli interessi di tutti).",
+            "Conflitti principale-agente (principal-agent): il management (agente) può perseguire i propri interessi a scapito degli azionisti (principale): costruzione di imperi (empire building) con acquisizioni che aumentano dimensione e compensi ma non il valore, avversione al rischio eccessiva per proteggere il posto, trinceramento (entrenchment), eccesso di benefit, gestione degli utili per raggiungere i bonus. Altri conflitti: azionisti di controllo contro minoranze (operazioni con parti correlate, azioni a voto multiplo), azionisti contro creditori, società contro governo e comunità.",
+            "Meccanismi di governance: per gli azionisti: assemblee e voto (anche per delega (proxy voting)), proposte degli azionisti, attivismo (activism), azioni legali collettive, mercato per il controllo (takeover); per i creditori: covenant, garanzie, comitati dei creditori; per i dipendenti: contratti, sindacati, piani azionari; per clienti e fornitori: contratti; per il governo: leggi e regolamentazione.",
+            "Esempio: un CEO vicino alla pensione con compenso legato al prezzo dell'azione a un anno taglia la ricerca per gonfiare gli utili. Rimedi: compensi in azioni vincolate su più anni, clausole di restituzione (clawback), metriche di lungo periodo (ROIC, rendimento totale relativo), consiglio indipendente."
+          ]
+        },
+        {
+          "title": "Governance: consiglio, comitati e difese",
+          "body": [
+            "Struttura del consiglio: a un livello (one-tier: un unico consiglio con amministratori esecutivi e indipendenti) o a due livelli (two-tier: consiglio di sorveglianza separato dal consiglio di gestione, tipico in Germania). Principi di buona governance: maggioranza di indipendenti, separazione tra presidente e amministratore delegato (o un amministratore indipendente di riferimento (lead independent director)), competenze adeguate e diversità, valutazione periodica del consiglio, elezione annuale invece che a scaglioni (staggered board, che rende più difficile cambiare il controllo).",
+            "Comitati: revisione (audit committee: integrità dei bilanci, rapporti con il revisore esterno e con l'internal audit), governance e nomine (nomination), remunerazione (remuneration/compensation: politiche retributive allineate alla strategia), rischi (risk committee). Gli indipendenti dovrebbero dominare i comitati chiave.",
+            "Difese contro le acquisizioni ostili: pillole avvelenate (poison pills: diritti agli azionisti esistenti di comprare azioni a sconto se un acquirente supera una soglia), consigli a scaglioni, azioni a voto multiplo, cavaliere bianco (white knight). Riducono la disciplina del mercato per il controllo e possono proteggere un management inefficiente.",
+            "Rischi di una governance debole: decisioni inefficienti, rischio legale e reputazionale, rischio di default, costo del capitale (cost of capital) più alto. Vantaggi di una governance forte: performance operativa migliore, meno rischio, valutazioni più alte. Per l'analista: verificare composizione del consiglio, politiche di remunerazione (legame con la performance, diluizione), operazioni con parti correlate, diritti degli azionisti, qualità dell'informativa.",
+            "Fattori ESG nella governance e nell'analisi: ambientali (emissioni, gestione delle risorse, rischi climatici fisici e di transizione), sociali (diritti umani, salute e sicurezza, relazioni con le comunità, sicurezza dei dati), di governance. Approcci d'investimento ESG: esclusione (negative screening), selezione dei migliori (positive/best-in-class screening), integrazione ESG nelle stime di rischio e valore, investimento tematico, investimento a impatto (impact investing), coinvolgimento attivo (engagement). Rischio di greenwashing: dichiarazioni ESG non sostenute dai fatti."
+          ]
+        },
+        {
+          "title": "Modelli di business e rischi",
+          "body": [
+            "Un modello di business (business model) descrive come l'impresa crea valore per i clienti e ne cattura una parte: clienti obiettivo, proposta di valore (value proposition), canali, prezzo, attività e risorse chiave, partner, struttura dei costi. Canali: diretti (vendita propria, online) e indiretti (distributori, rivenditori); omnicanale.",
+            "Strategie di prezzo: basate sul valore (value-based), sul costo più margine (cost-plus), sulla concorrenza; differenziazione di prezzo per segmento (tiered pricing), prezzo dinamico (dynamic), asta, prodotto principale a basso prezzo e consumabili ad alto margine (razors and blades), gratuito con servizi premium (freemium), abbonamento (subscription: ricavi ricorrenti), pacchetti (bundling).",
+            "Modelli specifici: piattaforme (platform business) che collegano due o più gruppi di utenti con effetti di rete (network effects: il valore cresce con il numero di utenti, favorendo la concentrazione), franchising, licensing, esternalizzazione della produzione (asset-light), integrazione verticale. Le imprese in fase iniziale hanno modelli non dimostrati: l'analista valuta i driver economici unitari (unit economics: costo di acquisizione del cliente, valore nel ciclo di vita, tasso di abbandono).",
+            "Rischi: macroeconomici (ciclo, tassi, cambi, inflazione (inflation)), di business (settoriali, competitivi, specifici dell'impresa: esecuzione, prodotto, dipendenza da clienti o fornitori, ESG), finanziari (leva operativa (operating leverage) e finanziaria, liquidità, capacità di rispettare le obbligazioni (bonds)). I rischi si combinano: un'impresa con alti costi fissi e alto debito in un settore ciclico è doppiamente esposta.",
+            "Esempio: due aziende con stessi ricavi; A produce in proprio (costi fissi alti, margine di contribuzione alto), B esternalizza (costi variabili alti). In una crescita delle vendite A aumenta l'utile più di B; in una recessione perde di più. La scelta del modello determina il profilo di rischio."
+          ]
+        },
+        {
+          "title": "Capitale circolante e gestione della liquidità",
+          "body": [
+            "Capitale circolante (working capital) = attività correnti - passività (liabilities) correnti; il capitale circolante operativo esclude cassa e debiti finanziari. Ciclo di conversione della cassa = giorni di giacenza + giorni d'incasso - giorni di pagamento: un ciclo più breve riduce il fabbisogno di finanziamento. Politiche: conservativa (molte attività correnti finanziate con fonti a lungo termine: più costosa ma sicura), aggressiva (poche attività correnti e molto debito a breve: più redditizia ma rischiosa), moderata.",
+            "Fonti di liquidità primarie (primary sources): cassa e titoli, fonti di finanziamento a breve (linee di credito, debiti commerciali), gestione dei flussi (incassi accelerati, pagamenti ottimizzati). Secondarie (secondary): rinegoziazione dei debiti, cessione di attività, procedura concorsuale; il loro uso segnala una posizione finanziaria deteriorata. Fattori che drenano la liquidità (drags: crediti incassati in ritardo, scorte obsolete, restrizioni al credito) o la assorbono (pulls: pagamenti anticipati ai fornitori, riduzione delle linee di credito).",
+            "Costo dello sconto per pagamento anticipato (trade credit): condizioni 2/10 net 30 (sconto 2% se si paga entro 10 giorni, altrimenti entro 30). Costo implicito di non usare lo sconto = (1 + 2/98)^(365/20) - 1 = 44.6% annuo: conviene quasi sempre pagare in anticipo prendendo a prestito anche a tassi elevati.",
+            "Strumenti di finanziamento a breve: linee di credito non garantite (impegnate (committed), non impegnate, revolving), prestiti garantiti da crediti o scorte, cessione di crediti (factoring, con o senza ricorso), accettazioni bancarie, carta commerciale (per emittenti di qualità, con linee di riserva). Investimenti a breve della liquidità in eccesso: depositi, titoli di Stato (government bond), carta commerciale, fondi monetari, con priorità a sicurezza e liquidità.",
+            "Misure: liquidità corrente, quick ratio, cash ratio, ciclo di conversione. Esempio: DOH 60, DSO 45, DPO 30 → ciclo 75 giorni. Ridurre DSO a 35 con incassi più rapidi libera capitale pari a 10 giorni di vendite: con ricavi annui di 365 milioni, circa 10 milioni di cassa.",
+            "Trappola: allungare i pagamenti ai fornitori migliora il ciclo ma può costare sconti persi, prezzi più alti e rapporti peggiori; non è sempre creazione di valore."
+          ]
+        },
+        {
+          "title": "Investimenti di capitale e criteri di scelta",
+          "body": [
+            "Tipi di investimenti: manutenzione (per continuare l'attività), miglioramento dell'efficienza, espansione, nuovi prodotti o mercati, obbligatori (regolatori, ambientali), altri (progetti strategici difficili da quantificare). Principi del capital budgeting: decisioni basate sui flussi di cassa incrementali (non sull'utile), al netto delle imposte, considerando i tempi e il costo opportunità (opportunity cost); i costi irrecuperabili (sunk costs) si ignorano; si includono le esternalità (cannibalizzazione (cannibalization) delle vendite esistenti, effetti positivi su altre linee); i costi di finanziamento non si sottraggono dai flussi perché sono nel tasso di sconto (discount rate).",
+            "Valore attuale (present value) netto (NPV) = Σ CFt/(1 + r)^t - investimento iniziale: si accettano progetti con NPV > 0; è la misura diretta della creazione di valore. Tasso interno di rendimento (IRR): tasso che azzera l'NPV; si accettano progetti con IRR > costo del capitale. Esempio: investimento 1,000, flussi 400 per 3 anni, costo del capitale 10% → NPV = -5.3, IRR = 9.70%: progetto da rifiutare con entrambi i criteri.",
+            "Conflitti tra NPV e IRR per progetti mutuamente esclusivi: dimensioni diverse o tempi diversi dei flussi; l'IRR assume il reinvestimento al tasso IRR, l'NPV al costo del capitale (più realistico). Flussi non convenzionali (più cambi di segno) possono avere più IRR o nessuno. In caso di conflitto prevale l'NPV.",
+            "Rendimento sul capitale investito (return on invested capital, ROIC) = NOPAT/capitale investito medio: misura a livello d'impresa; se il ROIC supera il costo del capitale l'impresa crea valore. Un ROIC alto per un settore dominato da intangibili spesati può essere distorto dalla contabilità.",
+            "Opzioni reali (real options): di tempistica (timing: rinviare l'investimento), di dimensione (abbandono se le cose vanno male, espansione se vanno bene), di flessibilità (prezzo, mix produttivo, input), fondamentali (il valore del progetto dipende da un prezzo, es. una miniera d'oro). NPV del progetto con opzioni = NPV senza opzioni + valore delle opzioni - costo delle opzioni: un progetto con NPV negativo può essere accettato se le opzioni valgono abbastanza.",
+            "Errori comuni nell'allocazione del capitale: inerzia (riproporre i budget passati), adattare le ipotesi al risultato desiderato, non considerare le alternative, prediligere progetti che migliorano l'EPS nel breve periodo, ignorare le opzioni reali, usare un costo del capitale unico per progetti con rischi diversi, includere i costi irrecuperabili."
+          ]
+        },
+        {
+          "title": "Costo del capitale e leva",
+          "body": [
+            "Costo medio ponderato del capitale (WACC) = wd × rd × (1 - t) + wp × rp + we × re, con pesi a valori di mercato secondo la struttura obiettivo. Esempio: debito 40% al 6%, aliquota 25%, capitale proprio 60% all'11% → 0.4 × 4.5% + 0.6 × 11% = 8.4%. Il costo del debito (cost of debt) è il rendimento a scadenza (yield to maturity) delle obbligazioni (o stimato dal rating), dedotto dalle imposte. Costo delle privilegiate = dividendo/prezzo.",
+            "Costo del capitale proprio: CAPM re = rf + β(E(Rm) - rf); modello del rendimento obbligazionario più premio (bond yield plus risk premium); modello a dividendi re = D1/P0 + g. Per un progetto con rischio diverso dall'impresa si usa il beta di un'impresa comparabile (pure-play): si toglie la leva βA = βE/[1 + (1 - t)D/E], poi la si rimette con la struttura del progetto. Per i mercati emergenti si aggiunge un premio per il rischio paese (country risk premium). I costi di collocamento (flotation costs) si trattano meglio come flusso iniziale del progetto che come aumento del costo del capitale.",
+            "Leva operativa (operating leverage): grado di leva operativa DOL = %ΔEBIT/%Δvendite = Q(P - V)/[Q(P - V) - F]. Leva finanziaria (financial leverage): DFL = %Δutile netto/%ΔEBIT = EBIT/(EBIT - interessi). Leva totale DTL = DOL × DFL. Esempio: Q(P - V) = 600, costi fissi 400, interessi 100 → EBIT 200, DOL = 3, DFL = 2, DTL = 6: un aumento delle vendite del 10% porta un aumento dell'utile netto del 60%.",
+            "Punto di pareggio (breakeven) in quantità = (costi fissi + interessi)/(P - V); pareggio operativo = costi fissi/(P - V). Più alti i costi fissi, più alto il pareggio e più volatili i risultati.",
+            "Trappola: il costo del capitale va scelto in base al rischio del progetto, non a chi lo finanzia; finanziare un progetto con debito non rende il suo costo del capitale pari al costo del debito."
+          ]
+        },
+        {
+          "title": "Struttura del capitale: teorie e fattori",
+          "body": [
+            "Modigliani-Miller senza imposte (proposizione I): in mercati perfetti il valore dell'impresa non dipende dalla struttura del capitale (VL = VU). Proposizione II: il costo del capitale proprio cresce linearmente con la leva re = r0 + (r0 - rd)(D/E), così il WACC resta costante. Con imposte: lo scudo fiscale (tax shield) del debito aumenta il valore, VL = VU + t × D, e re = r0 + (r0 - rd)(1 - t)(D/E): il WACC scende con la leva. Esempio: debito 1,000, aliquota 25% → valore aggiunto 250.",
+            "Teoria del compromesso statica (static trade-off): oltre un certo livello i costi del dissesto finanziario (financial distress: costi diretti di procedura, indiretti come clienti e fornitori persi, management distratto, investimenti rinunciati) superano il beneficio fiscale; esiste una struttura ottimale che massimizza il valore e minimizza il WACC. Costi d'agenzia: il debito disciplina il management (meno cassa libera da sprecare) ma crea conflitti con gli azionisti.",
+            "Teoria dell'ordine di scelta (pecking order): per asimmetrie informative le imprese preferiscono autofinanziamento, poi debito, infine emissione di azioni (che segnala al mercato che il management ritiene le azioni sopravvalutate). Le emissioni azionarie tendono a essere accolte con un calo del prezzo.",
+            "Fattori della struttura del capitale: fase del ciclo di vita (startup con flussi negativi: quasi solo capitale proprio; imprese mature con flussi stabili e attività tangibili: più debito), volatilità dei flussi, intensità degli investimenti, attività utilizzabili come garanzia, condizioni di mercato (tassi, spread), rating obiettivo, preferenze del management e degli azionisti, regolamentazione (banche, utility). Le imprese si muovono intorno a una struttura obiettivo (target capital structure) per opportunismo di mercato e costi di aggiustamento.",
+            "Misure: debito/capitale a valori di mercato vs contabili (gli analisti e le agenzie usano spesso i contabili; i pesi del WACC dovrebbero essere a mercato). Stakeholder diversi preferiscono strutture diverse: obbligazionisti meno leva, azionisti più leva fino a quando non aumenta troppo il rischio, management spesso meno leva per sicurezza personale.",
+            "Trappola: in MM con imposte un'impresa al 100% debito sarebbe ottimale; nella realtà i costi del dissesto lo impediscono. La domanda d'esame tipica chiede quale teoria spiega un certo comportamento."
+          ]
+        }
+      ],
+      "formulas": [
+        "NPV = Σ CFt/(1 + r)^t - CF0; IRR: NPV = 0",
+        "WACC = wd rd (1 - t) + wp rp + we re",
+        "βA = βE / [1 + (1 - t) D/E]; βE = βA [1 + (1 - t) D/E]",
+        "DOL = Q(P - V)/[Q(P - V) - F]; DFL = EBIT/(EBIT - I); DTL = DOL × DFL",
+        "Pareggio = (F + I)/(P - V)",
+        "MM con imposte: VL = VU + tD; re = r0 + (r0 - rd)(1 - t)D/E",
+        "Costo sconto commerciale = (1 + sconto/(1 - sconto))^(365/(giorni pieni - giorni sconto)) - 1",
+        "ROIC = NOPAT/capitale investito"
+      ],
+      "pitfalls": [
+        "Includere i costi irrecuperabili o gli oneri finanziari nei flussi incrementali di un progetto.",
+        "Scegliere tra progetti esclusivi con l'IRR quando contraddice l'NPV.",
+        "Usare il WACC dell'impresa per un progetto con rischio molto diverso.",
+        "Dimenticare la cannibalizzazione delle vendite esistenti come flusso negativo.",
+        "Pensare che la teoria dell'ordine di scelta preveda una struttura ottimale: descrive solo una gerarchia di preferenze.",
+        "Considerare l'uso delle fonti di liquidità secondarie un segnale neutro."
+      ]
+    }
+  ]
+}
